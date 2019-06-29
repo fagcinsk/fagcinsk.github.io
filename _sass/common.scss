@@ -1,0 +1,49 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  font-size: 1rem;
+}
+
+main {
+  flex: 1;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img, embed, object, video {
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  vertical-align: middle;
+}
+
+img::selection {
+  background: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: #66d;
+  transition: color 150ms ease-in-out;
+  &:hover, &:active {color: #66e}
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #888;
+  margin: 16px 0;
+}
+
+@media (max-width: 768px) {
+}

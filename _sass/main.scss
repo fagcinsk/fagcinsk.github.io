@@ -1,0 +1,32 @@
+.page__content {
+  padding: 16px;
+  margin: 0 auto;
+  align-self: center;
+  max-width: 1024px;
+  width: 100%;
+}
+
+.post-item__title {
+  line-height: 1.2;
+}
+
+.post-item__meta {
+  display: flex;
+  color: #888;
+}
+
+.post__content {
+  margin-bottom: 32px;
+}
+
+.promo {
+  padding: 64px;
+  margin: 0 0 16px;
+  background-color: #88a;
+  color: #fff;
+  text-align: center;
+  
+  h2 {
+    font-size: 0.875rem;
+  }
+}
