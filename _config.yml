@@ -1,6 +1,6 @@
 lang: ru
 title: Михаил Юдин
-headline: Михаил Юдин | Персональный блог
+headline: Михаил Юдин
 author: fagci
 copyright: Михаил Юдин (fagci)
 email: fagci.nsk@gmail.com
@@ -22,6 +22,8 @@ social:
 
 # Build settings
 safe: true
+paginate: 10
+paginate_path: "/page:num/"
 markdown: kramdown
 kramdown:
   input: GFM
