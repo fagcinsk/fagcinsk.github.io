@@ -1,0 +1,8 @@
+{% include pubdate.html date=include.post.date %}
+{% if include.post.updated %}
+  (updated <time itemprop="dateModified" datetime="{{ include.post.updated | date: '%Y-%m-%d' }}">{{ include.post.updated | date: "%B %e, %Y" }}</time>)
+{% endif %}
+{% if include.post.author %}
+• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ include.post.author }}</span></span>
+{% endif %}
+{% include categories.html categories=include.post.categories %}
