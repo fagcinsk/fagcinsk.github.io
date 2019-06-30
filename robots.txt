@@ -1,0 +1,4 @@
+User-agent: *
+Allow: *
+Sitemap: https://fagcinsk.github.io/sitemap.xml
+Host: fagcinsk.github.io
