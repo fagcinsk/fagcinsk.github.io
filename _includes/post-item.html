@@ -1,18 +1,16 @@
-<article class="post-item">
+<article class="post-item" itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-item__header">
     <div class="post-item__meta">
       <small>{% include pubdate.html date=post.date %}</small>
       <small>{% include categories.html categories=post.categories %}</small>
     </div>
-    <h2 class="post-item__title">
+    <h2 class="post-item__title" itemprop="name">
       <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
     </h2>
   </header>
-  <div>
-    {% if post.summary %}
-    <p class="post-item__summary">{{ post.summary | strip_html | truncatewords:20 }}</p>
-    {% else %}
-    <p class="post-item__summary">{{ post.content | strip_html | truncatewords: 20 }}</p>
-    {% endif %}
-  </div>
+  {% if post.summary %}
+  <p class="post-item__summary" itemprop="description">{{ post.summary | strip_html | truncatewords:20 }}</p>
+  {% else %}
+  <p class="post-item__summary" itemprop="description">{{ post.content | strip_html | truncatewords: 20 }}</p>
+  {% endif %}
 </article>

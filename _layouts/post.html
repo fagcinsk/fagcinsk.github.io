@@ -7,7 +7,7 @@ layout: default
         {% include pubdate.html date=page.date %}
         {% include categories.html categories=page.categories %}
     </div>
-    <h1 class="post__title" itemprop="name headline">{{ page.title | escape }}</h1>
+    <h1 class="post__title" itemprop="headline">{{ page.title | escape }}</h1>
   </header>
   <div class="post__content" itemprop="articleBody">{{content}}</div>
 </article>

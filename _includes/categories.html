@@ -1,6 +1,6 @@
 &nbsp;::
 {% for category in include.categories %}
-<i class="category">
+<i class="category" itemprop="articleSection">
   {%- if site.categoryMap[category] %}{{site.categoryMap[category] }}{% else %}{{ category }}{% endif -%}
   {%- if forloop.last == false %}, {% endif -%}
 </i>
