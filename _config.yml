@@ -1,7 +1,12 @@
-title: Михаил Юдин, веб разработчик
+lang: ru
+title: Михаил Юдин
+headline: Михаил Юдин | Персональный блог  
+author: fagci
+copyright: Михаил Юдин (fagci)
 email: fagci.nsk@gmail.com
-description: Full-Stack developer. Большую часть времени занимаюсь frontend разработкой, UX/UI.
-copyright: fagci
+description: >
+  Full-Stack developer. 
+  Большую часть времени занимаюсь frontend разработкой, UX/UI.
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
@@ -9,24 +14,46 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  fagcinsk
 telegram_username: fagci
 
-lang: ru
+social:
+  name: Михаил Юдин
+  links:
+    - https://github.com/fagcinsk
+    - https://vk.com/fagci
 
 # Build settings
+safe: true
 markdown: kramdown
-remote_theme: janczizikow/sleek
+kramdown:
+  input: GFM
+  hard_wrap: true
+  syntax_highlighter: rouge
 
 plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-redirect-from
 
 navigation: # Navigation links
   - {name: 'Главная', link: '/'}
   - {name: 'Обо мне', link: '/about'}
   - {name: 'Контакты', link: '/contact'}
-  
-headline: Михаил Юдин | Персональный блог  
-  
+
+categoryMap:
+  frontend: Фронтенд
+  backend: Бэкэнд
+  lifehacks: Лайфхаки
+  hardware: Железо
+  linux: Linux
+  android: Android
+
+webmaster_verifications:
+  google: # 1234
+  bing: # 1234
+  alexa: # 1234
+  yandex: # 1234
+
 exclude:
   - Gemfile
   - Gemfile.lock

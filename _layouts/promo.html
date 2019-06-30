@@ -7,8 +7,11 @@
 
   {%- include header.html -%}
 
-  <main class="page__content" aria-label="Content">
+  <main aria-label="Content">
     {{ content }}
+    <div class="page__content">
+      {% include post-list.html %}
+    </div>
   </main>
 
   {%- include footer.html -%}

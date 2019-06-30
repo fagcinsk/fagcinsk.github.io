@@ -1,41 +1,22 @@
-<!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en-US" }}">
+---
+layout: default
+---
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post__header">
+    <div class="post__meta">
+        {% include pubdate.html date=page.date %}
+        {% include categories.html categories=page.categories %}
+    </div>
+    <h1 class="post__title" itemprop="name headline">{{ page.title | escape }}</h1>
+  </header>
+  <div class="post__content" itemprop="articleBody">{{content}}</div>
+</article>
 
-  {% include head.html %}
-
-  <body class="page">
-
-    {% if site.google_tag_manager %}
-
-      <!-- Google Tag Manager (noscript) -->
-      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ site.google_tag_manager }}"
-      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-      <!-- End Google Tag Manager (noscript) -->
-
-    {% endif %}
-
-    {% include header.html %}
-    
-    <main class="page__content">
-    	<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-    	  <div class="post__meta">
-           <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: '%d %b %Y' }}</time>
-          </div>
-          <h1 class="post__title">{{ page.title }}</h1>
-          <div class="post__content">{{content}}</div>
-        </article>
-        
-        {% if site.related_posts %}
-          <hr />
-          <h2>Ещё почитать:</h2>
-          {% for post in site.related_posts %}
-            {% include post.html %}
-          {% endfor %}
-        {% endif %}
-    </main>
-
-    {% include footer.html %}
-
-  </body>
-
-</html>
+<section class="related-posts">
+  {% if site.related_posts %}
+  <h2>Ещё почитать:</h2>
+  {% for post in site.related_posts %}
+  {% include post-item.html %}
+  {% endfor %}
+  {% endif %}
+</section>

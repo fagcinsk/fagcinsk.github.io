@@ -2,19 +2,20 @@
 layout: page
 title: Обо мне
 permalink: /about/
+image: /assets/img/me.jpg
 ---
 
-# Михаил Юдин
+![Я]({{ page.image }}){:style="float: right; width: 250px;"}
 
-## Веб разработчик
+# Михаил Юдин
 
 Дата рождения: 28.01.1990
 
 ## Навыки
 
-**Frontend**: js/es6, coffeescript, handlebars, SVG
-**Backend**: PHP, twig, NodeJS, разработка api
-**Базы данных**:, MySQL, sqlite3, MongoDB
+**Frontend**: js/es6, coffeescript, handlebars, SVG  
+**Backend**: PHP, twig, NodeJS, разработка api  
+**Базы данных**:, MySQL, sqlite3, MongoDB  
 **Фреймворки**: Yii, Zend, Laravel, Phalcon
 
 ## Приоритет

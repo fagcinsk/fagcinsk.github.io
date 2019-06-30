@@ -1,0 +1,11 @@
+&nbsp;::
+{% for category in include.categories %}
+<i class="category">
+  {% if site.categoryMap[category] %}
+  {{site.categoryMap[category] }}
+  {% else %}
+  {{ category }}
+  {% endif %}
+  {% if forloop.last == false %}, {% endif %}
+</i>
+{% endfor %}

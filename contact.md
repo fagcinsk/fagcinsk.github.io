@@ -1,8 +1,9 @@
 ---
 layout: page
+title: Контакты
 ---
 
-:round_pushpin: Новосибирск  
-:fa-envelope: fagci.nsk@gmail.com  
-:fa-telegram: [@fagci](https://tg.me/fagci)  
-:fa-github: [@fagcinsk](https://github.com/fagcinsk)
+# {{ page.title }}
+
+Telegram [@{{site.telegram_username}}](https://tg.me/{{site.telegram_username}})  
+Github [@{{site.github_username}}](https://github.com/{{site.github_username}})

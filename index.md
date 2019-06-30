@@ -1,6 +1,6 @@
 ---
-title: Глпвная
-layout: default
+title: Главная
+layout: promo
 ---
 
 <div class="promo">
