@@ -9,7 +9,7 @@ description: >
   Большую часть времени занимаюсь frontend разработкой, UX/UI.
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://fagcinsk.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://fagcinsk.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 github_username:  fagcinsk
 telegram_username: fagci
