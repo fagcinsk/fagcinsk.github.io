@@ -14,13 +14,13 @@ title: Android shell scripting. Part 1.
 
 Чтобы настроить переменные окружения, которые будут установлены при запуске shell (sh), необходимо внести правки в файл /etc/mkshrc. Но перед этим нужно примонтировать файловую систему для записи:
 
-```
+```shell
 mount -o remount,rw /system
 ```
 
 Пример установки путей для midnight commander:
 
-```
+```shell
 export PATH=/system/xbin:/system/bin
 export TERMINFO=/etc/terminfo
 export TERM=xterm-256color

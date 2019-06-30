@@ -6,7 +6,7 @@ title: STM32 ILI9341 SPI with DMA
 
 Долго возился с подключением DMA на STM32f103, в итоге удалось завести следующим образом:  
 
-```
+```cpp
 u8              dmaWorking = 0;
 DMA_InitTypeDef dma8, dma16;
 
