@@ -3,6 +3,8 @@ layout: page
 title: Обо мне
 permalink: /about/
 image: /assets/img/me.jpg
+description: >
+  Краткая информация обо мне как о веб-разработчике.
 ---
 
 ![Я]({{ page.image }}){:style="float: right; width: 250px;"}
