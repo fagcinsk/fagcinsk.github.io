@@ -35,7 +35,7 @@ a {
   text-decoration: none;
   color: #66d;
   transition: color 150ms ease-in-out;
-  &:hover, &:active {color: #66e}
+  &:hover, &:active, &.active {color: #66e}
 }
 
 hr {

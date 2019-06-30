@@ -19,7 +19,7 @@
   a {
     color: #ccf;
     display: block;
-    &:hover, &:active {
+    &:hover, &:active, &.active {
       color: #fff;
     }
   }

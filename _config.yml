@@ -39,8 +39,8 @@ plugins:
 
 navigation: # Navigation links
   - {name: 'Главная', link: '/'}
-  - {name: 'Обо мне', link: '/about'}
-  - {name: 'Контакты', link: '/contact'}
+  - {name: 'Обо мне', link: '/about/'}
+  - {name: 'Контакты', link: '/contact/'}
 
 permalinks: pretty
 permalink: /:categories/:title/
