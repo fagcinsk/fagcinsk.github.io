@@ -40,6 +40,9 @@ navigation: # Navigation links
   - {name: 'Обо мне', link: '/about'}
   - {name: 'Контакты', link: '/contact'}
 
+permalinks: pretty
+permalink: /:categories/:title/
+
 categoryMap:
   frontend: Фронтенд
   backend: Бэкэнд
