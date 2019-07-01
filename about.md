@@ -7,9 +7,9 @@ description: >
   Краткая информация обо мне как о веб-разработчике.
 ---
 
-![Я]({{ page.image }}){:style="float: right; width: 350px;"}
-
 # Михаил Юдин
+
+![Я]({{ page.image }}){:style="float: right; width: 350px;"}
 
 Дата рождения: 28.01.1990
 

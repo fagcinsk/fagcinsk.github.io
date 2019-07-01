@@ -1,0 +1,4 @@
+{% include pubdate.html date=include.post.date %}
+{% if include.post.updated %}
+  (updated <time itemprop="dateModified" datetime="{{ include.post.updated | date: '%Y-%m-%d' }}">{{ include.post.updated | date: "%B %e, %Y" }}</time>)
+{% endif %}

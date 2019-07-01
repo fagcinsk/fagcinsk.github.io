@@ -2,6 +2,7 @@
 layout: post
 category: hardware
 title: STM32f103 ADC with DMA
+tags: stm32
 ---
 
 Having troubles with ADC using DMA, solved by introducing timer for external triggering.  

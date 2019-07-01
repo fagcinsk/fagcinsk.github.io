@@ -2,6 +2,7 @@
 layout: post
 categories: lifehacks
 title: 5 причин почему Google Chrome тормозит — советы программиста
+tags: chrome
 ---
 
 # Проблема
