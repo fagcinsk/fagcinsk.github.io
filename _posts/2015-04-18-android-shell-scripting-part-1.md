@@ -39,6 +39,4 @@ fi
 3.  укажем пути хранения конфигурации midnight commander
 4.  установим режим терминала xterm с поддержкой 256 цветов
 
-Установщик midnight commander можно скачать по ссылке: [NativnuxInstaller.apk](https://drive.google.com/open?id=0By7QfrffBV76fkozTGtfMjdER01YWF8tQ3VrNFljVTZLY1VBWGlZV21RbFR2XzRWYVVfSEU)
-
 В следующей части будет описана процедура получения и установки различных linux утилит одним из простых способов.
