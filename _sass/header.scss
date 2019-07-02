@@ -8,20 +8,12 @@
   margin-top: 4px;
 }
 
-.main-menu__list {
-  margin: 0;
-}
-
 .main-menu__item {
   display: inline-block;
   margin-right: 16px;
-  
-  a {
-    color: #ccf;
-    display: block;
-    &:hover, &:active, &.active {
-      color: #fff;
-    }
+  color: #ccf;
+  &:hover, &:active, &.active {
+    color: #fff;
   }
 }
 

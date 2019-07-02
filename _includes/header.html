@@ -1,16 +1,12 @@
 <header class="page__header">
 	<div class="site-title">{{ site.headline | escape }}</div>
 	<nav class="main-menu">
-		<ul class="main-menu__list">
-			{% for nav_item in site.navigation %}
-          <li class="main-menu__item">
-            {% if page.url == nav_item.link %}
-            <a class="active" href="{{nav_item.link}}" title="{{nav_item.name}}">{{nav_item.name}}</a>
-            {% else %}
-            <a href="{{nav_item.link}}" title="{{nav_item.name}}">{{nav_item.name}}</a>
-            {% endif %}
-          </li>
-			{% endfor %}
-		</ul>
+		{% for nav_item in site.navigation %}
+			{% assign class = nil %}
+			{% if page.url == nav_item.link %}
+				{% assign class = 'active' %}
+			{% endif %}
+            <a class="main-menu__item {{class}}" href="{{nav_item.link}}" title="{{nav_item.name}}">{{nav_item.name}}</a>
+		{% endfor %}
 	</nav>
 </header>
