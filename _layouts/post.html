@@ -4,18 +4,16 @@ layout: default
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post__header">
     <div class="post__meta">
-        {% include post-meta.html post=page %}
+      {% include post-meta.html post=page %}
     </div>
     <h1 class="post__title" itemprop="headline">{{ page.title | escape }}</h1>
   </header>
   <div class="post__content" itemprop="articleBody">{{content}}</div>
 </article>
 
+{% if site.related_posts %}
 <section class="related-posts">
-  {% if site.related_posts %}
   <b>Ещё почитать:</b>
-  {% for post in site.related_posts %}
-  {% include post-item.html %}
-  {% endfor %}
-  {% endif %}
+  {% for post in site.related_posts %}{% include post-item.html %}{% endfor %}
 </section>
+{% endif %}
