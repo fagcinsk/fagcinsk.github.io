@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 category: hardware
 title: STM32 ILI9341 SPI with DMA
 tags: stm32 ili9341

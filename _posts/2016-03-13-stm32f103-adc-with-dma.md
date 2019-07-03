@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 category: hardware
 title: STM32f103 ADC with DMA
 tags: stm32
