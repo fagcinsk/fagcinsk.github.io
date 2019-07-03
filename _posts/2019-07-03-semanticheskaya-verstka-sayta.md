@@ -2,7 +2,6 @@
 layout: post
 comments: true
 categories: frontend
-tags: [ "HTML5", "Семантическая вёрстка", "Accessibility", "SEO"]
 title: Семантическая вёрстка сайта
 description: Как я начал использовать семантическую вёрстку и стал улучшать пользовательский опыт при помощи семантических тегов HTML5
 ---
