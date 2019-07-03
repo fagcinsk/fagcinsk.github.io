@@ -1,12 +1,12 @@
 <div class="pager">
-    {% if paginator.previous_page %}
+    {%- if paginator.previous_page -%}
         <a class="pager__prev" href="{{ paginator.previous_page_path }}">Предыдущая страница</a>
-    {% endif %}
-    {% if paginator.previous_page and paginator.next_page %}
+    {%- endif -%}
+    {%- if paginator.previous_page and paginator.next_page -%}
         &nbsp;
         &nbsp;
-    {% endif %}
-    {% if paginator.next_page %}
+    {%- endif -%}
+    {%- if paginator.next_page -%}
         <a class="pager__next" href="{{ paginator.next_page_path }}">Следующая страница</a>
-    {% endif %}
+    {%- endif -%}
 </div>

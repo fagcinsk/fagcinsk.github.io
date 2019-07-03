@@ -1,12 +1,12 @@
 <header class="page__header">
 	<div class="site-title">{{ site.headline | escape }}</div>
 	<nav class="main-menu">
-		{% for nav_item in site.navigation %}
-			{% assign class = nil %}
-			{% if page.url == nav_item.link %}
-				{% assign class = 'active' %}
-			{% endif %}
+		{%- for nav_item in site.navigation -%}
+			{%- assign class = nil -%}
+			{%- if page.url == nav_item.link -%}
+				{%- assign class = 'active' -%}
+			{%- endif -%}
             <a class="main-menu__item {{class}}" href="{{nav_item.link}}" title="{{nav_item.name}}">{{nav_item.name}}</a>
-		{% endfor %}
+		{%- endfor -%}
 	</nav>
 </header>

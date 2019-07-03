@@ -6,7 +6,6 @@
   {% seo %}
   {% feed_meta %}
   
-  <!-- <link rel="manifest" href="{{ '/assets/manifest.json' | relative_url }}"> -->
   <link rel="shortcut icon" href="{{ '/assets/img/favicon.ico' | relative_url }}">
   <meta name="theme-color" content="#ffffff">
 
@@ -20,10 +19,6 @@
     enable_page_level_ads: true
   });
 </script>
-
-  {% if site.google_tag_manager %}
-    {% include gtm.html %}
-  {% endif %}
 
   <link rel="preload" href="{{ '/assets/css/main.css' | relative_url }}" as="style">
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
