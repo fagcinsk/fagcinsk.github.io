@@ -8,6 +8,7 @@ body {
   min-height: 100vh;
   flex-direction: column;
   font-size: 1rem;
+  overflow-y: scroll;
 }
 
 main {
@@ -43,7 +44,10 @@ body > header a {
 a {
   text-decoration: none;
   transition: color 150ms ease-in-out;
-  &:hover, &:active, &.active {color: #66e}
+
+  &:hover, &:active, &.active {
+    color: #66e
+  }
 }
 
 hr {
