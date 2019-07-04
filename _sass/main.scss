@@ -2,7 +2,7 @@
   padding: 32px;
   margin: 0 auto;
   align-self: center;
-  max-width: 1024px;
+  max-width: 48rem;
   width: 100%;
 }
 
@@ -22,15 +22,14 @@
 .post {
   margin-bottom: 32px;
   padding: 32px;
-  border-radius: 4px;
-  border: 1px solid #ddd;
 }
 
 .post__header {
   margin-bottom: 16px;
 }
 
-.post__meta, .post-item__meta {
+.post__meta,
+.post-item__meta {
   color: #666;
   font-size: 0.875rem;
 }
@@ -49,8 +48,16 @@
   margin: 0 0 16px;
   text-align: center;
 
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 2.25rem;
+  }
+
   h2 {
-    font-size: 1rem;
+    font-size: 1.25rem;
+    color: #666;
+    max-width: 48rem;
+    margin: 0 auto;
   }
 }
 
@@ -72,7 +79,8 @@ form {
   flex-flow: column;
 }
 
-input, textarea {
+input,
+textarea {
   font-size: 1.125rem;
   border: none;
   border-bottom: 1px solid #668;
