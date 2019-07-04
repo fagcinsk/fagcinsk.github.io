@@ -7,9 +7,20 @@ description: >
   Краткая информация обо мне как о веб-разработчике.
 ---
 
+<style>
+img.me {
+float: right; width: 300px; margin: 0 0 16px 16px; border-radius: 3px; 
+}
+@media (max-width:768px) {
+  img.me {
+    width:100%
+  }
+}
+</style>
+
 Никогда не думал о том, что заведу когда-нибудь свой блог. И вот я здесь =)
 
-![Я]({{ page.image }}){:style="float: right; width: 300px; margin: 0 0 16px 16px; border-radius: 3px;"}
+![Я]({{ page.image }}){:class="me"}
 
 С главной страницы уже было понятно, как меня зовут, лучше расскажу кратко о себе.
 
