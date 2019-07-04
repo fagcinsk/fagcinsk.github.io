@@ -18,3 +18,9 @@
   font-weight: 600;
   flex: 1;
 }
+
+@media (max-width: 768px) {
+  .page__header {
+    flex-flow: column;
+  }
+}
