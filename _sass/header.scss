@@ -1,6 +1,6 @@
 .page__header {
-  background: #444;
   padding: 8px 16px;
+  display: flex;
 }
 
 .main-menu {
@@ -11,14 +11,10 @@
 .main-menu__item {
   display: inline-block;
   margin-right: 16px;
-  color: #ccf;
-  &:hover, &:active, &.active {
-    color: #fff;
-  }
 }
 
 .site-title {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #eee;
+  flex: 1;
 }

@@ -31,9 +31,17 @@ img::selection {
   background: transparent;
 }
 
+body > header a {
+  color: #222;
+  text-transform: uppercase;
+}
+
+.page__content a {
+  color: #66d;
+}
+
 a {
   text-decoration: none;
-  color: #66d;
   transition: color 150ms ease-in-out;
   &:hover, &:active, &.active {color: #66e}
 }
