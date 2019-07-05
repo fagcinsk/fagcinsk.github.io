@@ -18,6 +18,8 @@ float: right; width: 300px; margin: 0 0 16px 16px; border-radius: 3px;
 }
 </style>
 
+# Обо мне
+
 Никогда не думал о том, что заведу когда-нибудь свой блог. И вот я здесь =)
 
 ![Я]({{ page.image }}){:class="me"}
