@@ -98,7 +98,7 @@ description: Как я начал использовать семантичес�
     <h1>Article title</h1>
     <p>Author, <time>2019-07-03</time>
   </header>
-  <p>Article content</p>
+  <div>Article content</div>
   <footer>
     <small>viewed 15 times</small>
   </footer>
