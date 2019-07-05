@@ -5,7 +5,7 @@ title: Полезные приложения Android
 description: Делюсь набором любимых приложений, без которых мне тяжело обходиться, так как их функционал покрывает все нужды в их области
 ---
 
-Постепенно пополняя свой арсенал приложений, которыми часто пользуюсь, появляются такие, которые не просто Must have, а без которых теперь сложно обходиться.
+Постепенно пополняя свой арсенал приложений которыми часто пользуюсь, появляются не просто Must have, а без которых теперь сложно обходиться.
 Представляю вашему вниманию набор полезных приложений под ОС Android.
 
 ## FooView
@@ -28,7 +28,7 @@ fooView (Float Viewer) - это волшебная плавающая кнопк
 — поиск на устройстве
 — многостраничный автоматический скриншот
 
-![](https://www.youtube.com/watch?v=JrWzmNIW4-Q&t=804s)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JrWzmNIW4-Q" frameborder="0" allowfullscreen></iframe>
 
 ## MiXplorer
 
@@ -52,7 +52,8 @@ MiXplorer - это быстрый, удобный, красивый и полн�
 
 ## MultilingOKeyboard
 
-PlayMarket । 4pda
+[PlayMarket](https://play.google.com/store/apps/details?id=kl.ime.oh)
+[4pda](https://4pda.ru/forum/index.php?showtopic=634293)
 
 Клавиатура для любых языков, многофункциональная и настраиваемая.
 
@@ -73,7 +74,8 @@ PlayMarket । 4pda
 
 ## Automagic
 
-PlayMarket | 4pda
+[PlayMarket](https://play.google.com/store/apps/details?id=ch.gridvision.ppam.androidautomagic&hl=ru) 
+[4pda](https://4pda.ru/forum/index.php?showtopic=456523)
 
 Автоматизация андроид с блок-схемами (аналог AutomateIt, Tasker и MacroDroid).
 
@@ -83,7 +85,8 @@ PlayMarket | 4pda
 
 ## PCRADIO
 
-PlayMarket | 4pda
+[PlayMarket](https://play.google.com/store/apps/details?id=com.maxxt.pcradio&hl=ru)
+[4pda](https://4pda.ru/forum/index.php?showtopic=311603)
 
 Десятки интернет радио станций разной тематики и направлений.
 
@@ -99,7 +102,8 @@ PlayMarket | 4pda
 
 ## SD Maid
 
-PlayMarket | 4pda
+[PlayMarket](https://play.google.com/store/apps/details?id=eu.thedarken.sdm&hl=ru)
+[4pda](https://4pda.ru/forum/index.php?showtopic=230839)
 
 Чистка "хвостов" за удалёнными приложениями.
 
@@ -111,7 +115,8 @@ PlayMarket | 4pda
 
 ## DVGet
  
-PlayMarket | 4pda
+[PlayMarket](https://play.google.com/store/apps/details?id=com.dv.get&hl=ru)
+[4pda](https://4pda.ru/forum/index.php?showtopic=280941)
 
 Менеджер загрузок
 
@@ -131,7 +136,8 @@ PlayMarket | 4pda
 
 ## eWeather HD
 
-PlayMarket | 4pda
+[PlayMarket](https://play.google.com/store/apps/details?id=com.Elecont.WeatherClock&hl=ru)
+[4pda](https://4pda.ru/forum/index.php?showtopic=194110)
 
 Подробный и точный прогноз погоды.
 
@@ -150,13 +156,14 @@ PlayMarket | 4pda
 
 ## ProgTV
 
-PlayMarket | 4pda
+[PlayMarket](https://play.google.com/store/apps/details?id=com.progdvb.progtva&hl=ru)
+[4pda](https://4pda.ru/forum/index.php?showtopic=617665)
 
-Интернет ТВ, архив фильмов, радио и вебкамеры всего мира.
+Интернет ТВ, архив фильмов, радио и веб камеры всего мира.
 
 ― IPTV (включая udp http proxy, слепой поиск и прочий сервис)
 ― Гид - XMLTV, JTV включая zip, gzip.
-― OTT провайдеры(Kartina TV, OTT Club, Shura TV, Nasche TV, Rodnoe TV,....) , без VOD но с архивом.
+― OTT провайдеры(Kartina TV, OTT Club, Shura TV, Nasche TV, Rodnoe TV, ...), без VOD но с архивом.
 ― ProgDVB клиент
 ― DVB over IP
 ― 300+ Internet TV каналов, 3000+ радио 
@@ -168,7 +175,8 @@ PlayMarket | 4pda
 
 ## Locus map
 
-Play market | 4pda
+[Play market](https://play.google.com/store/apps/details?id=menion.android.locus&hl=ru)
+[4pda](http://4pda.ru/forum/index.php?showtopic=210573)
 
 Приложение для путешественников на своих двоих, ногах или колесах.
 
@@ -183,3 +191,6 @@ Play market | 4pda
 - POI;
 - отображение фото из галереи с geo meta;
 - карты высот, график высот маршрута.
+
+Каждого приложения достаточно, чтобы делать им всё, для чего оно предназначено. Пробуйте, пользуйтесь, радуйтесь =)
+ 
