@@ -9,6 +9,10 @@
 .post-item {
   padding: 8px 0;
   margin-bottom: 1rem;
+
+  h3 {
+    margin-top: 0;
+  }
 }
 
 .post-item__title {
@@ -20,8 +24,9 @@
 }
 
 .post {
+  padding: 32px 0;
   margin-bottom: 32px;
-  padding: 32px;
+  border-bottom: 1px solid #ddd;
 }
 
 .post__header {

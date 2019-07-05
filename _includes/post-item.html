@@ -1,8 +1,8 @@
 <article class="post-item" itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-item__header">
-    <h2 class="post-item__title" itemprop="name">
+    <h3 class="post-item__title" itemprop="name">
       <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-    </h2>
+    </h3>
   </header>
   <p class="post-item__summary" itemprop="articleBody">{{ post.excerpt | strip_html | truncatewords:25 | strip }}</p>
   <div class="post-item__meta">

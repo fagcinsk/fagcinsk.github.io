@@ -27,8 +27,7 @@ ul,
 ol,
 dl,
 table {
-  margin-top: 0;
-  margin-bottom: 1em;
+  margin-bottom: 1.25em;
 }
 
 ul,
@@ -43,28 +42,29 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 0;
-  margin-bottom: 0.75rem;
+  margin: 2.75rem 0 1rem;
+  line-height: 1.15;
   font-weight: 400;
 }
 
 h1 {
-  font-size: 2rem;
+  margin-top: 0;
 }
+
+h1 {
+  font-size: 1.953em;
+}
+
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.563em;
 }
+
 h3 {
-  font-size: 1.25rem;
+  font-size: 1.25em;
 }
+
 h4 {
-  font-size: 1.125rem;
-}
-h5 {
-  font-size: 1rem;
-}
-h6 {
-  font-size: 0.875rem;
+  font-size: 0.8em;
 }
 
 blockquote {
@@ -72,6 +72,7 @@ blockquote {
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
   color: #666;
+
   p {
     margin: 1rem 0;
   }
@@ -108,6 +109,7 @@ pre {
 
 table {
   width: 100%;
+
   td,
   th {
     padding: 0.5em 0;
