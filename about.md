@@ -108,3 +108,8 @@ float: right; width: 300px; margin: 0 0 16px 16px; border-radius: 3px;
 
 - GIMP, Photoshop
 - Blender, 3DsMax
+
+<div itemscope itemtype="http://schema.org/Person">
+  <span itemprop="name">Михаил Юдин</span>
+  <span itemprop="birthDate">28 января 1990 г.</span>
+</div>
