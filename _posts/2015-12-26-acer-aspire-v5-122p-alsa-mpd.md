@@ -1,6 +1,7 @@
 ---
 layout: post
 category: linux
+tags: ["scripting"]
 title: Acer Aspire v5 122p alsa, mpd
 ---
 

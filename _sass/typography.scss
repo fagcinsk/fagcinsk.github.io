@@ -5,10 +5,7 @@ html {
 }
 
 body {
-  font-family: $font-family-sans-serif;
-  font-size: 1rem;
-  line-height: 1.45;
-  -webkit-font-smoothing: subpixel-antialiased;
+  font: 1rem/1.45 $font-family-sans-serif;
   text-rendering: optimizeLegibility;
   color: #222;
 }
@@ -19,7 +16,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $font-family-sans-serif;
+  font-family: $font-family-sans-serif-condensed;
+  font-stretch: condensed;
 }
 
 p,
