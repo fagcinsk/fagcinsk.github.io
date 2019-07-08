@@ -29,7 +29,9 @@ fooView (Float Viewer) - это волшебная плавающая кнопк
 — поиск на устройстве
 — многостраничный автоматический скриншот
 
+<div class="video-wrapper">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/JrWzmNIW4-Q" frameborder="0" allowfullscreen></iframe>
+</div>
 
 ## MiXplorer
 
