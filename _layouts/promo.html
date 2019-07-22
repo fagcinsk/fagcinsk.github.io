@@ -9,6 +9,7 @@
 
   <main aria-label="Content">
     {{ content }}
+    <aside>{%- include tags.html -%}</aside>
     <div class="page__content">
       {% include post-list.html %}
       {% include pagination.html %}
