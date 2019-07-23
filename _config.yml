@@ -24,7 +24,7 @@ social:
     - https://vk.com/fagci
 
 # Build settings
-safe: true
+#safe: true
 paginate: 10
 paginate_path: "/page:num/"
 markdown: kramdown
@@ -32,13 +32,6 @@ kramdown:
   input: GFM
   hard_wrap: true
   syntax_highlighter: rouge
-
-plugins:
-  - jekyll-sitemap
-  - jekyll-feed
-  - jekyll-seo-tag
-  - jekyll-paginate
-  - jekyll-redirect-from
 
 navigation: # Navigation links
   - {name: 'Главная', link: '/'}
@@ -61,6 +54,10 @@ webmaster_verifications:
   bing: # 1234
   alexa: # 1234
   yandex: # 1234
+
+exiftag:
+ sources:
+   - photos
 
 exclude:
   - Gemfile
