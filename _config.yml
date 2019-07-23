@@ -55,6 +55,10 @@ webmaster_verifications:
   alexa: # 1234
   yandex: # 1234
 
+maps:
+    google:
+      api_key: AIzaSyAf9YISYXCikh0atpkIETWXsFyshRdt72E
+
 exiftag:
  sources:
    - photos
