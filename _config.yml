@@ -49,22 +49,6 @@ categoryMap:
   linux: Linux
   android: Android
 
-webmaster_verifications:
-  google: # 1234
-  bing: # 1234
-  alexa: # 1234
-  yandex: # 1234
-
-maps:
-    google:
-      api_key: AIzaSyAf9YISYXCikh0atpkIETWXsFyshRdt72E
-      
-google_maps_api_key: AIzaSyAf9YISYXCikh0atpkIETWXsFyshRdt72E
-
-exiftag:
- sources:
-   - photos
-
 exclude:
   - Gemfile
   - Gemfile.lock
