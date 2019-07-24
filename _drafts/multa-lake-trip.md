@@ -14,11 +14,11 @@ description: Чистейшие горные озёра, большие медв
 {% include image.html url="/photos/multa-lake-trip/IMG_20190710_043935.jpg" description="Раннее утро в Горно-Алтайске" %}
 
 {% capture lat %}
-{{- 'photos/multa-lake-trip/IMG_20190710_043935.jpg' | exif: 'gps.latitude' -}}
+{{- 'photos/multa-lake-trip/IMG_20190710_043935.jpg' | exif: 'gps.latitude' | round: 7 -}}
 {% endcapture %}
 
 {% capture lng %}
-{{- 'photos/multa-lake-trip/IMG_20190710_043935.jpg' | exif: 'gps.longitude' -}}
+{{- 'photos/multa-lake-trip/IMG_20190710_043935.jpg' | exif: 'gps.longitude' | round: 7 -}}
 {% endcapture %}
 
 {{lat}}, {{lng}}
@@ -29,10 +29,5 @@ description: Чистейшие горные озёра, большие медв
 ![Пещера Усть-Кан](/photos/multa-lake-trip/IMG_20190712_173829.jpg)
 
 
-{% google_map
-   zoom="10"
-   latitude: lat
-   longitude: lng
-   marker_title="Boo"
-   marker_url="https://en.wikipedia.org/wiki/Madrid" %}
+{% include map.html latitude=lat longitude=lng zoom="10" %}
 
