@@ -14,11 +14,11 @@ description: Чистейшие горные озёра, большие медв
 {% include image.html url="/photos/multa-lake-trip/IMG_20190710_043935.jpg" description="Раннее утро в Горно-Алтайске" %}
 
 {% capture lat %}
-{{- 'photos/multa-lake-trip/IMG_20190710_043935.jpg' | exif: 'gps.latitude' | round: 7 -}}
+{{- 'photos/multa-lake-trip/IMG_20190710_043935.jpg' | exif: 'gps.latitude' -}}
 {% endcapture %}
 
 {% capture lng %}
-{{- 'photos/multa-lake-trip/IMG_20190710_043935.jpg' | exif: 'gps.longitude' | round: 7 -}}
+{{- 'photos/multa-lake-trip/IMG_20190710_043935.jpg' | exif: 'gps.longitude' -}}
 {% endcapture %}
 
 {{lat}}, {{lng}}
