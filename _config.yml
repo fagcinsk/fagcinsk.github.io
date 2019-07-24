@@ -48,6 +48,9 @@ categoryMap:
   hardware: Железо
   linux: Linux
   android: Android
+  trip: Путешествия
+
+leaflet: leaflet@1.5.1
 
 exclude:
   - Gemfile
