@@ -1,9 +1,11 @@
 <div id="disqus_thread"></div>
 <script>
   var disqus_config = function () {
-    this.page.url = document.location.href;
-    this.page.identifier = document.location.pathname;
+    this.page.url = '{{site.url}}{{page.url}}';
+    this.page.identifier = '{{page.url}}';
   };
+
+  console.log(disqus_config);
 
   (function () { // DON'T EDIT BELOW THIS LINE
     var d = document, s = d.createElement('script');
