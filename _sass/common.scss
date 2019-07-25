@@ -59,6 +59,13 @@ hr {
 
 figcaption {
   text-align: center;
-  font-size: .8rem;
-  color: #888;
+  font-size: .875rem;
+  color: #446;
+  padding: 4px 8px;
+}
+
+figure, .map {
+  border-radius: 3px;
+  overflow: hidden;
+  border: 1px solid #ddd;
 }

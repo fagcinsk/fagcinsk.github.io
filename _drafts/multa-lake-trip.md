@@ -13,24 +13,11 @@ image: /photos/multa-lake-trip/IMG_20190710_052534.jpg
 
 ## Приехали
 
-{% responsive_image path: photos/multa-lake-trip/IMG_20190710_043935.jpg %}
-
-{% include image.html url="/photos/multa-lake-trip/IMG_20190710_043935.jpg" description="Раннее утро в Горно-Алтайске" %}
-
-{% capture lat %}
-{{- 'photos/multa-lake-trip/IMG_20190710_043935.jpg' | exif: 'gps.latitude' -}}
-{% endcapture %}
-
-{% capture lng %}
-{{- 'photos/multa-lake-trip/IMG_20190710_043935.jpg' | exif: 'gps.longitude' -}}
-{% endcapture %}
-
-{{lat}}, {{lng}}
-
-![Рождение маршрутов](/photos/multa-lake-trip/IMG_20190710_052534.jpg)
-![В горах значительно холоднее](/photos/multa-lake-trip/IMG_20190712_152402.jpg)
-![Чем дальше, тем выше горы](/photos/multa-lake-trip/IMG_20190712_161407.jpg)
-![Пещера Усть-Кан](/photos/multa-lake-trip/IMG_20190712_173829.jpg)
+{% include image.html exif=1 url="photos/multa-lake-trip/IMG_20190710_043935.jpg" description="Раннее утро в Горно-Алтайске" %}
+{% include image.html exif=1 url="photos/multa-lake-trip/IMG_20190710_052534.jpg" description="Рождение маршрутов" %}
+{% include image.html exif=1 url="photos/multa-lake-trip/IMG_20190712_152402.jpg" description="В горах значительно холоднее" %}
+{% include image.html exif=1 url="photos/multa-lake-trip/IMG_20190712_161407.jpg" description="Чем дальше, тем выше горы" %}
+{% include image.html exif=1 url="photos/multa-lake-trip/IMG_20190712_173829.jpg" description="Пещера Усть-Кан" %}
 
 
 {% include map.html latitude=lat longitude=lng zoom="10" %}
