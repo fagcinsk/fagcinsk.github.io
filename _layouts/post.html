@@ -20,9 +20,4 @@ layout: default
 {% include disqus.html %}
 {% endif %}
 
-{% if site.related_posts %}
-<section class="related-posts">
-  <b>Ещё почитать:</b>
-  {% for post in site.related_posts %}{% include post-item.html %}{% endfor %}
-</section>
-{% endif %}
+{% include related.html %}

@@ -1,0 +1,7 @@
+{% if site.related_posts != empty %}
+<section class="related-posts">
+  <b>Ещё почитать:</b>
+
+  {% for post in site.related_posts | limit: 5 %}{% include post-item.html %}{% endfor %}
+</section>
+{% endif %}

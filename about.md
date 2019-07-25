@@ -7,17 +7,6 @@ description: >
   Краткая информация обо мне как о веб-разработчике.
 ---
 
-<style>
-img.me {
-float: right; width: 300px; margin: 0 0 16px 16px; border-radius: 3px; 
-}
-@media (max-width:768px) {
-  img.me {
-    width:100%
-  }
-}
-</style>
-
 # Обо мне
 
 Никогда не думал о том, что заведу когда-нибудь свой блог. И вот я здесь =)
