@@ -9,10 +9,10 @@
     </h3>
   </header>
   <div class="content flex">
+    <p class="post-item__summary flex-grow" itemprop="articleBody">{{ post.excerpt | strip_html | truncatewords:25 | strip }}</p>
     {% if post.image %}
     <aside class="post-preview" style="background-image: url({{ post.image }})"></aside>
     {% endif %}
-    <p class="post-item__summary flex-grow" itemprop="articleBody">{{ post.excerpt | strip_html | truncatewords:25 | strip }}</p>
   </div>
 
 
