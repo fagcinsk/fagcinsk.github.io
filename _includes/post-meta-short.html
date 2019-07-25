@@ -2,3 +2,4 @@
 {%- if include.post.updated -%}
   (updated <time itemprop="dateModified" datetime="{{ include.post.updated | date: '%Y-%m-%d' }}">{{ include.post.updated | date: "%B %e, %Y" }}</time>)
 {%- endif -%}
+<a href="{{ post.url }}#disqus_thread">комментарии</a>
