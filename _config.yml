@@ -1,7 +1,9 @@
 lang: ru
 title: Михаил Юдин
 headline: Михаил Юдин
-author: fagci
+author:
+  name: Михаил Юдин
+  email: fagci.nsk@gmail.com
 copyright: Михаил Юдин (fagci)
 email: fagci.nsk@gmail.com
 description: >
