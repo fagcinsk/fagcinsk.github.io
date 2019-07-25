@@ -1,15 +1,15 @@
-{% capture lat %}{{- include.url | exif: 'gps.latitude' -}}{% endcapture %}
-{% capture lng %}{{- include.url | exif: 'gps.longitude' -}}{% endcapture %}
-{% capture dt %}{{- include.url | exif: 'date_time' -}}{% endcapture %}
-{%- assign m = dt | date: "%-m" -%}
-<figure class="image">
+<figure class="image" title="{{ include.url }}">
   <img src="/{{ include.url }}" alt="{{ include.description }}">
   <figcaption>
     {{ include.description }}
     {% if include.exif %}
-    <br>
-    <i>{{- dt | date: "%-d"  }} {% case m %}{% when '1' %}января{% when '2' %}февраля{% when '3' %}марта{% when '4' %}апреля{% when '5' %}мая{% when '6' %}июня{% when '7' %}июля{% when '8' %}августа{% when '9' %}сентября{% when '10' %}октября{% when '11' %}ноября{% when '12' %}декабря{% endcase %} {{ dt | date: "%Y" -}}</i>
-    <i>{{lat | round: 5}}, {{lng | round: 5}}</i>
+        {% capture dt %}{% exiftag date_time, nil, {{ include.url }} %}{% endcapture %}
+        {% capture lat %}{% exiftag gps.latitude, nil, {{ include.url }} %}{% endcapture %}
+        {% capture lng %}{% exiftag gps.longitude, nil, {{ include.url }} %}{% endcapture %}
+        {%- assign m = dt | date: "%-m" -%}
+        <br>
+        <i>{{- dt | date: "%-d"  }} {% case m %}{% when '1' %}января{% when '2' %}февраля{% when '3' %}марта{% when '4' %}апреля{% when '5' %}мая{% when '6' %}июня{% when '7' %}июля{% when '8' %}августа{% when '9' %}сентября{% when '10' %}октября{% when '11' %}ноября{% when '12' %}декабря{% endcase %} {{ dt | date: "%Y" }} {{ dt | date: "%H:%M" -}}</i>
+        <i>{{ lat | round: 5 }}, {{ lng | round: 5 }}</i>
     {% endif %}
   </figcaption>
 </figure>

@@ -54,6 +54,11 @@ categoryMap:
 
 leaflet: leaflet@1.5.1
 
+exiftag:
+ sources:
+   - photos
+   - photos/multa-lake-trip
+
 exclude:
   - Gemfile
   - Gemfile.lock
