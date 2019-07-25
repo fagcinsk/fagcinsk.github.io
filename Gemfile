@@ -8,6 +8,6 @@ group :jekyll_plugins do
   gem "jekyll-paginate"
   gem "jekyll-sitemap"
   gem "jekyll-redirect-from"
-  gem 'jekyll-exif-data'
+  gem 'jekyll-exif-data' # TODO: remove. Somehow doesn't works without it.
   gem 'jekyll-exiftag'
 end
