@@ -13,6 +13,8 @@ image: /photos/multa-lake-trip/IMG_20190710_052534.jpg
 
 ## Приехали
 
+{% responsive_image path: photos/multa-lake-trip/IMG_20190710_043935.jpg %}
+
 {% include image.html url="/photos/multa-lake-trip/IMG_20190710_043935.jpg" description="Раннее утро в Горно-Алтайске" %}
 
 {% capture lat %}

@@ -11,6 +11,7 @@ group :jekyll_plugins do
   gem "jekyll-sitemap"
   gem "jekyll-redirect-from"
   gem 'jekyll-exif-data', '~> 0.0'
+  gem 'jekyll-responsive-image'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
