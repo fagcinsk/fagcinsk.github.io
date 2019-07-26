@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'palette';
 
 html {
   font-size: 100%;
@@ -68,16 +69,17 @@ h4 {
 }
 
 blockquote {
-  font-size: 1.25em;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  color: #666;
+  font-size: 1em;
+  border-top: 1px solid $p-primary-light;
+  border-bottom: 1px solid $p-primary-light;
+  color: $p-primary-dark;
 
   p {
     margin: 1rem 0;
   }
 
   cite {
+    margin-top: 0.5em;
     display: block;
     text-align: right;
   }

@@ -12,3 +12,25 @@
     });
   }
 </script>
+
+<script>
+  (function(window) {
+    var d = window.document,
+      goTop = d.querySelector('.go-top')
+
+    goTop.addEventListener('click', function(){
+      window.scrollTo(0, 0)
+    })
+
+    function onScroll() {
+      if(window.scrollY > window.innerHeight) {
+        goTop.classList.add('show')
+      } else {
+        goTop.classList.remove('show')
+      }
+    }
+
+    window.addEventListener('scroll', onScroll)
+    onScroll()
+  })(window)
+</script>

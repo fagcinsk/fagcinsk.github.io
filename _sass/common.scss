@@ -35,7 +35,9 @@ img::selection {
 
 body > header a {
   color: $p-grey-dark;
-  text-transform: uppercase;
+  &:not(.site-title) {
+    text-transform: uppercase;
+  }
 }
 
 .page__content a, .tags-cloud a {
@@ -69,4 +71,27 @@ figure, .map {
   border-radius: 3px;
   overflow: hidden;
   border: 1px solid $p-grey-light;
+}
+
+.go-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  font-size: 32px;
+  background-color: $p-grey-light;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 32px;
+  line-height: 32px;
+  text-align: center;
+  &:not(.show) {
+    display: none;
+  }
+  &:hover {
+    background-color: $p-primary-light;
+  }
+}
+
+.contact-icons {
+  font-size: 32px;
 }
