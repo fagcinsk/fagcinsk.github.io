@@ -1,12 +1,14 @@
 <header class="page__header" itemscope itemtype="http://schema.org/WPHeader">
 	<div class="site-title" itemprop="name">{{ site.headline | escape }}</div>
-	<nav class="main-menu">
+	<nav class="main-menu" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 		{%- for nav_item in site.navigation -%}
 			{%- assign class = nil -%}
 			{%- if page.url == nav_item.link -%}
 				{%- assign class = 'active' -%}
 			{%- endif -%}
-            <a class="main-menu__item {{class}}" href="{{nav_item.link}}" title="{{nav_item.name}}">{{nav_item.name}}</a>
+            <a class="main-menu__item {{class}}" itemprop="url" href="{{nav_item.link}}" title="{{nav_item.name}}">
+							<span itemprop="name">{{nav_item.name}}</span>
+						</a>
 		{%- endfor -%}
 	</nav>
 </header>
