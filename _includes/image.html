@@ -1,5 +1,6 @@
 <figure class="image" title="{{ include.url }}">
   <img src="/{{ include.url }}" alt="{{ include.description }}">
+  {% if include.description or include.exif %}
   <figcaption>
     {{ include.description }}
     {% if include.exif %}
@@ -14,4 +15,5 @@
         {% include map.html lat=lat lng=lng %}
     {% endif %}
   </figcaption>
+  {% endif %}
 </figure>

@@ -76,6 +76,11 @@ blockquote {
   p {
     margin: 1rem 0;
   }
+
+  cite {
+    display: block;
+    text-align: right;
+  }
 }
 
 code, pre {
