@@ -53,6 +53,10 @@ a {
   }
 }
 
+body>header a.active {
+  color: $p-primary;
+}
+
 hr {
   border: none;
   height: 1px;
@@ -93,5 +97,5 @@ figure, .map {
 }
 
 .contact-icons {
-  font-size: 32px;
+  font-size: 48px;
 }
