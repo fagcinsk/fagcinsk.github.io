@@ -15,4 +15,4 @@ VKontakte [@{{site.vk_username}}](https://vk.com/{{site.vk_username}})
 Telegram [@{{site.telegram_username}}](https://t.me/{{site.telegram_username}})  
 Github [@{{site.github_username}}](https://github.com/{{site.github_username}})
 
-{% include map.html latitude="55.0415" longitude="82.9346" zoom="7" %}
+{% include map.html lat="55.0415" lng="82.9346" zoom="7" %}
