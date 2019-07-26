@@ -1,5 +1,5 @@
-<header class="page__header">
-	<div class="site-title">{{ site.headline | escape }}</div>
+<header class="page__header" itemscope itemtype="http://schema.org/WPHeader">
+	<div class="site-title" itemprop="name">{{ site.headline | escape }}</div>
 	<nav class="main-menu">
 		{%- for nav_item in site.navigation -%}
 			{%- assign class = nil -%}
