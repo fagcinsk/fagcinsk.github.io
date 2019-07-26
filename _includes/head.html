@@ -26,14 +26,10 @@
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 
   {% if page.leaflet == true %}
-  <link href="https://unpkg.com/{{ site.leaflet }}/dist/leaflet.css" rel="stylesheet" />
+  <link href="/assets/css/leaflet.min.css" rel="stylesheet" />
   {% endif %}
 
-  <!-- For the .js -->
   {% if page.leaflet == true %}
-  <script src="https://unpkg.com/{{ site.leaflet }}/dist/leaflet.js"></script>
+  <script src="/assets/js/leaflet.min.js"></script>
   {% endif %}
-
-  <script src="//code.iconify.design/1/1.0.0-rc1/iconify.min.js"></script>
-
 </head>

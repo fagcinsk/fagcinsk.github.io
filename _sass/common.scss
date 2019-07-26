@@ -1,3 +1,5 @@
+@import "palette";
+
 html {
   box-sizing: border-box;
 }
@@ -33,12 +35,12 @@ img::selection {
 }
 
 body > header a {
-  color: #222;
+  color: $p-grey-dark;
   text-transform: uppercase;
 }
 
 .page__content a, .tags-cloud a {
-  color: #66d;
+  color: $p-primary;
 }
 
 a {
@@ -46,26 +48,26 @@ a {
   transition: color 150ms ease-in-out;
 
   &:hover, &:active, &.active {
-    color: #66e
+    color: $p-primary-light;
   }
 }
 
 hr {
   border: none;
   height: 1px;
-  background-color: #ddd;
+  background-color: $p-grey-light;
   margin: 16px 0;
 }
 
 figcaption {
   text-align: center;
   font-size: .875rem;
-  color: #446;
+  color: $p-primary-dark;
   padding: 4px 8px;
 }
 
 figure, .map {
   border-radius: 3px;
   overflow: hidden;
-  border: 1px solid #ddd;
+  border: 1px solid $p-grey-light;
 }

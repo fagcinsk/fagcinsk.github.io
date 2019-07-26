@@ -1,3 +1,6 @@
+@import 'palette';
+@import 'variables';
+
 .page__content {
   padding: 32px;
   margin: 0 auto;
@@ -26,7 +29,7 @@
 .post {
   padding: 32px 0;
   margin-bottom: 32px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid $p-grey-light;
 }
 
 .post__header {
@@ -35,7 +38,7 @@
 
 .post__meta,
 .post-item__meta {
-  color: #666;
+  color: $p-grey;
   font-size: 0.75rem;
 }
 
@@ -50,7 +53,7 @@
 }
 
 .category {
-  color: #666;
+  color: $p-grey;
   font-style: normal;
 }
 
@@ -70,7 +73,7 @@
 
   h2 {
     font-size: 1.25rem;
-    color: #666;
+    color: $p-grey;
     max-width: 48rem;
     margin: 0 auto;
   }
@@ -82,7 +85,7 @@
 
 form {
   padding: 16px;
-  background-color: #eee;
+  background-color: $p-grey-light;
   border-radius: 3px;
   font-size: 1rem;
   max-width: 550px;
@@ -98,7 +101,7 @@ input,
 textarea {
   font-size: 1.125rem;
   border: none;
-  border-bottom: 1px solid #668;
+  border-bottom: 1px solid $p-primary;
   background: none;
   padding: 8px 4px;
   margin: 4px 0;
@@ -115,14 +118,14 @@ button {
   border-radius: 4px;
   padding: 12px 16px;
   text-transform: uppercase;
-  background-color: #446;
-  color: #fff;
+  background-color: $p-primary-dark;
+  color: $p-white;
   margin-top: 8px;
   font-size: 1rem;
   cursor: pointer;
 
   &:hover {
-    background-color: #668;
+    background-color: $p-primary;
   }
 }
 
@@ -175,7 +178,10 @@ button {
 }
 
 img.me {
-  float: right; width: 300px; margin: 0 0 16px 16px; border-radius: 3px;
+  float: right;
+  width: 300px;
+  margin: 0 0 16px 16px;
+  border-radius: 3px;
 }
 
 @media (max-width: 768px) {
@@ -188,6 +194,6 @@ img.me {
   }
 
   img.me {
-    width:100%
+    width: 100%
   }
 }
