@@ -31,6 +31,7 @@ leaflet: true
 ### Следить за новостями
 
 <a href="/subscribe"><span class="iconify soc-i" data-icon="mdi-email"></span> Подписаться на E-mail рассылку</a>
+
 <a href ="/feed.xml"><span class="iconify soc-i" data-icon="mdi-rss"></span> RSS feed</a>
 
 {% include map.html lat="55.0415" lng="82.9346" zoom="7" %}
