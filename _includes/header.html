@@ -1,6 +1,6 @@
 <header class="page__header" itemscope itemtype="http://schema.org/WPHeader">
 	<div class="site-title" itemprop="name">{{ site.headline | escape }}</div>
-	<nav class="main-menu" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+	<nav class="main-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
 		{%- for nav_item in site.navigation -%}
 			{%- assign class = nil -%}
 			{%- if page.url == nav_item.link -%}
