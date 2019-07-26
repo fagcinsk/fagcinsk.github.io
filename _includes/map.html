@@ -3,7 +3,7 @@
 <script>
   (function (window, L) {
     // create the map object and set the cooridnates of the initial view:
-      var latLng = [{{include.lat}}, {{include.lng}}],
+      var latLng = [{{include.lat | default: 0}}, {{include.lng | default: 0}}],
         osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
         mapboxUrl = 'http://{s}.tiles.mapbox.com/v3/jamesg87.goac2bf1/{z}/{x}/{y}.png',
         map = L.map('map{{ mapindex }}').setView(latLng, {{include.zoom | default: 10}});
@@ -17,4 +17,3 @@
     var marker = L.marker(latLng).addTo(map)
   })(window, L)
 </script>
-

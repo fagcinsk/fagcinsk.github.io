@@ -184,6 +184,13 @@ img.me {
   border-radius: 3px;
 }
 
+.collapsible {
+  cursor: pointer;
+  & + div:not(.expanded) {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
   .page__content {
     padding: 16px;
