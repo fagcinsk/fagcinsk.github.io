@@ -1,4 +1,4 @@
 User-agent: *
 Allow: *
-Sitemap: https://fagcinsk.github.io/sitemap.xml
-Host: fagcinsk.github.io
+Sitemap: https://mikhail-yudin.ru/sitemap.xml
+Host: mikhail-yudin.ru
