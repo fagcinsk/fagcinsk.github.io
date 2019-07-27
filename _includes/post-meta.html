@@ -2,11 +2,7 @@
 {% if include.post.updated %}
   (updated <time itemprop="dateModified" datetime="{{ include.post.updated | date: '%Y-%m-%d' }}">{{ include.post.updated | date: "%B %e, %Y" }}</time>)
 {% endif %}
-{% if include.post.author %}
-• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ include.post.author }}</span></span>
-{% else %}
-• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ site.author.name }}</span></span>
-{% endif %}
+• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ include.post.author | default: site.author.name }}</span></span>
 {% include categories.html categories=include.post.categories %}
 {% if include.post.tags.size > 0 %}
 <span>
