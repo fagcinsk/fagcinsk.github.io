@@ -1,5 +1,6 @@
 ---
 layout: default
+permalink: /subscribe/
 ---
 
 <form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" 
