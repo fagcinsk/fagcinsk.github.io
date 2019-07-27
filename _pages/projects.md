@@ -4,27 +4,51 @@ title: Проекты
 permalink: /projects/
 description: >
   Мои проекты
+projects:
+  - category: Web
+    repos:
+      - name: Михаил Юдин | Персональный блог (этот блог)
+        repo: fagcinsk.github.io 
+      - name: PHP библиотека для генерации алиасов объектов
+        repo: ro-aliaseable-object 
+  - category: Hardware
+    repos:
+      - name: Реализация ПО для импульсного металлоискателя с графической и звуковой индикацией с системой меню и настройками
+        repo: arduino_metal_detector 
+      - name: STM32 ILI9341 spi
+        repo: stm-ILI9341-spi 
+      - name: CLion проект для stm32f103c8t6
+        repo: stm32-lcd-sandbox 
+  - category: Android
+    repos:
+      - name: Лаунчер с текстовым интерфейсом, быстрым поиском чего угодно на устройстве и работой с этими объектами
+        repo: tui_home 
+      - name: Android Bluetooth Low Energy tasker plugin
+        repo: ble_tasker_plugin 
+  - category: Linux, OS
+    repos:
+      - name: Начало реализации ОС x86
+        repo: fagci_os 
+      - name: dotfiles - файлы локальной конфигурации программ ОС Linux
+        repo: dotfiles 
 ---
 
 # Проекты
 
-## Web
+<table>
+{% for category in page.projects %}
+<tr>
+<th colspan="3" style="padding-top: 32px">{{ category.category }}</th>
+</tr>
 
-[fagcinsk.github.io aka mikhail-yudin.ru](https://github.com/fagcinsk/fagcinsk.github.io) Михаил Юдин | Персональный блог
-[ro-aliaseable-object](https://github.com/fagcinsk/ro-aliaseable-object) PHP библиотека для генерации алиасов объектов
+{% for repo in category.repos %}
+<tr>
+<td><a href="https://github.com/fagcinsk/{{ repo.repo }}">{{ repo.repo }}</a></td>
+<td>{{ repo.name }}</td>
+<td><a class="github-button" href="https://github.com/fagcinsk/{{ repo.repo }}" data-icon="octicon-star" data-show-count="true" aria-label="Star fagcinsk/stm32-lcd-sandbox on GitHub"></a></td>
+</tr>
+{% endfor %}
+{% endfor %}
+</table>
 
-## Android
-
-[tui_home](https://github.com/fagcinsk/tui_home) Лаунчер с текстовым интерфейсом, быстрым поиском чего угодно на устройстве и работой с этими объектами
-[ble_tasker_plugin](https://github.com/fagcinsk/ble_tasker_plugin) Android Bluetooth Low Energy tasker plugin
-
-## Linux, OS
-
-[fagci_os](https://github.com/fagcinsk/fagci_os) Начало реализации ОС x86
-[dotfiles](https://github.com/fagcinsk/dotfiles) dotfiles - файлы локальной конфигурации программ ОС Linux
-
-## Hardware
-
-[arduino_metal_detector](https://github.com/fagcinsk/arduino_metal_detector) Реализация ПО для импульсного металлоискателя с графической и звуковой индикацией с системой меню и настройками
-[spi](https://github.com/fagcinsk/stm-ILI9341-spi) STM32 ILI9341 spi
-[sandbox](https://github.com/fagcinsk/stm32-lcd-sandbox) CLion проект для stm32f103c8t6
+<script async defer src="https://buttons.github.io/buttons.js"></script>

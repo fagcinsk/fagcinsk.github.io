@@ -119,7 +119,7 @@ table {
 
   td,
   th {
-    padding: 0.5em 0;
-    border-bottom: 1px solid #eee;
+    padding: 0.5em 16px;
+    border-bottom: 1px solid $p-grey-light;
   }
 }
