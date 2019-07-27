@@ -1,9 +1,9 @@
 {%- include pubdate.html date=include.post.date -%}
 (обновлено {% include update.html date=include.post.last_modified_at %})
 • <a href="{{ post.url }}#disqus_thread">комментарии</a>
-<div itemprop="publisher" itemscope="" itemtype="https://schema.org/Person">
+<div itemprop="author" itemscope="" itemtype="https://schema.org/Person">
   <meta itemprop="name" content="{{ post.author | default: site.author.name }}">
 </div>
-<div itemprop="publisher" itemscope="" itemtype="https://schema.org/Person">
+<div itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
   <meta itemprop="name" content="{{ site.author.name }}">
 </div>
