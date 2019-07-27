@@ -1,7 +1,5 @@
 {% include pubdate.html date=include.post.date %}
-{% if include.post.updated %}
-  (updated <time itemprop="dateModified" datetime="{{ include.post.updated | date: '%Y-%m-%d' }}">{{ include.post.updated | date: "%B %e, %Y" }}</time>)
-{% endif %}
+(обновлено {% include update.html date=include.post.last_modified_at %})
 • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ include.post.author | default: site.author.name }}</span></span>
 {% include categories.html categories=include.post.categories %}
 {% if include.post.tags.size > 0 %}
