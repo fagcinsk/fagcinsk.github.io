@@ -25,6 +25,7 @@ social:
     - https://github.com/fagcinsk
     - https://vk.com/fagci
 
+include: ['_pages']
 # Build settings
 #safe: true
 paginate: 10
@@ -37,6 +38,7 @@ kramdown:
 
 navigation: # Navigation links
   - {name: 'Главная', link: '/'}
+  - {name: 'Проекты', link: '/projects/'}
   - {name: 'Обо мне', link: '/about/'}
   - {name: 'Контакты', link: '/contact/'}
 
