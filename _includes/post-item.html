@@ -10,7 +10,7 @@
   <div class="content flex">
     <p class="post-item__summary flex-grow" itemprop="articleBody">{{ post.excerpt | strip_html | truncatewords:25 | strip }}</p>
     {% if post.image %}
-    <meta itemprop="image" content="{{ post.image }}"></meta>
+    <meta itemprop="image" content="{{ post.image }}">
     <aside class="post-preview" style="background-image: url({{ post.image }})"></aside>
     {% endif %}
   </div>
