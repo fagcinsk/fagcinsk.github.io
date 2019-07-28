@@ -1,6 +1,8 @@
 ---
 layout: default
+title: Подписаться на E-mail рассылку
 permalink: /subscribe/
+description: Можете подписаться на E-mail рассылку, чтобы быть в курсе последних записей
 ---
 
 <form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" 

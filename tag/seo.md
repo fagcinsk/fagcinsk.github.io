@@ -1,5 +1,5 @@
 ---
 layout: tagpage
-title: "Tag: seo"
+title: "Просмотр материалов с тегом seo"
 tag: seo
 ---

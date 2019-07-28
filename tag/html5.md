@@ -1,5 +1,5 @@
 ---
 layout: tagpage
-title: "Tag: html5"
+title: "Просмотр материалов с тегом html5"
 tag: html5
 ---

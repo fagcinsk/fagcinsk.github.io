@@ -1,5 +1,5 @@
 ---
 layout: tagpage
-title: "Tag: chrome"
+title: "Просмотр материалов с тегом chrome"
 tag: chrome
 ---

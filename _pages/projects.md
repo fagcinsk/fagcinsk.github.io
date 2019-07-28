@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Проекты
+title: Веб-разработчик Михаил Юдин &mdash; мои проекты
 permalink: /projects/
 description: >
-  Мои проекты
+  Проекты, над которыми работаю или работал 
 projects:
   - category: Web
     repos:
@@ -33,7 +33,7 @@ projects:
         repo: dotfiles 
 ---
 
-# Проекты
+# Мои проекты
 
 <table>
 {% for category in page.projects %}

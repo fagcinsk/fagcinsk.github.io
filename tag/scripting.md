@@ -1,5 +1,5 @@
 ---
 layout: tagpage
-title: "Tag: scripting"
+title: "Просмотр материалов с тегом scripting"
 tag: scripting
 ---

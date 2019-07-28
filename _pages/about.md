@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Обо мне
+title: Веб-разработчик Михаил Юдин &mdash; обо мне
 permalink: /about/
 image: /assets/img/me.jpg
 description: >

@@ -1,5 +1,5 @@
 ---
 layout: tagpage
-title: "Tag: stm32"
+title: "Просмотр материалов с тегом stm32"
 tag: stm32
 ---
