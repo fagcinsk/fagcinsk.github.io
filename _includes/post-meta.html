@@ -1,5 +1,6 @@
 <span class="iconify" data-icon="mdi-calendar-range"></span> {% include pubdate.html date=include.post.date %}
-{% include update.html date=include.post.last_modified_at %}
+{% capture lastmod_date %}{% last_modified {{ include.post.path }} %}{% endcapture %}
+{% include update.html date=lastmod_date %}
 • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ include.post.author | default: site.author.name }}</span></span>
 {% include categories.html categories=include.post.categories %}
 {% if include.post.tags.size > 0 %}
