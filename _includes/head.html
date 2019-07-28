@@ -4,6 +4,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   {% seo %}
+  {%if page.tags %}
+  <meta name="keywords" content="{{ page.tags | join: ', ' | escape }}"/>
+  {% endif %}
   {% feed_meta %}
   
   <link rel="shortcut icon" href="{{ 'favicon.ico' | relative_url }}">

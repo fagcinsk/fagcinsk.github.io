@@ -7,8 +7,8 @@ author:
 copyright: Михаил Юдин (fagci)
 email: fagci.nsk@gmail.com
 description: >
-  Full-Stack developer. 
-  Большую часть времени занимаюсь frontend разработкой, UX/UI.
+  Личный блог веб разработчика, программиста Михаила Юдина.
+  Большую часть времени занимаюсь frontend разработкой, улучшаю пользовательский опыт, занимаюсь оптимизацией frontend приложений, UX/UI.
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mikhail-yudin.ru" # the base hostname & protocol for your site, e.g. http://example.com
