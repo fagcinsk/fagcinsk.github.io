@@ -36,7 +36,6 @@ kramdown:
   syntax_highlighter: rouge
 
 navigation: # Navigation links
-  - {name: 'Главная', link: '/'}
   - {name: 'Проекты', link: '/projects/'}
   - {name: 'Обо мне', link: '/about/'}
   - {name: 'Контакты', link: '/contact/'}
