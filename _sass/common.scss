@@ -16,12 +16,6 @@ main {
   flex: 1;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
 img, embed, object, video {
   max-width: 100%;
   height: auto;
