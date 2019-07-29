@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: 'en' }}" itemscope="" itemtype="http://schema.org/WebPage">
+<html lang="{{ page.lang | default: site.lang | default: 'ru' }}" itemscope="" itemtype="http://schema.org/WebPage">
 
 {%- include head.html -%}
 
@@ -9,7 +9,14 @@
 
   <main aria-label="Content" itemscope itemprop="mainContentOfPage">
     {{ content }}
-    <aside>{%- include tags.html -%}</aside>
+    <aside>
+      <ul class="categories">
+        {% for category in site.categories %}
+        {% capture cat %}{{ category | first }}{% endcapture %}
+        <li><a href="{{ site.url }}/category/{{ category | first | url_encode }}/index.html">{{ site.categoryMap[cat] }} ({{ category | last | size }})</a></li>
+        {% endfor %}
+      </ul>
+    </aside>
     <div class="page__content">
       {% include post-list.html %}
       {% include pagination.html %}

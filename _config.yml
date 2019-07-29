@@ -53,6 +53,9 @@ categoryMap:
   android: Android
   trip: Путешествия
 
+# category_path: "jekyll/category" # <- default value
+category_layout: "category-index.html" # <- default value
+
 leaflet: leaflet@1.5.1
 
 exiftag:
