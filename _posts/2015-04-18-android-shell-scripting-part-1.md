@@ -2,6 +2,7 @@
 layout: post
 category: android
 title: Android shell scripting. Part 1.
+tags: ["scripting"]
 ---
 
 Если возникло желание развернуть linux shell окружение на Вашем устройстве, можно воспользоваться приёмами, описанными далее.

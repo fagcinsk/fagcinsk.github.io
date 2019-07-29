@@ -2,6 +2,7 @@
 layout: post
 category: android
 title: Android shell scripting. Part 2.
+tags: ["scripting"]
 ---
 
 Если нет желания собирать консольные утилиты из исходников, можно воспользоваться менее болезненным способом.
