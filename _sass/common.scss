@@ -27,28 +27,29 @@ img::selection {
   background: transparent;
 }
 
-body > header a {
-  color: $p-grey-dark;
-  &:not(.site-title) {
-    text-transform: uppercase;
-  }
-}
-
-.page__content a, .tags-cloud a {
-  color: $p-primary;
+::selection {
+  background-color: $p-primary-dark;
+  color: $p-white;
 }
 
 a {
+  color: $p-primary;
   text-decoration: none;
-  transition: color 150ms ease-in-out;
+  transition: color 100ms ease-in-out;
 
   &:hover, &:active, &.active {
     color: $p-primary-light;
   }
 }
 
-body>header a.active {
-  color: $p-primary;
+.main-menu__item {
+  color: $p-grey-dark;
+  &:not(.site-title) {
+    text-transform: uppercase;
+  }
+  &.active {
+    color: $p-primary;
+  }
 }
 
 hr {

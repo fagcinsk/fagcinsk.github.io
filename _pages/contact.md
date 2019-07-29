@@ -14,7 +14,7 @@ leaflet: true
 <div class="contact-icons">
 <a title="Telegram" href="https://t.me/{{site.telegram_username}}"><span class="iconify soc-i" data-icon="mdi-telegram" ></span></a>
 <a title="VKontakte" href="https://vk.com/{{site.vk_username}}"><span class="iconify soc-i" data-icon="mdi-vk" ></span></a>
-<a title="Facebook" href="https://www.facebook.com/profile.php?id=100001429612548"><span class="iconify soc-i" data-icon="mdi-facebook" ></span></a>
+<a title="Facebook" href="https://www.facebook.com/fagcinsk"><span class="iconify soc-i" data-icon="mdi-facebook" ></span></a>
 <a title="ICQ" href="https://icq.im/{{site.icq_username}}"><span class="iconify soc-i" data-icon="mdi-flower-poppy" ></span></a>
 <a title="Skype" href="skype:{{site.skype_username}}?chat"><span class="iconify soc-i" data-icon="mdi-skype" ></span></a>
 <a title="E-mail" href="mailto:&#102;&#097;&#103;&#099;&#105;&#046;&#110;&#115;&#107;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;"><span class="iconify soc-i" data-icon="mdi-email"></span></a>

@@ -23,6 +23,11 @@ social:
   links:
     - https://github.com/fagcinsk
     - https://vk.com/fagci
+    - https://www.facebook.com/fagcinsk
+
+webmaster_verifications:
+  google: cYPYXSNeHCFhzx8wb_DhIoSC1GhqibLCVUEDbpFfdgI
+  yandex: ea38c54b7e1b64ef
 
 include: ['_pages']
 # Build settings

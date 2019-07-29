@@ -1,22 +1,23 @@
 .page__header {
   padding: 8px 16px;
   display: flex;
+  align-items: center;
 }
 
 .main-menu {
-  line-height: 2rem;
-  margin-top: 4px;
+  line-height: 42px;
 }
 
 .main-menu__item {
   display: inline-block;
-  margin-right: 16px;
+  margin: 0 8px;
 }
 
 .site-title {
   font-size: 1.5rem;
   font-weight: 600;
   flex: 1;
+  margin: 0 8px;
 }
 
 @media (max-width: 768px) {

@@ -1,9 +1,8 @@
 <div class="tags-cloud">
   {% assign tags = site.tags | sort %}
   {% for tag in tags %}
-   <span class="site-tag">
-     <a href="/tag/{{ tag | first | slugify }}/" title="{{ tag | first }}">
-        {{ tag[0] | replace:'-', ' ' }}&nbsp;({{ tag | last | size }})
-      </a>
-  </span>
-{% endfor %}</div>
+    <a class="tags-cloud__link" href="/tag/{{ tag | first | slugify }}/" title="{{ tag | first }}">
+      {{ tag[0] | replace:'-', ' ' }}&nbsp;({{ tag | last | size }})
+    </a>
+  {% endfor %}
+</div>

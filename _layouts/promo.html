@@ -11,9 +11,10 @@
     {{ content }}
     <aside>
       <ul class="categories">
-        {% for category in site.categories %}
+        {% assign sorted_categories = site.categories | sort %}
+        {% for category in sorted_categories %}
         {% capture cat %}{{ category | first }}{% endcapture %}
-        <li><a href="{{ site.url }}/category/{{ category | first | url_encode }}/">{{ site.categoryMap[cat] }} ({{ category | last | size }})</a></li>
+        <li><a class="categories__link" href="{{ site.url }}/category/{{ category | first | url_encode }}/">{{ site.categoryMap[cat] }} ({{ category | last | size }})</a></li>
         {% endfor %}
       </ul>
     </aside>

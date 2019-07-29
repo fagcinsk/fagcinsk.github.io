@@ -1,5 +1,5 @@
-@import 'palette';
-@import 'variables';
+@import "palette";
+@import "variables";
 
 .page__content {
   padding: 32px;
@@ -63,7 +63,6 @@
 
 .promo {
   padding: 64px;
-  margin: 0 0 16px;
   text-align: center;
 
   h1 {
@@ -133,25 +132,29 @@ button {
   margin-bottom: 16px;
 }
 
-.tags-cloud, .categories {
+.categories {
   font-family: $font-family-mono;
-  font-size: 0.75rem;
-  line-height: 2.75;
+  font-size: 1.125rem;
   text-align: center;
   max-width: 48rem;
-  margin: 0 auto;
   text-transform: uppercase;
   list-style: none;
 
-  li {
+  li, a {
     display: inline-block;
   }
-
-  a {
-    margin: 0 16px;
-  }
+  margin: 2em auto;
 }
 
+.categories__link {
+  color: $p-primary-dark;
+  margin: 0 16px;
+  padding: 8px 16px;
+
+  &:hover {
+    color: $p-primary;
+  }
+}
 
 .video-wrapper {
   position: relative;
@@ -191,6 +194,7 @@ img.me {
 
 .collapsible {
   cursor: pointer;
+
   & + div:not(.expanded) {
     display: none;
   }
@@ -200,6 +204,7 @@ img.me {
   .page__content {
     padding: 16px;
   }
+
   .post {
     padding: 16px;
     margin: -16px -16px 16px -16px;
@@ -210,6 +215,6 @@ img.me {
   }
 
   img.me {
-    width: 100%
+    width: 100%;
   }
 }
