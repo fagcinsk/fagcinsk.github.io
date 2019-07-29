@@ -4,12 +4,10 @@
 • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ include.post.author | default: site.author.name }}</span></span>
 {% include categories.html categories=include.post.categories %}
 {% if include.post.tags.size > 0 %}
-<span>
   {% for tag in include.post.tags %}
     {% capture tag_name %}{{ tag }}{% endcapture %}
-    <a href="/tag/{{ tag_name }}">#{{ tag_name }}&nbsp;</a>
+  <span>#{{ tag_name }}&nbsp;</span>
   {% endfor %}
-</span>
 {% endif %}
 <div itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
   <meta itemprop="name" content="{{ site.author.name }}">
