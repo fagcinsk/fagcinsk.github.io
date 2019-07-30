@@ -12,11 +12,18 @@
 .post-item {
   padding: 8px 0;
   margin-bottom: 1rem;
+  > a {
+    color: unset;
+    &:hover {
+      color: $p-primary;
+    }
+  }
 }
 
 .post-item__title {
   line-height: 1.2;
   margin-top: 0;
+  margin-bottom: 0.25em;
 }
 
 .post-item__summary {
