@@ -1,7 +1,7 @@
 ---
 layout: post
 categories: frontend
-title: Минимальный сброс стилей reset.css
+title: Минимальный файл сброса стилей reset.css
 description: Очень простой, лёгкий reset.css, чтобы сбросить все стили к одному стандарту.
 ---
 
