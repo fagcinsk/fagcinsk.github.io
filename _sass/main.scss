@@ -12,14 +12,11 @@
 .post-item {
   padding: 8px 0;
   margin-bottom: 1rem;
-
-  h3, .h3 {
-    margin-top: 0;
-  }
 }
 
 .post-item__title {
   line-height: 1.2;
+  margin-top: 0;
 }
 
 .post-item__summary {

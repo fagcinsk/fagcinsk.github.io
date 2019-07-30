@@ -3,12 +3,6 @@
 {% include update.html date=lastmod_date %}
 • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ include.post.author | default: site.author.name }}</span></span>
 {% include categories.html categories=include.post.categories %}
-{% if include.post.tags.size > 0 %}
-  {% for tag in include.post.tags %}
-    {% capture tag_name %}{{ tag }}{% endcapture %}
-  <span>#{{ tag_name }}&nbsp;</span>
-  {% endfor %}
-{% endif %}
 <div itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
   <meta itemprop="name" content="{{ site.author.name }}">
   <div itemprop="logo" itemscope="" itemtype="http://schema.org/ImageObject">

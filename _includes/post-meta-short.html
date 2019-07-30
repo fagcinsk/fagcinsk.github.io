@@ -2,12 +2,6 @@
 {% capture lastmod_date %}{% last_modified {{ include.post.path }} %}{% endcapture %}
 {% include update.html date=lastmod_date %}
 {% include categories.html categories=include.post.categories %}
-{% if include.post.tags.size > 0 %}
-  {% for tag in include.post.tags %}
-    {% capture tag_name %}{{ tag }}{% endcapture %}
-  <span>#{{ tag_name }}&nbsp;</span>
-  {% endfor %}
-{% endif %}
 <div itemprop="author" itemscope="" itemtype="https://schema.org/Person">
   <meta itemprop="name" content="{{ post.author | default: site.author.name }}">
 </div>

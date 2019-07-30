@@ -6,9 +6,9 @@ html {
 }
 
 body {
-  font: 1rem/1.45 $font-family-sans-serif;
+  font: 1rem/1.5 $font-family-sans-serif;
   text-rendering: optimizeLegibility;
-  color: #222;
+  color: $p-grey-dark;
 }
 
 h1, .h1,

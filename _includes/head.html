@@ -5,9 +5,6 @@
 
   {% seo %}
   <meta property="og:type" content="website">
-  {%if page.tags %}
-  <meta name="keywords" content="{{ page.tags | join: ', ' | escape }}"/>
-  {% endif %}
   {% feed_meta %}
   
   <link rel="shortcut icon" href="{{ 'favicon.ico' | relative_url }}">

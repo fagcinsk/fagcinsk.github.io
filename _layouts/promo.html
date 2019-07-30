@@ -10,13 +10,7 @@
   <main aria-label="Content" itemscope itemprop="mainContentOfPage">
     {{ content }}
     <aside>
-      <ul class="categories">
-        {% assign sorted_categories = site.categories | sort %}
-        {% for category in sorted_categories %}
-        {% capture cat %}{{ category | first }}{% endcapture %}
-        <li><a class="categories__link" href="{{ site.url }}/category/{{ category | first | url_encode }}/">{{ site.categoryMap[cat] }} ({{ category | last | size }})</a></li>
-        {% endfor %}
-      </ul>
+      {% include site-categories.html %}
     </aside>
     <div class="page__content">
       {% include post-list.html %}

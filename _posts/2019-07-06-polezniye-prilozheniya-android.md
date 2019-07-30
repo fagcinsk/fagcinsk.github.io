@@ -1,7 +1,6 @@
 ---
 layout: post
 categories: android
-comments: true
 title: Полезные приложения Android
 description: Делюсь набором любимых приложений, без которых мне тяжело обходиться, так как их функционал покрывает все нужды в их области
 image: /assets/img/android-must-have.jpeg

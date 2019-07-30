@@ -9,7 +9,7 @@ leaflet: true
 
 # Связаться со мной
 
-### Поговорить
+## Поговорить
 
 <div class="contact-icons">
 <a title="Telegram" href="https://t.me/{{site.telegram_username}}"><span class="iconify soc-i" data-icon="mdi-telegram" ></span></a>
@@ -20,7 +20,7 @@ leaflet: true
 <a title="E-mail" href="mailto:&#102;&#097;&#103;&#099;&#105;&#046;&#110;&#115;&#107;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;"><span class="iconify soc-i" data-icon="mdi-email"></span></a>
 </div>
 
-### Посмотреть
+## Посмотреть
 
 <div class="contact-icons">
 <a title="Github" href="https://github.com/{{site.github_username}}"><span class="iconify soc-i" data-icon="mdi-github-circle" ></span></a>
@@ -29,7 +29,7 @@ leaflet: true
 <a title="Pinterest" href="https://www.pinterest.ru/fagcinsk/"><span class="iconify soc-i" data-icon="mdi-pinterest" ></span></a>
 </div>
 
-### Следить за новостями
+## Следить за новостями
 
 <a href="/subscribe"><span class="iconify soc-i" data-icon="mdi-email"></span> Подписаться на E-mail рассылку</a>
 
