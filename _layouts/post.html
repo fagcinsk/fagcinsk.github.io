@@ -16,8 +16,6 @@ layout: default
 
 <p class="subscribe">Чтобы не пропускать новости, можно <a href="{{ '/subscribe' | relative_url }}">подписаться на email рассылку</a>.</p>
 
-{% if page.comments %}
 {% include disqus.html %}
-{% endif %}
 
 {% include related.html %}
