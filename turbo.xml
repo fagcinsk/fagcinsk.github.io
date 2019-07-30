@@ -11,7 +11,7 @@ sitemap: false
 >
 	<channel>
 		<title>{{ site.name | xml_escape }}</title>
-		<description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>		
+		<description>{% if site.description %}{{ site.description | strip_html | xml_escape }}{% endif %}</description>		
 		<sy:updatePeriod>{{ site.feed_update_period | default: "daily" | xml_escape }}</sy:updatePeriod>
 		<sy:updateFrequency>{{ site.feed_update_frequency | default: 1 | xml_escape }}</sy:updateFrequency>
 		<link>{{ site.url }}</link>
@@ -24,11 +24,11 @@ sitemap: false
 					<dc:creator>{{ post.author.name | xml_escape }}</dc:creator>
 				{% endif %}
 				{% if post.excerpt %}
-					<description>{{ post.excerpt | xml_escape }}</description>
+					<description>{{ post.excerpt | strip_html | xml_escape }}</description>
 				{% else %}
-					<description>{{ post.content | xml_escape }}</description>
+					<description>{{ post.description | strip_html | xml_escape }}</description>
 				{% endif %}
-        <yandex:full-text>{{ post.content | xml_escape }}</yandex:full-text>
+        <yandex:full-text><![CDATA[{{ post.content }}]]></yandex:full-text>
 				<pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
 				<link>{{ site.url }}{{ post.url }}</link>
 				<guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
