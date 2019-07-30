@@ -20,15 +20,17 @@ sitemap: false
 		{% for post in site.posts %}
 			<item turbo="true">
 				<title>{{ post.title | xml_escape }}</title>
-				{% if post.author.name %}
-					<dc:creator>{{ post.author.name | xml_escape }}</dc:creator>
+				{% if post.author %}
+					<dc:creator>{{ post.author | xml_escape }}</dc:creator>
+				{% else %}
+        <dc:creator>{{ site.author.name | xml_escape }}</dc:creator>
 				{% endif %}
 				{% if post.excerpt %}
 					<description>{{ post.excerpt | strip_html | xml_escape }}</description>
 				{% else %}
 					<description>{{ post.description | strip_html | xml_escape }}</description>
 				{% endif %}
-        <yandex:full-text><![CDATA[{{ post.content }}]]></yandex:full-text>
+        <yandex:full-text>{{ post.content | xml_escape }}</yandex:full-text>
 				<pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
 				<link>{{ site.url }}{{ post.url }}</link>
 				<guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
