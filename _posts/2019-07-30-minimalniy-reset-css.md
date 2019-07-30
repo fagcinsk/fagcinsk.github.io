@@ -2,7 +2,7 @@
 layout: post
 categories: frontend
 title: Минимальный файл сброса стилей reset.css
-description: Очень простой, минимальный файл сброса стилей reset.css, чтобы сбросить все стили к одному стандарту.
+description: Очень простой, минимальный файл сброса стилей minireset.css, чтобы сбросить все стили к одному стандарту.
 tags: ["reset.css","minireset.css","файл сброса стилей","минимальный файл сброса стилей","css reset","tiny css reset"]
 ---
 
