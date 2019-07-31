@@ -1,19 +1,52 @@
 @import "palette";
 @import "variables";
 
-.page__content {
-  padding: 32px;
+main {
+  display: grid;
+  grid-template-areas: "promo promo" "content aside";
+  grid-column-gap: 16px;
   margin: 0 auto;
+  aside {
+    grid-area: aside;
+    max-width: 240px;
+    padding: 0 16px;
+    h2 {
+      margin-top: 0;
+    }
+  }
+}
+
+.page__content {
+  grid-area: content;
   align-self: center;
   max-width: 48rem;
   width: 100%;
 }
 
+.promo {
+  grid-area: promo;
+  padding: 64px;
+  margin-bottom: 32px;
+  text-align: center;
+
+  h1 {
+    font-size: 2.25rem;
+    margin-bottom: 2rem;
+  }
+
+  p {
+    font-size: 1.125rem;
+    color: $p-grey;
+    max-width: 48rem;
+    margin: 0 auto;
+  }
+}
+
 .post-item {
-  padding: 8px 0;
-  margin-bottom: 1rem;
+  margin-bottom: 32px;
   > a {
     color: unset;
+    display: block;
     &:hover {
       color: $p-primary;
     }
@@ -51,7 +84,7 @@
   height: 115px;
   background-size: cover;
   background-position: center;
-  margin-left: 16px;
+  margin-right: 16px;
   border-radius: 4px;
   overflow: hidden;
 }
@@ -65,22 +98,7 @@
   margin-bottom: 32px;
 }
 
-.promo {
-  padding: 64px;
-  text-align: center;
 
-  h1 {
-    font-size: 3rem;
-    margin-bottom: 2.25rem;
-  }
-
-  p {
-    font-size: 1.25rem;
-    color: $p-grey;
-    max-width: 48rem;
-    margin: 0 auto;
-  }
-}
 
 .related-posts {
   margin-top: 32px;
@@ -137,23 +155,18 @@ button {
 }
 
 .categories {
-  font-family: $font-family-mono;
-  font-size: 1.125rem;
-  text-align: center;
-  max-width: 48rem;
-  text-transform: uppercase;
   list-style: none;
+  margin: 0;
+  padding: 0;
 
   li, a {
-    display: inline-block;
+    display: block;
   }
-  margin: 2em auto;
 }
 
 .categories__link {
   color: $p-primary-dark;
-  margin: 0 16px;
-  padding: 8px 16px;
+  padding: 4px 0;
 
   &:hover {
     color: $p-primary;
@@ -205,6 +218,18 @@ img.me {
 }
 
 @media (max-width: 768px) {
+  main {
+    grid-template-areas: "promo" "aside" "content";
+    aside {
+      max-width: none;
+    }
+  }
+  
+  .categories li {
+    display: inline-block;
+    margin-right: 16px;
+  }
+
   .page__content {
     padding: 16px;
   }
@@ -215,7 +240,7 @@ img.me {
   }
 
   .promo {
-    padding: 32px;
+    padding: 16px;
   }
 
   img.me {

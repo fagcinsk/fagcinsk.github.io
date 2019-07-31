@@ -4,8 +4,10 @@
 {%- include head.html -%}
 <body class="page">
   {%- include header.html -%}
-  <main class="page__content" aria-label="Content" itemscope itemprop="mainContentOfPage">
+  <main aria-label="Content" itemscope itemprop="mainContentOfPage">
+    <div class="page__content">
     {{ content }}
+  </div>
   </main>
   {%- include footer.html -%}
   {%- include scripts.html -%}

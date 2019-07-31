@@ -1,20 +1,19 @@
 <article class="post-item" itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
   <a href="{{ post.url }}" title="{{ post.title }}">
     <header class="post-item__header">
-      <div class="post-item__meta">
-        {% include post-meta-short.html post=post %}
-      </div>
       <h2 class="post-item__title" itemprop="name headline mainEntityOfPage">
         {{ post.title }}
       </h2>
+      
     </header>
     <div class="content flex">
-      <p class="post-item__summary flex-grow" itemprop="articleBody">
-        {{ post.excerpt | strip_html | truncatewords:25 | strip }}</p>
       {% if post.image %}
-      <meta itemprop="image" content="{{ post.image }}">
       <aside class="post-preview" style="background-image: url({{ post.image }})"></aside>
+      <meta itemprop="image" content="{{ post.image }}">
       {% endif %}
+      <p class="post-item__summary flex-grow" itemprop="articleBody">
+        {{ post.excerpt | strip_html | truncatewords:25 | strip }}
+      </p>
     </div>
   </a>
 </article>
