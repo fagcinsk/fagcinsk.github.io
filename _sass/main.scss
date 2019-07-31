@@ -219,7 +219,9 @@ img.me {
 
 @media (max-width: 768px) {
   main {
-    grid-template-areas: "promo" "aside" "content";
+    display: flex;
+    flex-flow: column;
+    margin: 0;
     aside {
       max-width: none;
     }
