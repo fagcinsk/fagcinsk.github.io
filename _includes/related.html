@@ -1,7 +1,8 @@
-{% if site.related_posts != empty %}
+{% assign category = include.post.categories | first %}
+{% assign related_posts = site.posts | where: "category", category %}
+{% if related_posts != empty %}
 <section class="related-posts">
   <h2>Ещё почитать:</h2>
-
-  {% for post in site.related_posts | limit: 5 %}{% include post-item.html %}{% endfor %}
+  {% for post in related_posts | limit: 5 %}{% include post-item.html %}{% endfor %}
 </section>
 {% endif %}
