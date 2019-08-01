@@ -6,13 +6,16 @@ main {
   grid-template-areas: "promo promo" "content aside";
   grid-column-gap: 16px;
   margin: 0 auto;
-  aside {
-    grid-area: aside;
-    max-width: 240px;
-    padding: 0 16px;
-    h2 {
-      margin-top: 0;
-    }
+  padding: 32px;
+}
+
+.page__aside {
+  grid-area: aside;
+  width: 240px;
+  margin-bottom: 32px;
+
+  h2 {
+    margin-top: 0;
   }
 }
 
@@ -44,9 +47,11 @@ main {
 
 .post-item {
   margin-bottom: 32px;
+
   > a {
     color: unset;
     display: block;
+
     &:hover {
       color: $p-primary;
     }
@@ -97,7 +102,6 @@ main {
 .post__content {
   margin-bottom: 32px;
 }
-
 
 
 .related-posts {
@@ -222,18 +226,16 @@ img.me {
     display: flex;
     flex-flow: column;
     margin: 0;
+    padding: 16px;
+
     aside {
       max-width: none;
     }
   }
-  
+
   .categories li {
     display: inline-block;
     margin-right: 16px;
-  }
-
-  .page__content {
-    padding: 16px;
   }
 
   .post {
