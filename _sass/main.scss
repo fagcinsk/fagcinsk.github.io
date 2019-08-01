@@ -31,18 +31,18 @@ main {
   padding: 64px;
   margin-bottom: 32px;
   text-align: center;
+}
 
-  h1 {
-    font-size: 2.25rem;
-    margin-bottom: 2rem;
-  }
+.promo__header {
+  font-size: 2.25rem;
+  margin-bottom: 1.25rem;
+}
 
-  p {
-    font-size: 1.125rem;
-    color: $p-grey;
-    max-width: 48rem;
-    margin: 0 auto;
-  }
+.promo__description {
+  font-size: 1.125rem;
+  color: $p-grey;
+  max-width: 48rem;
+  margin: 0 auto;
 }
 
 .post-item {
@@ -231,6 +231,15 @@ img.me {
     aside {
       max-width: none;
     }
+  }
+
+  .content.flex {
+    flex-flow: column;
+  }
+
+  .post-preview {
+    width: 100%;
+    height: 56.25vw;
   }
 
   .categories li {

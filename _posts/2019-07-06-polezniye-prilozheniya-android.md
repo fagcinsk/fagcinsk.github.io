@@ -3,7 +3,7 @@ layout: post
 categories: android
 title: Полезные приложения Android
 description: Делюсь набором любимых приложений, без которых мне тяжело обходиться, так как их функционал покрывает все нужды в их области
-image: /assets/img/android-must-have.jpeg
+image: /photos/useful-android-apps.png
 ---
 
 Постепенно пополняя свой арсенал приложений которыми часто пользуюсь, появляются не просто Must have, а без которых теперь сложно обходиться.

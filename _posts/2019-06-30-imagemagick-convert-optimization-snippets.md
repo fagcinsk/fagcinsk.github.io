@@ -4,7 +4,7 @@ categories: frontend
 title: Оптимизация изображений для Веба при помощи ImageMagick
 description: >
   Способы оптимизации изображений при помощи утилиты convert библиотеки ImageMagick
-image: /assets/img/imagemagick-resize.jpg
+image: /photos/imagemagick-convert-optimization.png
 ---
 
 Часто при работе с изображениями встаёт задача оптимизировать изображения для показа в Веб. Инструментов достаточно много, в том числе и онлайн, однако больше контроля над процессом и более эффективный результат можно получить используя утилиту convert из библиотеки ImageMagick.
