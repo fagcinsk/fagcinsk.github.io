@@ -5,22 +5,29 @@
 
 <body class="page">
 
-  {%- include header.html -%}
+{%- include header.html -%}
 
-  <main aria-label="Content" itemscope itemprop="mainContentOfPage">
-    {{ content }}
-    <aside class="page__aside">
-      {% include site-categories.html %}
-    </aside>
-    <div class="page__content">
-      {% include post-list.html %}
-      {% include pagination.html %}
+<main aria-label="Content" itemscope itemprop="mainContentOfPage">
+  {{ content }}
+  <aside class="page__aside">
+    <h2>Автор</h2>
+    <div class="avatar">
+      <img src="/assets/img/ava.jpg" alt="Я">
     </div>
-  </main>
+    <p class="text-center">Михаил Юдин</p>
 
-  {%- include footer.html -%}
-  {%- include scripts.html -%}
-  {%- include analytics.html -%}
+    <p>{{site.description}}</p>
+    {% include site-categories.html %}
+  </aside>
+  <div class="page__content">
+    {% include post-list.html %}
+    {% include pagination.html %}
+  </div>
+</main>
+
+{%- include footer.html -%}
+{%- include scripts.html -%}
+{%- include analytics.html -%}
 </body>
 
 </html>

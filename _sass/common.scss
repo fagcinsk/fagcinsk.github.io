@@ -26,6 +26,10 @@ img::selection {
   background: transparent;
 }
 
+.text-center {
+  text-align: center;
+}
+
 ::selection {
   background-color: $p-primary-dark;
   color: $p-white;

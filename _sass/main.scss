@@ -4,7 +4,7 @@
 main {
   display: grid;
   grid-template-areas: "promo promo" "content aside";
-  grid-column-gap: 16px;
+  grid-column-gap: 64px;
   margin: 0 auto;
   padding: 32px;
 }
@@ -16,6 +16,8 @@ main {
 
   h2 {
     margin-top: 0;
+    padding: 4px 0;
+    border-bottom: 1px solid $p-grey-light;
   }
 }
 
@@ -24,6 +26,13 @@ main {
   align-self: center;
   max-width: 48rem;
   width: 100%;
+}
+
+.avatar {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 80px;
+  margin: 16px auto;
 }
 
 .promo {
@@ -227,10 +236,10 @@ img.me {
     flex-flow: column;
     margin: 0;
     padding: 16px;
+  }
 
-    aside {
-      max-width: none;
-    }
+  .page__aside {
+    width: auto;
   }
 
   .content.flex {
