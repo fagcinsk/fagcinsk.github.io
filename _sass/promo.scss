@@ -1,0 +1,19 @@
+@import "palette";
+
+.promo {
+  padding: 64px;
+  text-align: center;
+  background-color: rgba($p-grey-light, 0.5);
+}
+
+.promo__header {
+  font-size: 2.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.promo__description {
+  font-size: 1.125rem;
+  color: $p-grey;
+  max-width: 48rem;
+  margin: 0 auto;
+}

@@ -2,7 +2,7 @@
 {% capture lastmod_date %}{% last_modified {{ include.post.path }} %}{% endcapture %}
 {% include update.html date=lastmod_date %}
 • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ include.post.author | default: site.author.name }}</span></span>
-{% include categories.html categories=include.post.categories %}
+{% include post-categories.html post=include.post %}
 <div itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
   <meta itemprop="name" content="{{ site.author.name }}">
   <div itemprop="logo" itemscope="" itemtype="http://schema.org/ImageObject">

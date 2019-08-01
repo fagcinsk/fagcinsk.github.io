@@ -1,4 +1,6 @@
-.page__header {
+@import "palette";
+
+.header-top {
   padding: 8px 16px;
   display: flex;
   align-items: center;
@@ -11,6 +13,13 @@
 .main-menu__item {
   display: inline-block;
   margin: 0 8px;
+  color: $p-grey-dark;
+  &:not(.site-title) {
+    text-transform: uppercase;
+  }
+  &.active {
+    color: $p-primary;
+  }
 }
 
 .site-title {
@@ -21,7 +30,7 @@
 }
 
 @media (max-width: 768px) {
-  .page__header {
+  .header-top {
     flex-flow: column;
   }
 }

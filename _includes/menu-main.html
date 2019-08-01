@@ -1,0 +1,11 @@
+<nav class="main-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
+  {%- for nav_item in site.navigation -%}
+    {%- assign class = nil -%}
+    {%- if page.url == nav_item.link -%}
+      {%- assign class = 'active' -%}
+    {%- endif -%}
+          <a class="main-menu__item {{class}}" itemprop="url" href="{{nav_item.link}}" title="{{nav_item.name}}">
+            <span itemprop="name">{{nav_item.name}}</span>
+          </a>
+  {%- endfor -%}
+</nav>
