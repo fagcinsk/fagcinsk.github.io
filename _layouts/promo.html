@@ -5,19 +5,12 @@
 
 <body class="page">
 
-{%- include header.html -%}
+{%- include header-promo.html -%}
 
 <main aria-label="Content" itemscope itemprop="mainContentOfPage">
   {{ content }}
   <aside class="page__aside">
-    <h2>Автор</h2>
-    <div class="avatar">
-      <img src="/assets/img/ava.jpg" alt="Я">
-    </div>
-    <p class="text-center">Михаил Юдин</p>
-
-    <p>{{site.description}}</p>
-    {% include site-categories.html %}
+    {% include sidebar.html %}
   </aside>
   <div class="page__content">
     {% include post-list.html %}

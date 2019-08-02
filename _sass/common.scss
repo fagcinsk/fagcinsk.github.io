@@ -45,16 +45,6 @@ a {
   }
 }
 
-.main-menu__item {
-  color: $p-grey-dark;
-  &:not(.site-title) {
-    text-transform: uppercase;
-  }
-  &.active {
-    color: $p-primary;
-  }
-}
-
 hr {
   border: none;
   height: 1px;
@@ -84,6 +74,7 @@ figure, .map {
   border-radius: 50%;
   cursor: pointer;
   width: 32px;
+  height: 32px;
   line-height: 32px;
   text-align: center;
   &:not(.show) {
@@ -98,20 +89,22 @@ figure, .map {
   font-size: 32px;
 }
 
-.pagination {
+.pager {
   font-size: 1.25em;
   text-align: center;
-  a,span {
-    display: inline-block;
-    width: 42px;
-    line-height: 42px;
-    text-align: center;
-    border-radius: 4px;
-  }
-  a {
-    background: rgba($p-primary, 0.15);
-  }
-  span {
-    background: rgba($p-grey-dark, 0.15);
-  }
+}
+
+.pager__prev,.pager__next,.pager__page {
+  background: rgba($p-primary, 0.15);
+}
+.pager__disabled {
+  background: rgba($p-grey-dark, 0.15);
+}
+
+.pager__prev,.pager__next,.pager__disabled,.pager__page {
+  display: inline-block;
+  width: 42px;
+  line-height: 42px;
+  text-align: center;
+  border-radius: 4px;
 }

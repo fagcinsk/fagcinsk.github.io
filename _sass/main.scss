@@ -3,7 +3,7 @@
 
 main {
   display: grid;
-  grid-template-areas: "promo promo" "content aside";
+  grid-template-areas: "content aside";
   grid-column-gap: 64px;
   margin: 0 auto;
   padding: 32px;
@@ -32,135 +32,13 @@ main {
   border-radius: 50%;
   overflow: hidden;
   width: 80px;
+  height: 80px;
   margin: 16px auto;
-}
-
-.promo {
-  grid-area: promo;
-  padding: 64px;
-  margin-bottom: 32px;
-  text-align: center;
-}
-
-.promo__header {
-  font-size: 2.25rem;
-  margin-bottom: 1.25rem;
-}
-
-.promo__description {
-  font-size: 1.125rem;
-  color: $p-grey;
-  max-width: 48rem;
-  margin: 0 auto;
-}
-
-.post-item {
-  margin-bottom: 32px;
-
-  > a {
-    color: unset;
-    display: block;
-
-    &:hover {
-      color: $p-primary;
-    }
-  }
-}
-
-.post-item__title {
-  line-height: 1.2;
-  margin-top: 0;
-  margin-bottom: 0.25em;
-}
-
-.post-item__summary {
-  margin-bottom: 0.5rem;
-}
-
-.post {
-  padding: 32px 0;
-  margin-bottom: 32px;
-  border-bottom: 1px solid $p-grey-light;
-}
-
-.post__header {
-  margin-bottom: 16px;
-}
-
-.post__meta,
-.post-item__meta {
-  color: $p-grey;
-  font-size: 0.75rem;
-}
-
-.post-preview {
-  width: 150px;
-  height: 115px;
-  background-size: cover;
-  background-position: center;
-  margin-right: 16px;
-  border-radius: 4px;
-  overflow: hidden;
-}
-
-.category {
-  color: $p-grey;
-  font-style: normal;
-}
-
-.post__content {
-  margin-bottom: 32px;
-}
-
-
-.related-posts {
-  margin-top: 32px;
-}
-
-form {
-  padding: 16px;
-  background-color: $p-grey-light;
-  border-radius: 3px;
-  font-size: 1rem;
-  max-width: 550px;
-  margin: 0 auto;
-}
-
-.input {
-  display: flex;
-  flex-flow: column;
-}
-
-input,
-textarea {
-  font-size: 1.125rem;
-  border: none;
-  border-bottom: 1px solid $p-primary;
-  background: none;
-  padding: 8px 4px;
-  margin: 4px 0;
+  background-color: $p-grey;
 }
 
 .text-right {
   text-align: right;
-}
-
-input[type="submit"],
-input[type="button"],
-button {
-  border: none;
-  border-radius: 4px;
-  padding: 12px 16px;
-  text-transform: uppercase;
-  background-color: $p-primary-dark;
-  color: $p-white;
-  margin-top: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-
-  &:hover {
-    background-color: $p-primary;
-  }
 }
 
 .subscribe {
@@ -171,15 +49,16 @@ button {
   list-style: none;
   margin: 0;
   padding: 0;
+}
 
-  li, a {
-    display: block;
-  }
+.categories__item {
+  display: inline-block;
 }
 
 .categories__link {
   color: $p-primary-dark;
-  padding: 4px 0;
+  padding: 8px 16px;
+  display: inline-block;
 
   &:hover {
     color: $p-primary;
@@ -246,19 +125,9 @@ img.me {
     flex-flow: column;
   }
 
-  .post-preview {
-    width: 100%;
-    height: 56.25vw;
-  }
-
   .categories li {
     display: inline-block;
     margin-right: 16px;
-  }
-
-  .post {
-    padding: 16px;
-    margin: -16px -16px 16px -16px;
   }
 
   .promo {
