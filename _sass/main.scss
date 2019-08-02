@@ -57,6 +57,11 @@ main {
 
 .categories__item {
   display: inline-block;
+  > sup {
+    position: relative;
+    left: -0.85em;
+    color: $p-grey;
+  }
 }
 
 .categories__link {
