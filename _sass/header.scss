@@ -4,6 +4,7 @@
   padding: 8px 16px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .main-menu {
@@ -18,14 +19,18 @@
     text-transform: uppercase;
   }
   &.active {
-    color: $p-primary;
+    color: $p-secondary;
+    text-decoration: none;
+  }
+  &:hover {
+    color: $p-secondary-light;
+    text-decoration: none;
   }
 }
 
 .site-title {
   font-size: 1.5rem;
   font-weight: 600;
-  flex: 1;
   margin: 0 8px;
 }
 

@@ -4,9 +4,12 @@
 main {
   display: grid;
   grid-template-areas: "content aside";
-  grid-column-gap: 64px;
   margin: 0 auto;
   padding: 32px;
+}
+
+.with-sidebar {
+  grid-column-gap: 64px;
 }
 
 .page__aside {
@@ -35,6 +38,7 @@ main {
   height: 80px;
   margin: 16px auto;
   background-color: $p-grey;
+  display: block;
 }
 
 .text-right {
@@ -42,7 +46,7 @@ main {
 }
 
 .subscribe {
-  margin-bottom: 16px;
+  margin: 32px 0;
 }
 
 .categories {
@@ -56,13 +60,8 @@ main {
 }
 
 .categories__link {
-  color: $p-primary-dark;
   padding: 8px 16px;
   display: inline-block;
-
-  &:hover {
-    color: $p-primary;
-  }
 }
 
 .video-wrapper {
@@ -107,6 +106,10 @@ img.me {
   & + div:not(.expanded) {
     display: none;
   }
+}
+
+.ad-content {
+  margin: 32px 0;
 }
 
 @media (max-width: 768px) {

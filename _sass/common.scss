@@ -31,17 +31,17 @@ img::selection {
 }
 
 ::selection {
-  background-color: $p-primary-dark;
+  background-color: $p-secondary-dark;
   color: $p-white;
 }
 
 a {
-  color: $p-primary;
+  color: $p-secondary;
   text-decoration: none;
   transition: color 100ms ease-in-out;
 
   &:hover, &:active, &.active {
-    color: $p-primary-light;
+    text-decoration: underline;
   }
 }
 
@@ -67,21 +67,24 @@ figure, .map {
 
 .go-top {
   position: fixed;
-  bottom: 32px;
-  right: 32px;
+  bottom: 24px;
+  right: 24px;
   font-size: 32px;
   background-color: $p-grey-light;
   border-radius: 50%;
   cursor: pointer;
-  width: 32px;
-  height: 32px;
-  line-height: 32px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
   text-align: center;
+
   &:not(.show) {
     display: none;
   }
+
   &:hover {
-    background-color: $p-primary-light;
+    background-color: $p-secondary;
+    color: $p-white;
   }
 }
 
@@ -94,14 +97,12 @@ figure, .map {
   text-align: center;
 }
 
-.pager__prev,.pager__next,.pager__page {
-  background: rgba($p-primary, 0.15);
-}
 .pager__disabled {
-  background: rgba($p-grey-dark, 0.15);
+  background: $p-secondary;
+  color: $p-white;
 }
 
-.pager__prev,.pager__next,.pager__disabled,.pager__page {
+.pager__prev, .pager__next, .pager__disabled, .pager__page {
   display: inline-block;
   width: 42px;
   line-height: 42px;
