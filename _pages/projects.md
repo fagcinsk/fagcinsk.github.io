@@ -11,6 +11,8 @@ projects:
         repo: fagcinsk.github.io 
       - name: PHP библиотека для генерации алиасов объектов
         repo: ro-aliaseable-object 
+      - name: <a href="https://mikhail-yudin.ru/projects/block-destruction-game">Игра про уничтожение блоков</a> с использованием HTML5 canvas
+        repo: block-destruction-game
   - category: Hardware
     repos:
       - name: Реализация ПО для импульсного металлоискателя с графической и звуковой индикацией с системой меню и настройками
