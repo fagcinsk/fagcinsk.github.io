@@ -5,7 +5,7 @@ layout: default
   <header class="post__header">
     <div class="post__meta">{% include post-meta.html post=page %}</div>
     <h1 class="post__title" itemprop="headline">{{ page.title | escape }}</h1>
-    <img data-src="{{ page.image }}" alt="{{ page.title | escape }}">
+    {% if page.image_hide != true %}<img data-src="{{ page.image }}" alt="{{ page.title | escape }}">{% endif %}
   </header>
   <div class="post__content" itemprop="articleBody">{{content}}</div>
 
