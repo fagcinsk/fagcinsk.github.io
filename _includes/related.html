@@ -1,5 +1,5 @@
 {% assign category = include.post.categories | first %}
-{% assign related_posts = site.posts | where: "category", category %}
+{% assign related_posts = site.posts | where: "category", category | where_exp: "post","post.url != page.url" %}
 {% if related_posts != empty %}
 <section class="related-posts">
   <h2>Ещё почитать:</h2>
