@@ -9,10 +9,14 @@ projects:
     repos:
       - name: Михаил Юдин | Персональный блог (этот блог)
         repo: fagcinsk.github.io 
+      - name: Multiplyer crafting game
+        repo: multiplayer-crafting-game
       - name: PHP библиотека для генерации алиасов объектов
         repo: ro-aliaseable-object 
       - name: <a href="https://mikhail-yudin.ru/projects/block-destruction-game">Игра про уничтожение блоков</a> с использованием HTML5 canvas
         repo: block-destruction-game
+      - name: Mixer analyzer
+        repo: mixer-analyzer
   - category: Hardware
     repos:
       - name: Реализация ПО для импульсного металлоискателя с графической и звуковой индикацией с системой меню и настройками
