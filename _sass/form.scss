@@ -41,3 +41,18 @@ button {
     background-color: $p-primary;
   }
 }
+
+.ya-site-form {
+  td {
+    border: none;
+    padding: 0;
+  }
+  .ya-site-form__submit {
+    background-color: transparent;
+    border: 1px solid $p-primary-dark;
+    padding: 8px 16px;
+  }
+  .ya-site-form__search-input {
+    padding: 0 !important;
+  }
+}
