@@ -1,7 +1,7 @@
 ---
 layout: post
 categories: android
-title: Полезные приложения Android
+title: Самые полезные приложения для Android
 description: Делюсь набором любимых приложений, без которых мне тяжело обходиться, так как их функционал покрывает все нужды в их области
 image: /photos/useful-android-apps.png
 ---
