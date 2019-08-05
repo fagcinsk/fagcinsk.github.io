@@ -5,7 +5,7 @@ title: STM32f103 ADC with DMA
 image: /photos/stm32f103-adc-with-dma.png
 ---
 
-Having troubles with ADC using DMA, solved by introducing timer for external triggering.  
+Having troubles with STM32f103 ADC using DMA, solved by introducing timer for external triggering.  
 
 Video here:  
 [https://www.youtube.com/watch?v=h16B7YAlttY](https://www.youtube.com/watch?v=h16B7YAlttY)  
