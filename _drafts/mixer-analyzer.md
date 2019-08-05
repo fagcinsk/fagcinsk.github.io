@@ -12,3 +12,4 @@ image: /photos/mixer-analyzer.png
 
 Mixer analyzer это приложение, позволяющее увидеть часторный спектр аудиосигнала на HTML5 canvas с микшера вашей аудиокарты.
 
+Проект лежит на [GitHub](https://github.com/fagcinsk/mixer-analyzer)
