@@ -1,7 +1,7 @@
 ---
 layout: post
 categories: frontend
-title: Анализатор спектра Mixer analyzer
+title: Анализатор спектра на HTML5 canvas Mixer analyzer
 description: Простой анализатор спектра с использованием HTML5 canvas и WebAudio API.
 image: /photos/mixer-analyzer.png
 ---
