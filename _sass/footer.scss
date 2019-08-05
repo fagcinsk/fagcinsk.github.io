@@ -1,3 +1,22 @@
 .page__footer {
-  padding: 8px 16px;
+  margin-top: 32px;
+  padding: 64px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  a {
+    color: $p-grey-dark;
+    &:hover {
+      color: $p-secondary-light;
+      text-decoration: none;
+    }
+  }
+  .contact-icons {
+    font-size: 40px;
+  }
+
+  @media (max-width: 768px) {
+    flex-flow: column;
+    align-items: center;
+  }
 }
