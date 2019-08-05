@@ -15,8 +15,10 @@
     </a>
     <meta itemprop="image" content="{{ post.image }}">
     {% endif %}
+    <!--noindex-->
     <p class="post-item__summary flex-grow" itemprop="articleBody">
       {{ post.excerpt | strip_html | truncatewords:25 | strip }}
     </p>
+    <!--/noindex-->
   </div>
 </article>

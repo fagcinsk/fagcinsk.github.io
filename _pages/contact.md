@@ -7,7 +7,9 @@ description: >
 leaflet: true
 ---
 
-# Связаться со мной
+# Контакты для связи со мной
+
+Я &mdash; Михаил Алексеевич Юдин доступен чаще всего в [Telegram @fagci](https://t.me/{{site.username.telegram}}), [ВКонтакте](https://vk.com/{{site.username.vk}}). Ниже есть и другие способы связаться со мной. Но там я отвечаю реже.
 
 ## Поговорить
 
