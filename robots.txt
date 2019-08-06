@@ -1,4 +1,5 @@
 User-agent: *
 Allow: *
+Disallow: /posts/
 Sitemap: https://mikhail-yudin.ru/sitemap.xml
 Host: mikhail-yudin.ru
