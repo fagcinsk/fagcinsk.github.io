@@ -1,32 +1,14 @@
 @import "palette";
 @import "variables";
 
-main {
-  display: grid;
-  grid-template-areas: "content aside";
-  margin: 0 auto;
-  padding: 32px;
-}
 
-.with-sidebar {
-  grid-column-gap: 64px;
-}
 
 .page__aside {
-  grid-area: aside;
-  width: 240px;
-  margin-bottom: 32px;
-
   h2 {
     margin-top: 0;
     padding: 4px 0;
     border-bottom: 1px solid $p-grey-light;
   }
-}
-
-.page__content {
-  grid-area: content;
-  max-width: 48rem;
 }
 
 .avatar {
@@ -55,6 +37,7 @@ main {
 
 .categories__item {
   display: inline-block;
+
   > sup {
     position: relative;
     left: -0.85em;
@@ -116,13 +99,6 @@ img.me {
 }
 
 @media (max-width: 768px) {
-  main {
-    display: flex;
-    flex-flow: column;
-    margin: 0;
-    padding: 16px;
-  }
-
   .author-block {
     display: flex;
   }
@@ -133,10 +109,6 @@ img.me {
 
   .avatar {
     margin-top: 0;
-  }
-
-  .page__aside {
-    width: auto;
   }
 
   .categories__item {

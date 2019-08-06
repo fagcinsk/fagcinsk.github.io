@@ -3,21 +3,18 @@
 
 {%- include head.html -%}
 
-<body class="page">
+<body class="page with-sidebar">
 
 {%- include header-promo.html -%}
 
-<main class="with-sidebar" aria-label="Content" itemscope itemprop="mainContentOfPage">
+<main aria-label="Content" itemscope itemprop="mainContentOfPage">
   {{ content }}
-  <aside class="page__aside">
-    {% include sidebar.html %}
-  </aside>
-  <div class="page__content">
-    {% include post-list.html %}
-    {% include pagination.html %}
-  </div>
+  {% include post-list.html %}
+  {% include pagination.html %}
 </main>
-
+<aside class="page__aside">
+  {% include sidebar.html %}
+</aside>
 {%- include footer.html -%}
 {%- include scripts.html -%}
 {%- include analytics.html -%}

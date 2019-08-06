@@ -89,6 +89,10 @@ lazy_load_image:
   # additional_attrs: # [optional] if you want to add attributes, please add key value
   #   "data-size": auto 
 
+autoprefixer:
+  browsers:
+    - last 2 versions
+
 exclude:
   - Gemfile
   - Gemfile.lock

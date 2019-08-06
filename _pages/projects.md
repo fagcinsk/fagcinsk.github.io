@@ -41,20 +41,17 @@ projects:
 
 # Мои проекты
 
-<table>
-{% for category in page.projects %}
-<tr>
-<th colspan="3" style="padding-top: 32px">{{ category.category }}</th>
-</tr>
 
+{% for category in page.projects %}
+
+<h2>{{ category.category }}</h2>
+<ol>
 {% for repo in category.repos %}
-<tr>
-<td><a href="https://github.com/fagcinsk/{{ repo.repo }}">{{ repo.repo }}</a></td>
-<td>{{ repo.name }}</td>
-<td><a class="github-button" href="https://github.com/fagcinsk/{{ repo.repo }}" data-icon="octicon-star" data-show-count="true" aria-label="Star fagcinsk/stm32-lcd-sandbox on GitHub"></a></td>
-</tr>
+<li><a href="https://github.com/fagcinsk/{{ repo.repo }}">{{ repo.repo }}</a>:
+{{ repo.name }}
+<a class="github-button" href="https://github.com/fagcinsk/{{ repo.repo }}" data-icon="octicon-star" data-show-count="true" aria-label="Star fagcinsk/stm32-lcd-sandbox on GitHub"></a></li>
 {% endfor %}
+</ol>
 {% endfor %}
-</table>
 
 <script async defer src="https://buttons.github.io/buttons.js"></script>

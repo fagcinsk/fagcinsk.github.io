@@ -1,18 +1,43 @@
 @import "palette";
 
+$max-content-size: 48rem;
 html {
   box-sizing: border-box;
 }
 
 body {
-  display: flex;
+  display: grid;
   min-height: 100vh;
-  flex-direction: column;
   overflow-y: scroll;
+  grid-template-columns: 1fr auto 1fr;
+  grid-gap: 16px;
 }
 
-main {
-  flex: 1;
+.page__header, .page__footer {
+  grid-column: 1/4;
+}
+
+aside, main {
+  grid-column: 2/3;
+}
+
+@media (min-width: $max-content-size) {
+  body {
+    grid-gap: 64px;
+    grid-template-columns: 1fr minmax(auto, $max-content-size) 1fr;
+  }
+
+  .with-sidebar {
+    grid-template-columns: 1fr minmax(auto, $max-content-size) 16rem 1fr;
+
+    aside {
+      grid-column: 3/4;
+    }
+
+    .page__header, .page__footer {
+      grid-column: 1/5;
+    }
+  }
 }
 
 img, embed, object, video {

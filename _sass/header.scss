@@ -15,9 +15,6 @@
   display: inline-block;
   margin: 0 8px;
   color: $p-grey-dark;
-  &:not(.site-title) {
-    text-transform: uppercase;
-  }
   &.active {
     color: $p-secondary;
     text-decoration: none;
