@@ -2,7 +2,7 @@
 layout: post
 categories: frontend
 title: Jekyll календарь на чистом Liquid template engine
-description: Сделал Jekyll календарик с использованием Liquid template engine и CS grid system
+description: Сделал Jekyll календарик с использованием Liquid template engine и CSS grid system
 image: /photos/jekyll-calendar-css-grid.png
 ---
 
