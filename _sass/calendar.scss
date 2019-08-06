@@ -1,0 +1,21 @@
+@import 'palette';
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 2rem);
+  line-height: 2rem;
+  text-align: center;
+}
+.calendar__we {
+  color: #e22;
+}
+.calendar__ext {
+  font-style: normal;
+  position: relative;
+  &:after{
+    content: '•';
+    position: absolute;
+    top: -.45em;
+    right: .125em;
+  }
+}
