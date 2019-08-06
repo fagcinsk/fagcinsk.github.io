@@ -9,7 +9,7 @@ body {
   display: grid;
   min-height: 100vh;
   overflow-y: scroll;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: 0 auto 0;
   grid-gap: 16px;
 }
 
