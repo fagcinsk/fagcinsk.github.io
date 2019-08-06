@@ -1,39 +1,42 @@
 <script src="/assets/js/lazysizes.min.js"></script>
 
 <script>
-  var i, coll = document.getElementsByClassName("collapsible");
+  let i
+  const coll = document.getElementsByClassName('collapsible')
 
   for (i = 0; i < coll.length; i++) {
-    coll[i].addEventListener("click", function() {
-      this.classList.toggle("active");
-      var content = this.nextElementSibling;
-      content.classList.toggle("expanded")
-    });
+    coll[i].addEventListener('click', function () {
+      this.classList.toggle('active')
+      var content = this.nextElementSibling
+      content.classList.toggle('expanded')
+    })
   }
 </script>
 
 <script>
-  (function(window) {
-    var d = window.document,
+  (function (window) {
+    const d = window.document,
       goTop = d.querySelector('.go-top')
 
-    goTop.addEventListener('click', function(){
+    goTop.addEventListener('click', function () {
       window.scrollTo(0, 0)
     })
 
     goTop.title = 'Наверх'
 
-    function onScroll() {
-      if(window.scrollY > window.innerHeight) {
+    function onScroll (e) {
+      if (window.scrollY > window.innerHeight) {
         goTop.classList.add('show')
       } else {
         goTop.classList.remove('show')
       }
     }
 
-    window.addEventListener('scroll', onScroll, {passive: true})
-    onScroll()
+    window.addEventListener('scroll', onScroll, {
+      capture: true,
+      passive: true
+    })
   })(window)
 </script>
 
-<script src="//code.iconify.design/1/1.0.3/iconify.min.js"></script>
+<script src="//code.iconify.design/1/1.0.3/iconify.min.js" async></script>
