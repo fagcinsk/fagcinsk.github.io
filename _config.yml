@@ -10,7 +10,7 @@ description: >
   Занимаюсь frontend разработкой, улучшаю пользовательский опыт. Рассказываю о железячных проектах, настройке сервера, полезных Android приложениях.
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://mikhail-yudin.ru" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://mikhail-yudin.ru"
 
 github_username:  fagcinsk
 telegram_username: fagci
@@ -59,16 +59,28 @@ permalinks: pretty
 permalink: /:categories/:title/
 
 categoryMap:
-  frontend: Фронтенд
-  backend: Бэкэнд
-  lifehacks: Лайфхаки
-  hardware: Железо
-  linux: Linux
-  android: Android
-  trip: Путешествия
-  administration: Администрирование
+  frontend:
+    name: Фронтенд
+    description: "Материал, связанный с фронтовой частью веб-разработки: вёрстка, JavaScript, UX/UI в общем."
+  backend:
+    name: Бэкэнд
+    description: "Бэкэндная частью веб-разработки: PHP, NodeJS, ..."
+  lifehacks:
+    name: Лайфхаки
+    description: "Хитрости жизни"
+  hardware:
+    name: Железо
+    description: "Железячные проекты: Arduino, STM32, всякие датчики, дисплеи, механизмы."
+  linux:
+    name: Linux
+    description: "Администрирование Linux, настройка сервера, примеры настроек."
+  android:
+    name: Android
+    description: "Приложения для Android, примеры использования приложений, обзоры, рекомендации."
+  trip:
+    name: Путешествия
+    description: "Путешествия по необъятной планете =)"
 
-# category_path: "jekyll/category" # <- default value
 category_layout: "category-index.html" # <- default value
 
 leaflet: leaflet@1.5.1

@@ -2,6 +2,6 @@
   {% assign sorted_categories = site.categories | sort %}
   {% for category in sorted_categories %}
   {% capture cat %}{{ category | first }}{% endcapture %}
-  <li class="categories__item"><a class="categories__link" href="{{ site.url }}/category/{{ category | first | url_encode }}/" title="Перейти к категории {{ site.categoryMap[cat] }} (записей: {{ category | last | size }})">{{ site.categoryMap[cat] }}</a><sup>{{ category | last | size }}</sup></li>
+  <li class="categories__item"><a class="categories__link" href="{{ site.url }}/category/{{ category | first | url_encode }}/" title="Перейти к категории {{ site.categoryMap[cat].name }} (записей: {{ category | last | size }})">{{ site.categoryMap[cat].name }}</a><sup>{{ category | last | size }}</sup></li>
   {% endfor %}
 </ul>

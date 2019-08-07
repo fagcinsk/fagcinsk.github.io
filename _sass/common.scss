@@ -134,3 +134,9 @@ figure, .map {
   text-align: center;
   border-radius: 4px;
 }
+
+.card {
+  padding: 16px;
+  display: flex;
+  flex-flow: column;
+}
