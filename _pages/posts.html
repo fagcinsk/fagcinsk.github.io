@@ -1,0 +1,39 @@
+---
+layout: page
+sitemap: false
+title: Список всех постов
+permalink: /posts/
+sitemap: false
+description: Список всех постов
+---
+
+<h1>Список постов</h1>
+
+<div class="cards-wrapper">
+  {% for category in site.categories %}
+  {% assign category_name = category | first %}
+
+  <div class="card">
+    <header class="tile">
+      <div class="tile__image" style="background-image:url(/assets/img/categories/{{ category_name }}.png)">
+      </div>
+      <div class="tile__text">
+        <h2><a href="{{ site.url }}/category/{{ category | first | url_encode }}">{{ site.categoryMap[category_name].name }}</a></h2>
+        <p>{{ site.categoryMap[category_name].description }}</p>
+      </div>
+    </header>
+    <ul>
+      {% for post in site.categories[category_name] %}
+      <li>
+        {{ post.date | date: '%d.%m.%Y' }}
+        <a href="https://github.com/fagcinsk/fagcinsk.github.io/blob/master/{{post.path}}" rel="nofollow">
+          <span class="iconify" data-icon="mdi-github-box"></span>
+        </a>
+        <a class="post-item__link" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> wc={{
+        post.content | number_of_words }}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endfor %}
+</div>

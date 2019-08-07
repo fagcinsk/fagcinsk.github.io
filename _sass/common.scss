@@ -10,6 +10,7 @@ body {
   min-height: 100vh;
   overflow-y: scroll;
   grid-template-columns: 0 minmax(0, auto) 0;
+  grid-auto-rows: auto 1fr;
   grid-gap: 16px;
 }
 
@@ -136,7 +137,37 @@ figure, .map {
 }
 
 .card {
-  padding: 16px;
+  margin: 32px;
   display: flex;
   flex-flow: column;
+  min-width: 50%;
+  max-width: 100%;
+}
+
+.cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -32px;
+}
+
+.tile {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.tile__image {
+  margin-right: 16px;
+  max-width: 120px;
+  min-width: 120px;
+  max-height: 120px;
+  min-height: 120px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.tile__text {
+  h1, h2, h3 {
+    margin-top: 0;
+  }
 }
