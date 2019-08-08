@@ -3,7 +3,7 @@ layout: post
 categories: frontend
 title: Анализатор спектра на HTML5 canvas Mixer analyzer
 description: Простой анализатор спектра с использованием HTML5 canvas и WebAudio API.
-image: /photos/mixer-analyzer.png
+image: photos/mixer-analyzer.png
 ---
 
 Простой анализатор спектра с использованием HTML5 canvas и WebAudio API. Работает из-под node-webkit, но можно переделать и на веб-версию.

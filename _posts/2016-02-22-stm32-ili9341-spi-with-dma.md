@@ -2,7 +2,7 @@
 layout: post
 category: hardware
 title: STM32 ILI9341 SPI with DMA
-image: /photos/stm32-ili9341-spi-with-dma.jpg
+image: photos/stm32-ili9341-spi-with-dma.jpg
 ---
 
 Долго возился с подключением DMA на STM32f103, в итоге удалось завести следующим образом:  

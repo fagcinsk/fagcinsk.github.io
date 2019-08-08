@@ -2,7 +2,7 @@
 layout: post
 categories: lifehacks
 title: 5 причин почему Google Chrome тормозит — советы программиста
-image: /photos/google-chrome-tormozit.png
+image: photos/google-chrome-tormozit.png
 ---
 
 В определённый момент у Вас возникло подозрение, что именно браузер Google Chrome тормозит, а не система? При открытии новых вкладок всё становится ещё хуже и дошло до того, что пользоваться невозможно?

@@ -11,7 +11,7 @@
   <div class="content flex">
     {% if post.image %}
     <a class="post-item__link" href="{{ post.url }}" title="{{ post.title }}">
-    <aside class="post-preview" style="background-image: url({{ post.image }})"></aside>
+    <aside class="post-preview lazyload" data-bg="//images.weserv.nl/?url=mikhail-yudin.ru/{{ post.image }}&w=150&t=fitup"></aside>
     </a>
     <meta itemprop="image" content="{{ post.image }}">
     {% endif %}

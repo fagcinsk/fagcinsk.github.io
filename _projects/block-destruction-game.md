@@ -3,7 +3,7 @@ layout: post
 title: Игра про уничтожение блоков
 permalink: /projects/block-destruction-game/
 description: Игра про уничтожение блоков с использованием HTML5 canvas
-image: /photos/block-destruction-game.png
+image: photos/block-destruction-game.png
 image_hide: true
 ---
 

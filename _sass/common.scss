@@ -85,7 +85,7 @@ figcaption {
   padding: 4px 8px;
 }
 
-figure, .map {
+.map {
   border-radius: 3px;
   overflow: hidden;
   border: 1px solid $p-grey-light;
@@ -213,11 +213,15 @@ figure, .map {
   padding-bottom: 133.333%;
 }
 
-.image-wrapper > img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: block;
+.img-dim-1-33,
+.img-dim-1,
+.img-dim-0-75 { 
+  > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
 }

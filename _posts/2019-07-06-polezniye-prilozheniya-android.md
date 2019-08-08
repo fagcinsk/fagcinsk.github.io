@@ -3,7 +3,7 @@ layout: post
 categories: android
 title: Самые полезные приложения для Android
 description: Выделил для себя самые полезные приложения для Android с мощным функционалом, без которых мне тяжело обходиться
-image: /photos/useful-android-apps.png
+image: photos/useful-android-apps.png
 ---
 
 Постепенно пополняя свой арсенал приложений которыми часто пользуюсь, появляются не просто Must have, а без которых теперь сложно обходиться.
