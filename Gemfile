@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'jekyll'
 gem 'exifr'
+gem 'fastimage'
 
 group :jekyll_plugins do
   gem 'jekyll-autoprefixer'

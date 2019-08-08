@@ -1,6 +1,6 @@
 ---
 layout: post
-categories: administration
+categories: linux
 title: Опыт клонирования большого количества жёстких дисков
 description: Описание статьи
 ---

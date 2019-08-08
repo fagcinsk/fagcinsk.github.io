@@ -1,19 +1,24 @@
 <figure class="image" title="{{ include.url }}">
-  <img src="/{{ include.url }}" alt="{{ include.description }}">
+  <a href="/{{ include.url }}" class="image-wrapper img-dim-{{ include.url | proportion | replace: '.','-' }}" data-size="{{ include.url | dimensions }}">
+    <img src="/{{ include.url }}" alt="{{ include.description }}">
+  </a>
   {% if include.description or include.exif %}
   <figcaption>
     {{ include.description }}
     {% if include.exif %}
-        {% capture dt %}{{ include.url | exif: 'date_time' }}{% endcapture %}
-        {% capture lat %}{{ include.url | exif: 'gps.latitude' }}{% endcapture %}
-        {% capture lng %}{{ include.url | exif: 'gps.longitude' }}{% endcapture %}
-        {%- assign m = dt | date: "%-m" -%}
-        <br>
-        <i>{{- dt | date: "%-d"  }} {% case m %}{% when '1' %}января{% when '2' %}февраля{% when '3' %}марта{% when '4' %}апреля{% when '5' %}мая{% when '6' %}июня{% when '7' %}июля{% when '8' %}августа{% when '9' %}сентября{% when '10' %}октября{% when '11' %}ноября{% when '12' %}декабря{% endcase %} {{ dt | date: "%Y" }} {{ dt | date: "%H:%M" -}}</i>
+    {% capture dt %}{{ include.url | exif: 'date_time' }}{% endcapture %}
+    {% capture lat %}{{ include.url | exif: 'gps.latitude' }}{% endcapture %}
+    {% capture lng %}{{ include.url | exif: 'gps.longitude' }}{% endcapture %}
+    {%- assign m = dt | date: "%-m" -%}
+    <br>
+    <i>{{- dt | date: "%-d" }} {% case m %}{% when '1' %}января{% when '2' %}февраля{% when '3' %}марта{% when '4'
+      %}апреля{% when '5' %}мая{% when '6' %}июня{% when '7' %}июля{% when '8' %}августа{% when '9' %}сентября{% when
+      '10' %}октября{% when '11' %}ноября{% when '12' %}декабря{% endcase %} {{ dt | date: "%Y" }} {{ dt | date: "%H:%M"
+      -}}</i>
 
-        <span class="collapsible"><span class="iconify" data-icon="mdi-map-marker"></span></span>
+    <span class="collapsible"><span class="iconify" data-icon="mdi-map-marker"></span></span>
     {{ include.url | exif: 'gps.altitude' }}
-        {% include map.html lat=lat lng=lng %}
+    {% include map.html lat=lat lng=lng %}
     {% endif %}
   </figcaption>
   {% endif %}

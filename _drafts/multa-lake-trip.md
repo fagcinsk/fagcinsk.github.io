@@ -5,11 +5,10 @@ title: Путешествие на Мультинские озёра
 description: Чистейшие горные озёра, большие медведи, резкие перепады температур, шумные водопады, летний снег.
 leaflet: true
 image: /photos/multa-lake-trip/IMG_20190721_163853.jpg
+gallery: true
 ---
 
 Чистейшие горные озёра, большие медведи, резкие перепады температур, шумные водопады, летний снег.
-
-{% include image.html url="photos/multa-lake-trip/IMG_20190721_163853.jpg" %}
 
 ## Сборы
 
@@ -212,6 +211,8 @@ image: /photos/multa-lake-trip/IMG_20190721_163853.jpg
 
 ## Пришли на озеро
 
+<div class="gallery">
+
 {% include image.html exif=1 url="photos/multa-lake-trip/IMG_20190716_171315.jpg" description="" %}
 {% include image.html exif=1 url="photos/multa-lake-trip/IMG_20190716_171320.jpg" description="" %}
 {% include image.html exif=1 url="photos/multa-lake-trip/IMG_20190716_173338.jpg" description="" %}
@@ -225,5 +226,7 @@ image: /photos/multa-lake-trip/IMG_20190721_163853.jpg
 {% include image.html exif=1 url="photos/multa-lake-trip/IMG_20190719_210636.jpg" description="" %}
 {% include image.html exif=1 url="photos/multa-lake-trip/IMG_20190720_182618.jpg" description="" %}
 {% include image.html exif=1 url="photos/multa-lake-trip/IMG_20190721_163853.jpg" description="" %}
+
+</div>
 
 [^1]: [Каремат](https://ru.wikipedia.org/wiki/%D0%A2%D1%83%D1%80%D0%B8%D1%81%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D0%BE%D0%B2%D1%80%D0%B8%D0%BA)
