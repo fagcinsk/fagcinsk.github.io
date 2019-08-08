@@ -3,12 +3,13 @@
 .calendar {
   margin: 4px;
   display: grid;
-  grid-template-columns: repeat(7, 2rem);
-  grid-auto-rows: 2rem;
-  line-height: 2rem;
+  grid-template-columns: repeat(7, 1.5rem);
+  grid-auto-rows: 1.5rem;
+  line-height: 1.5rem;
   text-align: center;
   padding: 8px;
   background-color: #fff;
+  font-size: 0.875rem;
 }
 .calendar__month {
   grid-column: 1/8;
@@ -33,6 +34,7 @@
 .calendar-wrapper {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .calendar-wrapper h1 {
   width: 100%;
