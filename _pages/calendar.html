@@ -1,0 +1,110 @@
+---
+layout: page
+permalink: /calendar/
+---
+
+<div class="calendar-wrapper"></div>
+
+<script>
+const extraDates = [
+{% for post in site.posts %}
+  { 
+    date: "{{ post.date | date: '%Y-%m-%d'}}",
+    title: "{{ post.title }}",
+    href: "{{ post.url }}"
+  },
+{% endfor %}
+];
+
+const monthNames = [
+  "Январь",
+  "Февраль",
+  "Март",
+  "Апрель",
+  "Май",
+  "Июнь",
+  "Июль",
+  "Август",
+  "Сентябрь",
+  "Октябрь",
+  "Ноябрь",
+  "Декабрь"
+];
+const dowNames = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"];
+
+const CURRENT_DATE_STRING = new Date().toDateString()
+
+function daysInMonth(iMonth, iYear) {
+  return 32 - new Date(iYear, iMonth, 32).getDate();
+}
+
+function createCalendar(today, extraDates) {
+  const currentMonth = today.getMonth();
+  const currentYear = today.getFullYear();
+  const calendar = document.createElement("div");
+  calendar.classList.add("calendar");
+
+  const firstDate = +new Date(currentYear, currentMonth, 1);
+
+  let started = false;
+
+  const daySpan = document.createElement("b");
+  daySpan.classList.add("calendar__month");
+  daySpan.innerText = monthNames[currentMonth];
+  calendar.appendChild(daySpan);
+
+  for (let i in dowNames) {
+    const daySpan = document.createElement("b");
+    if (i == 5 || i == 6) {
+      daySpan.classList.add("calendar__we");
+    }
+    daySpan.innerText = dowNames[i];
+    calendar.appendChild(daySpan);
+  }
+
+  const daysTotal = daysInMonth(currentMonth, currentYear)
+  
+  for (let k = -7; k < daysTotal; k++) {
+    const date = new Date(firstDate + k * 86400000);
+    const currentDateString = date.toDateString()
+    let dow = date.getDay();
+
+    if (!started && dow == 1) started = true;
+    if (!started) continue;
+
+    let daySpan = document.createElement("a");
+
+    if (currentMonth == date.getMonth()) {
+      daySpan.innerText = date.getDate();
+      if (dow == 6 || dow == 0) daySpan.classList.add("calendar__we");
+      if (CURRENT_DATE_STRING == currentDateString) daySpan.classList.add("calendar__cur");
+      for (let e in extraDates) {
+        const ed = extraDates[e]
+        if (
+          new Date(ed.date).toDateString() == currentDateString
+        ) {
+          daySpan.setAttribute('title', ed.title)
+          daySpan.setAttribute('href', ed.href)
+          daySpan.classList.add("calendar__ext");
+        }
+      }
+    }
+
+    calendar.appendChild(daySpan);
+  }
+  return calendar;
+}
+
+let date, calendar;
+const container = document.querySelector('.calendar-wrapper')
+let currentYear = new Date().getFullYear()
+
+const yearHeader = document.createElement('h1')
+yearHeader.innerText = 'Календарь на ' + currentYear + ' год'
+container.appendChild(yearHeader)
+for(let i=0;i<12;i++){
+  date = new Date(currentYear, i)
+  calendar = createCalendar(date, extraDates)
+  container.appendChild(calendar)
+}
+</script>

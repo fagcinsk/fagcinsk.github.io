@@ -1,22 +1,40 @@
 @import 'palette';
 
 .calendar {
+  margin: 4px;
   display: grid;
   grid-template-columns: repeat(7, 2rem);
+  grid-auto-rows: 2rem;
   line-height: 2rem;
   text-align: center;
-  margin: 16px 0;
+  padding: 8px;
+  background-color: #fff;
+}
+.calendar__month {
+  grid-column: 1/8;
 }
 .calendar__we {
   color: #e22;
 }
+.calendar__cur {
+  background-color: $p-secondary;
+  color: $p-white;
+  border-radius: 4px;
+}
 .calendar__ext {
-  font-style: normal;
   position: relative;
-  &:after{
-    content: '•';
-    position: absolute;
-    top: -.45em;
-    right: .125em;
-  }
+}
+.calendar__ext:after {
+  content: '•';
+  position: absolute;
+  top: -0.45em;
+  right: 0.125em;
+}
+.calendar-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.calendar-wrapper h1 {
+  width: 100%;
+  text-align: center;
 }

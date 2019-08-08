@@ -61,7 +61,7 @@ img::selection {
   color: $p-white;
 }
 
-a {
+a[href] {
   color: $p-secondary;
   text-decoration: none;
   transition: color 100ms ease-in-out;
