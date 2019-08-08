@@ -4,6 +4,9 @@ module Jekyll
     module ImageProportion
       def proportion(input)
         width, height = FastImage.size(input)
+        if width == nil or height == nil
+          return ''
+        end
         (width.to_f / height).round(2)
       end
 

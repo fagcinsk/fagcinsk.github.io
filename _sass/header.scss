@@ -1,7 +1,8 @@
 @import "palette";
 
 .header-top {
-  padding: 8px 16px;
+  padding: 0 16px;
+  min-height: 72px;
   display: flex;
   align-items: center;
   justify-content: space-between;
