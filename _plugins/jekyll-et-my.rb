@@ -5,9 +5,7 @@ module Jekyll
     module ExifData
       def exif(input, exif_tag)
         exif = EXIFR::JPEG::new(input)
-        exif_tag.split('.').inject(exif) {|exif, tag|
-          exif == nil ? nil : exif.send(tag)
-        } || ""
+        exif_tag.split('.').inject(exif) {|e, tag| e ? e.send(tag) : nil}
       end
     end
   end
