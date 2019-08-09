@@ -105,6 +105,11 @@ autoprefixer:
   browsers:
     - last 2 versions
 
+yandex_metrika:
+  token: AgAAAAACBsTEAAXOQm6356MxwEN8vDlsI0f5t3g
+  site_url: https://mikhail-yudin.ru/
+  trim_last: " | Михаил Юдин"
+
 exclude:
   - Gemfile
   - Gemfile.lock
