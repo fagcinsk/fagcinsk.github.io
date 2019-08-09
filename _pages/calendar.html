@@ -100,7 +100,7 @@ const container = document.querySelector('.calendar-wrapper')
 let currentYear = new Date().getFullYear()
 
 const yearHeader = document.createElement('h1')
-yearHeader.innerText = 'Календарь на ' + currentYear + ' год'
+yearHeader.innerText = 'Календарь публикаций на ' + currentYear + ' год'
 container.appendChild(yearHeader)
 for(let i=0;i<12;i++){
   date = new Date(currentYear, i)

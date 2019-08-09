@@ -8,14 +8,13 @@
   line-height: 1.5rem;
   text-align: center;
   padding: 8px;
-  background-color: #fff;
   font-size: 0.875rem;
 }
 .calendar__month {
   grid-column: 1/8;
 }
 .calendar__we {
-  color: #e22;
+  color: $accent-color;
 }
 .calendar__cur {
   background-color: $accent-color;
@@ -23,13 +22,7 @@
   border-radius: 4px;
 }
 .calendar__ext {
-  position: relative;
-}
-.calendar__ext:after {
-  content: '•';
-  position: absolute;
-  top: -0.45em;
-  right: 0.125em;
+  font-weight: bolder;
 }
 .calendar-wrapper {
   display: flex;

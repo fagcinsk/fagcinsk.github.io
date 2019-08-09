@@ -91,7 +91,7 @@ yandex_metrika:
 
 pagination:
   enabled: true
-  debug: true
+  debug: false
   per_page: 10
   permalink: '/page/:num/' # Pages are index.html inside this folder (default)
   title: ':title - страница :num'
