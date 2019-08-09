@@ -1,16 +1,11 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: 'ru' }}" itemscope="" itemtype="http://schema.org/WebPage">
-
+{%- assign mapindex = 0 -%}
 {%- include head.html -%}
-
 <body class="page with-sidebar">
-
 {%- include header-promo.html -%}
-
 <main aria-label="Content" itemscope itemprop="mainContentOfPage">
   {{ content }}
-  {% include post-list.html %}
-  {% include pagination.html %}
 </main>
 <aside class="page__aside">
   {% include sidebar.html %}
@@ -19,5 +14,4 @@
 {%- include scripts.html -%}
 {%- include analytics.html -%}
 </body>
-
 </html>
