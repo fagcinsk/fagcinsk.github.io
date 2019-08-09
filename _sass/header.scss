@@ -3,17 +3,17 @@
 .header-top {
   padding: 0 16px;
   min-height: 72px;
+  line-height: 42px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .main-menu {
-  line-height: 42px;
   text-transform: uppercase;
 }
 
-.main-menu__item {
+.main-menu__item[href] {
   display: inline-block;
   margin: 0 8px;
   color: $p-grey-dark;
