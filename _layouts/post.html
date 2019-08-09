@@ -7,7 +7,10 @@ layout: default
     <h1 class="post__title" itemprop="headline">{{ page.title | escape }}</h1>
     {% if page.image_hide != true %}{% include image.html url=page.image alt=page.title %}{% endif %}
   </header>
-  <div class="post__content" itemprop="articleBody">{{content}}</div>
+  <div class="post__content" itemprop="articleBody">
+    {{content | toc}}
+    {{content}}
+  </div>
 
   <h2>Поделиться в соцсетях:</h2>
   <script src="//yastatic.net/share2/share.js" async="async"></script>

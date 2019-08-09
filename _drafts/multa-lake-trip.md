@@ -6,6 +6,7 @@ description: Чистейшие горные озёра, большие медв
 leaflet: true
 image: photos/multa-lake-trip/IMG_20190721_163853.jpg
 gallery: true
+toc: true
 ---
 
 Чистейшие горные озёра, большие медведи, резкие перепады температур, шумные водопады, летний снег.

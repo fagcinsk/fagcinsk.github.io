@@ -1,5 +1,6 @@
 ---
 layout: default
+sitemap: false
 pagination:
   enabled: true
 ---
@@ -7,4 +8,4 @@ pagination:
 {% assign category = page.dir | split: "/" | last%}
 <h1>Материалы в категории &ldquo;{{ site.categoryMap[category].name }}&rdquo;</h1>
 
-{% for post in site.categories[category] %}{% include post-item.html %}{% endfor %}
+{% for post in paginator.posts %}{% include post-item.html %}{% endfor %}
