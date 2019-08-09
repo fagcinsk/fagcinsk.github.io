@@ -3,12 +3,38 @@
 .promo {
   padding: 96px 64px;
   text-align: center;
-  background-color: rgba($p-grey-light, 0.4);
+  background-color: $accent-color;
+  color: $p-white;
 }
 
 .promo__header {
   font-size: 2.25rem;
   margin-bottom: 1.25rem;
+}
+
+.categories {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.categories__item {
+  display: inline-block;
+
+  > sup {
+    position: relative;
+    left: -0.85em;
+    color: $p-grey-light;
+  }
+}
+
+.categories__link {
+  padding: 8px 16px;
+  display: inline-block;
+}
+
+a[href].categories__link {
+  color: $primary-color-light;
 }
 
 @media (max-width: 768px) {

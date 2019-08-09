@@ -5,6 +5,10 @@ html {
   box-sizing: border-box;
 }
 
+body {
+  background-color: $p-grey-light;
+}
+
 .page {
   display: grid;
   min-height: 100vh;
@@ -18,7 +22,7 @@ html {
   grid-column: 1/4;
 }
 
-aside, main {
+.page__aside, main {
   grid-column: 2/3;
   margin-bottom: 32px;
 }
@@ -32,7 +36,7 @@ aside, main {
   .with-sidebar {
     grid-template-columns: 1fr minmax(auto, $max-content-size) 16rem 1fr;
 
-    aside {
+    .page__aside {
       grid-column: 3/4;
     }
 
@@ -58,17 +62,22 @@ img::selection {
 }
 
 ::selection {
-  background-color: $p-secondary-dark;
+  background-color: $primary-color-dark;
   color: $p-white;
 }
 
 a[href] {
-  color: $p-secondary;
+  color: $primary-color-dark;
   text-decoration: none;
-  transition: color 100ms ease-in-out;
+  transition: color 100ms ease-in-out, background-color 1000ms step-end;
 
   &:hover, &:active, &.active {
     text-decoration: underline;
+  }
+
+
+  &:active {
+    background-color: $primary-color-light;
   }
 }
 
@@ -82,7 +91,7 @@ hr {
 figcaption {
   text-align: center;
   font-size: .875rem;
-  color: $p-primary-dark;
+  color: $primary-color-dark;
   padding: 4px 8px;
 }
 
@@ -110,7 +119,7 @@ figcaption {
   }
 
   &:hover {
-    background-color: $p-secondary;
+    background-color: $accent-color;
     color: $p-white;
   }
 }
@@ -125,7 +134,7 @@ figcaption {
 }
 
 .pager__disabled {
-  background: $p-secondary;
+  background: $accent-color;
   color: $p-white;
 }
 
@@ -198,7 +207,7 @@ figcaption {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 33%;
-  background-color: rgba($p-secondary, 0.35);
+  background-color: rgba($primary-color-light, 0.35);
   opacity: .35;
 }
 

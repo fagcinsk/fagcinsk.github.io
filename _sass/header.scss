@@ -2,11 +2,11 @@
 
 .header-top {
   padding: 0 16px;
-  min-height: 72px;
   line-height: 42px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: $p-white;
 }
 
 .main-menu {
@@ -15,26 +15,32 @@
 
 .main-menu__item[href] {
   display: inline-block;
-  margin: 0 8px;
+  padding: 8px 24px;
   color: $p-grey-dark;
+  transition: background-color 50ms;
   &.active {
-    color: $p-secondary;
+    color: $primary-color-dark;
     text-decoration: none;
   }
   &:hover {
-    color: $p-secondary-light;
+    color: $primary-color-dark;
     text-decoration: none;
+    background-color: $primary-color-light;
   }
 }
 
 .site-title {
+  display: inline-block;
   font-size: 1.5rem;
   font-weight: 600;
-  margin: 0 8px;
+  padding: 8px 16px;
 }
 
 @media (max-width: 768px) {
   .header-top {
     flex-flow: column;
+  }
+  .main-menu__item[href] {
+    padding: 4px 8px;
   }
 }

@@ -7,8 +7,22 @@
   h2 {
     margin-top: 0;
     padding: 0 0 4px 0;
-    border-bottom: 1px solid $p-grey-light;
+    border-bottom: 1px solid $primary-color-dark;
   }
+
+  background-color: $primary-color-light;
+  padding: 0 16px;
+  font-size: 0.875rem;
+
+  a:not(.avatar) {
+    line-height: 1.25;
+    display: inline-block;
+    margin: 0.25rem;
+  }
+}
+
+.author-block {
+  margin-top: -32px;
 }
 
 .avatar {
@@ -16,9 +30,10 @@
   overflow: hidden;
   width: 80px;
   height: 80px;
-  margin: 16px auto;
+  margin: 0 auto 16px;
   background-color: $p-grey;
   display: block;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.35);
 }
 
 .text-right {
@@ -29,26 +44,7 @@
   margin: 32px 0;
 }
 
-.categories {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
 
-.categories__item {
-  display: inline-block;
-
-  > sup {
-    position: relative;
-    left: -0.85em;
-    color: $p-grey;
-  }
-}
-
-.categories__link {
-  padding: 8px 16px;
-  display: inline-block;
-}
 
 .video-wrapper {
   position: relative;
@@ -105,6 +101,7 @@ img.me {
 @media (max-width: 768px) {
   .author-block {
     display: flex;
+    margin-top: 16px;
   }
 
   .author-avatar {

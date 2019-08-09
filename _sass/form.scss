@@ -18,7 +18,7 @@ input,
 textarea {
   font-size: 1.125rem;
   border: none;
-  border-bottom: 1px solid $p-primary;
+  border-bottom: 1px solid $accent-color;
   background: none;
   padding: 8px 4px;
   margin: 4px 0;
@@ -31,14 +31,14 @@ button {
   border-radius: 4px;
   padding: 12px 16px;
   text-transform: uppercase;
-  background-color: $p-primary-dark;
+  background-color: $primary-color-dark;
   color: $p-white;
   margin-top: 8px;
   font-size: 1rem;
   cursor: pointer;
 
   &:hover {
-    background-color: $p-primary;
+    background-color: $primary-color;
   }
 }
 
@@ -49,8 +49,13 @@ button {
   }
   .ya-site-form__submit {
     background-color: transparent;
-    border: 1px solid $p-primary-dark;
+    border: 1px solid $primary-color-dark;
     padding: 8px 16px;
+  }
+  &#ya-site-form0 .ya-site-form__form .ya-site-form__input-text{
+    background-color: transparent !important;
+    border: none !important;
+    border-bottom: 1px solid $accent-color !important;
   }
   .ya-site-form__search-input {
     padding: 0 !important;

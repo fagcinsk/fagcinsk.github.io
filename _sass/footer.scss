@@ -1,3 +1,5 @@
+@import "palette";
+
 .page__footer {
   margin-top: 32px;
   padding: 64px 16px;
@@ -7,7 +9,7 @@
   a {
     color: $p-grey-dark;
     &:hover {
-      color: $p-secondary-light;
+      color: $primary-color;
       text-decoration: none;
     }
   }
