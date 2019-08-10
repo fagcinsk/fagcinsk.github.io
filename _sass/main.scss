@@ -1,122 +1,34 @@
-@import "palette";
-@import "variables";
+@charset "utf-8";
 
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "abstracts/palette";
 
+@import 'themes/default';
 
-.page__aside {
-  h2 {
-    margin-top: 0;
-    padding: 0 0 4px 0;
-    border-bottom: 1px solid $primary-color-dark;
-  }
+@import "base/reset";
+@import "base/base";
+@import "base/typography";
 
-  background-color: $primary-color-light;
-  padding: 0 16px;
-  font-size: 0.875rem;
+@import "layout/page";
 
-  a:not(.avatar) {
-    line-height: 1.25;
-    display: inline-block;
-    margin: 0.25rem;
-  }
-}
+@import "components/header";
+@import "components/promo";
+@import "components/footer";
+@import "components/author";
+@import "components/sidebar";
+@import "components/map";
+@import "components/post-item";
 
-.author-block {
-  margin-top: -32px;
-}
+@import "components/form";
+@import "components/yandex-search-form";
 
-.avatar {
-  border-radius: 50%;
-  overflow: hidden;
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 16px;
-  background-color: $p-grey;
-  display: block;
-  box-shadow: 0 2px 3px rgba(0,0,0,0.35);
-}
+@import "components/syntax";
+@import "components/calendar";
 
-.text-right {
-  text-align: right;
-}
+@import "pages/post";
+@import "pages/about";
 
 .subscribe {
   margin: 32px 0;
-}
-
-
-
-.video-wrapper {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
-  padding-top: 25px;
-  height: 0;
-}
-
-.video-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.flex {
-  display: flex;
-}
-
-.flex-grow {
-  flex: 1;
-}
-
-.map {
-  width: 100%;
-  height: 250px;
-  margin: 16px 0;
-}
-
-img.me {
-  float: right;
-  width: 300px;
-  margin: 0 0 16px 16px;
-  border-radius: 3px;
-}
-
-.collapsible {
-  cursor: pointer;
-
-  & + div:not(.expanded) {
-    display: none;
-  }
-}
-
-.ad-content {
-  margin: 32px 0;
-}
-
-.sidebar-block {
-  margin-bottom: 32px;
-}
-
-@media (max-width: 768px) {
-  .author-block {
-    display: flex;
-    margin-top: 16px;
-  }
-
-  .author-avatar {
-    margin-right: 8px;
-  }
-
-  .avatar {
-    margin-top: 0;
-  }
-
-  .categories__item {
-    display: inline-block;
-  }
-
-  img.me {
-    width: 100%;
-  }
 }

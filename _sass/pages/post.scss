@@ -1,0 +1,34 @@
+.post {
+  padding: 32px 0;
+  margin-bottom: 16px;
+  @include themify {
+    border-bottom: 1px solid themed('border-c');
+  }
+}
+
+.post__header {
+  margin-bottom: 16px;
+}
+
+.post__meta {
+  @include themify {
+    color: themed('post-meta-c');
+  }
+  font-size: 0.75rem;
+}
+
+.post__content {
+  margin-bottom: 32px;
+}
+
+
+.related-posts {
+  margin-top: 32px;
+}
+
+@media (max-width: 768px) {
+  .post {
+    padding: 16px;
+    margin: -16px -16px 16px -16px;
+  }
+}

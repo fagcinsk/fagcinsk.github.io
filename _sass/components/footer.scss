@@ -1,18 +1,10 @@
-@import "palette";
-
 .page__footer {
   margin-top: 32px;
   padding: 64px 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  a {
-    color: $p-grey-dark;
-    &:hover {
-      color: $primary-color;
-      text-decoration: none;
-    }
-  }
+
   .contact-icons {
     font-size: 40px;
   }

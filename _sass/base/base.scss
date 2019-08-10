@@ -1,56 +1,36 @@
-@import "palette";
-
-$max-content-size: 48rem;
 html {
   box-sizing: border-box;
 }
 
 body {
-  background-color: $p-grey-light;
-}
-
-.page {
-  display: grid;
-  min-height: 100vh;
-  overflow-y: scroll;
-  grid-template-columns: 0 minmax(0, auto) 0;
-  grid-auto-rows: auto 1fr auto;
-  grid-gap: 16px;
-}
-
-.page__header, .page__footer {
-  grid-column: 1/4;
-}
-
-.page__aside, main {
-  grid-column: 2/3;
-  margin-bottom: 32px;
-}
-
-@media (min-width: $max-content-size) {
-  .page {
-    grid-gap: 64px;
-    grid-template-columns: 1fr minmax(auto, $max-content-size) 1fr;
-  }
-
-  .with-sidebar {
-    grid-template-columns: 1fr minmax(auto, $max-content-size) 16rem 1fr;
-
-    .page__aside {
-      grid-column: 3/4;
-    }
-
-    .page__header, .page__footer {
-      grid-column: 1/5;
-    }
+  @include themify {
+    color: themed('page-c');
+    background-color: themed('page-bg');
   }
 }
+
+
 
 img, embed, object, video {
   max-width: 100%;
   height: auto;
   width: auto;
   vertical-align: middle;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 img::selection {
@@ -62,43 +42,47 @@ img::selection {
 }
 
 ::selection {
-  background-color: $primary-color-dark;
-  color: $p-white;
+  @include themify {
+    background-color: themed('sel-bg');
+    color: themed('sel-c');
+  }
 }
 
 a[href] {
-  color: $primary-color-dark;
+  
   text-decoration: none;
-  transition: color 100ms ease-in-out, background-color 1000ms step-end;
+  transition: color 100ms ease-in-out, background-color 100ms;
 
   &:hover, &:active, &.active {
     text-decoration: underline;
   }
 
-
+  @include themify {
+  color: themed('link-c-a');
   &:active {
-    background-color: $primary-color-light;
+      background-color: themed('link-c-a');
+    }
   }
 }
 
 hr {
   border: none;
   height: 1px;
-  background-color: $p-grey-light;
+  @include themify {
+    background-color: themed('border-c');
+  }
   margin: 16px 0;
 }
 
 figcaption {
   text-align: center;
   font-size: .875rem;
-  color: $primary-color-dark;
   padding: 4px 8px;
 }
 
 .map {
   border-radius: 3px;
   overflow: hidden;
-  border: 1px solid $p-grey-light;
 }
 
 .go-top {
@@ -106,7 +90,6 @@ figcaption {
   bottom: 24px;
   right: 24px;
   font-size: 38px;
-  background-color: $p-grey-light;
   border-radius: 50%;
   cursor: pointer;
   width: 40px;
@@ -117,11 +100,6 @@ figcaption {
   &:not(.show) {
     display: none;
   }
-
-  &:hover {
-    background-color: $accent-color;
-    color: $p-white;
-  }
 }
 
 .contact-icons {
@@ -131,11 +109,6 @@ figcaption {
 .pager {
   font-size: 1.25em;
   text-align: center;
-}
-
-.pager__disabled {
-  background: $accent-color;
-  color: $p-white;
 }
 
 .pager__prev, .pager__next, .pager__disabled, .pager__page {
@@ -207,7 +180,7 @@ figcaption {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 33%;
-  background-color: rgba($primary-color-light, 0.35);
+  background-color: rgba(0,0,0, 0.35);
   opacity: .35;
 }
 

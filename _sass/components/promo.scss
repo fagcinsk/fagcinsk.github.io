@@ -1,10 +1,13 @@
-@import "palette";
-
 .promo {
   padding: 96px 64px;
   text-align: center;
-  background-color: $accent-color;
-  color: $p-white;
+  @include themify {
+    background-color: themed('promo-bg');
+    color: themed('promo-c');
+    a[href] {
+      color: themed('promo-c');
+    }
+  }
 }
 
 .promo__header {
@@ -24,7 +27,6 @@
   > sup {
     position: relative;
     left: -0.85em;
-    color: $p-grey-light;
   }
 }
 
@@ -33,9 +35,7 @@
   display: inline-block;
 }
 
-a[href].categories__link {
-  color: $primary-color-light;
-}
+
 
 @media (max-width: 768px) {
   .promo {

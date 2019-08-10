@@ -1,12 +1,12 @@
-@import "palette";
-
 .header-top {
   padding: 0 16px;
   line-height: 42px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: $p-white;
+  @include themify {
+    background-color: themed('header-bg');
+  }
 }
 
 .main-menu {
@@ -16,16 +16,17 @@
 .main-menu__item[href] {
   display: inline-block;
   padding: 8px 24px;
-  color: $p-grey-dark;
   transition: background-color 50ms;
-  &.active {
-    color: $primary-color-dark;
-    text-decoration: none;
-  }
-  &:hover {
-    color: $primary-color-dark;
-    text-decoration: none;
-    background-color: $primary-color-light;
+  text-decoration: none !important;
+  @include themify {
+    color: themed('menu-c');
+    &.active {
+      color: themed('menu-c-a');
+    }
+    &:hover {
+      color: themed('menu-c-h');
+      background-color: themed('menu-bg-h');
+    }
   }
 }
 

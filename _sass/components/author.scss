@@ -1,0 +1,31 @@
+.author-block {
+  margin-top: -32px;
+  .avatar {
+    margin: 0 auto 16px;
+  }
+}
+
+.avatar {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 80px;
+  height: 80px;
+  
+  display: block;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.35);
+}
+
+@media (max-width: 768px) {
+  .author-block {
+    display: flex;
+    margin-top: 16px;
+  }
+
+  .author-avatar {
+    margin-right: 8px;
+  }
+
+  .avatar {
+    margin-top: 0;
+  }
+}

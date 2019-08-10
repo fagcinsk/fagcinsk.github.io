@@ -1,0 +1,22 @@
+.page__aside {
+  h2 {
+    margin-top: 0;
+    padding: 0 0 4px 0;
+  }
+
+  @include themify {
+    background-color: themed('sidebar-bg');
+  }
+  padding: 0 16px;
+  font-size: 0.875rem;
+
+  a:not(.avatar) {
+    line-height: 1.25;
+    display: inline-block;
+    margin: 0.25rem;
+  }
+}
+
+.sidebar-block {
+  margin-bottom: 32px;
+}

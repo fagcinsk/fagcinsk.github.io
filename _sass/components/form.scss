@@ -1,0 +1,48 @@
+form {
+  padding: 16px;
+  border-radius: 3px;
+  font-size: 1rem;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.input {
+  display: flex;
+  flex-flow: column;
+}
+
+input,
+textarea,
+select {
+  font-size: 1.125rem;
+  border: none;
+  background: none;
+  padding: 8px 4px;
+  margin: 4px 0;
+  @include themify {
+    border-bottom: 1px solid themed('control-border-c');
+  }
+}
+
+input[type="submit"],
+input[type="button"],
+button,
+.button {
+  border: none;
+  border-radius: 4px;
+  padding: 12px 16px;
+  text-transform: uppercase;
+  margin-top: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+
+  @include themify {
+    color: themed('button-c');
+    background-color: themed('button-bg');
+  
+    &:hover {
+      background-color: themed('button-bg-a');
+    }
+  }
+}
+

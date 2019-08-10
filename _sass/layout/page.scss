@@ -1,0 +1,38 @@
+$max-content-size: 48rem;
+
+.page {
+  display: grid;
+  min-height: 100vh;
+  overflow-y: scroll;
+  grid-template-columns: 0 minmax(0, auto) 0;
+  grid-auto-rows: auto 1fr auto;
+  grid-gap: 16px;
+}
+
+.page__header, .page__footer {
+  grid-column: 1/4;
+}
+
+.page__aside, main {
+  grid-column: 2/3;
+  margin-bottom: 32px;
+}
+
+@media (min-width: $max-content-size) {
+  .page {
+    grid-gap: 64px;
+    grid-template-columns: 1fr minmax(auto, $max-content-size) 1fr;
+  }
+
+  .with-sidebar {
+    grid-template-columns: 1fr minmax(auto, $max-content-size) 16rem 1fr;
+
+    .page__aside {
+      grid-column: 3/4;
+    }
+
+    .page__header, .page__footer {
+      grid-column: 1/5;
+    }
+  }
+}

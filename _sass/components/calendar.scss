@@ -1,5 +1,3 @@
-@import 'palette';
-
 .calendar {
   margin: 4px;
   display: grid;
@@ -13,13 +11,21 @@
 .calendar__month {
   grid-column: 1/8;
 }
+.calendar__cur {
+  border-radius: 4px;
+}
+
+
 .calendar__we {
-  color: $accent-color;
+  @include themify {
+    color: themed('cal-we-c');
+  }
 }
 .calendar__cur {
-  background-color: $accent-color;
-  color: $p-white;
-  border-radius: 4px;
+  @include themify {
+    color: themed('cal-cur-c');
+    background-color: themed('cal-cur-bg');
+  }
 }
 .calendar__ext {
   font-weight: bolder;

@@ -1,0 +1,11 @@
+img.me {
+  float: right;
+  width: 300px;
+  margin: 0 0 16px 16px;
+  border-radius: 3px;
+}
+@media (max-width: 768px) {
+  img.me {
+    width: 100%;
+  }
+}
