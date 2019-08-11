@@ -5,7 +5,7 @@ author:
   name: Михаил Юдин
   email: fagci.nsk@gmail.com
 description: >
-  Занимаюсь frontend разработкой, улучшаю пользовательский опыт. Рассказываю о железячных проектах, настройке сервера, полезных Android приложениях.
+  Занимаюсь front-end разработкой, улучшаю UX. Рассказываю о железячных проектах, настройке сервера, полезных Android приложениях.
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mikhail-yudin.ru"
