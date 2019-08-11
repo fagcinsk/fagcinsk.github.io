@@ -8,33 +8,35 @@
   padding: 8px;
   font-size: 0.875rem;
 }
+
 .calendar__month {
   grid-column: 1/8;
 }
+
 .calendar__cur {
   border-radius: 4px;
+  @include themify {
+    color: themed('cal-cur-c');
+    background-color: themed('cal-cur-bg');
+  }
 }
-
 
 .calendar__we {
   @include themify {
     color: themed('cal-we-c');
   }
 }
-.calendar__cur {
-  @include themify {
-    color: themed('cal-cur-c');
-    background-color: themed('cal-cur-bg');
-  }
-}
+
 .calendar__ext {
   font-weight: bolder;
 }
+
 .calendar-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
+
 .calendar-wrapper h1 {
   width: 100%;
   text-align: center;

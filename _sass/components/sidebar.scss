@@ -1,9 +1,4 @@
 .page__aside {
-  h2 {
-    margin-top: 0;
-    padding: 0 0 4px 0;
-  }
-
   @include themify {
     background-color: themed('sidebar-bg');
   }
@@ -15,6 +10,11 @@
     display: inline-block;
     margin: 0.25rem;
   }
+}
+
+.sidebar__header {
+  margin-top: 0;
+  padding: 0 0 4px 0;
 }
 
 .sidebar-block {

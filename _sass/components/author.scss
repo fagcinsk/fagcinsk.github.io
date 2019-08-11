@@ -15,7 +15,11 @@
   box-shadow: 0 2px 3px rgba(0,0,0,0.35);
 }
 
-@media (max-width: 768px) {
+.author-avatar__name {
+  text-align: center;
+}
+
+@include device('mobile') {
   .author-block {
     display: flex;
     margin-top: 16px;

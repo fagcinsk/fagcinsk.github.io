@@ -30,7 +30,7 @@
   overflow: hidden;
 }
 
-@media (max-width: 768px) {
+@include device('mobile') {
   .post-preview {
     width: 70px;
     height: 70px;

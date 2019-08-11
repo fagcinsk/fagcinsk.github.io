@@ -21,12 +21,15 @@
   margin-bottom: 32px;
 }
 
-
 .related-posts {
   margin-top: 32px;
 }
 
-@media (max-width: 768px) {
+.subscribe {
+  margin: 32px 0;
+}
+
+@include device('mobile') {
   .post {
     padding: 16px;
     margin: -16px -16px 16px -16px;

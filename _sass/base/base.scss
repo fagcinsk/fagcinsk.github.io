@@ -9,8 +9,6 @@ body {
   }
 }
 
-
-
 img, embed, object, video {
   max-width: 100%;
   height: auto;
@@ -37,10 +35,6 @@ img::selection {
   background: transparent;
 }
 
-.text-center {
-  text-align: center;
-}
-
 ::selection {
   @include themify {
     background-color: themed('sel-bg');
@@ -49,7 +43,6 @@ img::selection {
 }
 
 a[href] {
-  
   text-decoration: none;
   transition: color 100ms ease-in-out, background-color 100ms;
 
@@ -60,7 +53,7 @@ a[href] {
   @include themify {
   color: themed('link-c-a');
   &:active {
-      background-color: themed('link-c-a');
+      color: themed('link-c-a');
     }
   }
 }
@@ -68,10 +61,10 @@ a[href] {
 hr {
   border: none;
   height: 1px;
+  margin: 16px 0;
   @include themify {
     background-color: themed('border-c');
   }
-  margin: 16px 0;
 }
 
 figcaption {
