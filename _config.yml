@@ -127,7 +127,6 @@ autopages:
 #    title: 'Материалы с тегом :tag'
 #    permalink: '/tag/:tag'
 
-
 include:
   - _pages
   - _redirects
