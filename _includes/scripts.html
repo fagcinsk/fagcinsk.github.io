@@ -1,5 +1,5 @@
-<script src="/assets/js/lazysizes.min.js"></script>
-<script src="/assets/js/ls.unveilhooks.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.1/lazysizes.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.1/plugins/unveilhooks/ls.unveilhooks.min.js"></script>
 
 <script>
   let i
@@ -38,6 +38,17 @@
       passive: true
     })
   })(window)
+</script>
+
+<script>
+  (function(document) {
+    if(!document.body.querySelector('.codehilite')) return;
+    var link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = "//cdn.jsdelivr.net/npm/pygments-css@1.0.0/monokai.css";
+
+    document.getElementsByTagName("head")[0].appendChild(link);
+  })(window.document)
 </script>
 
 <script src="//code.iconify.design/1/1.0.3/iconify.min.js" async></script>

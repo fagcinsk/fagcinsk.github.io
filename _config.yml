@@ -37,6 +37,12 @@ kramdown:
   input: GFM
   hard_wrap: true
   syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    default_lang: html
+    css_class   : 'codehilite'
+
+sass:
+  style: compressed
 
 navigation: # Navigation links
   - {name: 'Проекты', link: '/projects/'}
