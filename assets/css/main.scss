@@ -1,4 +1,23 @@
 ---
 ---
-@import "main";
+@charset "utf-8";
 
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "abstracts/palette";
+
+@import 'themes/default';
+
+@import "base/reset";
+@import "base/base";
+@import "base/typography";
+
+@import "layout/page";
+
+@import "components/header";
+@import "components/footer";
+@import "components/author";
+@import "components/post-item";
+
+@import "components/form";
+@import "components/yandex-search-form";

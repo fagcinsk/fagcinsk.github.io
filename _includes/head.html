@@ -1,25 +1,23 @@
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  {% seo %}
-  <meta property="og:type" content="website">
-  {% feed_meta %}
-  
-  <link rel="shortcut icon" href="{{ 'favicon.ico' | relative_url }}">
-  <meta name="theme-color" content="#ffffff">
+{% seo %}
+<meta property="og:type" content="website">
+{% feed_meta %}
 
-  <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
-  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
-  
-  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-  
-  {% if page.leaflet == true %}
-  <link href="/assets/css/leaflet.min.css" rel="stylesheet" />
-  {% endif %}
+<link rel="shortcut icon" href="{{ 'favicon.ico' | relative_url }}">
+<meta name="theme-color" content="#ffffff">
 
-  {% if page.leaflet == true %}
-  <script src="/assets/js/leaflet.min.js"></script>
-  {% endif %}
-</head>
+<link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+<link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
+
+<link rel="stylesheet" href="/assets/css/main.css">
+
+{% if page.leaflet == true %}
+<link href="/assets/css/leaflet.min.css" rel="stylesheet" />
+{% endif %}
+
+{% if page.leaflet == true %}
+<script src="/assets/js/leaflet.min.js"></script>
+{% endif %}
