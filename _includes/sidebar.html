@@ -1,60 +1,62 @@
 <div class="sidebar-block">
-<div class="author-block">
-  <div class="author-avatar">
-    <a class="avatar author-block__avatar" href="/about/">
-      <img src="/assets/img/ava.jpg" alt="Я">
-    </a>
-    <p class="author-avatar__name"><a href="/about/">Михаил Юдин</a></p>
+  <div class="author-block">
+    <div class="author-avatar">
+      <a class="avatar author-block__avatar" href="/about/">
+        <img src="/assets/img/ava.jpg" alt="Я" title="Михаил Юдин">
+      </a>
+      <p class="author-avatar__name"><a href="/about/">Михаил Юдин</a></p>
+    </div>
+    <p>{{site.description}}</p>
   </div>
-  <p>{{site.description}}</p>
-</div>
 </div>
 <div class="sidebar-block">
   <h2 class="sidebar__header">Популярные страницы</h2>
   {% ym %}
 </div>
 <div class="ya-site-form ya-site-form_inited_no sidebar-block"
-     data-bem="{&quot;action&quot;:&quot;https://mikhail-yudin.ru/search/&quot;,&quot;arrow&quot;:false,&quot;bg&quot;:&quot;transparent&quot;,&quot;fontsize&quot;:14,&quot;fg&quot;:&quot;#000000&quot;,&quot;language&quot;:&quot;ru&quot;,&quot;logo&quot;:&quot;rb&quot;,&quot;publicname&quot;:&quot;Поиск по mikhail-yudin.ru&quot;,&quot;suggest&quot;:true,&quot;target&quot;:&quot;_blank&quot;,&quot;tld&quot;:&quot;ru&quot;,&quot;type&quot;:2,&quot;usebigdictionary&quot;:true,&quot;searchid&quot;:2354636,&quot;input_fg&quot;:&quot;#000000&quot;,&quot;input_bg&quot;:&quot;#ffffff&quot;,&quot;input_fontStyle&quot;:&quot;normal&quot;,&quot;input_fontWeight&quot;:&quot;normal&quot;,&quot;input_placeholder&quot;:&quot;Поиск в блоге&quot;,&quot;input_placeholderColor&quot;:&quot;#000000&quot;,&quot;input_borderColor&quot;:&quot;#dddddd&quot;}">
-  <form action="https://yandex.ru/search/site/" method="get" target="_blank" accept-charset="utf-8"><input
-    type="hidden" name="searchid" value="2354636"/><input type="hidden" name="l10n" value="ru"/><input type="hidden"
-                                                                                                       name="reqenc"
-                                                                                                       value=""/><input
-    type="search" name="text" value=""/><input type="submit" value="Найти"/></form>
+  data-bem="{&quot;action&quot;:&quot;https://mikhail-yudin.ru/search/&quot;,&quot;arrow&quot;:false,&quot;bg&quot;:&quot;transparent&quot;,&quot;fontsize&quot;:14,&quot;fg&quot;:&quot;#000000&quot;,&quot;language&quot;:&quot;ru&quot;,&quot;logo&quot;:&quot;rb&quot;,&quot;publicname&quot;:&quot;Поиск по mikhail-yudin.ru&quot;,&quot;suggest&quot;:true,&quot;target&quot;:&quot;_blank&quot;,&quot;tld&quot;:&quot;ru&quot;,&quot;type&quot;:2,&quot;usebigdictionary&quot;:true,&quot;searchid&quot;:2354636,&quot;input_fg&quot;:&quot;#000000&quot;,&quot;input_bg&quot;:&quot;#ffffff&quot;,&quot;input_fontStyle&quot;:&quot;normal&quot;,&quot;input_fontWeight&quot;:&quot;normal&quot;,&quot;input_placeholder&quot;:&quot;Поиск в блоге&quot;,&quot;input_placeholderColor&quot;:&quot;#000000&quot;,&quot;input_borderColor&quot;:&quot;#dddddd&quot;}">
+  <form action="https://yandex.ru/search/site/" method="get" target="_blank" accept-charset="utf-8"><input type="hidden"
+      name="searchid" value="2354636" /><input type="hidden" name="l10n" value="ru" />
+    <input type="hidden" name="reqenc" value="" />
+    <input type="search" id="y-search" name="text" value="" />
+    <input type="submit" value="Найти" /></form>
 </div>
-<style type="text/css">.ya-page_js_yes .ya-site-form_inited_no {
-  display: none;
-}</style>
+<style type="text/css">
+  .ya-page_js_yes .ya-site-form_inited_no {
+    display: none;
+  }
+</style>
 <script type="text/javascript">(function (w, d, c) {
-  var s = d.createElement('script'), h = d.getElementsByTagName('script')[0], e = d.documentElement
-  if ((' ' + e.className + ' ').indexOf(' ya-page_js_yes ') === -1) {e.className += ' ya-page_js_yes'}
-  s.type = 'text/javascript'
-  s.async = true
-  s.charset = 'utf-8'
-  s.src = (d.location.protocol === 'https:' ? 'https:' : 'http:') + '//site.yandex.net/v2.0/js/all.js'
-  h.parentNode.insertBefore(s, h);
-  (w[c] || (w[c] = [])).push(function () {Ya.Site.Form.init()})
-})(window, document, 'yandex_site_callbacks')</script>
+    var s = d.createElement('script'), h = d.getElementsByTagName('script')[0], e = d.documentElement
+    if ((' ' + e.className + ' ').indexOf(' ya-page_js_yes ') === -1) { e.className += ' ya-page_js_yes' }
+    s.type = 'text/javascript'
+    s.async = true
+    s.charset = 'utf-8'
+    s.src = (d.location.protocol === 'https:' ? 'https:' : 'http:') + '//site.yandex.net/v2.0/js/all.js'
+    h.parentNode.insertBefore(s, h);
+    (w[c] || (w[c] = [])).push(function () { Ya.Site.Form.init() })
+  })(window, document, 'yandex_site_callbacks')</script>
 
 
 <div class="ad-block sidebar-block">
   <!-- Yandex.RTB R-A-427763-3 -->
   <div id="yandex_rtb_R-A-427763-3"></div>
   <script type="text/javascript">
-    (function (w, d, n, s, t) {
-      w[n] = w[n] || []
-      w[n].push(function () {
-        Ya.Context.AdvManager.render({
-          blockId: 'R-A-427763-3',
-          renderTo: 'yandex_rtb_R-A-427763-3',
-          async: true
+      (function (w, d, n, s, t) {
+        w[n] = w[n] || []
+        w[n].push(function () {
+          Ya.Context.AdvManager.render({
+            blockId: 'R-A-427763-3',
+            renderTo: 'yandex_rtb_R-A-427763-3',
+            async: true
+          })
         })
-      })
-      t = d.getElementsByTagName('script')[0]
-      s = d.createElement('script')
-      s.type = 'text/javascript'
-      s.src = '//an.yandex.ru/system/context.js'
-      s.async = true
-      t.parentNode.insertBefore(s, t)
-    })(this, this.document, 'yandexContextAsyncCallbacks')
+        t = d.getElementsByTagName('script')[0]
+        s = d.createElement('script')
+        s.type = 'text/javascript'
+        s.src = '//an.yandex.ru/system/context.js'
+        s.async = true
+        t.parentNode.insertBefore(s, t)
+      })(this, this.document, 'yandexContextAsyncCallbacks')
   </script>
 </div>

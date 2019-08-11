@@ -8,19 +8,24 @@ $themes: map-merge($themes, (
     'sel-c': $clr-grey-100,
     'sel-bg': $clr-orange-800,
 
-    'link-c': $clr-orange-600,
-    'link-c-a': $clr-orange-a400,
+    'link-c': $clr-deep-orange-800,
+    'link-c-a': $clr-orange-800,
     
     'border-c': $clr-grey-300,
     'blockquote-border': $clr-orange-800,
     'blockquote-bg': $clr-orange-100,
     'header-bg': $clr-white,
     'menu-c': $clr-grey-800,
-    'menu-c-a': $clr-orange-600,
-    'menu-c-h': $clr-orange-400,
-    'menu-bg-h': $clr-orange-100,
+    'menu-c-a': $clr-deep-orange-800,
+    'menu-c-h': $clr-deep-orange-800,
+    'menu-bg-h': $clr-orange-50,
+
+    'go-top-bg': $clr-grey-300,
+    'go-top-bg-h': $clr-orange-600,
+    'go-top-c-h': $clr-white,
+
     'promo-c': $clr-white,
-    'promo-bg': $clr-blue-grey-500,
+    'promo-bg': $clr-blue-grey-800,
     'control-border-c': $clr-grey-800,
     'button-c': $clr-white,
     'button-bg': $clr-orange-600,
@@ -29,7 +34,7 @@ $themes: map-merge($themes, (
     'cal-cur-c': $clr-orange-800,
     'cal-cur-bg': $clr-orange-300,
     'post-meta-c': $clr-grey-600,
-    'sidebar-bg': $clr-orange-50,
+    'sidebar-bg': $clr-white,
   )
 ));
 

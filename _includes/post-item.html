@@ -1,16 +1,15 @@
 <article class="post-item" itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-item__header">
-    <a class="post-item__link" href="{{ post.url }}" title="{{ post.title }}">
-      <h2 class="post-item__title" itemprop="name headline mainEntityOfPage">
+    <h2 class="post-item__title" itemprop="name headline mainEntityOfPage" >
+      <a class="post-item__link" href="{{ post.url }}"  title="Перейти к записи блога: {{ post.title }}">
         {{ post.title }}
-      </h2>
-    </a>
-
+      </a>
+    </h2>
   </header>
   <div class="post-item__content">
     {% if post.image %}
-    <a class="post-item__link" href="{{ post.url }}" title="{{ post.title }}">
+    <a class="post-item__link" href="{{ post.url }}" aria-label="Иллюстрация к посту: {{ post.title }} &mdash; перейти к записи блога">
     <aside class="post-preview lazyload" data-bg="//images.weserv.nl/?url=mikhail-yudin.ru/{{ post.image }}&w=150&t=fitup"></aside>
     </a>
     <meta itemprop="image" content="{{ post.image }}">
