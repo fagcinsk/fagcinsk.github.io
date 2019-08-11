@@ -16,7 +16,6 @@
 }
 
 @function themed($key) {
-  @debug $key;
   @return map-get($theme-map, $key);
 }
 
