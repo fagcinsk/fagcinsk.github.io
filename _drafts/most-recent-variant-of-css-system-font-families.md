@@ -3,13 +3,14 @@ layout: post
 categories: frontend
 title: Актуальный набор системных CSS семейств шрифтов
 description: Собрал небольшую подборку системных семейств шрифтов CSS. Системные семейства шрифтов ускоряют загрузку страницы и делают шрифты более привычными для глаз.
+image: photos/most-recent-variant-of-css-system-font-families.png
 ---
 
 Собрал небольшую подборку системных семейств шрифтов CSS. Системные семейства шрифтов ускоряют загрузку страницы и делают шрифты более привычными для глаз.
 
 ## Системные шрифты?
 
-Системные шрифты &mdash; это шрифты, имеющиеся в операционной системе по умолчанию. Можно найти списки системных шрифтов для каждой операционной системы, вот краткий список:
+Системные шрифты &mdash; это шрифты, имеющиеся в операционной системе по умолчанию. Можно найти списки дефолтных системных шрифтов для каждой версии операционной системы, вот краткий список:
 
 ### Windows
 
@@ -35,6 +36,8 @@ description: Собрал небольшую подборку системных
 | 1                       | Helv3          |
 |---|---|
 
+[Источник](https://www.granneman.com/webdev/coding/css/fonts-and-formatting/default-fonts)
+
 ### Mac OS
 
 |Версия|Шрифт|
@@ -56,7 +59,11 @@ description: Собрал небольшую подборку системных
 | 10.1 Puma          | Lucida Grande  |
 | 10.0 Cheetah       | Lucida Grande  |
 
+[Источник](https://www.granneman.com/webdev/coding/css/fonts-and-formatting/default-fonts)
+
 ### Linux
+
+...
 
 ### iOS
 
@@ -74,6 +81,17 @@ description: Собрал небольшую подборку системных
 | iPhone OS 3 | Helvetica      |
 | iPhone OS 2 | Helvetica      |
 | iPhone OS 1 | Helvetica      |
+
+[Источник](https://www.granneman.com/webdev/coding/css/fonts-and-formatting/default-fonts)
+
+### Android
+
+|Версия|Шрифт|
+|---|---|
+| 4.3 и ниже   | Droid |
+| 5.0 Lollipop и выше | Roboto |
+
+[Источник](https://en.wikipedia.org/wiki/Roboto)
 
 ## Зачем их использовать, если есть красивые веб-шрифты?
 
