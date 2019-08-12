@@ -5,12 +5,14 @@
   align-items: center;
   justify-content: space-between;
   @include themify {
-    background-color: themed('header-bg');
+    background-color: themed("header-bg");
   }
 }
 
 .main-menu {
   text-transform: uppercase;
+  font-family: $font-family-sans-serif-condensed;
+  font-stretch: condensed;
 }
 
 .main-menu__item[href] {
@@ -18,13 +20,12 @@
   padding: 8px 24px;
   text-decoration: none !important;
   @include themify {
-    color: themed('menu-c');
+    color: themed("menu-c");
     &.active {
-      color: themed('menu-c-a');
+      color: themed("menu-c-a");
     }
     &:hover {
-      color: themed('menu-c-h');
-      // background-color: themed('menu-bg-h');
+      color: themed("menu-c-h");
     }
   }
 }
@@ -34,13 +35,24 @@
   font-size: 1.5rem;
   font-weight: 600;
   padding: 8px 16px;
+  line-height: normal;
 }
 
-@include device('mobile') {
+@include device("mobile") {
   .header-top {
-    flex-flow: column;
+    padding: 8px;
   }
   .main-menu__item[href] {
-    padding: 4px 8px;
+    padding: 4px 16px;
+  }
+
+  .site-title {
+    display: block;
+    font-size: 0;
+  }
+
+  .site-title:first-letter {
+    visibility: visible;
+    font-size: 2rem;
   }
 }

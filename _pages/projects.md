@@ -43,17 +43,15 @@ projects:
 
 # Мои проекты
 
-
 {% for category in page.projects %}
-
 <h2>{{ category.category }}</h2>
-<ol>
 {% for repo in category.repos %}
-<li><a href="https://github.com/fagcinsk/{{ repo.repo }}">{{ repo.repo }}</a>:
-{{ repo.name }}
-<a class="github-button" href="https://github.com/fagcinsk/{{ repo.repo }}" data-icon="octicon-star" data-show-count="true" aria-label="Star fagcinsk/stm32-lcd-sandbox on GitHub"></a></li>
-{% endfor %}
-</ol>
-{% endfor %}
+<div class="tile">
+<div class="tile__text">
+<h3><a href="https://github.com/fagcinsk/{{ repo.repo }}">
+<span class="iconify" data-icon="mdi-github-circle"></span> {{ repo.repo }}</a>
+</h3>
+{{ repo.name }}</div></div><hr>
 
-<script async defer src="https://buttons.github.io/buttons.js"></script>
+{% endfor %}
+{%- endfor %}

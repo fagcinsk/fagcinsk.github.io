@@ -1,7 +1,14 @@
 <ul class="categories">
   {% assign sorted_categories = site.categories | sort %}
+  {% assign c_url = page.url | replace: "index.html", "" %}
   {% for category in sorted_categories %}
   {% capture cat %}{{ category | first }}{% endcapture %}
-  <li class="categories__item"><a class="categories__link" href="{{ site.url }}/category/{{ category | first | url_encode }}/" title="Перейти к категории {{ site.categoryMap[cat].name }} (записей: {{ category | last | size }})">{{ site.categoryMap[cat].name }}</a><sup>{{ category | last | size }}</sup></li>
+  {% capture url %}/category/{{ category | first | url_encode }}/{% endcapture %}
+  {%- if c_url == url %}{% assign class = 'active' %}{% else %}{% assign class = '' %}{% endif -%}
+  <li class="categories__item">
+    <a class="categories__link {{class}}" 
+      href="{{ site.url }}{{ url }}" 
+      title="Перейти к категории {{ site.categoryMap[cat].name }} (записей: {{ category | last | size }})">{{ site.categoryMap[cat].name }}</a>
+  </li>
   {% endfor %}
 </ul>

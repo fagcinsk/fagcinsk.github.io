@@ -3,12 +3,13 @@ $themes: ();
 $themes: map-merge($themes, (
   'default': (
     'page-c': $clr-grey-800,
-    'page-bg': $clr-grey-100,
+    'page-bg': $clr-grey-200,
 
     'sel-c': $clr-grey-100,
     'sel-bg': $clr-orange-800,
 
     'link-c': $clr-deep-orange-800,
+    'link-c-h': $clr-orange-600,
     'link-c-a': $clr-orange-800,
     
     'border-c': $clr-grey-300,
@@ -26,10 +27,15 @@ $themes: map-merge($themes, (
 
     'promo-c': $clr-white,
     'promo-bg': $clr-blue-grey-800,
+
+    'categories-c': $clr-white,
+    'categories-bg': $clr-blue-grey-900,
+
     'control-border-c': $clr-grey-800,
+    'control-outline-f': $clr-deep-orange-800, 
     'button-c': $clr-white,
-    'button-bg': $clr-orange-600,
-    'button-bg-a': $clr-orange-400,
+    'button-bg': $clr-orange-800,
+    'button-bg-a': $clr-orange-600,
     'cal-we-c': $clr-grey-600,
     'cal-cur-c': $clr-orange-800,
     'cal-cur-bg': $clr-orange-300,

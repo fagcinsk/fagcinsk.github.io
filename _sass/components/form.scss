@@ -1,8 +1,13 @@
-form {
+form, .form {
   padding: 16px;
-  border-radius: 3px;
+  border-radius: 4px;
   font-size: 1rem;
-  max-width: 550px;
+  background: #fff;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.45);
+}
+
+.form-subscribe {
+  max-width: 420px;
   margin: 0 auto;
 }
 
@@ -14,13 +19,16 @@ form {
 input,
 textarea,
 select {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   border: none;
   background: none;
   padding: 8px 4px;
   margin: 4px 0;
   @include themify {
-    border-bottom: 1px solid themed('control-border-c');
+    border-bottom: 1px solid themed("control-border-c");
+    &:focus {
+      outline-color: themed("control-outline-f");
+    }
   }
 }
 
@@ -37,12 +45,22 @@ button,
   cursor: pointer;
 
   @include themify {
-    color: themed('button-c');
-    background-color: themed('button-bg');
-  
+    color: themed("button-c");
+    background-color: themed("button-bg");
+
     &:hover {
-      background-color: themed('button-bg-a');
+      background-color: themed("button-bg-a");
     }
   }
 }
 
+textarea {
+  display: block;
+  width: 100%;
+}
+
+.form__footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
