@@ -10,10 +10,12 @@ projects:
       - name: Михаил Юдин | Персональный блог (этот блог)
         repo: fagcinsk.github.io 
       - name: Multiplyer crafting game
-        repo: multiplayer-crafting-game
+        repo: multiplayer-crafting-game 
+      - name: <a href="https://mikhail-yudin.ru/projects/text-layout-change/">Смена раскладки онлайн</a> с английского на русский и наоборот
+        repo: text-layout-change
       - name: PHP библиотека для генерации алиасов объектов
         repo: ro-aliaseable-object 
-      - name: <a href="https://mikhail-yudin.ru/projects/block-destruction-game">Игра про уничтожение блоков</a> с использованием HTML5 canvas
+      - name: <a href="https://mikhail-yudin.ru/projects/block-destruction-game/">Игра про уничтожение блоков</a> с использованием HTML5 canvas
         repo: block-destruction-game
       - name: Mixer analyzer
         repo: mixer-analyzer
