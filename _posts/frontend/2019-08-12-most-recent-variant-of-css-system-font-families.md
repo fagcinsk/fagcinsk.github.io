@@ -1,7 +1,7 @@
 ---
 layout: post
 categories: frontend
-title: Актуальный набор системных CSS семейств шрифтов
+title: Актуальный стек системных шрифтов для веба
 description: Собрал небольшую подборку системных семейств шрифтов CSS. Системные семейства шрифтов ускоряют загрузку страницы и делают шрифты более привычными для глаз.
 image: photos/most-recent-variant-of-css-system-font-families.png
 ---
@@ -116,7 +116,7 @@ image: photos/most-recent-variant-of-css-system-font-families.png
 
 ## Мой вариант
 
-Полазив по крупным ресурсам: GitHub, Medium и некоторым другим, пришёл к такому виду актуального набора системных CSS семейств шрифтов:
+Полазив по крупным ресурсам: GitHub, Medium и некоторым другим, пришёл к такому виду актуального стека системных шрифтов:
 
 ```scss
 $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
