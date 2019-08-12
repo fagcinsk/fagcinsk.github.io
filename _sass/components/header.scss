@@ -1,5 +1,5 @@
 .header-top {
-  padding: 0 16px;
+  padding: 8px 16px;
   line-height: 42px;
   display: flex;
   align-items: center;
@@ -16,7 +16,6 @@
 .main-menu__item[href] {
   display: inline-block;
   padding: 8px 24px;
-  transition: background-color 50ms;
   text-decoration: none !important;
   @include themify {
     color: themed('menu-c');
@@ -25,7 +24,7 @@
     }
     &:hover {
       color: themed('menu-c-h');
-      background-color: themed('menu-bg-h');
+      // background-color: themed('menu-bg-h');
     }
   }
 }
