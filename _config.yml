@@ -19,6 +19,7 @@ username:
   facebook: fagcinsk
   icq: 430468782
   pinterest: fagcinsk
+  instagram: fagci.nsk
 
 social: # jekyll-seo-tag
   name: Михаил Юдин
@@ -27,6 +28,7 @@ social: # jekyll-seo-tag
     - https://github.com/fagcinsk
     - https://vk.com/fagci
     - https://www.facebook.com/fagcinsk
+    - https://www.instagram.com/fagci.nsk/
 
 webmaster_verifications:
   google: cYPYXSNeHCFhzx8wb_DhIoSC1GhqibLCVUEDbpFfdgI
