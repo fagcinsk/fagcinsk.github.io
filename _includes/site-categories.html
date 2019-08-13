@@ -1,4 +1,9 @@
+{% if include.noindex == true %}<!--noindex-->{% endif %}
 <ul class="categories">
+  {% assign rel = '' %}
+  {% if include.noindex == true %}
+  {% assign rel = 'nofollow' %}
+  {% endif %}
   {% assign sorted_categories = site.categories | sort %}
   {% assign c_url = page.url | replace: "index.html", "" %}
   {% for category in sorted_categories %}
@@ -7,8 +12,9 @@
   {%- if c_url == url %}{% assign class = 'active' %}{% else %}{% assign class = '' %}{% endif -%}
   <li class="categories__item">
     <a class="categories__link {{class}}" 
-      href="{{ site.url }}{{ url }}" 
+      href="{{ site.url }}{{ url }}" rel="{{ rel }}"
       title="Перейти к категории {{ site.categoryMap[cat].name }} (записей: {{ category | last | size }})">{{ site.categoryMap[cat].name }}</a>
   </li>
   {% endfor %}
 </ul>
+{% if include.noindex == true %}<!--/noindex-->{% endif %}

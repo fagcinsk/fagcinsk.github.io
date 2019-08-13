@@ -3,6 +3,6 @@
 		<a class="site-title" itemprop="name" title="На главную" href="/">{{ site.headline | escape }}</a>
 		{% include menu-main.html %}
   </div>
-  {% include site-categories.html %}
+  {% include site-categories.html noindex=true %}
 	{% include analytics-header.html %}
 </header>
