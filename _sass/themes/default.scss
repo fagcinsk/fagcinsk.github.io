@@ -15,7 +15,8 @@ $themes: map-merge($themes, (
     'border-c': $clr-grey-300,
     'blockquote-border': $clr-orange-800,
     'blockquote-bg': $clr-orange-100,
-    'header-bg': $clr-white,
+
+    'header-bg': $clr-grey-100,
     'menu-c': $clr-grey-800,
     'menu-c-a': $clr-deep-orange-800,
     'menu-c-h': $clr-deep-orange-800,
@@ -25,11 +26,11 @@ $themes: map-merge($themes, (
     'go-top-bg-h': $clr-orange-600,
     'go-top-c-h': $clr-white,
 
-    'promo-c': $clr-white,
-    'promo-bg': $clr-blue-grey-800,
+    'promo-c': $clr-grey-900,
+    'promo-bg': $clr-grey-400,
 
-    'categories-c': $clr-white,
-    'categories-bg': $clr-blue-grey-900,
+    'categories-c': $clr-grey-800,
+    'categories-bg': $clr-grey-300,
 
     'control-border-c': $clr-grey-800,
     'control-outline-f': $clr-deep-orange-800, 

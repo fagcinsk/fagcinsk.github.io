@@ -1,6 +1,10 @@
 .post {
   margin-bottom: 16px;
-  padding-bottom: 32px;
+  padding: 32px;
+  border-radius: 4px;
+  @include themify {
+    background-color: themed('card-bg');
+  }
 }
 
 .post-bb {
