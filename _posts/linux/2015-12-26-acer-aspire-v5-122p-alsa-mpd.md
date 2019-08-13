@@ -4,9 +4,9 @@ category: linux
 title: Acer Aspire v5 122p alsa, mpd
 ---
 
-# How to get it work
+## How to get it work
 
-## Alsa
+### Alsa
 
 ~/.asoundrc :
 
@@ -25,7 +25,7 @@ options snd-hda-intel index=1
 
 _So, HDMI is second device, and sources mixings by dmix_
 
-## mpd
+### mpd
 
 /etc/mpd.conf:   
 
@@ -41,7 +41,7 @@ audio_output {
 }  
 ```
 
-## Last steps
+### Last steps
 
 <u>remove pulseaudio</u>, if exists, and:  
 
