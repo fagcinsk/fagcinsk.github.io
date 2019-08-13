@@ -115,7 +115,7 @@ autopages:
   categories:
     layouts: ['autopage_category.html']
     title: 'Материалы категории :cat'
-    permalink: '/category/:cat'
+    permalink: '/:cat'
 
 #  collections:
 #    layouts: ['autopage_collection.html']

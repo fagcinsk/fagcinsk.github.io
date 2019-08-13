@@ -3,7 +3,7 @@
   {% assign c_url = page.url | replace: "index.html", "" %}
   {% for category in sorted_categories %}
   {% capture cat %}{{ category | first }}{% endcapture %}
-  {% capture url %}/category/{{ category | first | url_encode }}/{% endcapture %}
+  {% capture url %}/{{ category | first | url_encode }}/{% endcapture %}
   {%- if c_url == url %}{% assign class = 'active' %}{% else %}{% assign class = '' %}{% endif -%}
   <li class="categories__item">
     <a class="categories__link {{class}}" 

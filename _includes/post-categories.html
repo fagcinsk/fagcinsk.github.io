@@ -1,6 +1,6 @@
 {% for category in include.post.categories %}
 / <a class="category" 
-href="{{ site.url }}/category/{{ category | url_encode }}/" 
+href="{{ site.url }}/{{ category | url_encode }}/" 
 title="Перейти к категории"
 itemprop="articleSection">
   {%- if site.categoryMap[category] %}{{site.categoryMap[category].name }}{% else %}{{ category }}{% endif -%}
