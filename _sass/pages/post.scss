@@ -1,6 +1,8 @@
 .post {
-  padding: 32px 0;
   margin-bottom: 16px;
+}
+
+.post-bb {
   @include themify {
     border-bottom: 1px solid themed('border-c');
   }

@@ -11,5 +11,5 @@ group :jekyll_plugins do
   gem 'jekyll-seo-tag'
   gem 'jekyll-sitemap'
   gem 'jekyll-toc'
-  gem 'jekyll-redirect-from'
+  # gem 'jekyll-redirect-from'
 end
