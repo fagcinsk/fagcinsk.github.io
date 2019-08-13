@@ -1,6 +1,5 @@
 <div class="post-list" itemscope="" itemtype="http://schema.org/Blog">
-  {% for post in paginator.posts %}
+  {% for post in site.categories["frontend"] limit: 10 %}
     {% include post-item.html %}
   {% endfor %}
 </div>
-{% include pagination.html %}

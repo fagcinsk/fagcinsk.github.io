@@ -8,6 +8,12 @@ $themes: map-merge($themes, (
     'sel-c': $clr-grey-100,
     'sel-bg': $clr-orange-800,
 
+    'mark-c': $clr-grey-900,
+    'mark-bg': $clr-deep-orange-200,
+
+    'code-c': $clr-grey-100,
+    'code-bg': $clr-grey-600,
+
     'link-c': $clr-deep-orange-800,
     'link-c-h': $clr-orange-600,
     'link-c-a': $clr-orange-800,

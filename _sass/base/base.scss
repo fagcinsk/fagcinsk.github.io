@@ -46,6 +46,30 @@ img::selection {
   }
 }
 
+mark {
+  @include themify {
+    background-color: themed("mark-bg");
+    color: themed("mark-c");
+  }
+}
+
+code {
+  @include themify {
+    background-color: themed("code-bg");
+    color: themed("code-c");
+  }
+}
+
+.content-block {
+  margin-bottom: 32px;
+  > *:first-child {
+    margin-top: 0;
+  }
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
 a[href] {
   text-decoration: none;
   transition: color 100ms ease-in-out, background-color 100ms;
