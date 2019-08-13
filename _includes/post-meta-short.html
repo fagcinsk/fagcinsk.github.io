@@ -1,7 +1,7 @@
 <span class="iconify" data-icon="mdi-calendar-range"></span> {% include pubdate.html date=include.post.date %}
 {% capture lastmod_date %}{% last_modified {{ include.post.path }} %}{% endcapture %}
 {% include update.html date=lastmod_date %}
-{% include categories.html categories=include.post.categories %}
+{% include post-categories.html post=include.post %}
 <div itemprop="author" itemscope="" itemtype="https://schema.org/Person">
   <meta itemprop="name" content="{{ post.author | default: site.author.name }}">
 </div>
