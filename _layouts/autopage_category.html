@@ -2,9 +2,12 @@
 layout: default
 pagination:
   enabled: true
+description: "Список актуальных материалов блога в текущей категории"
 ---
 
 {% assign category = page.dir | split: "/" | last%}
+<script>document.querySelector('meta[name="description"]').setAttribute("content", "Список актуальных материалов блога в категории {{ site.categoryMap[category].name }}");</script>
+<meta property="og:image" content="/assets/img/categories/{{ category }}.png">
 <h1>Материалы в категории &ldquo;{{ site.categoryMap[category].name }}&rdquo;</h1>
 
 {% for post in paginator.posts %}{% include post-item.html %}{% endfor %}
