@@ -143,3 +143,5 @@ exclude:
   - CNAME
   - .idea
   - .jekyll-cache
+  - _redirects
+
