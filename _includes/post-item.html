@@ -13,7 +13,7 @@
   <div class="post-item__content">
     {% if post.image %}
     <a class="post-item__link" href="{{ post.url }}" aria-label="Иллюстрация к посту: {{ post.title }} &mdash; перейти к записи блога">
-    <aside class="post-preview" data-bg="https://images.weserv.nl/?url=mikhail-yudin.ru/{{ post.image }}&w=150&t=fitup"></aside>
+    <aside class="post-preview lazyolad" data-bg="https://images.weserv.nl/?url=mikhail-yudin.ru/{{ post.image }}&w=150&t=fitup"></aside>
     </a>
     <meta itemprop="image" content="{{ post.image }}">
     {% endif %}
