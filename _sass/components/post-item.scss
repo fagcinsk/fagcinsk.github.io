@@ -25,19 +25,28 @@
 }
 
 .post-preview {
-  width: 150px;
-  height: 115px;
   background-size: cover;
   background-position: center;
   margin-right: 16px;
   border-radius: 4px;
-  overflow: hidden;
+
+  width: 150px;
+
+  > img {
+    max-width: 150px;
+    max-height: 115px;
+  }
 }
 
 @include device('mobile') {
   .post-preview {
     width: 70px;
-    height: 70px;
+
+    > img {
+      max-width: 70px;
+      max-height: 70px;
+    }
+
     margin-right: 8px;
   }
 }

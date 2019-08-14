@@ -12,8 +12,8 @@
   </header>
   <div class="post-item__content">
     {% if post.image %}
-    <a class="post-item__link" href="{{ post.url }}" aria-label="Иллюстрация к посту: {{ post.title }} &mdash; перейти к записи блога">
-    <aside class="post-preview lazyload" data-bg="https://images.weserv.nl/?url=mikhail-yudin.ru/{{ post.image }}&w=150&t=fitup"></aside>
+    <a class="post-item__link post-preview" href="{{ post.url }}" aria-label="Иллюстрация к посту: {{ post.title }} &mdash; перейти к записи блога">
+    <img class="lazyload" data-src="https://images.weserv.nl/?url=mikhail-yudin.ru/{{ post.image }}&w=150&t=fitup">
     </a>
     <meta itemprop="image" content="{{ post.image }}">
     {% endif %}
