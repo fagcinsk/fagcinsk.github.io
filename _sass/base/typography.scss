@@ -117,6 +117,11 @@ pre {
 table {
   width: 100%;
   max-width: 100%;
+  background-color: rgba(0,0,0,0.05);
+
+  thead {
+    background-color: rgba(0,0,0,0.15);
+  }
 
   td,
   th {

@@ -1,5 +1,4 @@
 <div class="post-list" itemscope="" itemtype="http://schema.org/Blog">
-  {% for post in site.categories["frontend"] limit: 10 %}
-    {% include post-item.html %}
-  {% endfor %}
-</div>
+  {%- for post in site.categories["frontend"] limit: 10 %}
+    {%- include post-item.html %}
+  {%- endfor %}</div>
