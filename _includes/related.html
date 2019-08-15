@@ -1,8 +1,10 @@
 {% assign category = include.post.categories | first %}
+{% if category %}
 {% assign related_posts = site.categories[category] | where_exp: "post","post.url != page.url" %}
 {% if related_posts != empty %}
 <section class="related-posts">
   <h2>Ещё почитать:</h2>
   {% for post in related_posts | limit: 5 %}{% include post-item.html %}{% endfor %}
 </section>
+{% endif %}
 {% endif %}
