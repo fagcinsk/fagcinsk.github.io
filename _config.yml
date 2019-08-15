@@ -38,11 +38,10 @@ webmaster_verifications:
 markdown: kramdown
 kramdown:
   input: GFM
-  hard_wrap: true
   syntax_highlighter: rouge
   syntax_highlighter_opts:
     default_lang: html
-    css_class   : 'codehilite'
+    css_class: 'codehilite'
 
 sass:
   style: compressed
@@ -80,9 +79,8 @@ categoryMap:
 
 leaflet: leaflet@1.5.1
 
-autoprefixer:
-  browsers:
-    - last 2 versions
+target-blank:
+    add_css_classes: ext-link
 
 yandex_metrika:
   token: AgAAAAACBsTEAAXOQm6356MxwEN8vDlsI0f5t3g

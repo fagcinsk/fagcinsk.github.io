@@ -1,19 +1,17 @@
 {% if include.noindex == true %}<!--noindex-->{% endif %}
 <ul class="categories">
   {% assign rel = '' %}
-  {% if include.noindex == true %}
-  {% assign rel = 'nofollow' %}
-  {% endif %}
+  {% if include.noindex == true %}{% assign rel = 'nofollow' %}{% endif %}
   {% assign sorted_categories = site.categories | sort %}
   {% assign c_url = page.url | replace: "index.html", "" %}
   {% for category in sorted_categories %}
   {% capture cat %}{{ category | first }}{% endcapture %}
   {% capture url %}/{{ category | first | url_encode }}/{% endcapture %}
-  {%- if c_url == url %}{% assign class = 'active' %}{% else %}{% assign class = '' %}{% endif -%}
+  {% if site.categoryMap[cat] %}{% assign cat = site.categoryMap[cat].name %}{% endif %}
   <li class="categories__item">
-    <a class="categories__link {{class}}" 
+    <a class="categories__link{% if c_url == url %} active{% endif %}" 
       href="{{ site.url }}{{ url }}" rel="{{ rel }}"
-      title="Перейти к категории {{ site.categoryMap[cat].name }} (записей: {{ category | last | size }})">{{ site.categoryMap[cat].name }}</a>
+      title="Перейти к категории {{ cat }} (записей: {{ category | last | size }})">{{ cat }}</a>
   </li>
   {% endfor %}
 </ul>

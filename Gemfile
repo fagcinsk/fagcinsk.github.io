@@ -10,6 +10,6 @@ group :jekyll_plugins do
   gem 'jekyll-paginate-v2'
   gem 'jekyll-seo-tag'
   gem 'jekyll-sitemap'
-  gem 'jekyll-toc'
+  gem 'jekyll-target-blank'
   # gem 'jekyll-redirect-from'
 end
