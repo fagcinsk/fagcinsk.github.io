@@ -12,13 +12,13 @@
   </header>
   <div class="post-item__content">
     {% if post.image %}
-    <a class="post-item__link post-preview" href="{{ post.url }}" aria-label="Иллюстрация к посту: {{ post.title }} &mdash; перейти к записи блога">
-    <img class="lazyload" data-src="https://images.weserv.nl/?url=mikhail-yudin.ru/{{ post.image }}&w=150&t=fitup">
+    <a class="post-item__preview_w" href="{{ post.url }}" aria-label="Иллюстрация к посту: {{ post.title }} &mdash; перейти к записи блога">
+    <img class="post-item__preview lazyload" data-src="https://images.weserv.nl/?url=mikhail-yudin.ru/{{ post.image }}&w=150&t=fitup" alt="Иллюстрация к посту: {{ post.title }}">
     </a>
     <meta itemprop="image" content="{{ post.image }}">
     {% endif %}
     <!--noindex-->
-    <p class="post-item__summary flex-grow" itemprop="articleBody">
+    <p class="post-item__summary" itemprop="articleBody">
       {{ post.excerpt | strip_html | truncatewords:25 | strip }}
     </p>
     <!--/noindex-->
