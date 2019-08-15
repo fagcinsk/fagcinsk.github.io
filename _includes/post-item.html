@@ -1,5 +1,4 @@
 <article class="post-item card e1" itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
-
   <header class="post-item__header">
     <div class="post-item__meta">
     {% include post-meta-short.html post=post %}
@@ -12,9 +11,9 @@
   </header>
   <div class="post-item__content">
     {% if post.image %}
-    <a class="post-item__preview_w" href="{{ post.url }}" aria-label="Иллюстрация к посту: {{ post.title }} &mdash; перейти к записи блога">
-    <img class="post-item__preview lazyload" data-src="https://images.weserv.nl/?url=mikhail-yudin.ru/{{ post.image }}&w=150&t=fitup" alt="Иллюстрация к посту: {{ post.title }}">
-    </a>
+    <a class="post-item__preview_w lazyload" href="{{ post.url }}"
+       aria-label="Иллюстрация к посту: {{ post.title }} &mdash; перейти к записи блога"
+       data-bgset="https://images.weserv.nl/?url=mikhail-yudin.ru/{{ post.image }}&w=70&t=fitup 70w, https://images.weserv.nl/?url=mikhail-yudin.ru/{{ post.image }}&w=150&t=fitup 150w, https://images.weserv.nl/?url=mikhail-yudin.ru/{{ post.image }}&w=450&t=fitup 450w" data-sizes="auto"></a>
     <meta itemprop="image" content="{{ post.image }}">
     {% endif %}
     <!--noindex-->

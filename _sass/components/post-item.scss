@@ -31,12 +31,8 @@
   overflow: hidden;
   border-radius: 4px;
   margin-right: 16px;
-}
-
-.post-item__preview {
-  max-width:100%;
-  max-height: none;
-  border-radius: 4px;
+  background-position: center;
+  background-size: cover;
 }
 
 @include device('mobile') {
