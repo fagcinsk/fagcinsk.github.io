@@ -5,3 +5,49 @@ escape(document.referrer)+((typeof(screen)=="undefined")?"":
 screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
 ";h"+escape(document.title.substring(0,150))+
 ";"+Math.random();</script><!--/LiveInternet-->
+
+<span class="theme-switch show"><span class="iconify" data-icon="mdi-palette"></span></span>
+<script>
+  const d = window.document,
+    html = document.querySelector('html'),
+    themeSwitch = d.querySelector('.theme-switch')
+
+  let userTheme = localStorage.getItem('userTheme')
+
+  const THEMES = ['default', 'dark']
+
+  function setThemeByName (name) {
+    userTheme = name
+    html.classList.add('theme-' + userTheme)
+    localStorage.setItem('userTheme', userTheme)
+    console.warn('theme set to', userTheme)
+  }
+
+  function resetThemes () {
+    html.classList.forEach(function (className) {
+      if (className.startsWith('theme-')) {
+        html.classList.remove(className)
+      }
+    })
+  }
+
+  themeSwitch.addEventListener('click', function () {
+    let themeIndex = THEMES.indexOf(userTheme)
+    console.log(themeIndex, 'of', userTheme)
+    themeIndex++
+    if (themeIndex >= THEMES.length) {
+      console.log(themeIndex, '>=', THEMES.length)
+      themeIndex = 0
+    }
+
+    resetThemes()
+
+    console.log(themeIndex)
+    let newTheme = THEMES[themeIndex]
+
+    setThemeByName(newTheme)
+  })
+
+  resetThemes()
+  setThemeByName(userTheme)
+</script>

@@ -8,7 +8,7 @@
 
   goTop.title = 'Наверх'
 
-  function onScroll(e) {
+  function onScroll (e) {
     if (window.scrollY > window.innerHeight) {
       goTop.classList.add('show')
     } else {
@@ -20,10 +20,9 @@
     capture: true,
     passive: true
   })
-  if (!d.body.querySelector('.codehilite')) return;
-  var link = d.createElement("link");
-  link.rel = "stylesheet";
-  link.href = "//cdn.jsdelivr.net/npm/pygments-css@1.0.0/monokai.css";
-
-  d.getElementsByTagName("head")[0].appendChild(link);
+  if (!d.body.querySelector('.codehilite')) return
+  const link = d.createElement('link')
+  link.rel = 'stylesheet'
+  link.href = '//cdn.jsdelivr.net/npm/pygments-css@1.0.0/monokai.css'
+  d.getElementsByTagName('head')[0].appendChild(link)
 })(window)

@@ -89,17 +89,16 @@ hr {
   overflow: hidden;
 }
 
-.go-top {
+.go-top, .theme-switch {
   position: fixed;
   bottom: 24px;
-  right: 24px;
-  font-size: 38px;
   border-radius: 50%;
   cursor: pointer;
   width: 40px;
   height: 40px;
   line-height: 40px;
   text-align: center;
+  font-size: 38px;
 
   &:not(.show) {
     display: none;
@@ -112,6 +111,14 @@ hr {
       background-color: themed('go-top-bg-h');
     }
   }
+}
+
+.theme-switch {
+  left: 24px;
+}
+
+.go-top {
+  right: 24px;
 }
 
 .contact-icons {
