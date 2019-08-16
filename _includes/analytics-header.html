@@ -19,9 +19,11 @@
 
   function setThemeByName (name) {
     userTheme = name
+    if (THEMES.indexOf(userTheme) === -1) {
+      userTheme = THEMES[0]
+    }
     html.classList.add('theme-' + userTheme)
     localStorage.setItem('userTheme', userTheme)
-    console.warn('theme set to', userTheme)
   }
 
   function resetThemes () {
@@ -34,23 +36,16 @@
 
   themeSwitch.addEventListener('click', function () {
     let themeIndex = THEMES.indexOf(userTheme)
-    console.log(themeIndex, 'of', userTheme)
     themeIndex++
     if (themeIndex >= THEMES.length) {
-      console.log(themeIndex, '>=', THEMES.length)
       themeIndex = 0
     }
 
     resetThemes()
-
-    console.log(themeIndex)
     let newTheme = THEMES[themeIndex]
-
     setThemeByName(newTheme)
   })
 
-  if (userTheme) {
-    resetThemes()
-    setThemeByName(userTheme)
-  }
+  resetThemes()
+  setThemeByName(userTheme)
 </script>

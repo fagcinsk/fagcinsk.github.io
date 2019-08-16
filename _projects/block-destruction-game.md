@@ -129,7 +129,6 @@ image_hide: true
 	arr.appendLine=function(bottom){
 		if(arr[height-1])for(var i=0;i<width;i++)if(arr[height-1][i])return 0;
 		if(bottom)arr.pop();
-		console.log(height);
 		for(var j=0, line=[]; j<width; j++){
 			fixChange(height-1,j);
             with(Math)line.push({color:round(random()*(colors-1))});

@@ -76,7 +76,6 @@
   }
 
   btn.addEventListener('click', function (e) {
-    console.log('click', wrongLayoutTextArea.innerHTML, convert(wrongLayoutTextArea.innerHTML))
     wrongLayoutTextArea.value = convert(wrongLayoutTextArea.value)
   })
 })(window)
