@@ -6,7 +6,7 @@
 <meta property="og:type" content="website">
 {% feed_meta %}
 
-<link rel="shortcut icon" href="{{ 'favicon.ico' | relative_url }}">
+<link rel="shortcut icon" href="/favicon.ico">
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#ffffff">
 
@@ -18,8 +18,5 @@
 
 {% if page.leaflet == true %}
 <link href="/assets/css/leaflet.min.css" rel="stylesheet" />
-{% endif %}
-
-{% if page.leaflet == true %}
 <script src="/assets/js/leaflet.min.js"></script>
 {% endif %}
