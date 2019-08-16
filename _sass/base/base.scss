@@ -91,14 +91,14 @@ hr {
 
 .go-top, .theme-switch {
   position: fixed;
-  bottom: 24px;
+  bottom: 16px;
   border-radius: 50%;
   cursor: pointer;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
   text-align: center;
-  font-size: 38px;
+  font-size: 32px;
 
   &:not(.show) {
     display: none;
@@ -114,11 +114,11 @@ hr {
 }
 
 .theme-switch {
-  left: 24px;
+  left: 16px;
 }
 
 .go-top {
-  right: 24px;
+  right: 16px;
 }
 
 .contact-icons {
