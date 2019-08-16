@@ -27,7 +27,7 @@ module Jekyll
 
       output_map = {}
 
-      result['data'].each {|item|
+      result['data'].take(10).each {|item|
         dim = item['dimensions']
         title = dim[0]['name'].reverse.sub(@trim_last_reversed, '').reverse
         url = dim[1]['name'].split('#')[0]
