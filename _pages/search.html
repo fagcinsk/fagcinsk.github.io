@@ -1,10 +1,12 @@
 ---
 layout: default
 permalink: /search/
+title: Поиск по блогу
+description: Поиск по всем постам блога с учётом текста описания, можно вводить часть текста, поиск работает моментально
 ---
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.5/fuse.min.js"></script>
-
+<script src="//cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js"></script>
 <div class="post">
 <h1>Поиск по блогу</h1>
 <input type="text" id="search" tabindex="1" placeholder="Что угодно" style="width:100%">
@@ -26,14 +28,14 @@ permalink: /search/
         location: 0,
         distance: 100,
         maxPatternLength: 32,
-        minMatchCharLength: 1,
+        minMatchCharLength: 2,
         keys: [
           { name: "title", weight: 0.8 },
           { name: "description", weight: 0.5 },
           { name: "category", weight: 0.3 }
         ]
-      }
-
+      }, 
+      mark = new Mark(resultsWrapper)
     let fuse;
 
     fetch('/index.json')
@@ -46,23 +48,29 @@ permalink: /search/
 
     function search(q) {
       let result, results = fuse.search(q)
+      const reg = new RegExp(q, 'gim')
       resultsWrapper.innerHTML = ''
       resultsCount.innerText = 'Найдено результатов: ' + results.length
       for(let i in results) {
         result = results[i]
-        resultsWrapper.innerHTML += '<div class="post-item card e2">'
+        resultsWrapper.innerHTML += ('<div class="post-item card e2">'
           +'<h1 class="post-item__title">'
           +'<a href="'+result.item.url+'">'+result.item.title+'</a>'
           +'</h1>'
           + '<p>'+result.item.description+'</p>'
-          +'</div>'
+          +'</div>')
       }
+      mark.mark(q)
     }
 
-    searchField.addEventListener('keyup', function () {
-      console.log(searchField.value)
+    function makeSearch() {
       search(searchField.value)
-    })
+    }
+
+    searchField.addEventListener('keyup', makeSearch)
+    searchField.addEventListener('input', makeSearch)
+
+
 
     searchField.focus()
 
