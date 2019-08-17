@@ -1,0 +1,13 @@
+---
+layout: pure
+---
+[
+  {% for post in site.posts %}
+    {
+      "title": "{{ post.title }}",
+      "category": "{{ post.categories | first }}",
+      "url": "{{ post.url }}",
+      "description": "{{ post.excerpt | strip_html | strip_newlines | strip }}"
+    }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]

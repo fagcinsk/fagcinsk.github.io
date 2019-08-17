@@ -1,4 +1,7 @@
 <nav class="main-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
+  <a href="/search/" rel="nofollow" class="main-menu__item search-icon">
+    <span class="iconify" data-icon="jam:search"></span>
+  </a>
   {%- for nav_item in site.navigation -%}
     {%- assign class = nil -%}
     {%- if page.url == nav_item.link -%}

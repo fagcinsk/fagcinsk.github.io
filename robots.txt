@@ -3,6 +3,7 @@ Allow: *
 Disallow: /posts/
 Disallow: /all/
 Disallow: /calendar/
+Disallow: /search/
 Disallow: /google9a34ada7dc895f31.html
 Disallow: /yandex_374e027b0b0bb958.html
 Sitemap: https://mikhail-yudin.ru/sitemap.xml

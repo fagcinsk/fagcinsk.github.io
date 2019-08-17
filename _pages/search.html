@@ -1,0 +1,73 @@
+---
+layout: default
+permalink: /search/
+---
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.5/fuse.min.js"></script>
+
+<div class="post">
+<h1>Поиск по блогу</h1>
+<input type="text" id="search" tabindex="1" placeholder="Что угодно" style="width:100%">
+<div id="resultscount"></div>
+</div>
+
+<div id="results"></div>
+
+<script>
+  (function (d) {
+    const searchField = d.querySelector('#search'),
+      resultsCount = d.querySelector('#resultscount'),
+      resultsWrapper = d.querySelector('#results'),
+      fuseOptions = {
+        shouldSort: true,
+        includeMatches: true,
+        threshold: 0.0,
+        tokenize: true,
+        location: 0,
+        distance: 100,
+        maxPatternLength: 32,
+        minMatchCharLength: 1,
+        keys: [
+          { name: "title", weight: 0.8 },
+          { name: "description", weight: 0.5 },
+          { name: "category", weight: 0.3 }
+        ]
+      }
+
+    let fuse;
+
+    fetch('/index.json')
+      .then(function (data) { return data.json() })
+      .then(function (json) { 
+        console.log(json)
+        fuse = new Fuse(json, fuseOptions)
+      })
+
+
+    function search(q) {
+      let result, results = fuse.search(q)
+      resultsWrapper.innerHTML = ''
+      resultsCount.innerText = 'Найдено результатов: ' + results.length
+      for(let i in results) {
+        result = results[i]
+        resultsWrapper.innerHTML += '<div class="post-item card e2">'
+          +'<h1 class="post-item__title">'
+          +'<a href="'+result.item.url+'">'+result.item.title+'</a>'
+          +'</h1>'
+          + '<p>'+result.item.description+'</p>'
+          +'</div>'
+      }
+    }
+
+    searchField.addEventListener('keyup', function () {
+      console.log(searchField.value)
+      search(searchField.value)
+    })
+
+    searchField.focus()
+
+
+
+
+  })(window.document)
+</script>
