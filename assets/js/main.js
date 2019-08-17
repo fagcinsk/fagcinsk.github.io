@@ -1,6 +1,7 @@
 (function (window) {
   const d = window.document,
-    goTop = d.querySelector('.go-top')
+    goTop = d.querySelector('.go-top'),
+    maxScroll = window.innerHeight / 2
 
   goTop.addEventListener('click', function () {
     window.scrollTo(0, 0)
@@ -9,7 +10,7 @@
   goTop.title = 'Наверх'
 
   function onScroll (e) {
-    if (window.scrollY > window.innerHeight) {
+    if (window.scrollY > maxScroll) {
       goTop.classList.add('show')
     } else {
       goTop.classList.remove('show')
@@ -20,6 +21,9 @@
     capture: true,
     passive: true
   })
+
+  requestAnimationFrame(onScroll)
+
   if (!d.body.querySelector('.codehilite')) return
   const link = d.createElement('link')
   link.rel = 'stylesheet'
