@@ -5,10 +5,24 @@
 {%- include head.html -%}
 <link rel="stylesheet" href="/assets/css/page.css">
 </head>
-<body class="page">
+<body>
   {%- include header.html -%}
-  <main aria-label="Content">
-    {{ content }}
+  {% include site-categories.html %}
+
+  {% if page.promo == true %}
+  <link rel="stylesheet" href="/assets/css/promo.css">
+  <div class="promo">
+    <h1 class="promo__header">Блог веб-разработчика</h1>
+    <p class="promo__subheader">Мысли о веб-разработке, фронтенде, вёрстке, проекты и идеи на другие темы</p>
+  </div>
+  {% endif %}
+  <main aria-label="Content" class="page">
+    {% if page.url == '/' %}
+    <aside class="page__aside">
+      {% include sidebar.html %}
+    </aside>
+    {% endif %}
+    <div class="page__content">{{ content }}</div>
   </main>
   {% if page.gallery == true %}{% include photoswipe.html %}{% endif %}
   {%- include footer.html -%}

@@ -1,6 +1,6 @@
 .page__aside {
   padding: 0 16px;
-  align-self: flex-start;
+  width: 250px;
 
   a:not(.avatar) {
     line-height: 1.25;
@@ -16,4 +16,10 @@
 
 .sidebar-block {
   margin-bottom: 32px;
+}
+
+@media (max-width: 768px) {
+  .page__aside {
+    width: auto
+  }
 }

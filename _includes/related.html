@@ -4,7 +4,9 @@
 {% if related_posts != empty %}
 <section class="related-posts">
   <h2>Ещё почитать:</h2>
-  {% for post in related_posts | limit: 5 %}{% include post-item.html %}{% endfor %}
+  <div class="post-list">
+    {% for post in related_posts | limit: 5 %}{% include post-item.html %}{% endfor %}
+  </div>
 </section>
 {% endif %}
 {% endif %}

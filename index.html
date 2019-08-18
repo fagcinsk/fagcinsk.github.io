@@ -1,8 +1,13 @@
 ---
 type: website
 title: "Блог frontend веб-разработчика"
-layout: promo
+layout: default
+promo: true
 image: assets/img/me.jpg
 ---
 
+<aside class="grid-full content-block promo__text card e1">
+  {% capture promo_text %}{% include promo-text.md %}{% endcapture %}
+  {{ promo_text | markdownify }}
+</aside>
 {% include post-list.html %}

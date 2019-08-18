@@ -1,4 +1,4 @@
-.header-top {
+.page__header {
   white-space: nowrap;
   padding: 0 16px;
   line-height: 42px;
@@ -47,7 +47,7 @@
 }
 
 @include device("mobile") {
-  .header-top {
+  .page__header {
     padding: 0 8px;
   }
   .main-menu__item[href] {
