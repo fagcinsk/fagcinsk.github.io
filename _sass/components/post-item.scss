@@ -1,37 +1,54 @@
+.post-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 16px;
+}
+
 .post-item {
-  margin-bottom: 16px;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+  min-height: 220px;
+  padding: 0;
+  display: flex;
+  flex-flow: column-reverse;
+  
+  &[href]:hover{
+    @extend .e3;
+    text-decoration: none;
+    transition: box-shadow 120ms ease-in-out;
+  }
+}
+
+.post-item__header {
+  @include themify {
+    background-color: rgba(themed('card-bg'), 0.9);
+  }
+  padding: 16px;
 }
 
 .post-item__title {
+  font-size: 1.125em;
   line-height: 1.2;
   margin-top: 0;
-  margin-bottom: 0.25em;
+  margin-bottom: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .post-item__meta {
-  font-size: 0.85rem;
-}
-
-.post-item__content {
-  display: flex;
+  font-size: 0.75rem;
+  @include themify {
+    color: themed('post-meta-c');
+  }
 }
 
 .post-item__summary {
   margin-bottom: 0;
 }
 
-.post-item__preview_w {
-  width: 120px;
-  height: 120px;
-  min-width: 120px;
-  overflow: hidden;
-  border-radius: 4px;
-  margin-right: 16px;
-  background-position: center;
-  background-size: cover;
-}
-
-@include device('mobile') {
+@include device("mobile") {
   .post-item__preview_w {
     width: 70px;
     height: 70px;

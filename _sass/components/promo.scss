@@ -9,7 +9,11 @@
 
 .promo__header {
   font-size: 2.25rem;
-  margin: 0;
+  margin: 0 0 0.25em;
+}
+
+.promo__text {
+  margin-bottom: 0;
 }
 
 @include device("mobile") {

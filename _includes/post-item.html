@@ -1,25 +1,14 @@
-<article class="post-item card e1" itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
-  <header class="post-item__header">
+<a class="post-item lazyload card e1" 
+href="{{ post.url }}"
+title="Перейти к записи блога: {{ post.title }}"
+data-bgset="https://images.weserv.nl/?url=mikhail-yudin.ru/{{ post.image }}&w=250&t=fitup 250w, https://images.weserv.nl/?url=mikhail-yudin.ru/{{ post.image }}&w=450&t=fitup 450w"
+data-sizes="auto"
+itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="post-item__header">
+    {% if post.image %}<meta itemprop="image" content="{{ post.image }}">{% endif %}
     <!--noindex-->
     <div class="post-item__meta">{% include post-meta-short.html post=post %}</div>
     <!--/noindex-->
-    <h2 class="post-item__title" itemprop="name headline mainEntityOfPage">
-      <a class="post-item__link" href="{{ post.url }}"
-         title="Перейти к записи блога: {{ post.title }}">{{ post.title }}</a>
-    </h2>
-  </header>
-  <div class="post-item__content">
-    {% if post.image %}
-    <a class="post-item__preview_w lazyload" href="{{ post.url }}"
-       aria-label="Иллюстрация к посту: {{ post.title }} &mdash; перейти к записи блога"
-       data-bgset="https://images.weserv.nl/?url=mikhail-yudin.ru/{{ post.image }}&w=70&t=fitup 70w, https://images.weserv.nl/?url=mikhail-yudin.ru/{{ post.image }}&w=150&t=fitup 150w, https://images.weserv.nl/?url=mikhail-yudin.ru/{{ post.image }}&w=450&t=fitup 450w"
-       data-sizes="auto"></a>
-    <meta itemprop="image" content="{{ post.image }}">
-    {% endif %}
-    <!--noindex-->
-    <p class="post-item__summary" itemprop="articleBody">
-      {{ post.excerpt | strip_html | truncatewords:25 | strip }}
-    </p>
-    <!--/noindex-->
+    <h2 class="post-item__title" itemprop="name headline mainEntityOfPage">{{ post.title }}</h2>
   </div>
-</article>
+</a>

@@ -3,17 +3,6 @@ type: website
 title: "Блог frontend веб-разработчика"
 layout: promo
 image: assets/img/me.jpg
-pagination:
-  enabled: true
 ---
 
-{% capture promo_text %}{% include promo-text.md %}{% endcapture %}
-<div class="promo__text content-block card e2">{{ promo_text | markdownify }}</div>
-<div class="content-block card e2">
-  <h2>Проекты, которые можно пощупать онлайн</h2>
-  <ul>
-    <li><a href="/projects/text-layout-change/" title="Смена раскладки онлайн с английского на русский и наоборот">Смена раскладки онлайн</a></li>
-    <li><a href="/projects/block-destruction-game/" title="Игра про уничтожение блоков с использованием HTML5 canvas">Игра про уничтожение блоков</a></li>
-  </ul>
-</div>
 {% include post-list.html %}
