@@ -7,12 +7,6 @@
   }
 }
 
-.post-bb {
-  @include themify {
-    border-bottom: 1px solid themed('border-c');
-  }
-}
-
 .post__header {
   margin-bottom: 16px;
 }
