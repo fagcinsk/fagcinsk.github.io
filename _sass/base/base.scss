@@ -189,7 +189,9 @@ hr {
 
 .lazyload,
 .lazyloading {
-  opacity: 0;
+  &:not(a){
+    opacity: 0;
+  }
 }
 
 .lazyloaded {
