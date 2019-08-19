@@ -1,7 +1,7 @@
 .promo {
   padding: 96px 64px;
   text-align: center;
-  margin-bottom: -48px;
+  margin-bottom: -80px;
   @include themify {
     color: themed("promo-c");
     background-color: themed("promo-bg");

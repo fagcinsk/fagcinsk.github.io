@@ -1,5 +1,8 @@
 {% include analytics-header.html %}
 <header class="page__header e3" itemscope itemtype="http://schema.org/WPHeader">
-	<a class="site-title" itemprop="name" title="На главную" href="/">{{ site.headline | escape }}</a>
-	{% include menu-main.html %}
+  <div class="page__header_top">
+    <a class="site-title" itemprop="name" title="На главную" href="/">{{ site.headline | escape }}</a>
+    {% include menu-main.html %}
+  </div>
+  {% include site-categories.html %}
 </header>

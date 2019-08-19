@@ -1,10 +1,16 @@
 .page__header {
+  @extend .e2;
+  position: relative;
+}
+
+.page__header_top {
   white-space: nowrap;
   padding: 0 16px;
   line-height: 42px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   @include themify {
     background-color: themed("header-bg");
   }
@@ -47,7 +53,7 @@
 }
 
 @include device("mobile") {
-  .page__header {
+  .page__header_top {
     padding: 0 8px;
   }
   .main-menu__item[href] {
