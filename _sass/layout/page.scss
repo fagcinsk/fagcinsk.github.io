@@ -1,6 +1,24 @@
 $max-content-size: 48rem;
 
-.page {
+html {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  @include themify {
+    color: themed("page-c");
+    background-color: themed("page-bg");
+  }
+}
+
+main {
+  height: auto;
+  flex-grow: 1;
+
   display: flex;
   min-height: 100vh;
   justify-content: center;
@@ -10,9 +28,6 @@ $max-content-size: 48rem;
 
 .page__content {
   flex-grow: 1;
-  max-width: 48em;
-  padding: 64px 0;
-
 }
 
 .page__aside, .page__content {
@@ -20,7 +35,7 @@ $max-content-size: 48rem;
 }
 
 @media (max-width: $max-content-size) {
-  .page {
+  main {
     flex-flow: column;
   }
   .page__aside, .page__content {

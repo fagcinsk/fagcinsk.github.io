@@ -1,68 +1,25 @@
-html {
-  font-size: 100%;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
-
 body {
-  font: 1rem/1.5 $font-family-sans-serif;
+  font-family: $font-family-sans-serif;
+  line-height: 1.6;
 }
 
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
+code {
+  font-family: $font-family-mono;
+}
+
+article {
+  max-width: 48em;
+}
+
+h1,h2,h3,h4,h5,h6 {
   font-family: $font-family-sans-serif-condensed;
   font-stretch: condensed;
-}
-
-p,
-ul,
-ol,
-dl,
-blockquote,
-table,
-figure {
-  margin-bottom: 1.25em;
-}
-
-ul,
-ol {
-  padding-left: 0.25em;
-  margin-left: 1.25em;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+  font-weight: normal;
   margin: 2.75rem 0 1rem;
-  line-height: 1.15;
-  font-weight: 400;
 }
 
-h1, .h1 {
+h1 {
   margin-top: 0;
-}
-
-h1, .h1 {
-  font-size: 1.953em;
-}
-
-h2, .h2 {
-  font-size: 1.563em;
-}
-
-h3, .h3 {
-  font-size: 1.25em;
-}
-
-h4, .h4 {
-  font-size: 0.8em;
 }
 
 blockquote {

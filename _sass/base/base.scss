@@ -1,12 +1,6 @@
-html {
-  box-sizing: border-box;
-}
-
-body {
-  @include themify {
-    color: themed("page-c");
-    background-color: themed("page-bg");
-  }
+article {
+  max-width: 48em;
+  margin: 32px auto;
 }
 
 img,
