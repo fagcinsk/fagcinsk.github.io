@@ -42,3 +42,9 @@ main {
     margin: 0 16px;
   }
 }
+
+@media (min-width: $max-content-size) {
+  .page__aside {
+    width: 250px;
+  }
+}
