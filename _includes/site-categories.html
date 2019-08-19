@@ -7,7 +7,7 @@
   {% for category in sorted_categories %}
   {% capture cat %}{{ category | first }}{% endcapture %}
   {% capture url %}/{{ category | first | url_encode }}/{% endcapture %}
-  {% if site.categoryMap[cat] %}{% assign cat = site.categoryMap[cat].name %}{% endif %}
+  {% if site.data.categories[cat] %}{% assign cat = site.data.categories[cat].name %}{% endif %}
   <li class="categories__item">
     <a class="categories__link{% if c_url == url %} active{% endif %}" 
       href="{{ site.url }}{{ url }}" rel="{{ rel }}"

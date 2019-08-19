@@ -18,8 +18,8 @@ description: Список всех постов
       <div class="tile__image" style="background-image:url(/assets/img/categories/{{ category_name }}.png)">
       </div>
       <div class="tile__text">
-        <h2><a href="{{ site.url }}/category/{{ category | first | url_encode }}">{{ site.categoryMap[category_name].name }}</a></h2>
-        <p>{{ site.categoryMap[category_name].description }}</p>
+        <h2><a href="{{ site.url }}/category/{{ category | first | url_encode }}">{{ site.data.categories[category_name].name }}</a></h2>
+        <p>{{ site.data.categories[category_name].description }}</p>
       </div>
     </header>
     <ul>

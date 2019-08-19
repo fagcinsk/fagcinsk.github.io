@@ -1,0 +1,42 @@
+- name: Михаил Юдин | Персональный блог (этот блог)
+  category: Web
+  repo: fagcinsk.github.io
+- name: Multiplyer crafting game
+  category: Web
+  repo: multiplayer-crafting-game
+- name: <a href="https://mikhail-yudin.ru/projects/text-layout-change/">Смена раскладки онлайн</a> с английского на русский и наоборот
+  category: Web
+  repo: text-layout-change
+- name: PHP библиотека для генерации алиасов объектов
+  category: Web
+  repo: ro-aliaseable-object
+- name: <a href="https://mikhail-yudin.ru/projects/block-destruction-game/">Игра про уничтожение блоков</a> с использованием HTML5 canvas
+  category: Web
+  repo: block-destruction-game
+- name: Mixer analyzer
+  category: Web
+  repo: mixer-analyzer
+
+- name: Реализация ПО для импульсного металлоискателя с графической и звуковой индикацией с системой меню и настройками
+  category: Hardware
+  repo: arduino_metal_detector
+- name: STM32 ILI9341 spi
+  category: Hardware
+  repo: stm-ILI9341-spi
+- name: CLion проект для stm32f103c8t6
+  category: Hardware
+  repo: stm32-lcd-sandbox
+
+- name: Лаунчер с текстовым интерфейсом, быстрым поиском чего угодно на устройстве и работой с этими объектами
+  category: Android
+  repo: tui_home
+- name: Android Bluetooth Low Energy tasker plugin
+  category: Android
+  repo: ble_tasker_plugin
+
+- name: Начало реализации ОС x86
+  category: Linux, OS
+  repo: fagci_os
+- name: dotfiles - файлы локальной конфигурации программ ОС Linux
+  category: Linux, OS
+  repo: dotfiles

@@ -1,4 +1,4 @@
 {% for category in include.post.categories %} / <span class="category" itemprop="articleSection">
-  {%- if site.categoryMap[category] %}{{site.categoryMap[category].name }}{% else %}{{ category }}{% endif -%}
+  {%- if site.data.categories[category] %}{{site.data.categories[category].name }}{% else %}{{ category }}{% endif -%}
   {%- if forloop.last == false %}, {% endif -%}
 </span>{% endfor %}

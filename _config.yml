@@ -54,29 +54,6 @@ navigation: # Navigation links
 permalinks: pretty
 permalink: /:categories/:title/
 
-categoryMap:
-  frontend:
-    name: Фронтенд
-    description: "Материал, связанный с фронтовой частью веб-разработки: вёрстка, JavaScript, UX/UI в общем."
-  backend:
-    name: Бэкэнд
-    description: "Бэкэндная часть веб-разработки: PHP, NodeJS, ..."
-  lifehacks:
-    name: Лайфхаки
-    description: "Хитрости жизни"
-  hardware:
-    name: Железо
-    description: "Железячные проекты: Arduino, STM32, всякие датчики, дисплеи, механизмы."
-  linux:
-    name: Linux
-    description: "Администрирование Linux, настройка сервера, примеры настроек."
-  android:
-    name: Android
-    description: "Приложения для Android, примеры использования приложений, обзоры, рекомендации."
-  trip:
-    name: Путешествия
-    description: "Путешествия по необъятной планете =)"
-
 leaflet: leaflet@1.5.1
 
 target-blank:
