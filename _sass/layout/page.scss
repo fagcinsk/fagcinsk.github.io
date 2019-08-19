@@ -13,11 +13,14 @@ $max-content-size: 48rem;
 }
 
 .page__aside, .page__content {
-  margin: 0 16px;
+  margin: 0 32px;
 }
 
 @media (max-width: $max-content-size) {
   .page {
     flex-flow: column;
+  }
+  .page__aside, .page__content {
+    margin: 0 16px;
   }
 }
