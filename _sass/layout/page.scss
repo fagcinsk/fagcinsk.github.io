@@ -4,13 +4,16 @@ $max-content-size: 48rem;
   display: flex;
   min-height: 100vh;
   justify-content: center;
-  padding: 0 16px;
 }
 
 .page__content {
   flex-grow: 1;
   max-width: 48em;
   padding: 32px 0;
+}
+
+.page__aside, .page__content {
+  margin: 0 16px;
 }
 
 @media (max-width: $max-content-size) {
