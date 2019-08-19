@@ -8,16 +8,16 @@
     content: '';
     position: absolute;
     top: -40px;
-    box-shadow: 0 0 64px #fff;
+    box-shadow: 0 0 72px #fff;
     width: 40px;
     height: 40px;
   }
   &:before {
-    left: 33%;
+    left: 25%;
     transform: translateX(-50%);
   }
   &:after {
-    right: 33%;
+    right: 25%;
     transform: translateX(50%);
   }
   @include themify {
