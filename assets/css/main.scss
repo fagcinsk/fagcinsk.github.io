@@ -9,9 +9,8 @@
 @import 'themes/default';
 @import 'themes/dark';
 
-// @import "base/reset";
+@import "base/normalize";
 @import "base/base";
-// @import "base/typography";
 @import "base/typography-light";
 
 @import "layout/page";
