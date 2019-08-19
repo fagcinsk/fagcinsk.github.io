@@ -1,6 +1,7 @@
 .page__header {
   @extend .e2;
   position: relative;
+  z-index: 1;
 }
 
 .page__header_top {

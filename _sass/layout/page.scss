@@ -4,12 +4,15 @@ $max-content-size: 48rem;
   display: flex;
   min-height: 100vh;
   justify-content: center;
+  z-index: 1;
+  position: relative;
 }
 
 .page__content {
   flex-grow: 1;
   max-width: 48em;
   padding: 64px 0;
+
 }
 
 .page__aside, .page__content {
