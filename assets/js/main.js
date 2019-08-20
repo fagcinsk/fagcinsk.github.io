@@ -2,15 +2,16 @@
   const d = window.document,
     goTop = d.querySelector('.go-top'),
     maxScroll = window.innerHeight / 2
+  let isWasShown = false
 
   goTop.addEventListener('click', function () {
     window.scrollTo(0, 0)
   })
 
-  goTop.title = 'Наверх'
-
   function onScroll (e) {
-    if (window.scrollY > maxScroll) {
+    if(window.scrollY > maxScroll === isWasShown) return;
+    isWasShown = !isWasShown
+    if (isWasShown) {
       goTop.classList.add('show')
     } else {
       goTop.classList.remove('show')

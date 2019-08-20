@@ -17,16 +17,16 @@ layout: default
 
   <h2>Поделиться в соцсетях:</h2>
   <script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
-  <script src="https://yastatic.net/share2/share.js"></script>
+  <script src="https://yastatic.net/share2/share.js" async></script>
   <div class="ya-share2"
-    data-services="vkontakte,facebook,twitter,reddit,evernote,linkedin,pocket,telegram"
-    data-image="/{{ page.image }}"></div>
+       data-services="vkontakte,facebook,twitter,reddit,evernote,linkedin,pocket,telegram"
+       data-image="/{{ page.image }}"></div>
 </article>
-<div class="tile card">
+<div class="tile card mw">
   <div class="tile__image">
     <div class="author-avatar">
-        <a class="avatar author-block__avatar lazyload e4" 
-        href="/about/" data-bgset="/assets/img/ava.jpg 80w" title="Я"></a>
+      <a class="avatar author-block__avatar lazyload e4"
+         href="/about/" data-bgset="/assets/img/ava.jpg 80w" title="Я"></a>
       <p class="author-avatar__name"><a href="/about/">Михаил Юдин</a></p>
     </div>
   </div>
@@ -34,32 +34,10 @@ layout: default
     <p>{{site.description}}</p>
   </div>
 </div>
-<p class="subscribe">Чтобы не пропускать новости, можно <a href="{{ '/subscribe' | relative_url }}">подписаться на email
-  рассылку</a>.</p>
-
-<div class="ad-content">
-  <!-- Yandex.RTB R-A-427763-1 -->
-  <div id="yandex_rtb_R-A-427763-1"></div>
-  <script>
-    (function (w, d, n, s, t) {
-      w[n] = w[n] || []
-      w[n].push(function () {
-        Ya.Context.AdvManager.render({
-          blockId: 'R-A-427763-1',
-          renderTo: 'yandex_rtb_R-A-427763-1',
-          async: true
-        })
-      })
-      t = d.getElementsByTagName('script')[0]
-      s = d.createElement('script')
-      s.type = 'text/javascript'
-      s.src = '//an.yandex.ru/system/context.js'
-      s.async = true
-      t.parentNode.insertBefore(s, t)
-    })(this, this.document, 'yandexContextAsyncCallbacks')
-  </script>
+<div class="mw">
+  <p>Чтобы не пропускать новости, можно <a href="{{ '/subscribe' | relative_url }}">подписаться на email рассылку</a>.
+  </p>
 </div>
-
-{% include disqus.html %}
-
-{% include related.html post=page %}
+<div class="ad-content mw">{% include ad-page-content.html %}</div>
+<div class="mw">{% include disqus.html %}</div>
+<div class="mw">{% include related.html post=page %}</div>

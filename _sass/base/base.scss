@@ -1,6 +1,14 @@
-article {
+.mw {
   max-width: 48em;
+}
+
+.ma {
   margin: 32px auto;
+}
+
+article, .mwm {
+  @extend .mw;
+  @extend .ma;
 }
 
 img,
@@ -73,7 +81,6 @@ hr {
 }
 
 
-
 .map {
   border-radius: 3px;
   overflow: hidden;
@@ -133,7 +140,6 @@ hr {
 }
 
 
-
 .tile {
   display: flex;
   margin-bottom: 16px;
@@ -163,15 +169,15 @@ hr {
 }
 
 .e2 {
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 .e3 {
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 .e4 {
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
 .tile__text {
@@ -184,7 +190,7 @@ hr {
 
 .lazyload,
 .lazyloading {
-  &:not(a){
+  &:not(a) {
     opacity: 0;
   }
 }
@@ -193,7 +199,6 @@ hr {
   opacity: 1;
   transition: opacity 150ms;
 }
-
 
 
 code {
@@ -219,6 +224,7 @@ code {
   margin-bottom: -40px;
   position: relative;
   z-index: 0;
+
   &:before, &:after {
     content: '';
     position: absolute;
@@ -227,14 +233,17 @@ code {
     width: 40px;
     height: 40px;
   }
+
   &:before {
     left: 25%;
     transform: translateX(-50%);
   }
+
   &:after {
     right: 25%;
     transform: translateX(50%);
   }
+
   @include themify {
     color: themed("promo-c");
     background-color: themed("promo-bg");
@@ -247,7 +256,7 @@ code {
 }
 
 .promo__subheader {
-  margin-bottom:0;
+  margin-bottom: 0;
 }
 
 @include device("mobile") {
