@@ -7,75 +7,72 @@ description: Поиск по всем постам блога с учётом т
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.5/fuse.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js"></script>
-<div class="post card e2">
-<h1>Поиск по блогу</h1>
-<input type="text" id="search" tabindex="1" placeholder="Что угодно" style="width:100%">
-<div id="resultscount"></div>
+<div class="mwm">
+  <div class="post card e2">
+    <h1>Поиск по блогу</h1>
+    <input type="text" id="search" tabindex="1" placeholder="Что угодно" style="width:100%">
+    <div id="resultscount"></div>
+  </div>
 </div>
+<div class="mwm">
+  <div id="results"></div>
 
-<div id="results"></div>
+  <script>
+    (function (d) {
+      const searchField = d.querySelector('#search'),
+        resultsCount = d.querySelector('#resultscount'),
+        resultsWrapper = d.querySelector('#results'),
+        fuseOptions = {
+          shouldSort: true,
+          includeMatches: true,
+          threshold: 0.0,
+          tokenize: true,
+          location: 0,
+          distance: 100,
+          maxPatternLength: 32,
+          minMatchCharLength: 2,
+          keys: [
+            { name: 'title', weight: 0.8 },
+            { name: 'description', weight: 0.5 },
+            { name: 'category', weight: 0.3 }
+          ]
+        },
+        mark = new Mark(resultsWrapper)
+      let fuse
 
-<script>
-  (function (d) {
-    const searchField = d.querySelector('#search'),
-      resultsCount = d.querySelector('#resultscount'),
-      resultsWrapper = d.querySelector('#results'),
-      fuseOptions = {
-        shouldSort: true,
-        includeMatches: true,
-        threshold: 0.0,
-        tokenize: true,
-        location: 0,
-        distance: 100,
-        maxPatternLength: 32,
-        minMatchCharLength: 2,
-        keys: [
-          { name: "title", weight: 0.8 },
-          { name: "description", weight: 0.5 },
-          { name: "category", weight: 0.3 }
-        ]
-      }, 
-      mark = new Mark(resultsWrapper)
-    let fuse;
+      fetch('/index.json')
+        .then(function (data) { return data.json() })
+        .then(function (json) {
+          console.log(json)
+          fuse = new Fuse(json, fuseOptions)
+        })
 
-    fetch('/index.json')
-      .then(function (data) { return data.json() })
-      .then(function (json) { 
-        console.log(json)
-        fuse = new Fuse(json, fuseOptions)
-      })
-
-
-    function search(q) {
-      let result, results = fuse.search(q)
-      const reg = new RegExp(q, 'gim')
-      resultsWrapper.innerHTML = ''
-      resultsCount.innerText = 'Найдено результатов: ' + results.length
-      for(let i in results) {
-        result = results[i]
-        resultsWrapper.innerHTML += ('<div class="post-item card e2">'
-          +'<h1 class="post-item__title">'
-          +'<a href="'+result.item.url+'">'+result.item.title+'</a>'
-          +'</h1>'
-          + '<p>'+result.item.description+'</p>'
-          +'</div>')
+      function search (q) {
+        let result, results = fuse.search(q)
+        const reg = new RegExp(q, 'gim')
+        resultsWrapper.innerHTML = ''
+        resultsCount.innerText = 'Найдено результатов: ' + results.length
+        for (let i in results) {
+          result = results[i]
+          resultsWrapper.innerHTML += ('<div class="card e2">'
+            + '<h1>'
+            + '<a href="' + result.item.url + '">' + result.item.title + '</a>'
+            + '</h1>'
+            + '<p>' + result.item.description + '</p>'
+            + '</div>')
+        }
+        mark.mark(q)
       }
-      mark.mark(q)
-    }
 
-    function makeSearch() {
-      search(searchField.value)
-    }
+      function makeSearch () {
+        search(searchField.value)
+      }
 
-    searchField.addEventListener('keyup', makeSearch)
-    searchField.addEventListener('input', makeSearch)
+      searchField.addEventListener('keyup', makeSearch)
+      searchField.addEventListener('input', makeSearch)
 
+      searchField.focus()
 
-
-    searchField.focus()
-
-
-
-
-  })(window.document)
-</script>
+    })(window.document)
+  </script>
+</div>

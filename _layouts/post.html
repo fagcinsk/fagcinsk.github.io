@@ -6,21 +6,14 @@ layout: default
     <div class="post__meta">{% include post-meta.html post=page %}</div>
     <h1 class="post__title" itemprop="headline">{{ page.title | escape }}</h1>
     {% if page.image %}
-    {% if page.image_hide != true %}{% include image.html url=page.image alt=page.title %}
-    {% endif %}
+    {% if page.image_hide != true %}{% include image.html url=page.image alt=page.title %}{% endif %}
     <meta itemprop="image" content="/{{ page.image }}">
     {% endif %}
   </header>
-  <div class="post__content" itemprop="articleBody">
-    {{content}}
-  </div>
 
-  <h2>Поделиться в соцсетях:</h2>
-  <script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
-  <script src="https://yastatic.net/share2/share.js" async></script>
-  <div class="ya-share2"
-       data-services="vkontakte,facebook,twitter,reddit,evernote,linkedin,pocket,telegram"
-       data-image="/{{ page.image }}"></div>
+  <div itemprop="articleBody">{{content}}</div>
+
+  {% include share.html %}
 </article>
 <div class="tile card mwm">
   <div class="tile__image">
@@ -38,6 +31,6 @@ layout: default
   <p>Чтобы не пропускать новости, можно <a href="{{ '/subscribe' | relative_url }}">подписаться на email рассылку</a>.
   </p>
 </div>
-<div class="ad-content mwm">{% include ad-page-content.html %}</div>
+<div class="mwm">{% include ad-page-content.html %}</div>
 <div class="mwm">{% include disqus.html %}</div>
 <div class="mwm">{% include related.html post=page %}</div>
