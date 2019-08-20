@@ -12,7 +12,7 @@
   const d = window.document,
     html = d.querySelector('html'),
     themeSwitch = d.querySelector('.theme-switch'),
-    metaThemeColor = d.querySelector('meta[name=theme-color]')
+    metaThemeColor = d.head.querySelector('#themeColor')
 
   let userTheme = localStorage.getItem('userTheme')
 
