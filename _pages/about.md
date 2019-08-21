@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Веб-разработчик Михаил Юдин &mdash; обо мне
-permalink: /about/
+permalink: /about
 image: assets/img/me.jpg
 description: >
   Обо мне, моя биография, интересы, увлечения и хобби.

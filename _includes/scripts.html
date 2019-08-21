@@ -2,3 +2,14 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.1/lazysizes.min.js" defer></script>
 <script src="//code.iconify.design/1/1.0.3/iconify.min.js" defer></script>
 <script src="/assets/js/main.js" defer></script>
+<script>
+  (function (d) {
+    for (var i = 0; i < d.links.length; i++) {
+      if (d.links[i].href === d.URL) {
+        d.links[i].classList.add('active');
+      } else {
+        d.links[0].classList.add('active');
+      }
+    }
+  })(window.document)
+</script>

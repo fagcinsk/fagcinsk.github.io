@@ -3,13 +3,12 @@
   {% assign rel = '' %}
   {% if include.noindex == true %}{% assign rel = 'nofollow' %}{% endif %}
   {% assign sorted_categories = site.categories | sort %}
-  {% assign c_url = page.url | replace: "index.html", "" %}
   {% for category in sorted_categories %}
   {% capture cat %}{{ category | first }}{% endcapture %}
   {% capture url %}/{{ category | first | url_encode }}/{% endcapture %}
   {% if site.data.categories[cat] %}{% assign cat = site.data.categories[cat].name %}{% endif %}
   <li class="categories__item">
-    <a class="categories__link{% if c_url == url %} active{% endif %}" 
+    <a class="categories__link"
       href="{{ site.url }}{{ url }}" rel="{{ rel }}"
       title="Перейти к категории {{ cat }} (записей: {{ category | last | size }})">{{ cat }}</a>
   </li>

@@ -1,0 +1,3 @@
+- {name: 'Проекты', link: '/projects/'}
+- {name: 'Обо мне', link: '/about'}
+- {name: 'Контакты', link: '/contact'}

@@ -46,11 +46,6 @@ kramdown:
 sass:
   style: compressed
 
-navigation: # Navigation links
-  - {name: 'Проекты', link: '/projects/'}
-  - {name: 'Обо мне', link: '/about/'}
-  - {name: 'Контакты', link: '/contact/'}
-
 permalinks: pretty
 permalink: /:categories/:title/
 

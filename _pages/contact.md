@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /contact/
+permalink: /contact
 title: Веб-разработчик Михаил Юдин &mdash; мои контакты
 description: >
   Контакты для связи. Резюме и дополнительную информацию можно получить, связавшись со мной.

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Подписаться на E-mail рассылку
-permalink: /subscribe/
+permalink: /subscribe
 description: Можете подписаться на E-mail рассылку, чтобы быть в курсе последних записей
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Веб-разработчик Михаил Юдин &mdash; моё резюме
-permalink: /resume/
+permalink: /resume
 description: >
   Краткая информация обо мне как о веб-разработчике.
 ---
