@@ -50,6 +50,13 @@
     setThemeByName(newTheme)
   })
 
-  resetThemes()
-  setThemeByName(userTheme)
+  if(!userTheme) {
+    userTheme = THEMES[0]
+    localStorage.setItem('userTheme', userTheme)
+  }
+
+  if(userTheme !== THEMES[0]) {
+    resetThemes()
+    setThemeByName(userTheme)
+  }
 </script>

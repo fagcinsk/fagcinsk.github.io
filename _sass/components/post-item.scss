@@ -6,15 +6,12 @@
 
 .post-item {
   overflow: hidden;
-  background-position: center;
-  background-size: cover;
   min-height: 220px;
   padding: 0;
-  display: flex;
-  flex-flow: column-reverse;
-  
-  &[href]:hover{
+
+  &[href]:hover {
     @extend .e3;
+
     text-decoration: none;
     transition: box-shadow 120ms ease-in-out;
   }
@@ -22,9 +19,15 @@
 
 .post-item__header {
   @include themify {
-    background-color: themed('card-bg');
+    background-color: themed("card-bg");
   }
+
+
   padding: 16px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .post-item__title {
@@ -39,9 +42,15 @@
 
 .post-item__meta {
   font-size: 0.75rem;
+
   @include themify {
-    color: themed('post-meta-c');
+    color: themed("post-meta-c");
   }
+}
+
+.pi__img {
+  object-fit: cover;
+  object-position: center;
 }
 
 .post-item__summary {

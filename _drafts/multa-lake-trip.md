@@ -3,7 +3,7 @@ layout: post
 categories: trip
 title: Путешествие на Мультинские озёра
 description: Чистейшие горные озёра, большие медведи, резкие перепады температур, шумные водопады, летний снег.
-leaflet: true
+# leaflet: true
 image: photos/multa-lake-trip/IMG_20190721_163853.jpg
 gallery: true
 ---
