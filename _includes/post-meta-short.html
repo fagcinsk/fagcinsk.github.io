@@ -1,5 +1,5 @@
 {% include pubdate.html date=include.post.date %}
-{% capture lastmod_date %}{% last_modified {{ include.post.path }} %}{% endcapture %}
+{%- capture lastmod_date %}{% last_modified {{ include.post.path }} %}{% endcapture %}
 {% include update.html date=lastmod_date %}
 {% include post-categories.html post=include.post %}
 <div itemprop="author" itemscope="" itemtype="https://schema.org/Person">

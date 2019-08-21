@@ -52,21 +52,12 @@ permalink: /:categories/:title/
 leaflet: leaflet@1.5.1
 
 target-blank:
-    add_css_classes: ext-link
+  add_css_classes: ext-link
 
 yandex_metrika:
   token: AgAAAAACBsTEAAXOQm6356MxwEN8vDlsI0f5t3g
   site_url: https://mikhail-yudin.ru/
   trim_last: " | Михаил Юдин"
-
-
-#collections:
-#  projects:
-#    output: true
-#    name: Проекты
-#  posts:
-#    output: false
-#    name: Посты
 
 pagination:
   enabled: true
@@ -90,15 +81,11 @@ autopages:
     title: 'Материалы в категории :cat'
     permalink: '/:cat'
 
-#  collections:
-#    layouts: ['autopage_collection.html']
-#    title: 'Страницы в коллекции :coll'
-#    permalink: '/collection/:coll'
+  collections:
+    enabled: false
 
-#  tags:
-#    layouts: ['autopage_tags.html']
-#    title: 'Материалы с тегом :tag'
-#    permalink: '/tag/:tag'
+  tags:
+    enabled: false
 
 include:
   - _pages
@@ -114,4 +101,3 @@ exclude:
   - .idea
   - .jekyll-cache
   - _redirects
-
