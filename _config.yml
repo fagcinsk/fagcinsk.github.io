@@ -43,9 +43,6 @@ kramdown:
     default_lang: html
     css_class: 'codehilite'
 
-sass:
-  style: compressed
-
 permalinks: pretty
 permalink: /:categories/:title/
 
@@ -53,11 +50,6 @@ leaflet: leaflet@1.5.1
 
 target-blank:
   add_css_classes: ext-link
-
-yandex_metrika:
-  token: AgAAAAACBsTEAAXOQm6356MxwEN8vDlsI0f5t3g
-  site_url: https://mikhail-yudin.ru/
-  trim_last: " | Михаил Юдин"
 
 pagination:
   enabled: true
@@ -100,4 +92,5 @@ exclude:
   - CNAME
   - .idea
   - .jekyll-cache
+  - .sass-cache
   - _redirects

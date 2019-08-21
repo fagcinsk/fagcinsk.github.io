@@ -17,7 +17,7 @@
   text-align: center;
 }
 
-@include device('mobile') {
+@media (max-width: 768px) {
   .author-block {
     margin-top: 16px;
   }

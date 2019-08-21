@@ -44,7 +44,7 @@ mark {
 .content-block {
   margin-bottom: 32px;
 
-  > *:first-child {
+  > h2:first-child {
     margin-top: 0;
   }
 
@@ -57,9 +57,7 @@ a[href] {
   text-decoration: none;
   transition: color 100ms ease-in-out;
 
-  &:hover,
-  &:active,
-  &.active {
+  &:hover {
     text-decoration: underline;
   }
 
@@ -197,13 +195,8 @@ hr {
   display: block;
   height: 0;
   width: 100%;
-
-  // background-image: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9JzMwMHB4JyB3aWR0aD0nMzAwcHgnICBmaWxsPSIjMDAwMDAwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTAwIDEwMDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwYXRoIGQ9Ik00MSw4SDh2MzNINVY4VjVoM2gzM1Y4eiBNOTIsNUg1OXYzaDMzdjMzaDNWOFY1SDkyeiBNOCw5MlY1OUg1djMzdjNoM2gzM3YtM0g4eiBNOTEsNTl2MzNINTh2M2gzM2gzdi0zVjU5SDkxeiBNNTksNDhoLTggIHYtOGgtMnY4aC04djJoOHY4aDJ2LThoOFY0OHoiPjwvcGF0aD48L3N2Zz4=");
-  background-position: center;
-  background-repeat: no-repeat;
   background-size: 33%;
-  background-color: rgba(0, 0, 0, 0.35);
-  opacity: 0.35;
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
 .img-dim-1-33:before {
@@ -299,7 +292,7 @@ code {
   margin-bottom: 0;
 }
 
-@include device("mobile") {
+@media (max-width: 768px) {
   .promo {
     padding: 64px 16px;
   }

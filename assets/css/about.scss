@@ -1,11 +1,13 @@
-img.me {
+---
+---
+.me {
   float: right;
   width: 300px;
   margin: 0 0 16px 16px;
   border-radius: 3px;
 }
-@include device('mobile') {
-  img.me {
+@media (max-width: 768px) {
+  .me {
     width: 100%;
   }
 }

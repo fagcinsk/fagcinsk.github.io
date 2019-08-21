@@ -1,20 +1,8 @@
-.post__header {
-  margin-bottom: 16px;
-}
-
 .post__meta {
   @include themify {
     color: themed('post-meta-c');
   }
   font-size: 0.75rem;
-}
-
-.related-posts {
-  margin-top: 32px;
-}
-
-.subscribe {
-  margin: 32px 0;
 }
 
 .video-wrapper {
@@ -38,23 +26,7 @@ figcaption {
   padding: 4px 8px;
 }
 
-
-
-.card-item {
-  margin: 32px;
-  display: flex;
-  flex-flow: column;
-  min-width: 50%;
-  max-width: 100%;
-}
-
-.cards-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  margin: -32px;
-}
-
-@include device('mobile') {
+@media (max-width: 768px) {
   .post {
     margin: 0 -16px 16px;
   }

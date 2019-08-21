@@ -9,7 +9,7 @@
     font-size: 40px;
   }
 
-  @include device('mobile') {
+  @media (max-width: 768px) {
     flex-flow: column;
     align-items: center;
   }
