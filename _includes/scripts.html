@@ -4,12 +4,10 @@
 <script src="/assets/js/main.js" defer></script>
 <script>
   (function (d) {
-    for (var i = 0; i < d.links.length; i++) {
-      if (d.links[i].href === d.URL) {
-        d.links[i].classList.add('active');
-      } else {
-        d.links[0].classList.add('active');
-      }
+    const linksCount = d.links.length
+    for (let i = 0; i < linksCount; i++) {
+      if (d.links[i].href !== d.URL) continue
+      d.links[i].classList.add('active')
     }
   })(window.document)
 </script>
