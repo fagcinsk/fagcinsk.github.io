@@ -1,9 +1,9 @@
 <script>
-    window.lazyLoadOptions = {	
-        elements_selector: ".lazy",	
-        class_loading: 'lazyloading',
-        class_loaded: 'lazyloaded',
-    };
+  window.lazyLoadOptions = {
+    elements_selector: '.lazy',
+    class_loading: 'lazyloading',
+    class_loaded: 'lazyloaded',
+  }
 </script>
 <script async src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.0.0/dist/lazyload.min.js"></script>
 <script src="//code.iconify.design/1/1.0.3/iconify.min.js" defer></script>
@@ -16,4 +16,24 @@
       d.links[i].classList.add('active')
     }
   })(window.document)
+</script>
+<script>
+  (function () {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+        .register('/sw.js', { scope: '/' })
+        .then(function (reg) {
+          if (reg.installing) {
+            console.log('Service worker installing')
+          } else if (reg.waiting) {
+            console.log('Service worker installed')
+          } else if (reg.active) {
+            console.log('Service worker active')
+          }
+        }).catch(function (error) {
+        // registration failed
+        console.log('Registration failed with ' + error)
+      })
+    }
+  })()
 </script>

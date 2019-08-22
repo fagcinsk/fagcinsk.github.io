@@ -33,6 +33,12 @@ img::selection {
   }
 }
 
+:focus {
+  @include themify {
+    outline-color: themed("sel-bg");
+  }
+}
+
 mark {
   @include themify {
     background-color: themed("mark-bg");

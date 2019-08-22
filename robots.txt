@@ -1,5 +1,6 @@
 User-agent: *
 Allow: *
+Disallow: /offline.html
 Disallow: /posts/
 Disallow: /all/
 Disallow: /calendar/
