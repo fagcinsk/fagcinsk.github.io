@@ -3,7 +3,7 @@
     <span class="iconify" data-icon="jam:search"></span>
   </a>
   {%- for nav_item in site.data.navigation -%}
-    <a class="main-menu__item {{class}}" itemprop="url" href="{{nav_item.link}}" title="{{nav_item.name}}">
+    <a class="main-menu__item" itemprop="url" href="{{nav_item.link}}" title="{{nav_item.name}}">
       <span itemprop="name">{{nav_item.name}}</span>
     </a>
   {%- endfor -%}

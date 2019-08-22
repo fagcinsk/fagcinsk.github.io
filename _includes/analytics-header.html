@@ -3,60 +3,15 @@
   new Image().src = '//counter.yadro.ru/hit?r' +
     escape(document.referrer) + ((typeof (screen) == 'undefined') ? '' :
       ';s' + screen.width + '*' + screen.height + '*' + (screen.colorDepth ?
-      screen.colorDepth : screen.pixelDepth)) + ';u' + escape(document.URL) +
+        screen.colorDepth : screen.pixelDepth)) + ';u' + escape(document.URL) +
     ';h' + escape(document.title.substring(0, 150)) +
-    ';' + Math.random()</script><!--/LiveInternet-->
+    ';' + Math.random()</script>
+<!--/LiveInternet-->
 
 <span class="theme-switch show e3"><span class="iconify" data-icon="mdi:palette-swatch"></span></span>
 <script>
-  const d = window.document,
-    html = d.querySelector('html'),
-    themeSwitch = d.querySelector('.theme-switch'),
-    metaThemeColor = d.head.querySelector('#themeColor')
-
-  let userTheme = localStorage.getItem('userTheme')
-
-  const THEMES = ['default', 'dark']
-
-  function setThemeByName (name) {
-    userTheme = name
-    if (THEMES.indexOf(userTheme) === -1) {
-      userTheme = THEMES[0]
-    }
-    html.classList.add('theme-' + userTheme)
-    localStorage.setItem('userTheme', userTheme)
-    window.setTimeout(function () {
-      metaThemeColor.setAttribute('content', window.getComputedStyle(d.body, null).getPropertyValue('background-color'))
-    })
-  }
-
-  function resetThemes () {
-    html.classList.forEach(function (className) {
-      if (className.startsWith('theme-')) {
-        html.classList.remove(className)
-      }
-    })
-  }
-
-  themeSwitch.addEventListener('click', function () {
-    let themeIndex = THEMES.indexOf(userTheme)
-    themeIndex++
-    if (themeIndex >= THEMES.length) {
-      themeIndex = 0
-    }
-
-    resetThemes()
-    let newTheme = THEMES[themeIndex]
-    setThemeByName(newTheme)
-  })
-
-  if(!userTheme) {
-    userTheme = THEMES[0]
-    localStorage.setItem('userTheme', userTheme)
-  }
-
-  if(userTheme !== THEMES[0]) {
-    resetThemes()
-    setThemeByName(userTheme)
-  }
+  (function (window) {
+    const THEMES=["default","dark"],
+    d=window.document,html=d.querySelector("html"),themeSwitch=d.querySelector(".theme-switch"),metaThemeColor=d.head.querySelector("#themeColor");let userTheme=localStorage.getItem("userTheme");function resetThemes(){html.classList.forEach(function(a){a.startsWith("theme-")&&html.classList.remove(a)})}function setThemeByName(a){resetThemes(),userTheme=a,-1===THEMES.indexOf(userTheme)&&(userTheme=THEMES[0]),html.classList.add("theme-"+userTheme),localStorage.setItem("userTheme",userTheme),window.setTimeout(function(){metaThemeColor.setAttribute("content",window.getComputedStyle(d.body,null).getPropertyValue("background-color"))})}themeSwitch.addEventListener("click",function(){let a=THEMES.indexOf(userTheme)+1;a>=THEMES.length&&(a=0),setThemeByName(THEMES[a])}),userTheme||(userTheme=THEMES[0],localStorage.setItem("userTheme",userTheme)),userTheme!==THEMES[0]&&setThemeByName(userTheme);
+  })(window)
 </script>

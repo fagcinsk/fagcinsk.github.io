@@ -1,14 +1,11 @@
-{% if include.noindex == true %}<!--noindex-->{% endif %}
 <aside class="cat">
   {%- assign rel = '' %}
   {%- assign sorted_categories = site.categories | sort %}
   {%- for category in sorted_categories %}
   {%- capture cat %}{{ category | first }}{% endcapture %}
-  {%- capture url %}/{{ category | first | url_encode }}/{% endcapture %}
+  {%- capture url %}/{{ cat | url_encode }}/{% endcapture %}
   {%- if site.data.categories[cat] %}{% assign cat = site.data.categories[cat].name %}{% endif %}
-  <a class="cat__link"
-    href="{{ url }}" {%- if include.noindex == true %}rel="noindex"{% endif %}
-    title="Перейти к категории {{ cat }} (записей: {{ category | last | size }})">{{ cat }}</a>
+  <a class="cat__link" href="{{ url }}"
+    title="Категория {{ cat }} (записей: {{ category | last | size }})">{{ cat }}</a>
   {%- endfor %}
 </aside>
-{% if include.noindex == true %}<!--/noindex-->{% endif %}

@@ -1,19 +1,4 @@
-<script>
-  window.lazyLoadOptions = {
-    elements_selector: '.lazy',
-    class_loading: 'lazyloading',
-    class_loaded: 'lazyloaded',
-  }
-</script>
-<script async src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.0.0/dist/lazyload.min.js"></script>
+<script>window.lazyLoadOptions={elements_selector:'.lazy',class_loading:'lazyloading',class_loaded:'lazyloaded'}</script>
+<script async src="//cdn.jsdelivr.net/npm/vanilla-lazyload@12.0.0/dist/lazyload.min.js"></script>
 <script src="//code.iconify.design/1/1.0.3/iconify.min.js" defer></script>
 <script src="/assets/js/main.js" defer></script>
-<script>
-  (function (d) {
-    const linksCount = d.links.length
-    for (let i = 0; i < linksCount; i++) {
-      if (d.links[i].href !== d.URL) continue
-      d.links[i].classList.add('active')
-    }
-  })(window.document)
-</script>

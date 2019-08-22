@@ -15,7 +15,7 @@ module Jekyll
       file_path = site_source + '/' + url
 
       # Return last modified date
-      File.mtime(file_path.strip!)
+      File.mtime(file_path.strip!).strftime("%F %T")
     end
   end
 end
