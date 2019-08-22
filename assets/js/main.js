@@ -1,6 +1,6 @@
 (function (window) {
   const d = window.document,
-    goTop = d.querySelector('.go-top'),
+    goTop = d.querySelector('#goTop'),
     maxScroll = window.innerHeight / 2
   let isWasShown = false
 

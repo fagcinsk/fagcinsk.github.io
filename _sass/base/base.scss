@@ -90,7 +90,7 @@ hr {
   overflow: hidden;
 }
 
-.go-top, .theme-switch {
+#goTop, .theme-switch {
   position: fixed;
   bottom: 16px;
   border-radius: 50%;
@@ -115,7 +115,7 @@ hr {
   left: 16px;
 }
 
-.go-top {
+#goTop {
   right: 16px;
   &:not(.show) {
     display: none;
