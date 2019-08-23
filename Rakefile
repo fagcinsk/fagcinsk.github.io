@@ -5,7 +5,6 @@ require 'rake'
 require 'fileutils'
 require 'tempfile'
 require 'rake/clean'
-require 'w3c_validators'
 require 'html-proofer'
 
 task default: [
