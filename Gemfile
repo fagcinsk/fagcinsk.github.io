@@ -1,8 +1,11 @@
 source 'https://rubygems.org'
 
 gem 'jekyll', :git => 'https://github.com/jekyll/jekyll.git', branch: 'master'
+gem 'rake'
 gem 'exifr'
 gem 'fastimage'
+gem 'w3c_validators'
+gem 'html-proofer'
 
 group :jekyll_plugins do
   gem 'jekyll-feed'

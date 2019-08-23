@@ -1,6 +1,6 @@
 <figure class="image" title="{{ include.url }}">
   <a href="/{{ include.url }}" class="img-wr img-dim-{{ include.url | proportion | replace: '.','-' }}" data-size="{{ include.url | dimensions }}">
-    <img class="lazy" data-src="/{{ include.url }}" alt="{{ include.alt | escape }}">
+    <img data-proofer-ignore class="lazy" data-src="/{{ include.url }}" alt="{{ include.alt | escape }}">
   </a>
   {%- if include.description or include.exif %}
   <figcaption>

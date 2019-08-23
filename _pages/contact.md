@@ -17,7 +17,7 @@ leaflet: true
 <a title="Telegram" href="https://t.me/{{site.username.telegram}}"><span class="iconify soc-i" data-icon="uil:telegram"></span></a>
 <a title="VKontakte" href="https://vk.com/{{site.username.vk}}"><span class="iconify soc-i" data-icon="mdi-vk-circle" ></span></a>
 <a title="Twitter" href="https://twitter.com/{{site.username.twitter}}"><span class="iconify soc-i" data-icon="mdi-twitter-circle"></span></a>
-<a title="Facebook" href="https://www.facebook.com/{{site.username.facebook}}"><span class="iconify soc-i" data-icon="mdi-facebook"></span></a>
+<a title="Facebook" href="https://www.facebook.com/{{site.username.facebook}}" data-proofer-ignore><span class="iconify soc-i" data-icon="mdi-facebook"></span></a>
 <a title="ICQ" href="https://icq.im/{{site.username.icq}}"><span class="iconify soc-i" data-icon="brandico:icq" ></span></a>
 <a title="Skype" href="skype:{{site.username.skype}}?chat"><span class="iconify soc-i" data-icon="mdi-skype" ></span></a>
 <a title="E-mail" href="mailto:&#102;&#097;&#103;&#099;&#105;&#046;&#110;&#115;&#107;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;"><span class="iconify soc-i" data-icon="mdi-email"></span></a>

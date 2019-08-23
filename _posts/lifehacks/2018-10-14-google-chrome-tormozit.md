@@ -19,7 +19,7 @@ description: В определённый момент у Вас возникло
 
 Чтобы избавиться от таких сервисов, нужно нажать f12, перейти на вкладку Application, выбрать Service Workers. Справа увидите раскрывающуюся штуку Service workers from other domains. В ней понажимайте на Unregister для каждого незнакомого сайта. Обратите внимание, что оповещения, на которые Вы были подписаны, перестанут приходить.
 
-![](https://avatars.mds.yandex.net/get-zen_doc/16074/pub_5bc31ff5575b6b00abbedea7_5bc3200ed1613800aa24b41b/scale_2400)
+![Service Workers](https://avatars.mds.yandex.net/get-zen_doc/16074/pub_5bc31ff5575b6b00abbedea7_5bc3200ed1613800aa24b41b/scale_2400)
 
 ### Google Chrome тормозит, думая о будущем
 
@@ -27,7 +27,7 @@ description: В определённый момент у Вас возникло
 
 Чтобы отключить это, перейдите в настройки браузера через кнопку меню сверху-справа, найдите пункт "... для ускорения загрузки страниц" и уберите галочку с этого пункта.
 
-![](https://avatars.mds.yandex.net/get-zen_doc/34175/pub_5bc31ff5575b6b00abbedea7_5bc32047b7a6b100ac906f88/scale_2400)
+![Ускорение загрузки страниц](https://avatars.mds.yandex.net/get-zen_doc/34175/pub_5bc31ff5575b6b00abbedea7_5bc32047b7a6b100ac906f88/scale_2400)
 
 ### До сих пор используете flash?
 
@@ -43,7 +43,7 @@ description: В определённый момент у Вас возникло
 
 Таким образом можно узнать например, что виновник тормозов не браузер, а приложение висящее в фоне, о наличии которого может и не догадывались.
 
-![](https://avatars.mds.yandex.net/get-zen_doc/196027/pub_5bc31ff5575b6b00abbedea7_5bc3200e2ac0f700a9c16534/scale_2400)
+![Диспетчером задач](https://avatars.mds.yandex.net/get-zen_doc/196027/pub_5bc31ff5575b6b00abbedea7_5bc3200e2ac0f700a9c16534/scale_2400)
 
 ### Много вкладок
 
@@ -51,7 +51,7 @@ description: В определённый момент у Вас возникло
 
 Чтобы узнать, какая из вкладок ест больше всего памяти, можно из меню браузера вызвать диспетчер задач.
 
-![](https://avatars.mds.yandex.net/get-zen_doc/222865/pub_5bc31ff5575b6b00abbedea7_5bc3200e3887bf00ac52530a/scale_2400)
+![Много вкладок](https://avatars.mds.yandex.net/get-zen_doc/222865/pub_5bc31ff5575b6b00abbedea7_5bc3200e3887bf00ac52530a/scale_2400)
 
 ## Результат
 
