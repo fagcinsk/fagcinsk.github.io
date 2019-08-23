@@ -2,3 +2,13 @@
 <script async src="//cdn.jsdelivr.net/npm/vanilla-lazyload@12.0.0/dist/lazyload.min.js"></script>
 <script src="//code.iconify.design/1/1.0.3/iconify.min.js" defer></script>
 <script src="/assets/js/main.js" defer></script>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistrations().then(function(registrations) {
+      for(let registration of registrations) {
+        registration.unregister()
+      }}).catch(function(err) {
+      console.log('Service Worker registration failed: ', err);
+    });
+  }
+</script>
