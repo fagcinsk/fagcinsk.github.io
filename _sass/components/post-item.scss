@@ -9,7 +9,7 @@
   min-height: 220px;
   padding: 0;
 
-  &[href]:hover, &[href]:focus {
+  &:hover, &:focus {
     @extend .e3;
 
     text-decoration: none;
