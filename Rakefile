@@ -45,7 +45,7 @@ task proofer: [:build] do
       log_level: :warn,
       check_html: true,
       assume_extension: true,
-      external_only: true # fast fix for deploying new posts problem
+      external_only: true, # fast fix for deploying new posts problem
       internal_domains: ['mikhail-yudin.ru']
   ).run
   done 'HTML passed through html-proofer'
