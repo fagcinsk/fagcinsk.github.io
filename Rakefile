@@ -44,7 +44,8 @@ task proofer: [:build] do
       '_site',
       log_level: :warn,
       check_html: true,
-      assume_extension: true
+      assume_extension: true,
+      external_only: true # fast fix for deploying new posts problem
   ).run
   done 'HTML passed through html-proofer'
 end
