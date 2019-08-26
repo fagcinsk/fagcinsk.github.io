@@ -33,7 +33,7 @@ passwd
 ```
 
 Пропишем порт для сервера в файле `~/../usr/etc/ssh/sshd_config`:
-```config
+```conf
 Port 2222
 PrintMotd no
 PasswordAuthentication yes
@@ -60,7 +60,7 @@ sv-enable sshd
 
 Чтобы не прописывать каждый раз имя хоста, порт и прочее при соединении с ssh сервером для создания тоннеля, пропишем конфиг `~/.ssh/config`. Пример:
 
-```config
+```conf
 Host srv_rev
 User username
 Port 22
