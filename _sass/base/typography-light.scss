@@ -12,7 +12,7 @@ code {
 }
 
 article {
-  max-width: 48em;
+  max-width: 40em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -28,11 +28,12 @@ h1 {
 }
 
 p, ol, ul, blockquote, pre, code, table, h2, h3, h4, h5, h6 {
-  margin-top: 1.5em;
-  margin-bottom: 0;
+  margin: 1.5em 0 0;
 }
 
 blockquote {
+  margin-left: 0;
+  margin-right: 0;
   padding: 0.25em 1.25em;
 
   @include themify {
