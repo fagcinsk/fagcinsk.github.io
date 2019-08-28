@@ -53,8 +53,9 @@ h4, .h4 {
 h5, .h5 {
   font-size: 1em;
   line-height: 1.5em;
-  margin-top: 16.5em;
+  margin-top: 1.5em;
   margin-bottom: 0;
+  opacity: 0.85;
 }
 
 
@@ -63,7 +64,7 @@ h1 {
   margin-bottom: 0;
 }
 
-p, ol, ul, blockquote, pre, code, table, h2, h3, h4, h5, h6 {
+p, ol, ul, blockquote, pre, code, table {
   margin: 1.5em 0 0;
 }
 
