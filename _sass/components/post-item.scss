@@ -31,7 +31,7 @@
 }
 
 .post-item__title {
-  font-size: 1.125em;
+  font-size: 2.2rem;
   line-height: 1.2;
   margin-top: 0;
   margin-bottom: 0;
@@ -41,7 +41,7 @@
 }
 
 .post-item__meta {
-  font-size: 0.75rem;
+  font-size: 0.75em;
 
   @include themify {
     color: themed("post-meta-c");
