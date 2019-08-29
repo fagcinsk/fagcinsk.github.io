@@ -1,7 +1,6 @@
 form, .form {
   padding: 16px;
   border-radius: 4px;
-  font-size: 1rem;
   @include themify {
     background: themed('card-bg');
   }
@@ -11,7 +10,6 @@ form, .form {
 
 .form-subscribe {
   max-width: 420px;
-  margin: 0 auto;
 }
 
 .input {
@@ -22,7 +20,6 @@ form, .form {
 input,
 textarea,
 select {
-  font-size: 1.25rem;
   border: none;
   background: none;
   padding: 8px 4px;
@@ -45,7 +42,6 @@ button,
   padding: 12px 16px;
   text-transform: uppercase;
   margin-top: 8px;
-  font-size: 1rem;
   cursor: pointer;
 
   @include themify {
