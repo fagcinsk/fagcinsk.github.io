@@ -255,7 +255,7 @@ code {
 
 .codehilite {
   @include themify {
-    border-left: 2px solid themed('code-border-c');
+    border-left: 3px solid themed('code-border-c');
   }
 }
 
