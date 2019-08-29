@@ -117,6 +117,7 @@ hr {
 
 #goTop {
   right: 16px;
+
   &:not(.show) {
     display: none;
   }
@@ -247,15 +248,16 @@ code {
   }
 }
 
-.codehilite {
-  color: #aaa;
-  background-color: #222;
-
-  > code {
-    background-color: unset;
-  }
+.codehilite > code {
+  background-color: unset;
+  color: unset;
 }
 
+.codehilite {
+  @include themify {
+    border-left: 2px solid themed('code-border-c');
+  }
+}
 
 .promo {
   padding: 96px 64px;
@@ -304,18 +306,53 @@ code {
   }
 }
 
-.i-telegram:hover { color: #0088cc; }
-.i-vkontakte:hover { color: #2a5885; }
-.i-twitter:hover { color: #00aced; }
-.i-stackoverflow:hover { color: #f48024; }
-.i-github:hover { color: #800080; }
-.i-facebook:hover { color: #3b5998; }
-.i-linkedin:hover { color: #007bb6; }
-.i-instagram:hover { color: #fd1d1d; }
-.i-rss:hover { color: #f60; }
-.i-reddit:hover { color: #cee3f8; }
-.i-pinterest:hover { color: #c92228; }
-.i-youtube:hover { color: #e52d27; }
+.i-telegram:hover {
+  color: #0088cc;
+}
+
+.i-vkontakte:hover {
+  color: #2a5885;
+}
+
+.i-twitter:hover {
+  color: #00aced;
+}
+
+.i-stackoverflow:hover {
+  color: #f48024;
+}
+
+.i-github:hover {
+  color: #800080;
+}
+
+.i-facebook:hover {
+  color: #3b5998;
+}
+
+.i-linkedin:hover {
+  color: #007bb6;
+}
+
+.i-instagram:hover {
+  color: #fd1d1d;
+}
+
+.i-rss:hover {
+  color: #f60;
+}
+
+.i-reddit:hover {
+  color: #cee3f8;
+}
+
+.i-pinterest:hover {
+  color: #c92228;
+}
+
+.i-youtube:hover {
+  color: #e52d27;
+}
 
 @media (max-width: 768px) {
   .promo {

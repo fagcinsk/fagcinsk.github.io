@@ -131,23 +131,22 @@ code, pre {
 }
 
 code {
-  padding: 0.2em 0.4em;
-  border-radius: 3px;
+  border-radius: .4rem;
+  font-size: 86%;
+  margin: 0 .2rem;
+  padding: .2rem .5rem;
+  white-space: nowrap;
 }
 
 pre {
-  padding: 0.8rem;
-  overflow-x: auto;
-  word-wrap: normal;
-  border-radius: 0.3rem;
+  overflow-y: hidden;
+}
 
-  > code {
-    padding: 0;
-    word-break: normal;
-    white-space: pre;
-    background: transparent;
-    border: 0;
-  }
+pre > code {
+  border-radius: 0;
+  display: block;
+  padding: 1rem 1.5rem;
+  white-space: pre;
 }
 
 table {
