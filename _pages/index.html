@@ -7,8 +7,8 @@ image: assets/img/me.jpg
 permalink: /
 ---
 
-<aside class="grid-full content-block promo__text card e1">
+<article class="grid-full content-block promo__text card e1 post">
   {% capture promo_text %}{% include promo-text.md %}{% endcapture %}
   {{ promo_text | markdownify }}
-</aside>
+</article>
 {% include post-list.html %}
