@@ -13,7 +13,7 @@ leaflet: true
 
 ## Поговорить
 
-<div>
+<div data-proofer-ignore>
 <a title="Написать в Telegram" href="https://t.me/{{site.username.telegram}}">Telegram</a>,
 <a title="Написать в VKontakte" href="https://vk.com/{{site.username.vk}}">VKontakte</a>,
 <a title="Написать в Twitter" href="https://twitter.com/{{site.username.twitter}}">Twitter</a>,
@@ -25,7 +25,7 @@ leaflet: true
 
 ## Посмотреть
 
-<div class="contact-icons">
+<div class="contact-icons" data-proofer-ignore>
 <a class="i-soc i-github" title="Github" href="https://github.com/{{site.username.github}}"><span class="iconify" data-icon="mdi-github-circle" ></span></a>
 <a class="i-soc i-instagram" title="Instagram" href="https://http://instagram.com/{{site.username.instagram}}"><span class="iconify" data-icon="mdi-instagram" ></span></a>
 <a class="i-soc i-youtube" title="YouTube" href="https://www.youtube.com/channel/UCgziLhBbQPGSQedqMKBR9Xw?view_as=subscriber"><span class="iconify" data-icon="mdi-youtube" ></span></a>
