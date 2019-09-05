@@ -27,6 +27,7 @@ leaflet: true
 
 <div class="contact-icons">
 <a class="i-soc i-github" title="Github" href="https://github.com/{{site.username.github}}"><span class="iconify" data-icon="mdi-github-circle" ></span></a>
+<a class="i-soc i-instagram" title="Instagram" href="https://http://instagram.com/{{site.username.instagram}}"><span class="iconify" data-icon="mdi-instagram" ></span></a>
 <a class="i-soc i-youtube" title="YouTube" href="https://www.youtube.com/channel/UCgziLhBbQPGSQedqMKBR9Xw?view_as=subscriber"><span class="iconify" data-icon="mdi-youtube" ></span></a>
 <a class="i-soc i-stackoverflow" title="StackOverflow" href="https://stackoverflow.com/users/7667774/%D0%9C%D0%B8%D1%85%D0%B0%D0%B8%D0%BB-%D0%AE%D0%B4%D0%B8%D0%BD?tab=profile"><span class="iconify" data-icon="mdi-stackoverflow" ></span></a>
 <a class="i-soc i-pinterest" title="Pinterest" href="https://www.pinterest.ru/{{site.username.pinterest}}/"><span class="iconify" data-icon="mdi-pinterest" ></span></a>
