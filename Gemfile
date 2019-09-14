@@ -15,6 +15,6 @@ group :jekyll_plugins do
 
   gem 'liquid', github: 'Shopify/liquid', branch: 'master'
   gem 'liquid-c', github: 'Shopify/liquid-c', branch: 'master'
-
+  gem 'sassc', '< 2.1.0'
   # gem 'jekyll-redirect-from'
 end
