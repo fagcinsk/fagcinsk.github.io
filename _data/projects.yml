@@ -1,42 +1,55 @@
 - name: Михаил Юдин | Персональный блог (этот блог)
   category: Web
   repo: fagcinsk.github.io
+  icon: "icomoon-free:blog"
 - name: Multiplyer crafting game
   category: Web
   repo: multiplayer-crafting-game
+  icon: "ls:game"
 - name: <a href="https://mikhail-yudin.ru/projects/text-layout-change/">Смена раскладки онлайн</a> с английского на русский и наоборот
   category: Web
   repo: text-layout-change
+  icon: "fa-solid:language"
 - name: PHP библиотека для генерации алиасов объектов
   category: Web
   repo: ro-aliaseable-object
+  icon: "dashicons:nametag"
 - name: <a href="https://mikhail-yudin.ru/projects/block-destruction-game/">Игра про уничтожение блоков</a> с использованием HTML5 canvas
   category: Web
   repo: block-destruction-game
+  icon: "mdi:cube-scan"
 - name: Mixer analyzer
   category: Web
   repo: mixer-analyzer
+  icon: "oi:audio-spectrum"
 
 - name: Реализация ПО для импульсного металлоискателя с графической и звуковой индикацией с системой меню и настройками
   category: Hardware
   repo: arduino_metal_detector
+  icon: "zmdi:portable-wifi-changes"
 - name: STM32 ILI9341 spi
   category: Hardware
   repo: stm-ILI9341-spi
+  icon: "jam:microchip-f"
 - name: CLion проект для stm32f103c8t6
   category: Hardware
   repo: stm32-lcd-sandbox
+  icon: "jam:microchip-f"
 
 - name: Лаунчер с текстовым интерфейсом, быстрым поиском чего угодно на устройстве и работой с этими объектами
   category: Android
   repo: tui_home
+  icon: "whh:launch"
 - name: Android Bluetooth Low Energy tasker plugin
   category: Android
   repo: ble_tasker_plugin
+  icon: "ic:outline-bluetooth"
 
 - name: Начало реализации ОС x86
   category: Linux, OS
   repo: fagci_os
+  icon: "simple-icons:intel"
 - name: dotfiles - файлы локальной конфигурации программ ОС Linux
   category: Linux, OS
   repo: dotfiles
+  icon: "ic:round-settings-system-daydream"

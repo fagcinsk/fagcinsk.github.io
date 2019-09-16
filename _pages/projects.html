@@ -12,10 +12,9 @@ description: >
 <h2>{{ category.name }}</h2>
 {% for repo in category.items %}
 <div class="tile">
+  <div class="tile__image"><span class="iconify project-icon" data-icon="{{ repo.icon }}"></span></div>
 <div class="tile__text">
-<h3><a href="https://github.com/fagcinsk/{{ repo.repo }}">
-<span class="iconify" data-icon="mdi-github-circle"></span> {{ repo.repo }}</a>
-</h3>
+<h3><a href="https://github.com/fagcinsk/{{ repo.repo }}">{{ repo.repo }}</a></h3>
 {{ repo.name }}</div></div><hr>
 
 {% endfor %}
