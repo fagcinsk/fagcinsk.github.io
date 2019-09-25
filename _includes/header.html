@@ -7,5 +7,5 @@
   {% include site-categories.html %}
 </header>
 <script>
-  (function (a) { const b = a.links.length; for (let c = 0; c < b; c++)a.links[c].href === a.URL && a.links[c].classList.add("active") })(window.document);
+  (function (a) { const b = a.links.length; for (let c = 0; c < b; c++)a.URL.startsWith(a.links[c].href) && a.links[c].classList.add("active") })(window.document);
 </script>
