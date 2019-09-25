@@ -157,9 +157,10 @@ table {
   width: 100%;
   max-width: 100%;
   background-color: rgba(0, 0, 0, 0.05);
+  border-collapse: collapse;
 
   thead {
-    background-color: rgba(0, 0, 0, 0.15);
+    background-color: rgba(0, 0, 0, 0.05);
   }
 
   td,
@@ -169,4 +170,8 @@ table {
       border-bottom: 1px solid themed('border-c');
     }
   }
+}
+
+figure {
+  margin: 0 0 1em;
 }

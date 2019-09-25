@@ -10,12 +10,13 @@ description: >
 {% assign projects_by_category = site.data.projects | group_by: 'category' %} 
 {% for category in projects_by_category %}
 <h2>{{ category.name }}</h2>
+<div class="card e1">
 {% for repo in category.items %}
 <div class="tile">
   <div class="tile__image"><span class="iconify project-icon" data-icon="{{ repo.icon }}"></span></div>
 <div class="tile__text">
 <h3><a href="https://github.com/fagcinsk/{{ repo.repo }}">{{ repo.repo }}</a></h3>
-{{ repo.name }}</div></div><hr>
-
+{{ repo.name }}</div></div>
 {% endfor %}
+</div>
 {%- endfor %}

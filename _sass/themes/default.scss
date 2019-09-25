@@ -3,7 +3,7 @@ $themes: ();
 $themes: map-merge($themes, (
         'default': (
                 'page-c': $clr-grey-800,
-                'page-bg': $clr-grey-200,
+                'page-bg': #e2e1e0,
                 'sel-c': $clr-grey-100,
                 'sel-bg': $clr-orange-800,
                 'mark-c': $clr-grey-900,
@@ -22,7 +22,7 @@ $themes: map-merge($themes, (
                 'menu-c-a': $clr-deep-orange-800,
                 'menu-c-h': $clr-deep-orange-800,
                 'menu-bg-h': $clr-orange-50,
-                'go-top-bg': $clr-grey-300,
+                'go-top-bg': $clr-white,
                 'go-top-bg-h': $clr-orange-600,
                 'go-top-c-h': $clr-white,
                 'promo-c': $clr-white,

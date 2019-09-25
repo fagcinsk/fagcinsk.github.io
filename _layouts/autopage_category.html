@@ -9,7 +9,7 @@ description: "Список актуальных материалов блога 
   {% assign category = page.dir | split: "/" | last%}
   <script>document.querySelector('meta[name="description"]').setAttribute('content', 'Список актуальных материалов блога в категории {{ site.data.categories[category].name }}')</script>
   <meta property="og:image" content="/assets/img/categories/{{ category }}.png">
-  <h1>Материалы в категории &ldquo;{{ site.data.categories[category].name }}&rdquo;</h1>
+  <h1>Материалы в категории «{{ site.data.categories[category].name }}»</h1>
   <div class="post-list">
     {% for post in paginator.posts %}{% include post-item.html %}{% endfor %}
   </div>
