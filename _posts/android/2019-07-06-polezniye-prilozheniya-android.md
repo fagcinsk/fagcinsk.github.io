@@ -179,7 +179,6 @@ MiXplorer - это быстрый, удобный, красивый и полн�
 ## Locus map
 
 [Play market](https://play.google.com/store/apps/details?id=menion.android.locus&hl=ru)
-[4pda](http://4pda.ru/forum/index.php?showtopic=210573)
 
 Приложение для путешественников на своих двоих, ногах или колесах.
 
