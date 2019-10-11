@@ -9,7 +9,9 @@ leaflet: true
 
 # Контакты для связи со мной
 
-Связаться со мной лучше в [Telegram @fagci](https://t.me/{{site.username.telegram}}), [ВКонтакте](https://vk.com/{{site.username.vk}}). Ниже есть и другие контакты для связи со мной. Но там я отвечаю реже.
+Связаться со мной лучше в [Telegram @fagci](https://t.me/{{site.username.telegram}}), [ВКонтакте](https://vk.com/{{site.username.vk}}).
+
+Ниже есть и другие контакты для связи со мной. Но там я отвечаю реже.
 
 ## Поговорить
 
