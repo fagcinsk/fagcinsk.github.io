@@ -1,11 +1,11 @@
 <aside class="cat">
-  {%- assign rel = '' %}
-  {%- assign sorted_categories = site.categories | sort %}
-  {%- for category in sorted_categories %}
-  {%- capture cat %}{{ category | first }}{% endcapture %}
-  {%- capture url %}/{{ cat | url_encode }}/{% endcapture %}
-  {%- if site.data.categories[cat] %}{% assign cat = site.data.categories[cat].name %}{% endif %}
+  {%- assign rel = '' -%}
+  {%- assign sorted_categories = site.categories | sort -%}
+  {%- for category in sorted_categories -%}
+  {%- capture cat %}{{ category | first }}{% endcapture -%}
+  {%- capture url %}/{{ cat | url_encode }}/{% endcapture -%}
+  {%- if site.data.categories[cat] %}{% assign cat = site.data.categories[cat].name %}{% endif -%}
   <a class="cat__link" href="{{ url }}"
     title="Категория {{ cat }} (записей: {{ category | last | size }})">{{ cat }}</a>
-  {%- endfor %}
+  {%- endfor -%}
 </aside>
