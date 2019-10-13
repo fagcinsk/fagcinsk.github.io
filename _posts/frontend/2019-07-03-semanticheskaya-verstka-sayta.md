@@ -118,8 +118,6 @@ image: photos/semanticheskaya-verstka.png
 
 ## Полезные материалы
 
-[Довольно интересный и наглядный пример семантической вёрстки](https://internetingishard.com/html-and-css/semantic-html/)
-
 [Эта статья помогла определиться с вариантом реализацией навигации](https://www.pluralsight.com/guides/semantic-html)
 
 [^1]: [Пост на тему списков в навигации с большим количеством комментариев](https://css-tricks.com/navigation-in-lists-to-be-or-not-to-be/)
