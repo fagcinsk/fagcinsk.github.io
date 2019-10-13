@@ -4,6 +4,8 @@ headline: Михаил Юдин
 author:
   name: Михаил Юдин
   email: fagci.nsk@gmail.com
+  jobTitle: Web Developer
+  image: /assets/img/ava.jpg
 logo: /assets/img/favicon-full.png
 description: >
   Фронтенд разработчик, веду блог, рассказываю о фронтенд разработке, железячных проектах, настройке сервера, полезных Android приложениях.

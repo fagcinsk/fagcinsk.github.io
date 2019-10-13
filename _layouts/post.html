@@ -11,21 +11,26 @@ layout: default
     {% endif %}
   </header>
   <div itemprop="articleBody">{{content}}</div>
-  {% include share.html %}
-</article>
-<div class="tile card mwm">
-  <div class="tile__image">
-    <div class="author-avatar">
-        <a class="avatar author-block__avatar e4" href="/about" title="Я">
-          <img data-proofer-ignore class="lazy" data-src="/assets/img/ava.jpg" alt="Я">
-        </a>
-      <p class="author-avatar__name"><a href="/about">Михаил Юдин</a></p>
+  <br>
+  <footer>
+    {% include share.html %}
+    <hr>
+    <div class="tile">
+      <div class="tile__image">
+        <div class="author-avatar">
+            <a class="avatar author-block__avatar e4" href="/about" rel="author" title="{{ page.author | default: site.author.name }}, перейти к профилю">
+              <img data-proofer-ignore class="lazy" data-src="/assets/img/ava.jpg" alt="{{ page.author | default: site.author.name }}, автор материала">
+            </a>
+          <p class="author-avatar__name"><a href="/about" rel="author">{{ page.author | default: site.author.name }}</a></p>
+        </div>
+      </div>
+      <div class="tile__text">
+        <p>{{site.description}}</p>
+      </div>
     </div>
-  </div>
-  <div class="tile__text">
-    <p>{{site.description}}</p>
-  </div>
-</div>
+  </footer>
+</article>
+
 <div class="mwm">
   <p>Чтобы не пропускать новости, можно <a href="/subscribe">подписаться на email рассылку</a>.
   </p>

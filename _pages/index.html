@@ -7,8 +7,20 @@ image: assets/img/me.jpg
 permalink: /
 ---
 
-<div class="grid-full content-block promo__text card post e3">
+<section class="grid-full content-block promo__text card post e3">
   {% capture promo_text %}{% include promo-text.md %}{% endcapture %}
   {{ promo_text | markdownify }}
-</div>
-{% include post-list.html %}
+</section>
+
+<section>
+  <h2>Материалы на тему фронтенда</h2>
+  {% include post-list.html %}
+</section>
+
+<section>
+  <h2>Проекты, которые можно пощупать онлайн</h2>
+  <a class="db" href="/projects/text-layout-change/" title="Смена раскладки онлайн с английского на русский и наоборот">Смена
+    раскладки онлайн</a>
+  <a class="db" href="/projects/block-destruction-game/"
+     title="Игра про уничтожение блоков с использованием HTML5 canvas">Игра про уничтожение блоков</a>
+</section>

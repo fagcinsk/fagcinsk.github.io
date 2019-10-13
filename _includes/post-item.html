@@ -9,11 +9,11 @@ itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
     data-sizes="(max-width: 768px) 640px,320px"
     data-srcset="//images.weserv.nl/?url=mikhail-yudin.ru/{{ post.image }}&w=320&output=webp&il&t=fitup&default=https://via.placeholder.com/320x240.png?text=¯\_(О_о)_/¯ 320w,
                  //images.weserv.nl/?url=mikhail-yudin.ru/{{ post.image }}&w=640&output=webp&il&t=fitup&default=https://via.placeholder.com/640x480.png?text=¯\_(О_о)_/¯ 640w">
-  <div class="post-item__header">
+  <header class="post-item__header">
     {% if post.image %}<meta itemprop="image" content="{{ post.image }}">{% endif %}
     <!--noindex-->
     <div class="post-item__meta">{% include post-meta-short.html post=post %}</div>
     <!--/noindex-->
-    <h2 class="post-item__title" itemprop="name headline mainEntityOfPage">{{ post.title }}</h2>
-  </div>
+    <p class="post-item__title" itemprop="name headline mainEntityOfPage">{{ post.title }}</p>
+  </header>
 </a>
