@@ -1,6 +1,7 @@
+{%- assign schema = page.schema | default: layout.schema | default: "WebPage" -%}
 <!DOCTYPE html>
 <html class="theme-default" lang="{{ page.lang | default: site.lang | default: 'en' }}"
-      itemscope="" itemtype="http://schema.org/Blog">
+      itemscope itemtype="https://schema.org/{{ schema }}">
 <head>{% include head.html %}</head>
 <body>
   {%- include header.html %}

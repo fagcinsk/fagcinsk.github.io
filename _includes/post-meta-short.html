@@ -2,12 +2,12 @@
 {%- capture lastmod_date %}{% last_modified {{ include.post.path }} %}{% endcapture %}
 {% include update.html date=lastmod_date %}
 {% include post-categories.html post=include.post %}
-<div itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<div itemprop="author" itemscope itemtype="https://schema.org/Person">
   <meta itemprop="name" content="{{ post.author | default: site.author.name }}">
 </div>
-<div itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+<div itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
   <meta itemprop="name" content="{{ site.author.name }}">
-  <div itemprop="logo" itemscope="" itemtype="http://schema.org/ImageObject">
+  <div itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
     <meta itemprop="url" content="{{ site.url }}/assets/img/me.jpg">
     <meta itemprop="height" content="1067">
     <meta itemprop="width" content="800">
