@@ -7,7 +7,6 @@ layout: default
     <h1 class="post__title" itemprop="headline">{{ page.title | escape }}</h1>
     {% if page.image %}
     {% if page.image_hide != true %}{% include image.html url=page.image alt=page.title %}{% endif %}
-    <meta itemprop="image" content="/{{ page.image }}">
     {% endif %}
   </header>
   <div itemprop="articleBody">{{content}}</div>
@@ -19,7 +18,7 @@ layout: default
       <div class="tile__image">
         <div class="author-avatar">
             <a class="avatar author-block__avatar e4" href="/about" rel="author" title="{{ page.author | default: site.author.name }}, перейти к профилю">
-              <img data-proofer-ignore class="lazy" data-src="/assets/img/ava.jpg" alt="{{ page.author | default: site.author.name }}, автор материала">
+              <img itemprop="image" content="{{ page.image }}" data-proofer-ignore class="lazy" data-src="/assets/img/ava.jpg" alt="{{ page.author | default: site.author.name }}, автор материала">
             </a>
           <p class="author-avatar__name"><a href="/about" rel="author">{{ page.author | default: site.author.name }}</a></p>
         </div>
