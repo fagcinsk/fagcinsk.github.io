@@ -13,14 +13,12 @@ code {
   font-family: $font-family-mono;
 }
 
-article {
-  max-width: 40em;
-}
-
 h1, h2, h3, h4, h5, h6 {
   font-family: $font-family-sans-serif-condensed;
   font-stretch: condensed;
   font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 

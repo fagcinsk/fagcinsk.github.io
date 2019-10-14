@@ -2,7 +2,7 @@ $themes: ();
 
 $themes: map-merge($themes, (
         'default': (
-                'page-c': $clr-grey-800,
+                'page-c': $clr-grey-900,
                 'page-bg': #e2e1e0,
                 'sel-c': $clr-grey-100,
                 'sel-bg': $clr-orange-800,
@@ -18,7 +18,7 @@ $themes: map-merge($themes, (
                 'blockquote-border': $clr-orange-600,
                 'blockquote-bg': $clr-orange-50,
                 'header-bg': $clr-grey-100,
-                'menu-c': $clr-grey-800,
+                'menu-c': $clr-grey-900,
                 'menu-c-a': $clr-deep-orange-800,
                 'menu-c-h': $clr-deep-orange-800,
                 'menu-bg-h': $clr-orange-50,
@@ -27,10 +27,10 @@ $themes: map-merge($themes, (
                 'go-top-c-h': $clr-white,
                 'promo-c': $clr-white,
                 'promo-bg': $clr-grey-600,
-                'categories-c': $clr-grey-800,
+                'categories-c': $clr-grey-900,
                 'categories-bg': $clr-grey-200,
-                'control-c': $clr-grey-800,
-                'control-border-c': $clr-grey-800,
+                'control-c': $clr-grey-900,
+                'control-border-c': $clr-grey-900,
                 'control-outline-f': $clr-deep-orange-800,
                 'button-c': $clr-white,
                 'button-bg': $clr-orange-800,

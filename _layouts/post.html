@@ -19,7 +19,7 @@ schema: Blog
       <div class="tile__image">
         <div class="author-avatar">
             <a class="avatar author-block__avatar e4" href="/about" rel="author" title="{{ page.author | default: site.author.name }}, перейти к профилю">
-              <img itemprop="image" content="{{ page.image }}" data-proofer-ignore class="lazy" data-src="/assets/img/ava.jpg" alt="{{ page.author | default: site.author.name }}, автор материала">
+              <img data-proofer-ignore class="lazy" data-src="/assets/img/ava.jpg" alt="{{ page.author | default: site.author.name }}, автор материала">
             </a>
           <p class="author-avatar__name"><a href="/about" rel="author">{{ page.author | default: site.author.name }}</a></p>
         </div>

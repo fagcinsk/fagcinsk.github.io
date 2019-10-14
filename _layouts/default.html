@@ -6,10 +6,10 @@
 <body>
   {%- include header.html %}
   {%- if page.promo == true %}
-  <div class="promo">
-    <h1 class="promo__header">Блог фронтендера</h1>
-    <p class="promo__subheader">Мысли на тему разработки сайтов, оптимизации веб-приложений.<br>Делюсь идеями и крутыми фичами.</p>
-  </div>
+  <section class="pr">
+    <h1 class="pr__header">Блог фронтенд разработчика</h1>
+    <p class="pr__subheader">Мысли на тему разработки сайтов, оптимизации веб-приложений.<br>Делюсь идеями и крутыми фичами.</p>
+  </section>
   {%- endif %}
   <main aria-label="Content" class="page">
     {% if page.url == '/' %}

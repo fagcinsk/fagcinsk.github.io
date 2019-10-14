@@ -1,15 +1,15 @@
 frontend:
   name: Фронтенд
-  description: "Материал, связанный с фронтовой частью веб-разработки: вёрстка, JavaScript, UX/UI в общем."
+  description: "Пользовательский интерфейс и функционал на стороне клиента: вёрстка, JavaScript, UX/UI."
 backend:
   name: Бэкэнд
-  description: "Бэкэндная часть веб-разработки: PHP, NodeJS, ..."
+  description: "Серверная часть веб приложений: PHP, NodeJS, базы данных, API ..."
 lifehacks:
   name: Лайфхаки
   description: "Хитрости жизни"
 hardware:
   name: Железо
-  description: "Железячные проекты: Arduino, STM32, всякие датчики, дисплеи, механизмы."
+  description: "Arduino, STM32 проекты, датчики, дисплеи, механизмы."
 linux:
   name: Linux
   description: "Администрирование Linux, настройка сервера, примеры настроек."
@@ -18,4 +18,4 @@ android:
   description: "Приложения для Android, примеры использования приложений, обзоры, рекомендации."
 trip:
   name: Путешествия
-  description: "Путешествия по необъятной планете =)"
+  description: "Путешествия по нашей планете =)"

@@ -4,10 +4,14 @@
   grid-gap: 16px;
 }
 
-.post-item {
+.pi {
   overflow: hidden;
-  min-height: 220px;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+
+  @extend .card;
+  @extend .e2;
 
   &:hover, &:focus {
     @extend .e3;
@@ -17,20 +21,16 @@
   }
 }
 
-.post-item__header {
+.pi__title, .pi__meta, .pi__desc {
   @include themify {
     background-color: themed("card-bg");
   }
 
-
-  padding: 16px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  padding: 0 16px;
 }
 
-.post-item__title {
+.pi__title {
+  padding-top: 16px;
   font-size: 2.2rem;
   line-height: 1.2;
   margin-top: 0;
@@ -41,8 +41,18 @@
   font-family: $font-family-sans-serif-condensed;
 }
 
-.post-item__meta {
+.pi__desc {
+  font-size: 0.875em;
+  flex: 1;
+  @include themify {
+    color: themed("post-meta-c");
+  }
+}
+
+.pi__meta {
   font-size: 0.75em;
+  padding-bottom: 16px;
+  justify-self: flex-end;
 
   @include themify {
     color: themed("post-meta-c");
@@ -54,15 +64,7 @@
   object-position: center;
 }
 
-.post-item__summary {
-  margin-bottom: 0;
-}
-
-@media (max-width: 768px) {
-  .post-item__preview_w {
-    width: 70px;
-    height: 70px;
-    min-width: 70px;
-    margin-right: 8px;
-  }
+.pi__img_wr {
+  @extend .img-dim-1-33;
+  @extend .img-wr;
 }

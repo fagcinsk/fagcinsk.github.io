@@ -7,11 +7,3 @@
     ';h' + escape(document.title.substring(0, 150)) +
     ';' + Math.random()</script>
 <!--/LiveInternet-->
-
-<span class="theme-switch show e3"><span class="iconify" data-icon="mdi:palette-swatch"></span></span>
-<script>
-  (function (window) {
-    const THEMES=["default","dark"],
-    d=window.document,html=d.querySelector("html"),themeSwitch=d.querySelector(".theme-switch"),metaThemeColor=d.head.querySelector("#themeColor");let userTheme=localStorage.getItem("userTheme");function resetThemes(){html.classList.forEach(function(a){a.startsWith("theme-")&&html.classList.remove(a)})}function setThemeByName(a){resetThemes(),userTheme=a,-1===THEMES.indexOf(userTheme)&&(userTheme=THEMES[0]),html.classList.add("theme-"+userTheme),localStorage.setItem("userTheme",userTheme),window.setTimeout(function(){metaThemeColor.setAttribute("content",window.getComputedStyle(d.body,null).getPropertyValue("background-color"))})}themeSwitch.addEventListener("click",function(){let a=THEMES.indexOf(userTheme)+1;a>=THEMES.length&&(a=0),setThemeByName(THEMES[a])}),userTheme||(userTheme=THEMES[0],localStorage.setItem("userTheme",userTheme)),userTheme!==THEMES[0]&&setThemeByName(userTheme);
-  })(window)
-</script>

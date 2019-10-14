@@ -1,20 +1,7 @@
 {% include pubdate.html date=include.post.date %}
 {%- capture lastmod_date %}{% last_modified {{ include.post.path }} %}{% endcapture %}
-{%- include update.html date=lastmod_date %}
-{%- include post-categories.html post=include.post %}
-<!--noindex-->
-<div itemprop="author" itemscope itemtype="https://schema.org/Person">
-  <meta itemprop="name" content="{{ post.author | default: site.author.name }}">
-</div>
+{%- include update.html date=lastmod_date %} / {%- include post-categories.html post=include.post %}
+ • <a rel="author" href="/about">{{ post.author | default: site.author.name }}</a>
 <a href="https://github.com/fagcinsk/fagcinsk.github.io/blob/master/{{page.path}}" rel="nofollow" title="Исходный код материала" aria-label="Исходный код материала">
   <span class="iconify" data-icon="mdi-github-box"></span>
 </a>
-<!--/noindex-->
-<div itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-  <meta itemprop="name" content="{{ site.author.name }}">
-  <div itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-    <meta itemprop="url" content="{{ site.url }}/assets/img/me.jpg">
-    <meta itemprop="height" content="1067">
-    <meta itemprop="width" content="800">
-  </div>
-</div>
