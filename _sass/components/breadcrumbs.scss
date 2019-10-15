@@ -1,9 +1,0 @@
-.breadcrumbs {
-  padding: 16px 32px;
-
-  span:not(:last-child) {
-    &:after {
-      content: ' > ';
-    }
-  }
-}
