@@ -15,16 +15,12 @@
 
 .calendar__cur {
   border-radius: 4px;
-  @include themify {
-    color: themed('cal-cur-c');
-    background-color: themed('cal-cur-bg');
-  }
+  color: var(--cal-cur-c);
+  background-color: var(--cal-cur-bg);
 }
 
 .calendar__we {
-  @include themify {
-    color: themed('cal-we-c');
-  }
+  color: var(--cal-we-c);
 }
 
 .calendar__ext {

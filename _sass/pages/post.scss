@@ -1,7 +1,5 @@
 .post__meta {
-  @include themify {
-    color: themed('post-meta-c');
-  }
+  color: var(--post-meta-c);
   font-size: 0.75em;
 }
 

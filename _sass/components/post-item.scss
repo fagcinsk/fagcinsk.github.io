@@ -22,9 +22,7 @@
 }
 
 .pi__title, .pi__meta, .pi__desc {
-  @include themify {
-    background-color: themed("card-bg");
-  }
+  background-color: var(--card-bg);
 
   padding: 0 16px;
 }
@@ -44,9 +42,7 @@
 .pi__desc {
   font-size: 0.875em;
   flex: 1;
-  @include themify {
-    color: themed("post-meta-c");
-  }
+  color: var(--post-meta-c);
 }
 
 .pi__meta {
@@ -54,9 +50,7 @@
   padding-bottom: 16px;
   justify-self: flex-end;
 
-  @include themify {
-    color: themed("post-meta-c");
-  }
+  color: var(--post-meta-c);
 }
 
 .pi__img {

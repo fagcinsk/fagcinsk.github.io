@@ -5,10 +5,8 @@
   font-size: 1.125em;
   text-align: center;
   grid-column: 1/6;
-  grid-row:1;
-  @include themify {
-    background-color: themed("categories-bg");
-  }
+  grid-row: 1;
+  background-color: var(--categories-bg);
 }
 
 .cat__link {
@@ -18,17 +16,18 @@
 .cat__link {
   padding: 12px 16px;
   border-bottom: 1px solid transparent;
-  @include themify {
-    color: themed("categories-c");
-    background-color: themed("categories-bg");
-    &.active {
-      color: themed("link-c-a");
-      text-decoration: none;
-    }
-    &:hover {
-      color: themed("link-c-h");  
-    }
+  color: var(--categories-c);
+  background-color: var(--categories-bg);
+
+  &.active {
+    color: var(--link-c-a);
+    text-decoration: none;
   }
+
+  &:hover {
+    color: var(--link-c-h);
+  }
+
   &:hover {
     text-decoration: none;
     border-bottom-color: inherit;

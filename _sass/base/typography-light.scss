@@ -112,10 +112,8 @@ blockquote {
   margin-right: 0;
   padding: 0.25em 1.25em;
 
-  @include themify {
-    border-left: 2px solid themed('blockquote-border');
-    background-color: themed('blockquote-bg');
-  }
+  border-left: 2px solid var(--blockquote-border);
+  background-color: var(--blockquote-bg);
 
   p {
     margin: 1rem 0;
@@ -164,9 +162,7 @@ table {
   td,
   th {
     padding: 0.5em 16px;
-    @include themify {
-      border-bottom: 1px solid themed('border-c');
-    }
+    border-bottom: 1px solid var(--border-c);
   }
 }
 

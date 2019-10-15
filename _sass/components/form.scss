@@ -1,9 +1,7 @@
 form, .form {
   padding: 16px;
   border-radius: 4px;
-  @include themify {
-    background: themed('card-bg');
-  }
+  background: var(--card-bg);
   @extend .e1;
 
 }
@@ -24,12 +22,11 @@ select {
   background: none;
   padding: 8px 4px;
   margin: 4px 0;
-  @include themify {
-    color: themed("control-c");
-    border-bottom: 1px solid themed("control-border-c");
-    &:focus {
-      outline-color: themed("control-outline-f");
-    }
+  color: var(--control-c);
+  border-bottom: 1px solid var(--control-border-c);
+
+  &:focus {
+    outline-color: var(--control-outline-f);
   }
 }
 
@@ -44,13 +41,11 @@ button,
   margin-top: 8px;
   cursor: pointer;
 
-  @include themify {
-    color: themed("button-c");
-    background-color: themed("button-bg");
+  color: var(--button-c);
+  background-color: var(--button-bg);
 
-    &:hover {
-      background-color: themed("button-bg-a");
-    }
+  &:hover {
+    background-color: var(--button-bg-a);
   }
 }
 

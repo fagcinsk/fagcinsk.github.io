@@ -27,23 +27,17 @@ img::selection {
 }
 
 ::selection {
-  @include themify {
-    background-color: themed("sel-bg");
-    color: themed("sel-c");
-  }
+  background-color: var(--sel-bg);
+  color: var(--sel-c);
 }
 
 :focus {
-  @include themify {
-    outline-color: themed("sel-bg");
-  }
+  outline-color: var(--sel-bg);
 }
 
 mark {
-  @include themify {
-    background-color: themed("mark-bg");
-    color: themed("mark-c");
-  }
+  background-color: var(--mark-bg);
+  color: var(--mark-c);
 }
 
 
@@ -67,11 +61,10 @@ a {
     text-decoration: underline;
   }
 
-  @include themify {
-    color: themed("link-c");
-    &:active {
-      color: themed("link-c-a");
-    }
+  color: var(--link-c);
+
+  &:active {
+    color: var(--link-c-a);
   }
 }
 
@@ -79,9 +72,7 @@ hr {
   border: none;
   height: 1px;
   margin: 16px 0;
-  @include themify {
-    background-color: themed("border-c");
-  }
+  background-color: var(--border-c);
 }
 
 
@@ -102,12 +93,11 @@ hr {
   font-size: 32px;
   z-index: 10;
 
-  @include themify {
-    background-color: themed('go-top-bg');
-    &:hover {
-      color: themed('go-top-c-h');
-      background-color: themed('go-top-bg-h');
-    }
+  background-color: var(--go-top-bg);
+
+  &:hover {
+    color: var(--go-top-c-h);
+    background-color: var(--go-top-bg-h);
   }
 }
 
@@ -159,9 +149,7 @@ hr {
 .card {
   padding: 16px;
   border-radius: 4px;
-  @include themify {
-    background-color: themed('card-bg');
-  }
+  background-color: var(--card-bg);
 }
 
 .e1 {
@@ -169,11 +157,11 @@ hr {
 }
 
 .e2 {
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 .e3 {
-  box-shadow: 0 2px 8px rgba(0,0,0,0.12), 0 2px 5px rgba(0,0,0,0.24);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12), 0 2px 5px rgba(0, 0, 0, 0.24);
 }
 
 .e4 {
@@ -244,10 +232,8 @@ hr {
 }
 
 code {
-  @include themify {
-    background-color: themed("code-bg");
-    color: themed("code-c");
-  }
+  background-color: var(--code-bg);
+  color: var(--code-c);
 }
 
 .codehilite > code {
@@ -256,9 +242,7 @@ code {
 }
 
 .codehilite {
-  @include themify {
-    border-left: 3px solid themed('code-border-c');
-  }
+  border-left: 3px solid var(--code-border-c);
 }
 
 .pr {
@@ -287,10 +271,8 @@ code {
     transform: translateX(50%);
   }
 
-  @include themify {
-    color: themed("promo-c");
-    background-color: themed("promo-bg");
-  }
+  color: var(--promo-c);
+  background-color: var(--promo-bg);
 }
 
 .pr__header {
@@ -303,9 +285,7 @@ code {
 }
 
 .i-soc {
-  @include themify {
-    color: themed('page-c');
-  }
+  color: var(--page-c);
 }
 
 .i-telegram:hover {
