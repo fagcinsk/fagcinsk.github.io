@@ -1,5 +1,5 @@
 {% assign h_level = include.heading_level | default:3 %}
-{% assign show_meta = include.hide_meta | default: false %}
+{% assign hide_meta = include.hide_meta | default:false %}
 <a class="pi" href="{{ post.url }}" title="Перейти к записи">
   <div class="pi__img_wr">
   <img data-proofer-ignore alt="Картинка к записи {{ post.title }}" class="pi__img lazy"
@@ -11,10 +11,10 @@
   <div class="pi__desc">
     <p>{{ post.excerpt | strip_html | truncatewords: 15 }}</p>
   </div>
-  {% if hide_meta == false %}
+  {%- if hide_meta == false %}
   <footer class="pi__meta">
     {% include pubdate.html date=post.date %}
-    <address class="author">{{ post.author | default: site.author.name }}</address>
+    • <address class="author">{{ post.author | default: site.author.name }}</address>
   </footer>
-  {% endif %}
+  {%- endif %}
 </a>

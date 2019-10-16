@@ -1,3 +1,2 @@
 - {name: 'Проекты', link: '/projects/'}
-- {name: 'Обо мне', link: '/about'}
-- {name: 'Контакты', link: '/contact'}
+- {name: 'Обо мне', link: '/about', rel: 'author'}

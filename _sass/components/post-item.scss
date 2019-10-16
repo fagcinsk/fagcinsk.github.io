@@ -29,7 +29,8 @@
 
 .pi__title {
   padding-top: 16px;
-  h1,h2,h3,h4,h5 {
+
+  h1, h2, h3, h4, h5 {
     margin-top: 0;
     font-size: 2.2rem;
     line-height: 1.2;
@@ -49,8 +50,10 @@
   font-size: 0.75em;
   padding-bottom: 16px;
   justify-self: flex-end;
-
   color: var(--post-meta-c);
+  address {
+    display: inline;
+  }
 }
 
 .pi__img {

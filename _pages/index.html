@@ -21,7 +21,7 @@ permalink: /
   <h2>Материалы на тему фронтенда</h2>
   <div class="post-list">
     {%- for post in site.categories["frontend"] limit: 10 %}
-    {%- include post-item.html hide_meta=true %}
+    {%- include post-item.html %}
     {%- endfor %}
   </div>
 </section>
@@ -31,7 +31,7 @@ permalink: /
   <div class="post-list">
     {%- for doc in site.projects %}
     {%- assign post = doc %}
-    {%- include post-item.html %}
+    {%- include post-item.html hide_meta=true %}
     {%- endfor %}
   </div>
 </section>

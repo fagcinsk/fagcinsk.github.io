@@ -3,6 +3,6 @@
     <span class="iconify" data-icon="jam:search"></span>
   </a>
   {%- for nav_item in site.data.navigation -%}
-    <a class="main-menu__item" href="{{nav_item.link}}" title="{{nav_item.name}}">{{nav_item.name}}</a>
+    <a class="main-menu__item" href="{{nav_item.link}}" title="{{nav_item.name}}" {% if nav_item.rel %}rel="{{nav_item.rel}}"{% endif %}>{{nav_item.name}}</a>
   {%- endfor -%}
 </nav>
