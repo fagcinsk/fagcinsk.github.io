@@ -2,9 +2,8 @@
 {% assign hide_meta = include.hide_meta | default:false %}
 <a class="pi" href="{{ post.url }}" title="Перейти к записи">
   <div class="pi__img_wr">
-  <img alt="Картинка к {{ post.title }}" class="pi__img"
-    loading="lazy"
-    src="//images.weserv.nl/?url=mikhail-yudin.ru/{{ post.image }}&output=jpg&q=50&w=640&il&default={{ site.url }}/assets/img/no-image.svg">
+  <img data-proofer-ignore alt="Картинка к {{ post.title }}" class="pi__img lazy"
+    data-src="//images.weserv.nl/?url=mikhail-yudin.ru/{{ post.image }}&output=jpg&q=65&w=480&il&default={{ site.url }}/assets/img/no-image.svg">
   </div>
   <header class="pi__title">
     <h{{h_level}}>{{ post.title }}</h{{h_level}}>
