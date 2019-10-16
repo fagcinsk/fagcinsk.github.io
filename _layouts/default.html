@@ -14,7 +14,10 @@
   </main>
   {%- if page.gallery == true %}{% include photoswipe.html %}{% endif %}
   {%- include footer.html %}
-  {%- include scripts.html %}
-  {%- include analytics.html %}
+
+  <script>window.window.lazySizesConfig={lazyClass:'lazy'}</script>
+  <script async src="//cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" async defer></script>
+  <script src="//code.iconify.design/1/1.0.3/iconify.min.js" async defer></script>
+  <script src="/assets/js/main.js" async defer></script>
 </body>
 </html>
