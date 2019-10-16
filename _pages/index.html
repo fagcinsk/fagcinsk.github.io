@@ -7,20 +7,31 @@ image: assets/img/me.jpg
 permalink: /
 ---
 
-<section class="grid-full content-block promo__text card post e3">
-  {% capture promo_text %}{% include promo-text.md %}{% endcapture %}
-  {{ promo_text | markdownify }}
+<section class="pr-intro">
+  <aside class="page__aside">
+    {% include sidebar.html %}
+  </aside>
+  <div class="content-block card post e2">
+    {% capture promo_text %}{% include promo-text.md %}{% endcapture %}
+    {{ promo_text | markdownify }}
+  </div>
 </section>
 
 <section>
   <h2>Материалы на тему фронтенда</h2>
-  {% include post-list.html %}
+  <div class="post-list">
+    {%- for post in site.categories["frontend"] limit: 10 %}
+    {%- include post-item.html hide_meta=true %}
+    {%- endfor %}
+  </div>
 </section>
 
 <section>
   <h2>Проекты, которые можно пощупать онлайн</h2>
-  <a class="db" href="/projects/text-layout-change/" title="Смена раскладки онлайн с английского на русский и наоборот">Смена
-    раскладки онлайн</a>
-  <a class="db" href="/projects/block-destruction-game/"
-     title="Игра про уничтожение блоков с использованием HTML5 canvas">Игра про уничтожение блоков</a>
+  <div class="post-list">
+    {%- for doc in site.projects %}
+    {%- assign post = doc %}
+    {%- include post-item.html %}
+    {%- endfor %}
+  </div>
 </section>

@@ -1,5 +1,5 @@
-{%- assign schema = page.schema | default: layout.schema | default: "WebPage" -%}
 <!DOCTYPE html>
+{%- assign schema = page.schema | default: layout.schema | default: "WebPage" -%}
 <html class="theme-default" lang="{{ page.lang | default: site.lang | default: 'en' }}"
       itemscope itemtype="https://schema.org/{{ schema }}">
 <head>{% include head.html %}</head>
@@ -12,15 +12,7 @@
   </section>
   {%- endif %}
   <main aria-label="Content" class="page">
-    {% if page.url == '/' %}
-    <aside class="page__aside">
-      {% include sidebar.html %}
-    </aside>
     <div class="page__content mw">{{ content }}</div>
-    {% else %}
-    <div class="page__content">{{ content }}</div>
-    {% endif %}
-
   </main>
   {%- if page.gallery == true %}{% include photoswipe.html %}{% endif %}
   {%- include footer.html %}

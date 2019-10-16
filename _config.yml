@@ -66,6 +66,9 @@ pagination:
     before: 2
     after: 2
 
+collections:
+  projects:
+    output: false
 
 autopages:
   enabled: true

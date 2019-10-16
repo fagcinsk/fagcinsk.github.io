@@ -29,14 +29,14 @@
 
 .pi__title {
   padding-top: 16px;
-  font-size: 2.2rem;
-  line-height: 1.2;
-  margin-top: 0;
-  margin-bottom: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-family: $font-family-sans-serif-condensed;
+  h1,h2,h3,h4,h5 {
+    margin-top: 0;
+    font-size: 2.2rem;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 
 .pi__desc {
@@ -61,4 +61,5 @@
 .pi__img_wr {
   @extend .img-dim-1-33;
   @extend .img-wr;
+  overflow: hidden;
 }

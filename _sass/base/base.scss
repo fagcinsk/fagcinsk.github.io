@@ -1,5 +1,5 @@
 .mw {
-  max-width: 1024rem;
+  max-width: 135rem;
 }
 
 .ma, .post {
@@ -283,6 +283,11 @@ code {
 
 .pr__subheader {
   margin-bottom: 0;
+}
+
+.pr-intro {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .i-soc {

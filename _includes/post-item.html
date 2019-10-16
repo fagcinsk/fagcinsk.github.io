@@ -1,15 +1,20 @@
 {% assign h_level = include.heading_level | default:3 %}
+{% assign show_meta = include.hide_meta | default: false %}
 <a class="pi" href="{{ post.url }}" title="Перейти к записи">
   <div class="pi__img_wr">
   <img data-proofer-ignore alt="Картинка к записи {{ post.title }}" class="pi__img lazy"
     data-src="//images.weserv.nl/?url=mikhail-yudin.ru/{{ post.image }}&w=640&il&t=fitup&default={{ site.url }}/assets/img/no-image.png">
   </div>
-  <h{{h_level}} class="pi__title">{{ post.title }}</h{{h_level}}>
-  <div class="pi__desc">
-    <p>{{ post.excerpt | truncatewords: 15 }}</p>
+  <div class="pi__title">
+    <h{{h_level}}>{{ post.title }}</h{{h_level}}>
   </div>
+  <div class="pi__desc">
+    <p>{{ post.excerpt | strip_html | truncatewords: 15 }}</p>
+  </div>
+  {% if hide_meta == false %}
   <footer class="pi__meta">
     {% include pubdate.html date=post.date %}
     <address class="author">{{ post.author | default: site.author.name }}</address>
   </footer>
+  {% endif %}
 </a>
