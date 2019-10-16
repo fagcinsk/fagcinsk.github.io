@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-{%- assign schema = page.schema | default: layout.schema | default: "WebPage" -%}
-<html class="theme-default" lang="{{ page.lang | default: site.lang | default: 'en' }}"
-      itemscope itemtype="https://schema.org/{{ schema }}">
+<html class="theme-default" lang="{{ page.lang | default: site.lang | default: 'en' }}">
 <head>{% include head.html %}</head>
 <body>
   {%- include header.html %}
   {%- if page.promo == true %}
   <section class="pr">
-    <h1 class="pr__header">Блог фронтенд разработчика</h1>
-    <p class="pr__subheader">Мысли на тему разработки сайтов, оптимизации веб-приложений.<br>Делюсь идеями и крутыми фичами.</p>
+    <h1>Блог фронтенд разработчика</h1>
+    <p>Мысли на тему разработки сайтов, оптимизации веб-приложений.<br>Делюсь идеями и крутыми фичами.</p>
   </section>
   {%- endif %}
   <main aria-label="Content" class="page">

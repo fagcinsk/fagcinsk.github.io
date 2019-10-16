@@ -229,7 +229,7 @@ hr {
 
 .lazyloaded {
   opacity: 1;
-  transition: opacity 150ms;
+  transition: opacity 90ms ease-out;
 }
 
 code {
@@ -274,15 +274,6 @@ code {
 
   color: var(--promo-c);
   background-color: var(--promo-bg);
-}
-
-.pr__header {
-  font-size: 2.25em;
-  margin: 0 0 0.25em;
-}
-
-.pr__subheader {
-  margin-bottom: 0;
 }
 
 .pr-intro {

@@ -2,14 +2,15 @@
 {% assign hide_meta = include.hide_meta | default:false %}
 <a class="pi" href="{{ post.url }}" title="Перейти к записи">
   <div class="pi__img_wr">
-  <img data-proofer-ignore alt="Картинка к записи {{ post.title }}" class="pi__img lazy"
-    data-src="//images.weserv.nl/?url=mikhail-yudin.ru/{{ post.image }}&w=640&il&t=fitup&default={{ site.url }}/assets/img/no-image.png">
+  <img alt="Картинка к {{ post.title }}" class="pi__img"
+    loading="lazy"
+    src="//images.weserv.nl/?url=mikhail-yudin.ru/{{ post.image }}&output=jpg&q=50&w=640&il&default={{ site.url }}/assets/img/no-image.svg">
   </div>
-  <div class="pi__title">
+  <header class="pi__title">
     <h{{h_level}}>{{ post.title }}</h{{h_level}}>
-  </div>
+  </header>
   <div class="pi__desc">
-    <p>{{ post.excerpt | strip_html | truncatewords: 15 }}</p>
+    <p>{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
   </div>
   {%- if hide_meta == false %}
   <footer class="pi__meta">
