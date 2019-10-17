@@ -8,7 +8,7 @@ author:
   image: /assets/img/ava.jpg
 logo: /assets/img/favicon-full.png
 description: >
-  Фронтенд разработчик, веду блог, рассказываю о фронтенд разработке, железячных проектах, настройке сервера, полезных Android приложениях.
+  Я фронтенд разработчик, веду блог о вёрстке сайтов, оптимизации веб-приложений. Улучшаю пользовательский опыт, собираю лучшие практики в области веб-разработки.
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mikhail-yudin.ru"
@@ -75,7 +75,7 @@ autopages:
 
   categories:
     layouts: ['autopage_category.html']
-    title: 'Материалы в категории :cat'
+    title: 'Записи в категории :cat'
     permalink: '/:cat'
 
   collections:
