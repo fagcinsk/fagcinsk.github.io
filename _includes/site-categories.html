@@ -5,7 +5,6 @@
   {%- capture cat %}{{ category | first }}{% endcapture -%}
   {%- capture url %}/{{ cat | url_encode }}/{% endcapture -%}
   {%- if site.data.categories[cat] %}{% assign cat = site.data.categories[cat].name %}{% endif -%}
-  <a class="cat__link" href="{{ url }}"
-    title="Категория {{ cat }} (записей: {{ category | last | size }})">{{ cat }}</a>
+  <a class="cat__link" href="{{ url }}" title="Перейти к категории">{{ cat }}</a>
   {%- endfor -%}
 </aside>

@@ -9,14 +9,14 @@
     <p>Мысли на тему разработки сайтов, оптимизации веб-приложений.<br>Делюсь идеями и крутыми фичами.</p>
   </section>
   {%- endif %}
-  <main aria-label="Content" class="page">
+  <main class="page">
     <div class="page__content mw">{{ content }}</div>
   </main>
   {%- if page.gallery == true %}{% include photoswipe.html %}{% endif %}
   {%- include footer.html %}
 
   <script>window.window.lazySizesConfig={lazyClass:'lazy'}</script>
-  <script async src="//cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" async defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" async defer></script>
   <script src="//code.iconify.design/1/1.0.3/iconify.min.js" async defer></script>
   <script src="/assets/js/main.js" async defer></script>
 </body>
