@@ -3,10 +3,11 @@
 <a class="pi" href="{{ post.url }}">
   <div class="pi__img_wr">
   <img data-proofer-ignore alt="Картинка к {{ post.title }}" class="pi__img lazy"
+    itemprop="image" content="{{ post.image }}"
     data-src="//images.weserv.nl/?url=mikhail-yudin.ru/{{ post.image }}&output=jpg&q=65&w=480&il&default={{ site.url }}/assets/img/no-image.svg">
   </div>
   <header class="pi__title">
-    <h{{h_level}}>{{ post.title }}</h{{h_level}}>
+    <h{{h_level}} itemprop="headline name">{{ post.title }}</h{{h_level}}>
   </header>
   <div class="pi__desc">
     <p>{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
@@ -14,7 +15,7 @@
   {%- if hide_meta == false %}
   <footer class="pi__meta">
     {% include pubdate.html date=post.date %}
-    • <address class="author">{{ post.author | default: site.author.name }}</address>
+    • <address class="author" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ post.author | default: site.author.name }}</span></address>
   </footer>
   {%- endif %}
 </a>

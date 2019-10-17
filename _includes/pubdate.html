@@ -1,5 +1,5 @@
 {% assign m = include.date | date: "%-m" -%}
-<time class="pubdate" datetime="{{ include.date | date_to_xmlschema }}" itemprop="datePublished">
+<time class="pubdate" datetime="{{ include.date | date_to_xmlschema }}" itemprop="datePublished" content="{{ include.date | date: '%Y-%m-%d' }}">
   {{- include.date | date: "%-d" }} {% case m %}
     {%- when '1' %}января
     {%- when '2' %}февраля

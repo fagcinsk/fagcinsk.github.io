@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html class="theme-default" lang="{{ page.lang | default: site.lang | default: 'en' }}">
+{%- assign schema = page.schema | default: layout.schema | default: "WebPage" -%}
+{%- assign lang = page.lang | default: site.lang | default: 'en' -%}
+<html class="theme-default" lang="{{ lang }}" itemscope itemtype="http://schema.org/{{ schema }}">
 <head>{% include head.html %}</head>
 <body>
   {%- include header.html %}

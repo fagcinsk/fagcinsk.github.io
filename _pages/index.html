@@ -8,7 +8,7 @@ permalink: /
 ---
 
 <section class="pr-intro">
-  <aside class="page__aside">
+  <aside class="page__aside" itemscope itemtype="http://schema.org/WPSideBar">
     {% include sidebar.html %}
   </aside>
   <div class="content-block card post e2">
@@ -19,7 +19,7 @@ permalink: /
 
 <section>
   <h2>Записи блога на тему фронтенд разработки</h2>
-  <div class="post-list">
+  <div class="post-list" itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
     {%- for post in site.categories["frontend"] limit: 10 %}
     {%- include post-item.html %}
     {%- endfor %}
@@ -28,7 +28,7 @@ permalink: /
 
 <section>
   <h2>Проекты, которые можно пощупать онлайн</h2>
-  <div class="post-list">
+  <div class="post-list" itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
     {%- for doc in site.projects %}
     {%- assign post = doc %}
     {%- include post-item.html hide_meta=true %}

@@ -1,4 +1,4 @@
 {% assign category = include.post.categories | first %}
-<span class="category">
+<span class="category" itemprop="articleSection">
   {%- if site.data.categories[category] %}{{site.data.categories[category].name }}{% else %}{{ category }}{% endif -%}
 </span>
