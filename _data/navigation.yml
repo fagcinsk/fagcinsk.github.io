@@ -1,3 +1,3 @@
-- {name: 'Поиск', link: '/search/', rel: 'search nofollow'}
 - {name: 'Проекты', link: '/projects/'}
 - {name: 'Обо мне', link: '/about', rel: 'author'}
+- {name: 'Контакты', link: '/contact', rel: 'contact nofollow'}

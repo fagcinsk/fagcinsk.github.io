@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /search/
+permalink: /search
 title: Поиск по блогу
 description: Поиск по всем постам блога с учётом текста описания, можно вводить часть текста, поиск работает моментально
 sitemap: false
@@ -41,13 +41,6 @@ sitemap: false
         mark = new Mark(resultsWrapper)
       let fuse
 
-      fetch('/index.json')
-        .then(function (data) { return data.json() })
-        .then(function (json) {
-          console.log(json)
-          fuse = new Fuse(json, fuseOptions)
-        })
-
       function search (q) {
         let result, results = fuse.search(q)
         const reg = new RegExp(q, 'gim')
@@ -74,6 +67,18 @@ sitemap: false
 
       searchField.focus()
 
+
+      fetch('/index.json')
+        .then(function (data) { return data.json() })
+        .then(function (json) {
+          fuse = new Fuse(json, fuseOptions)
+
+          var searchQuery = decodeURIComponent(location.search).match(/\?q=(.+)/)
+          if(searchQuery){
+            searchField.value = searchQuery[1]
+            makeSearch()
+          }
+        })
     })(window.document)
   </script>
 </div>
