@@ -6,7 +6,7 @@
       var latLng = [{{include.lat | default: 0}}, {{include.lng | default: 0}}],
         osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
         mapboxUrl = 'https://{s}.tiles.mapbox.com/v3/jamesg87.goac2bf1/{z}/{x}/{y}.png',
-        map = L.map('map{{ mapindex }}').setView(latLng, {{include.zoom | default: 10}});
+        map = L.map('map{{ mapindex }}', {tap:false}).setView(latLng, {{include.zoom | default: 10}});
 
     // create the tile layer with correct attribution:
     L.tileLayer(osmUrl, {
