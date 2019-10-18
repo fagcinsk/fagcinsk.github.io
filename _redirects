@@ -1,3 +1,13 @@
 http://fagcinsk.netlify.com/* https://mikhail-yudin.ru/:splat 301!
 https://fagcinsk.netlify.com/* https://mikhail-yudin.ru/:splat 301!
 /category/*  /:splat 301!
+/android/  /blog/android/ 301!
+/linux/  /blog/linux/ 301!
+/hardware/  /blog/hardware/ 301!
+/frontend/  /blog/frontend/ 301!
+/lifehacks/  /blog/lifehacks/ 301!
+/android/*  /blog/android/:splat 301!
+/linux/*  /blog/linux/:splat 301!
+/hardware/*  /blog/hardware/:splat 301!
+/frontend/*  /blog/frontend/:splat 301!
+/lifehacks/*  /blog/lifehacks/:splat 301!

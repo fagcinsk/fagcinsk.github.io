@@ -46,7 +46,6 @@ kramdown:
     css_class: 'codehilite'
 
 permalinks: pretty
-permalink: /:categories/:title/
 
 leaflet: leaflet@1.5.1
 
@@ -59,7 +58,7 @@ pagination:
   per_page: 10
   permalink: '/page/:num/' # Pages are index.html inside this folder (default)
   title: ':title - страница :num'
-  category: 'posts'
+  category: 'blog'
   sort_field: 'date'
   sort_reverse: true
   trail:
@@ -69,6 +68,9 @@ pagination:
 collections:
   projects:
     output: false
+  posts:
+    output: true
+    permalink: /blog/:categories/:title/
 
 autopages:
   enabled: true
@@ -76,7 +78,7 @@ autopages:
   categories:
     layouts: ['autopage_category.html']
     title: 'Записи в категории :cat'
-    permalink: '/:cat'
+    permalink: '/blog/:cat'
 
   collections:
     enabled: false

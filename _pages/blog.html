@@ -1,0 +1,41 @@
+---
+type: website
+title: Блог фронтенд разработчика
+image: assets/img/me.jpg
+layout: default
+permalink: /blog/
+---
+
+<div class="mwm">
+  <h1>Блог &mdash; актуальные записи</h1>
+
+  {%- assign post = site.posts | first %}
+  <article class="card e2 pi-huge">
+    <div class="pi-huge__img_wr">
+      <img data-proofer-ignore alt="Картинка к {{ post.title }}" class="pi-huge__img lazy"
+           itemprop="image" content="{{ post.image }}"
+           data-src="//images.weserv.nl/?url=mikhail-yudin.ru/{{ post.image }}&output=jpg&q=80&w=640&il&default={{ site.url }}/assets/img/no-image.svg">
+    </div>
+    <div class="pi-huge__content">
+      <header class="pi-huge__title">
+        <h2 itemprop="headline name"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      </header>
+      <div class="pi-huge_desc">
+        <p>{{ post.excerpt | strip_html | truncatewords: 75 }}</p>
+      </div>
+      <footer class="pi-huge__meta">
+        {% include pubdate.html date=post.date %}
+        •
+        <address class="author" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ post.author | default: site.author.name }}</span>
+        </address>
+      </footer>
+    </div>
+  </article>
+
+  <div class="post-list" itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
+    {%- include publisher.html -%}
+    {%- for post in site.posts offset: 1 limit: 10 %}
+    {%- include post-item.html %}
+    {%- endfor %}
+  </div>
+</div>
