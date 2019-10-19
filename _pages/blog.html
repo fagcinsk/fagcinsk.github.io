@@ -1,10 +1,21 @@
 ---
 type: website
+schema: Blog
 title: Блог фронтенд разработчика
-image: assets/img/me.jpg
+image: assets/img/blog.jpg
 layout: default
 permalink: /blog/
 ---
+
+<section class="pr-intro">
+    <aside class="page__aside" itemscope itemtype="http://schema.org/WPSideBar">
+      {% include sidebar.html %}
+    </aside>
+    <div class="content-block card post e2">
+      {% capture promo_text %}{% include promo-text.md %}{% endcapture %}
+      {{ promo_text | markdownify }}
+    </div>
+  </section>  
 
 <div class="mwm">
   <h1>Блог &mdash; актуальные записи</h1>
