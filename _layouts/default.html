@@ -15,7 +15,10 @@
   </section>
   {%- endif %}
   <main class="page">
-    <div class="page__content mw">{{ content }}</div>
+    <div class="page__content mw">
+      {% include breadcrumbs.html %}
+      {{ content }}
+    </div>
   </main>
   {%- if page.gallery == true %}{% include photoswipe.html %}{% endif %}
   {%- include footer.html %}

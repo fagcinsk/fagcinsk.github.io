@@ -12,16 +12,14 @@
             <span itemprop="name">{{nav_item.name}}</span>
           </a>
           {% if nav_item.link == '/blog/' %}
-          <ul class="cat main-menu__list main-menu__list_sub">
-            {%- assign rel = '' -%}
-            {%- assign sorted_categories = site.categories | sort -%}
-            {%- for category in sorted_categories -%}
-            {%- capture cat %}{{ category | first }}{% endcapture -%}
-            {%- capture url %}/{{ cat | url_encode }}/{% endcapture -%}
-            {%- if site.data.categories[cat] %}{% assign cat = site.data.categories[cat].name %}{% endif -%}
+          <ul class="cat main-menu__list main-menu__list_sub e3">
+            {% assign cats = site.categories | sort  %}
+            {%- for cat in cats -%}
+            {%- capture url %}/{{ cat[0] | url_encode }}/{% endcapture -%}
             <li class="main-menu__item">
-            <a class="menu-link cat__link" itemprop="url" href="/blog{{ url }}" title="Перейти к категории"><span
-              itemprop="name">{{ cat }}</span></a>
+              <a class="menu-link cat__link" itemprop="url" href="/blog{{ url }}">
+                <span itemprop="name">{{ site.data.categories[cat[0]].name }}</span>
+              </a>
             </li>
             {%- endfor -%}
             </ul>

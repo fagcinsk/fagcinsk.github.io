@@ -9,7 +9,7 @@ description: "Список актуальных записей блога в т�
 <script>document.querySelector('meta[name="description"]').setAttribute('content', '{{ site.data.categories[category].description }}')</script>
 <div class="mwm">
   <meta property="og:image" content="/assets/img/categories/{{ category }}.png">
-  <h1>Записи блога в категории «{{ site.data.categories[category].name }}»</h1>
+  <h1>Блог: статьи в категории &laquo;{{ site.data.categories[category].name }}&raquo;</h1>
   <p>{{ site.data.categories[category].description }}</p>
   <div class="post-list">
     {% for post in paginator.posts %}{% include post-item.html heading_level=2 %}{% endfor %}

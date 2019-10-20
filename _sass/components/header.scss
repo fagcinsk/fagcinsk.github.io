@@ -58,6 +58,12 @@
   position: relative;
 }
 
+@media (max-width: 48rem) {
+  .site-title {
+    padding: 8px 0;
+  }
+}
+
 @media (min-width: 1024px) {
   #menu_toggler {
     display: none;
@@ -111,6 +117,10 @@
         transform: translateX(100%);
       }
     }
+  }
+
+  .main-menu__list_sub {
+    box-shadow: none;
   }
   
   .main-menu__list {
