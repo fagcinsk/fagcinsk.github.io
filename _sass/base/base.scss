@@ -247,7 +247,7 @@ code {
 }
 
 .pr {
-  padding: 64px;
+  padding: calc(32px + 2%) 5%;
   text-align: center;
   position: relative;
   z-index: 0;

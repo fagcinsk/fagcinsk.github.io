@@ -1,13 +1,9 @@
 .page__header {
   @extend .e2;
   position: relative;
-  z-index: 1;
-}
-
-.page__header_top {
-  white-space: nowrap;
+  z-index: 2;
   padding: 0 16px;
-  line-height: 42px;
+  min-height: 48px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -21,12 +17,23 @@
   font-stretch: condensed;
 }
 
+.main-menu__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .main-menu__item {
   display: inline-block;
-  padding: 8px 24px;
+  position: relative;
+  margin: 0;
+}
+
+.menu-link {
+  display: block;
+  padding: 12px 24px;
   text-decoration: none !important;
   color: var(--menu-c);
-
   &.active {
     color: var(--menu-c-a);
   }
@@ -51,21 +58,75 @@
   position: relative;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 1024px) {
+  #menu_toggler {
+    display: none;
+  }
+  .main-menu__item {
+    &:not(:hover) > ul {
+      display: none;
+    }
+  }
+  .main-menu__list_sub {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    .main-menu__item {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  #menu_toggler {
+    cursor: pointer;
+    padding: 8px;
+    font-size: 24px;
+    height: 52px;
+    display: inline-block;
+    box-sizing: border-box;
+  }
+  .menu-root {
+    transition: transform 120ms;
+    overflow-y: auto;
+  }
+  .main-menu {
+    position: fixed;
+    top:0;
+    right:0;
+    left:0;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.65);
+    display: flex;
+    justify-content: flex-end;
+    transition: background-color 90ms, visibility 0ms 0ms;
+    will-change: background-color;
+    &:not(.open) {
+      transition: background-color 90ms, visibility 120ms 120ms;
+      visibility: hidden;
+      background-color: rgba(0,0,0,0);
+      .menu-root {
+        will-change: transform;
+        transform: translateX(100%);
+      }
+    }
+  }
+  
+  .main-menu__list {
+    max-width: calc(100vw - 48px);
+    background-color: var(--header-bg);
+  }
+
+  .main-menu__list, .main-menu__item {
+    display: inline-flex;
+    flex-direction: column;
+  }
+
   .page__header_top {
     padding: 0 8px;
   }
   .main-menu__item {
     padding: 4px 8px;
-  }
-
-  .site-title {
-    text-overflow: clip;
-    overflow: hidden;
-    font-size: 0;
-  }
-
-  .site-title:first-letter {
-    font-size: 2rem;
   }
 }

@@ -1,10 +1,59 @@
 {% include analytics-header.html %}
 <header class="page__header e3" itemscope itemtype="http://schema.org/WPHeader">
-  <div class="page__header_top">
     <a class="site-title" itemprop="name" title="На главную" href="/">{{ site.headline | escape }}</a>
-    {% include menu-main.html %}
-  </div>
-  {%- if page.url contains '/blog/' %}{% include site-categories.html %}{% endif %}
+    <span id="menu_toggler">
+      <span class="iconify" data-icon="mdi:menu"></span>
+    </span>
+    <nav class="main-menu" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
+      <ul class="main-menu__list menu-root">
+        {%- for nav_item in site.data.navigation -%}
+          <li class="main-menu__item">
+          <a class="menu-link" itemprop="url" href="{{nav_item.link}}" title="{{nav_item.name}}" {% if nav_item.rel %}rel="{{nav_item.rel}}"{% endif %}>
+            <span itemprop="name">{{nav_item.name}}</span>
+          </a>
+          {% if nav_item.link == '/blog/' %}
+          <ul class="cat main-menu__list main-menu__list_sub">
+            {%- assign rel = '' -%}
+            {%- assign sorted_categories = site.categories | sort -%}
+            {%- for category in sorted_categories -%}
+            {%- capture cat %}{{ category | first }}{% endcapture -%}
+            {%- capture url %}/{{ cat | url_encode }}/{% endcapture -%}
+            {%- if site.data.categories[cat] %}{% assign cat = site.data.categories[cat].name %}{% endif -%}
+            <li class="main-menu__item">
+            <a class="menu-link cat__link" itemprop="url" href="/blog{{ url }}" title="Перейти к категории"><span
+              itemprop="name">{{ cat }}</span></a>
+            </li>
+            {%- endfor -%}
+            </ul>
+            {% endif %}
+        </li>
+        {%- endfor -%}
+      </ul>
+    </nav>
+    <script>
+      var menuToggler = document.querySelector('#menu_toggler');
+      var mainMenu = document.querySelector('.main-menu');
+      var isMenuOpened = false;
+
+      function toggleMenu(){
+        isMenuOpened = !isMenuOpened;
+        if(isMenuOpened) {
+          mainMenu.classList.add('open')
+        } else {
+          mainMenu.classList.remove('open')
+        }
+      }
+
+      function hideMenu(e){
+        if(e.target != mainMenu) return;
+        isMenuOpened = false;
+        mainMenu.classList.remove('open')
+      }
+
+      menuToggler.addEventListener('click', toggleMenu);
+      mainMenu.addEventListener('click', hideMenu);
+      mainMenu.addEventListener('touchmove', hideMenu);
+    </script>
 </header>
 <script>
   (function (a) { const b = a.links.length; for (let c = 0; c < b; c++)a.URL.startsWith(a.links[c].href) && a.links[c].classList.add("active") })(window.document);
