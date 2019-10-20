@@ -52,7 +52,7 @@
 
       menuToggler.addEventListener('click', toggleMenu);
       mainMenu.addEventListener('click', hideMenu);
-      mainMenu.addEventListener('touchmove', hideMenu);
+      mainMenu.addEventListener('touchmove', hideMenu, {passive:true});
     </script>
 </header>
 <script>
