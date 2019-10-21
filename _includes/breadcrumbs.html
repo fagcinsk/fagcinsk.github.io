@@ -11,7 +11,7 @@
     {% assign pos = pos | plus: 1 %}
     {% if forloop.index == crumbs_total %}
       <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
-        <a itemprop="item" href="{{ site.baseurl }}{{ page.url }}"><span itemprop="name">{{page.breadcrumb|default page.title}}</span></a>
+        <a itemprop="item" href="{{ site.baseurl }}{{ page.url }}"><span itemprop="name">{{page.breadcrumb|default:page.title}}</span></a>
         <meta itemprop="position" content="{{pos}}" />
       </li>
     {% else %}
@@ -24,7 +24,7 @@
       {% for p in site.pages %}
         {% if crumb_without_index != current_page and crumb_without_index == p.url %}
           <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-            <a itemprop="item" href="{{ crumb_with_index }}"><span itemprop="name">{{p.title}}</span></a>
+            <a itemprop="item" href="{{ crumb_with_index }}"><span itemprop="name">{{p.breadcrumb|default:p.title}}</span></a>
             <meta itemprop="position" content="{{pos}}" />
           </li>
         {% endif %}
