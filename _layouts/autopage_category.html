@@ -6,7 +6,6 @@ schema: CollectionPage
 {% assign category = page.dir | split: "/" | last %}
 
 <div class="mwm">
-  <meta property="og:image" content="/assets/img/categories/{{ category }}.png">
   <h1>{{ site.data.categories[category].name }} &mdash; актуальные записи категории блога</h1>
   <p>{{ site.data.categories[category].description }}</p>
   <div class="post-list">
