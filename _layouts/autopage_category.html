@@ -1,17 +1,15 @@
 ---
 layout: default
 schema: CollectionPage
-pagination:
-  enabled: true
-description: "Список актуальных записей блога в текущей категории"
 ---
+
 {% assign category = page.dir | split: "/" | last %}
-<script>document.querySelector('meta[name="description"]').setAttribute('content', '{{ site.data.categories[category].description }}')</script>
+
 <div class="mwm">
   <meta property="og:image" content="/assets/img/categories/{{ category }}.png">
-  <h1>Блог: статьи в категории &laquo;{{ site.data.categories[category].name }}&raquo;</h1>
+  <h1>{{ site.data.categories[category].name }} &mdash; актуальные записи категории блога</h1>
   <p>{{ site.data.categories[category].description }}</p>
   <div class="post-list">
-    {% for post in paginator.posts %}{% include post-item.html heading_level=2 %}{% endfor %}
+    {% for post in site.categories[category] %}{% include post-item.html heading_level=2 %}{% endfor %}
   </div>
 </div>

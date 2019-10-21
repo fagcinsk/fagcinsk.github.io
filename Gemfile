@@ -8,7 +8,7 @@ gem 'html-proofer'
 
 group :jekyll_plugins do
   gem 'jekyll-feed'
-  gem 'jekyll-paginate-v2', github: 'jonlpersson/jekyll-paginate-v2'
+  # gem 'jekyll-paginate-v2', github: 'jonlpersson/jekyll-paginate-v2'
   gem 'jekyll-seo-tag'
   gem 'jekyll-sitemap'
   gem 'jekyll-target-blank'

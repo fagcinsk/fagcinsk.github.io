@@ -73,9 +73,10 @@ collections:
     permalink: /blog/:categories/:title/
 
 autopages:
-  enabled: true
+  enabled: false
 
   categories:
+    enabled: false
     layouts: ['autopage_category.html']
     title: 'Записи в категории :cat'
     permalink: '/blog/:cat'
@@ -90,6 +91,7 @@ include:
   - _pages
   - _redirects
   - _projects
+  - _categories
 
 exclude:
   - Gemfile
