@@ -15,17 +15,16 @@
   --blockquote-border: #{$clr-orange-600};
   --blockquote-bg: #{$clr-orange-50};
   --header-bg: #{$clr-grey-100};
-  --menu-c: #{$clr-grey-900};
+  --menu-c: #{$clr-grey-800};
   --menu-c-a: #{$clr-deep-orange-800};
-  --menu-c-h: #{$clr-deep-orange-800};
-  --menu-bg-h: #{$clr-orange-50};
+  --menu-c-h: #{$clr-grey-900};
+  --menu-bg-h: #{$clr-grey-200};
+  --menu-bg-a: #{rgba($clr-deep-orange-50,0.65)};
   --go-top-bg: #{$clr-white};
   --go-top-bg-h: #{$clr-orange-600};
   --go-top-c-h: #{$clr-white};
   --promo-c: #{$clr-white};
   --promo-bg: #{$clr-grey-600};
-  --categories-c: #{$clr-grey-900};
-  --categories-bg: #{$clr-grey-200};
   --control-c: #{$clr-grey-900};
   --control-border-c: #{$clr-grey-900};
   --control-outline-f: #{$clr-deep-orange-800};
@@ -37,4 +36,5 @@
   --cal-cur-bg: #{$clr-orange-100};
   --post-meta-c: #{$clr-grey-600};
   --card-bg: #{$clr-white};
+  --breadcrumbs-c: #{$clr-grey-600};
 }

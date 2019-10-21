@@ -10,9 +10,8 @@
   {% for crumb in crumbs offset: 1 %}
     {% assign pos = pos | plus: 1 %}
     {% if forloop.index == crumbs_total %}
-      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
-        <a itemprop="item" href="{{ site.baseurl }}{{ page.url }}"><span itemprop="name">{{page.breadcrumb|default:page.title}}</span></a>
-        <meta itemprop="position" content="{{pos}}" />
+      <li class="active">
+        <span>{{page.breadcrumb|default:page.title}}</span>
       </li>
     {% else %}
       {% assign crumb_limit = forloop.index | plus: 1 %}
