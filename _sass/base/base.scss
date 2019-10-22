@@ -135,23 +135,6 @@ hr {
   font-size: 32px;
 }
 
-.pager {
-  font-size: 1.25em;
-  text-align: center;
-}
-
-.pager__prev,
-.pager__next,
-.pager__disabled,
-.pager__page {
-  display: inline-block;
-  width: 42px;
-  line-height: 42px;
-  text-align: center;
-  border-radius: 4px;
-}
-
-
 .tile {
   display: flex;
   margin-bottom: 16px;
@@ -246,7 +229,7 @@ hr {
 
 .lazyloaded {
   opacity: 1;
-  transition: opacity 90ms ease-out;
+  transition: opacity 90ms ease-in;
 }
 
 code {
