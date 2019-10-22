@@ -89,9 +89,10 @@ autopages:
 
 include:
   - _pages
-  - _redirects
   - _projects
   - _categories
+  - _headers
+  - _redirects
 
 exclude:
   - Gemfile
