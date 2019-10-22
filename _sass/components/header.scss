@@ -34,7 +34,7 @@
   padding: 12px 24px;
   text-decoration: none !important;
   color: var(--menu-c);
-  
+
   &:hover {
     color: var(--menu-c-h);
     background-color: var(--menu-bg-h);
@@ -76,11 +76,13 @@
     a {
       transition: none;
     }
+
     &:not(:hover) > ul {
       visibility: hidden;
     }
+
     &:hover {
-      background-color: rgba(0,0,0,0.03);
+      background-color: rgba(0, 0, 0, 0.03);
     }
   }
   .main-menu__list_sub {
@@ -89,6 +91,7 @@
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
+
     .main-menu__item {
       display: block;
     }
@@ -107,22 +110,25 @@
   .menu-root {
     transition: transform 120ms;
     overflow-y: auto;
+    width: 240px;
   }
   .main-menu {
     position: fixed;
-    top:0;
-    right:0;
-    left:0;
+    top: 0;
+    right: 0;
+    left: 0;
     height: 100vh;
-    background-color: rgba(0,0,0,0.65);
+    background-color: rgba(0, 0, 0, 0.65);
     display: flex;
     justify-content: flex-end;
     transition: background-color 90ms, visibility 0ms 0ms;
     will-change: background-color;
+
     &:not(.open) {
       transition: background-color 90ms, visibility 120ms 120ms;
       visibility: hidden;
-      background-color: rgba(0,0,0,0);
+      background-color: rgba(0, 0, 0, 0);
+
       .menu-root {
         will-change: transform;
         transform: translateX(100%);
@@ -130,13 +136,18 @@
     }
   }
 
-  .main-menu__list_sub {
-    box-shadow: none;
-  }
-  
   .main-menu__list {
     max-width: calc(100vw - 48px);
     background-color: var(--header-bg);
+  }
+
+  .main-menu__list_sub {
+    box-shadow: none;
+    margin-left: 16px;
+
+    > .main-menu__item {
+      text-transform: none;
+    }
   }
 
   .main-menu__list, .main-menu__item {
@@ -146,8 +157,5 @@
 
   .page__header_top {
     padding: 0 8px;
-  }
-  .main-menu__item {
-    padding: 4px 8px;
   }
 }
