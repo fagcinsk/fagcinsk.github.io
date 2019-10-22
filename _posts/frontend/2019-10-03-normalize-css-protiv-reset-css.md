@@ -1,7 +1,7 @@
 ---
 layout: post
 categories: frontend
-title: normalize.css против reset.css
+title: "Битва титанов: normalize.css против reset.css"
 description: Использовать normalize.css практично и менее затратно. Расскажу почему и что подвело к использованию normalize.css вместо reset.css
 image: photos/normalize-css-protiv-reset-css.png?v=1
 ---

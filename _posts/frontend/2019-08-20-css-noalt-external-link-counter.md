@@ -1,7 +1,7 @@
 ---
 layout: post
 categories: frontend
-title: CSS подсчёт изображений без alt
+title: "CSS ищет баги в SEO: картинки без alt и внешние ссылки"
 description: В 2015 году писал CSS стиль для stylish, для подсчёта изображений без атрибута alt, чтобы видеть где и сколько забыл проставить.
 image: photos/css-noalt-external-link-counter.png
 ---
