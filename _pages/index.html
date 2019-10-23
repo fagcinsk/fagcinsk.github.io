@@ -9,7 +9,8 @@ permalink: /
 ---
 
 <section>
-  <h2>Записи на тему фронтенда</h2>
+  <h2>Фронтенд &mdash; последние записи блога</h2>
+  <p>Рассказываю о веб-разработке, об интерфейсных решениях, способох улучшения user experience, оптимизации веб-приложений. Собираю фронтенд best practices, быстрые простые и надёжные способы достижения результатов.</p>
   <div class="post-list" itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
     {%- include publisher.html -%}
     {%- for post in site.categories["frontend"] limit: 10 %}
@@ -19,11 +20,33 @@ permalink: /
 </section>
 
 <section>
-  <h2>Проекты, которые можно пощупать онлайн</h2>
+  <h2>Проекты онлайн</h2>
+  <p>Делюсь проектами которые доступны онлайн.</p>
   <div class="post-list">
     {%- for doc in site.projects %}
     {%- assign post = doc %}
     {%- include post-item.html hide_meta=true %}
     {%- endfor %}
+  </div>
+</section>
+
+<section>
+  <h2>Проекты на Github</h2>
+  <p>Веб-приложения, игры, библиотеки для, исходники которых есть в свободном доступе.</p>
+  <div class="post-list">
+    {% assign category = site.data.projects | where: 'category','Web' %}
+
+
+      {% for repo in category %}
+    <div class="card e1">
+      <div class="tile">
+        <div class="tile__image"><span class="iconify project-icon" data-icon="{{ repo.icon }}"></span></div>
+        <div class="tile__text">
+          <h3><a href="https://github.com/fagcinsk/{{ repo.repo }}">{{ repo.repo }}</a></h3>
+          {{ repo.name }}</div>
+      </div>
+    </div>
+      {% endfor %}
+
   </div>
 </section>
