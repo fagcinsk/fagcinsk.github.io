@@ -32,21 +32,18 @@ permalink: /
 
 <section>
   <h2>Проекты на Github</h2>
-  <p>Веб-приложения, игры, библиотеки для, исходники которых есть в свободном доступе.</p>
+  <p>Веб-приложения, игры, библиотеки, исходники которых есть в свободном доступе.</p>
   <div class="post-list">
     {% assign category = site.data.projects | where: 'category','Web' %}
-
-
-      {% for repo in category %}
-    <div class="card e1">
-      <div class="tile">
-        <div class="tile__image"><span class="iconify project-icon" data-icon="{{ repo.icon }}"></span></div>
-        <div class="tile__text">
-          <h3><a href="https://github.com/fagcinsk/{{ repo.repo }}">{{ repo.repo }}</a></h3>
-          {{ repo.name }}</div>
+    {% for repo in category %}
+      <div class="card e1">
+        <div class="tile">
+          <div class="tile__image"><span class="iconify project-icon" data-icon="{{ repo.icon }}"></span></div>
+          <div class="tile__text">
+            <h3><a href="https://github.com/fagcinsk/{{ repo.repo }}">{{ repo.repo }}</a></h3>
+            {{ repo.name }}</div>
+        </div>
       </div>
-    </div>
-      {% endfor %}
-
+    {% endfor %}
   </div>
 </section>
