@@ -2,6 +2,10 @@
   category: Web
   repo: fagcinsk.github.io
   icon: "icomoon-free:blog"
+- name: Cube map viewer (THREE.js)
+  category: Web
+  repo: cube-map-viewer
+  icon: "mdi-cube-unfolded"
 - name: Multiplyer crafting game
   category: Web
   repo: multiplayer-crafting-game
