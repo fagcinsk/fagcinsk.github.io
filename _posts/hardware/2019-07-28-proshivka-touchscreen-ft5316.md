@@ -88,9 +88,9 @@ ACK до этого принимал, значит был контакт уже=
 ## Что получилось в итоге
 
 ```cpp
-#include
-#include
-
+#include <Wire.h>
+#include <SD.h>
+ 
 #define VCC_PIN 3
 #define RST_PIN 2
 #define DEV_ADDR 0x38
