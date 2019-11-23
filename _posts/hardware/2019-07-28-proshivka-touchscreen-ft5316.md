@@ -88,6 +88,7 @@ ACK до этого принимал, значит был контакт уже=
 ## Что получилось в итоге
 
 ```cpp
+{% raw %}
 #include <Wire.h>
 #include <SD.h>
  
@@ -307,6 +308,7 @@ boolean fts_ctpm_fw_upgrade(/*byte* pbt_buf, unsigned int dw_lenth*/) {
 
   return true;
 }
+{% endraw %}
 ```
 
 Больше так делать не буду. Возможно =)
