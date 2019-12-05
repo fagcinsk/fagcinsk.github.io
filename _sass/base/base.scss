@@ -60,16 +60,18 @@ mark {
   margin: 32px 0 0;
   padding: 0;
   color: var(--breadcrumbs-c);
+
   li {
     display: inline-block;
     margin: 0;
   }
+
   li:not(:last-child) {
     &:after {
       content: ' / ';
     }
   }
-} 
+}
 
 a {
   text-decoration: none;
@@ -337,6 +339,17 @@ code {
   width: 96px;
   margin: auto;
   display: block;
+}
+
+.ad-notify {
+  font-size: 0.75em;
+  color: grey;
+  background-color: #eaeaea;
+  border: 1px solid grey;
+  border-radius: 3px;
+  padding: 8px;
+  display: inline-block;
+  width: 100%;
 }
 
 @media (max-width: 768px) {
