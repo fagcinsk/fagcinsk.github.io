@@ -14,6 +14,7 @@ schema: Blog
     {% endif %}
     {% endif %}
   </header>
+  {% include ad-page-content.html %}
   <div itemprop="articleBody">{{content}}</div>
   <br>
   <footer>
@@ -42,6 +43,6 @@ schema: Blog
   <p>Чтобы не пропускать новости, можно <a href="/subscribe">подписаться на email рассылку</a>.
   </p>
 </div>
-<div class="mwm" itemscope itemtype="http://schema.org/WPAdBlock">{% include ad-page-content.html %}</div>
+<div class="mwm">{% include ad-page-content.html %}</div>
 <div class="mwm">{% include disqus.html %}</div>
 <div class="mwm">{% include related.html post=page %}</div>
