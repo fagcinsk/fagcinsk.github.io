@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Игра про уничтожение блоков
-permalink: /projects/block-destruction-game/
+permalink: /projects/block-destruction-game
 description: Игра про уничтожение блоков с использованием HTML5 canvas
 image: photos/block-destruction-game.png
 image_hide: true
@@ -9,7 +9,7 @@ image_hide: true
 
 Задача игрока &mdash; убрать все блоки, или оставить как можно меньше. За уничтоженный блок начисляется очко. Всегда максимальное количество возможных очков равно площади поля. Поэтому даже если убраны не все блоки, можно соревноваться набирая большее количество очков.
 
-[Предыстория](https://mikhail-yudin.ru/frontend/html5-canvas-block-destruction-game/)
+[Предыстория](https://mikhail-yudin.ru/frontend/html5-canvas-block-destruction-game)
 
 [Репозиторий с иходником](https://github.com/fagcinsk/block-destruction-game)
 
