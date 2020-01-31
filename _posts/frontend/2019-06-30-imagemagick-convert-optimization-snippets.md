@@ -3,7 +3,7 @@ layout: post
 categories: frontend
 title: Оптимизация изображений для Веба при помощи ImageMagick
 description: >
-  Способы оптимизации изображений при помощи утилиты convert библиотеки ImageMagick
+  Способы оптимизации изображений для Веба при помощи утилиты convert библиотеки ImageMagick
 image: photos/imagemagick-convert-optimization.png
 ---
 
