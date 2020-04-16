@@ -30,13 +30,13 @@ ul dl,
 ul ol,
 ul ul {
   font-size: 90%;
-  margin: 1.5rem 0 1.5rem 3.0rem;
+  margin: 1.5em 0 1.5em 3.0em;
 }
 
 dd,
 dt,
 li {
-  margin-bottom: 1.0rem;
+  margin-bottom: 1em;
 }
 
 blockquote,
@@ -48,7 +48,7 @@ p,
 pre,
 table,
 ul {
-  margin-bottom: 1rem;
+  margin-bottom: 1em;
 }
 
 p {
@@ -99,8 +99,8 @@ code, pre {
 code {
   border-radius: .4rem;
   font-size: 86%;
-  margin: 0 .2rem;
-  padding: .2rem .5rem;
+  margin: 0 .2em;
+  padding: .2em .5em;
   word-break: break-word;
 }
 
@@ -111,7 +111,7 @@ pre {
 pre > code {
   border-radius: 0;
   display: block;
-  padding: 1rem 1.5rem;
+  padding: 1em 1.5em;
   white-space: pre;
 }
 
