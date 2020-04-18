@@ -1,11 +1,9 @@
 html {
-  line-height: 1.6;
   font-size: 62.5%;
 }
 
 body {
-  font-family: $font-family-sans-serif;
-  font-size: 1.8em;
+  font: #{1.8em}/#{1.6} $font-family-sans-serif;
 }
 
 code {
