@@ -33,16 +33,10 @@ schema: Blog
         <p>{{site.description}}</p>
       </div>
     </div>
-
-    {%- include publisher.html -%}
-
+    <p>Чтобы не пропускать новости, можно <a href="/subscribe">подписаться на email рассылку</a>.</p>
+    {% include publisher.html %}
+    {% include ad-page-content.html %}
+    {% include disqus.html %}
   </footer>
 </article>
-
-<div class="mwm">
-  <p>Чтобы не пропускать новости, можно <a href="/subscribe">подписаться на email рассылку</a>.
-  </p>
-</div>
-<div class="mwm">{% include ad-page-content.html %}</div>
-<div class="mwm">{% include disqus.html %}</div>
 <div class="mwm">{% include related.html post=page %}</div>
