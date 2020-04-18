@@ -32,7 +32,7 @@ sitemap: false
 				{% else %}
 					<description>{{ post.description | strip_html | xml_escape }}</description>
 				{% endif %}
-        <yandex:full-text>{{ post.content | xml_escape }}</yandex:full-text>
+        <yandex:full-text>{{ post.content | replace: "data-src", "src" | xml_escape }}</yandex:full-text>
 				<pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
 				<link>{{ site.url }}{{ post.url }}</link>
 				<guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
