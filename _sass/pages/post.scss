@@ -27,15 +27,3 @@ figcaption {
   font-size: 0.875em;
   padding: 4px 8px;
 }
-
-@media (max-width: 768px) {
-  .post {
-    margin: 0 -16px 16px;
-  }
-}
-
-@include device('desktop') {
-  .post {
-    padding: 3em;
-  }
-}
