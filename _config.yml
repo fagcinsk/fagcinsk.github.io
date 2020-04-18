@@ -68,6 +68,7 @@ pagination:
 collections:
   projects:
     output: false
+    permalink: /projects/:title
   posts:
     output: true
     permalink: /blog/:categories/:title
