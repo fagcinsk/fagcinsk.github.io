@@ -3,17 +3,12 @@
 }
 
 .ma, .post {
-  margin: 48px auto;
+  margin: 2vw auto;
 }
 
 .mwm {
   @extend .mw;
   @extend .ma;
-}
-
-.post {
-  max-width: 40em;
-  box-sizing: content-box;
 }
 
 img,
@@ -277,6 +272,12 @@ code {
 
   color: var(--promo-c);
   background-color: var(--promo-bg);
+}
+
+.post {
+  max-width: 40em;
+  box-sizing: content-box;
+  padding: 2vmax !important;
 }
 
 .pr-intro {
