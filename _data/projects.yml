@@ -10,7 +10,7 @@
   category: Web
   repo: multiplayer-crafting-game
   icon: "ls:game"
-- name: <a href="https://mikhail-yudin.ru/projects/text-layout-change/">Смена раскладки онлайн</a> с английского на русский и наоборот
+- name: <a href="https://mikhail-yudin.ru/projects/text-layout-change">Смена раскладки онлайн</a> с английского на русский и наоборот
   category: Web
   repo: text-layout-change
   icon: "fa-solid:language"
@@ -18,7 +18,7 @@
   category: Web
   repo: ro-aliaseable-object
   icon: "dashicons:nametag"
-- name: <a href="https://mikhail-yudin.ru/projects/block-destruction-game/">Игра про уничтожение блоков</a> с использованием HTML5 canvas
+- name: <a href="https://mikhail-yudin.ru/projects/block-destruction-game">Игра про уничтожение блоков</a> с использованием HTML5 canvas
   category: Web
   repo: block-destruction-game
   icon: "mdi:cube-scan"
