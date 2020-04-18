@@ -3,14 +3,20 @@ html {
 }
 
 body {
-  font: #{1.8em}/#{1.6} $font-family-sans-serif;
+  font: #{1.8rem}/#{1.6} $font-family-sans-serif;
 }
 
 code {
   font-family: $font-family-mono;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
   font-family: $font-family-sans-serif-condensed;
   font-stretch: condensed;
   font-weight: normal;
@@ -28,7 +34,7 @@ ul dl,
 ul ol,
 ul ul {
   font-size: 90%;
-  margin: 1.5em 0 1.5em 3.0em;
+  margin: 1.5em 0 1.5em 3em;
 }
 
 dd,
@@ -60,9 +66,9 @@ h4,
 h5,
 h6 {
   font-weight: 300;
-  letter-spacing: -.1rem;
+  letter-spacing: -0.1rem;
   margin-top: 1em;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 
 h1 {
@@ -90,15 +96,16 @@ blockquote {
   }
 }
 
-code, pre {
+code,
+pre {
   font-family: $font-family-mono;
 }
 
 code {
-  border-radius: .4rem;
+  border-radius: 0.4rem;
   font-size: 1.4rem;
-  margin: 0 .2em;
-  padding: .2em .5em;
+  margin: 0 0.2em;
+  padding: 0.2em 0.5em;
   word-break: break-word;
 }
 

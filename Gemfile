@@ -14,5 +14,4 @@ group :jekyll_plugins do
 
   gem 'liquid', github: 'Shopify/liquid', branch: 'master'
   gem 'liquid-c', github: 'Shopify/liquid-c', branch: 'master'
-  gem 'sassc'
 end

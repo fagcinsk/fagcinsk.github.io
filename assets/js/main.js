@@ -28,6 +28,6 @@
   if (!d.body.querySelector('.codehilite')) return
   const link = d.createElement('link')
   link.rel = 'stylesheet'
-  link.href = '//cdn.jsdelivr.net/npm/pygments-css@1.0.0/manni.css'
+  link.href = '//cdn.jsdelivr.net/npm/pygments-css@1.0.0/colorful.css'
   d.getElementsByTagName('head')[0].appendChild(link)
 })(window)

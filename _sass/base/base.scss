@@ -1,4 +1,4 @@
-html{
+html {
   touch-action: manipulation;
 }
 
@@ -6,7 +6,8 @@ html{
   max-width: 135rem;
 }
 
-.ma, .post {
+.ma,
+.post {
   margin: 2vw auto;
 }
 
@@ -41,7 +42,6 @@ mark {
   color: var(--mark-c);
 }
 
-
 .content-block {
   margin-bottom: 32px;
 
@@ -68,7 +68,7 @@ mark {
 
   li:not(:last-child) {
     &:after {
-      content: ' / ';
+      content: " / ";
     }
   }
 }
@@ -95,13 +95,13 @@ hr {
   background-color: var(--border-c);
 }
 
-
 .map {
   border-radius: 3px;
   overflow: hidden;
 }
 
-#goTop, .theme-switch {
+#goTop,
+.theme-switch {
   position: fixed;
   bottom: 16px;
   border-radius: 50%;
@@ -172,11 +172,11 @@ hr {
 }
 
 .db {
-  display: block
+  display: block;
 }
 
 .dib {
-  display: inline-block
+  display: inline-block;
 }
 
 .tile__text {
@@ -255,8 +255,9 @@ code {
   position: relative;
   z-index: 0;
 
-  &:before, &:after {
-    content: '';
+  &:before,
+  &:after {
+    content: "";
     position: absolute;
     top: -40px;
     box-shadow: 0 0 72px #fff;
@@ -279,9 +280,9 @@ code {
 }
 
 .post {
-  max-width: 40em;
+  max-width: 42em;
   box-sizing: content-box;
-  padding: 2vmax !important;
+  padding: 4.2vw;
 }
 
 .pr-intro {
@@ -366,5 +367,10 @@ code {
   .project-icon {
     font-size: 48px;
     width: 48px;
+  }
+
+  .post {
+    margin-left: -16px;
+    margin-right: -16px;
   }
 }
