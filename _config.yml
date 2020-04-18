@@ -67,7 +67,7 @@ pagination:
 
 collections:
   projects:
-    output: false
+    output: true
     permalink: /projects/:title
   posts:
     output: true
@@ -90,7 +90,6 @@ autopages:
 
 include:
   - _pages
-  - _projects
   - _categories
   - _headers
   - _redirects
