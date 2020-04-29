@@ -1,7 +1,6 @@
 {% assign h_level = include.heading_level | default:3 %}
 {% assign hide_meta = include.hide_meta | default:false %}
-<li class="pi" itemprop="itemListElement" itemscope itemtype="https://schema.org/BlogPosting">
-	<meta itemprop="position" content="{{ forloop.index }}"/>
+<li class="pi" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
 	<a class="pi__link" itemprop="url" href="{{ site.url }}{{ post.url }}">
 		<figure class="pi__img_wr" itemprop='image' itemscope itemtype='http://schema.org/ImageObject'>
 			<img data-proofer-ignore alt="Картинка к {{ post.title }}" class="pi__img lazy"

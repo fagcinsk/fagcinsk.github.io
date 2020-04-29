@@ -3,7 +3,7 @@ type: article
 layout: default
 schema: Blog
 ---
-<div class="post card e2" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="post card e2" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post__header">
     <div class="post__meta">{% include post-meta.html post=page %}</div>
     <h1 class="post__title" itemprop="headline name">{{ page.title | escape }}</h1>
@@ -15,7 +15,7 @@ schema: Blog
     {% endif %}
   </header>
   <div class="article-ad">{% include ad-post-content.html %}</div>
-  <article itemprop="mainEntityOfPage articleBody">{{content}}</article>
+  <div itemprop="mainEntityOfPage articleBody">{{content}}</div>
   <br>
   <footer>
     {% include share.html %}
@@ -37,5 +37,5 @@ schema: Blog
     {% include ad-page-content.html %}
     {% include disqus.html %}
   </footer>
-</div>
+</article>
 <div class="mwm">{% include related.html post=page %}</div>

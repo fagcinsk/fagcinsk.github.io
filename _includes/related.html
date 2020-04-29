@@ -2,7 +2,7 @@
 {% if category %}
 {% assign related_posts = site.categories[category] | where_exp: "post","post.url != page.url" %}
 {% if related_posts != empty %}
-<section itemscope itemtype="http://schema.org/ItemList" class="related-posts">
+<section itemscope itemtype="http://schema.org/Blog" class="related-posts">
   <p itemprop="description">Ещё почитать:</p>
   <ul class="post-list">
     {% for post in related_posts | limit: 6 %}{% include post-item.html %}{% endfor %}

@@ -18,12 +18,11 @@ description: Блог фронтенд веб-разработчика Миха�
   </aside>
 </section>  
 
-<div class="mwm" itemscope itemtype="http://schema.org/ItemList">
+<div class="mwm" itemscope itemtype="http://schema.org/Blog">
   <h1 itemprop="description">Блог фронтенд веб-разработчика &mdash; актуальные записи</h1>
 
   {%- assign post = site.posts | first %}
-  <article class="card e2 pi-huge" itemprop="itemListElement" itemscope itemtype="http://schema.org/BlogPosting">
-    <meta itemprop="position" content="0"/>
+  <article class="card e2 pi-huge" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
     <figure class="pi-huge__img_wr" itemprop='image' itemscope itemtype='http://schema.org/ImageObject'>
       <img data-proofer-ignore alt="Картинка к {{ post.title }}" class="pi-huge__img lazy"
            data-src="//images.weserv.nl/?url=mikhail-yudin.ru/{{ post.image }}&output=jpg&q=80&w=640&il&default={{ site.url }}/assets/img/no-image.svg">
