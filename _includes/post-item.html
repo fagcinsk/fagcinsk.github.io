@@ -15,7 +15,8 @@
 		<footer class="pi__meta">
 			{% include pubdate.html date=post.date %}
 			•
-			<address class="author" itemprop="author publisher" itemscope itemtype="https://schema.org/Person"><span itemprop="name">{{ post.author | default: site.author.name }}</span>
+			<address class="author" itemprop="author publisher" itemscope itemtype="https://schema.org/Person">
+				<span itemprop="name">{{ post.author | default: site.author.name }}</span>
 			</address>
 		</footer>
 		{%- endif %}
