@@ -9,16 +9,16 @@ sitemap: false
 <script src="//cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.5/fuse.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js"></script>
 <div class="mwm">
-  <div class="post card e2">
-    <h1>Поиск по блогу</h1>
-    <input type="text" id="search" tabindex="1" placeholder="Что угодно" style="width:100%">
-    <div id="resultscount"></div>
-  </div>
+	<div class="post card e2">
+		<h1>Поиск по блогу</h1>
+		<input type="text" id="search" tabindex="1" placeholder="Что угодно" style="width:100%">
+		<div id="resultscount"></div>
+	</div>
 </div>
 <div class="mwm">
-  <div id="results"></div>
+	<div id="results"></div>
 
-  <script>
+	<script>
     (function (d) {
       const searchField = d.querySelector('#search'),
         resultsCount = d.querySelector('#resultscount'),
@@ -33,15 +33,15 @@ sitemap: false
           maxPatternLength: 32,
           minMatchCharLength: 2,
           keys: [
-            { name: 'title', weight: 0.8 },
-            { name: 'description', weight: 0.5 },
-            { name: 'category', weight: 0.3 }
-          ]
+            {name: 'title', weight: 0.8},
+            {name: 'description', weight: 0.5},
+            {name: 'category', weight: 0.3},
+          ],
         },
         mark = new Mark(resultsWrapper)
       let fuse
 
-      function search (q) {
+      function search(q) {
         let result, results = fuse.search(q)
         const reg = new RegExp(q, 'gim')
         resultsWrapper.innerHTML = ''
@@ -58,7 +58,7 @@ sitemap: false
         mark.mark(q)
       }
 
-      function makeSearch () {
+      function makeSearch() {
         search(searchField.value)
       }
 
@@ -69,16 +69,18 @@ sitemap: false
 
 
       fetch('/index.json')
-        .then(function (data) { return data.json() })
+        .then(function (data) {
+          return data.json()
+        })
         .then(function (json) {
           fuse = new Fuse(json, fuseOptions)
 
           var searchQuery = decodeURIComponent(location.search).match(/\?q=(.+)/)
-          if(searchQuery){
+          if (searchQuery) {
             searchField.value = searchQuery[1]
             makeSearch()
           }
         })
     })(window.document)
-  </script>
+	</script>
 </div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 {%- assign schema = page.schema | default: layout.schema | default: "WebPage" -%}
 {%- assign lang = page.lang | default: site.lang | default: 'en' -%}
-<html class="theme-default" prefix="og: http://ogp.me/ns#" lang="{{ lang }}" itemscope itemtype="http://schema.org/{{ schema }}">
+<html class="theme-default" prefix="og: http://ogp.me/ns#" lang="{{ lang }}" itemscope itemtype="https://schema.org/{{ schema }}">
 <head>{% include head.html %}</head>
 <body>
   {%- include header.html %}

@@ -1,22 +1,23 @@
 <figure class="image" title="{{ include.url }}">
-  <a href="/{{ include.url }}" class="img-wr img-dim-{{ include.url | proportion | replace: '.','-' }}" data-size="{{ include.url | dimensions }}">
-    <img data-proofer-ignore class="lazy" data-src="/{{ include.url }}" alt="{{ include.alt | escape }}">
-  </a>
-  {%- if include.description or include.exif %}
-  <figcaption>
-    {{ include.description | escape }}
-    {%- if include.exif %}
-    {%- capture dt %}{{ include.url | exif: 'date_time' }}{% endcapture %}
-    {%- capture lat %}{{ include.url | exif: 'gps.latitude' }}{% endcapture %}
-    {%- capture lng %}{{ include.url | exif: 'gps.longitude' }}{% endcapture %}
-    {%- assign m = dt | date: "%-m" -%}
-    <br>
-    <i>{{- dt | date: "%-d" }} {% case m %}{% when '1' %}января{% when '2' %}февраля{% when '3' %}марта{% when '4'
-      %}апреля{% when '5' %}мая{% when '6' %}июня{% when '7' %}июля{% when '8' %}августа{% when '9' %}сентября{% when
-      '10' %}октября{% when '11' %}ноября{% when '12' %}декабря{% endcase %} {{ dt | date: "%Y" }} {{ dt | date: "%H:%M"
-      -}}</i>
-    Место: {{lat | round:4}}, {{lng | round:4}}; высота: {{ include.url | exif: 'gps.altitude' }} м
-    {%- endif %}
-  </figcaption>
-  {%- endif %}
+	<a href="/{{ include.url }}" class="img-wr img-dim-{{ include.url | proportion | replace: '.','-' }}"
+		 data-size="{{ include.url | dimensions }}">
+		<img data-proofer-ignore class="lazy" data-src="/{{ include.url }}" alt="{{ include.alt | escape }}">
+	</a>
+	{%- if include.description or include.exif %}
+	<figcaption>
+		{{ include.description | escape }}
+		{%- if include.exif %}
+		{%- capture dt %}{{ include.url | exif: 'date_time' }}{% endcapture %}
+		{%- capture lat %}{{ include.url | exif: 'gps.latitude' }}{% endcapture %}
+		{%- capture lng %}{{ include.url | exif: 'gps.longitude' }}{% endcapture %}
+		{%- assign m = dt | date: "%-m" -%}
+		<br>
+		<i>{{- dt | date: "%-d" }} {% case m %}{% when '1' %}января{% when '2' %}февраля{% when '3' %}марта{% when '4'
+			%}апреля{% when '5' %}мая{% when '6' %}июня{% when '7' %}июля{% when '8' %}августа{% when '9' %}сентября{% when
+			'10' %}октября{% when '11' %}ноября{% when '12' %}декабря{% endcase %} {{ dt | date: "%Y" }} {{ dt | date: "%H:%M"
+			-}}</i>
+		Место: {{lat | round:4}}, {{lng | round:4}}; высота: {{ include.url | exif: 'gps.altitude' }} м
+		{%- endif %}
+	</figcaption>
+	{%- endif %}
 </figure>

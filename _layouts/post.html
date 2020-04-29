@@ -3,39 +3,42 @@ type: article
 layout: default
 schema: Blog
 ---
-<article class="post card e2" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-  <header class="post__header">
-    <div class="post__meta">{% include post-meta.html post=page %}</div>
-    <h1 class="post__title" itemprop="headline name">{{ page.title | escape }}</h1>
-    {% if page.image %}
-    {% if page.image_hide != true %}
-    {% include image.html url=page.image alt=page.title %}
-    <meta itemprop="image" content="{{ site.url }}/{{ page.image }}">
-    {% endif %}
-    {% endif %}
-  </header>
-  <div class="article-ad">{% include ad-post-content.html %}</div>
-  <div itemprop="mainEntityOfPage articleBody">{{content}}</div>
-  <br>
-  <footer>
-    {% include share.html %}
-    <hr>
-    <div class="tile">
-      <div class="tile__image">
-        <div class="author-avatar">
-            <a class="avatar author-block__avatar e4" href="/about" rel="author" title="{{ page.author | default: site.author.name }}, перейти к профилю">
-              <img data-proofer-ignore class="lazy" data-src="/assets/img/ava.jpg" alt="{{ page.author | default: site.author.name }}, автор материала">
-            </a>
-          <p class="author-avatar__name"><a href="/about" rel="author">{{ page.author | default: site.author.name }}</a></p>
-        </div>
-      </div>
-      <div class="tile__text">
-        <p>{{site.description}}</p>
-      </div>
-    </div>
-    <p>Чтобы не пропускать новости, можно <a href="/subscribe">подписаться на email рассылку</a>.</p>
-    {% include ad-page-content.html %}
-    {% include disqus.html %}
-  </footer>
+<article class="post card e2" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+	<header class="post__header">
+		<div class="post__meta">{% include post-meta.html post=page %}</div>
+		<h1 class="post__title" itemprop="headline name">{{ page.title | escape }}</h1>
+		{% if page.image %}
+		{% if page.image_hide != true %}
+		{% include image.html url=page.image alt=page.title %}
+		<meta itemprop="image" content="{{ site.url }}/{{ page.image }}">
+		{% endif %}
+		{% endif %}
+	</header>
+	<div class="article-ad">{% include ad-post-content.html %}</div>
+	<div itemprop="mainEntityOfPage articleBody">{{content}}</div>
+	<br>
+	<footer>
+		{% include share.html %}
+		<hr>
+		<div class="tile">
+			<div class="tile__image">
+				<div class="author-avatar">
+					<a class="avatar author-block__avatar e4" href="/about" rel="author"
+						 title="{{ page.author | default: site.author.name }}, перейти к профилю">
+						<img data-proofer-ignore class="lazy" data-src="/assets/img/ava.jpg"
+								 alt="{{ page.author | default: site.author.name }}, автор материала">
+					</a>
+					<p class="author-avatar__name"><a href="/about" rel="author">{{ page.author | default: site.author.name }}</a>
+					</p>
+				</div>
+			</div>
+			<div class="tile__text">
+				<p>{{site.description}}</p>
+			</div>
+		</div>
+		<p>Чтобы не пропускать новости, можно <a href="/subscribe">подписаться на email рассылку</a>.</p>
+		{% include ad-page-content.html %}
+		{% include disqus.html %}
+	</footer>
 </article>
 <div class="mwm">{% include related.html post=page %}</div>

@@ -1,8 +1,9 @@
 {% include pubdate.html date=include.post.date %}
 {%- capture lastmod_date %}{% last_modified {{ include.post.path }} %}{% endcapture %}
 {%- include update.html date=lastmod_date %} / {%- include post-categories.html post=include.post %}
- • <a rel="author publisher" href="/about" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <span itemprop="name">{{ post.author | default: site.author.name }}</span></a>
-<a href="https://github.com/fagcinsk/fagcinsk.github.io/blob/master/{{page.path}}" rel="nofollow" title="Исходный код материала" aria-label="Исходный код материала">
-  <span class="iconify" data-icon="mdi-github-box"></span>
+• <a rel="author publisher" href="/about" itemprop="author" itemscope itemtype="https://schema.org/Person">
+	<span itemprop="name">{{ post.author | default: site.author.name }}</span></a>
+<a href="https://github.com/fagcinsk/fagcinsk.github.io/blob/master/{{page.path}}" rel="nofollow"
+	 title="Исходный код материала" aria-label="Исходный код материала">
+	<span class="iconify" data-icon="mdi-github-box"></span>
 </a>

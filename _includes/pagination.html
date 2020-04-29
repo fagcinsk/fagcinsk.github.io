@@ -1,21 +1,21 @@
 {% if paginator.total_pages > 1 %}
 <div class="pager">
-  {% if paginator.previous_page %}
-    <a class="pager__prev" href="{{ paginator.next_page_path | prepend: site.baseurl }}"  title="Предыдущая страница"><</a>
-  {% endif %}
+	{% if paginator.previous_page %}
+	<a class="pager__prev" href="{{ paginator.next_page_path | prepend: site.baseurl }}" title="Предыдущая страница"><</a>
+	{% endif %}
 
-  {% if paginator.page_trail %}
-  {% for trail in paginator.page_trail %}
-  {% if page.url == trail.path %}
-  <span class="pager__disabled">{{trail.num}}</span>
-  {% else %}
-    <a class="pager__page" href="{{ trail.path | prepend: site.baseurl }}"   title="{{trail.title}}">{{ trail.num }}</a>
-  {% endif %}
-  {% endfor %}
-  {% endif %}
+	{% if paginator.page_trail %}
+	{% for trail in paginator.page_trail %}
+	{% if page.url == trail.path %}
+	<span class="pager__disabled">{{trail.num}}</span>
+	{% else %}
+	<a class="pager__page" href="{{ trail.path | prepend: site.baseurl }}" title="{{trail.title}}">{{ trail.num }}</a>
+	{% endif %}
+	{% endfor %}
+	{% endif %}
 
-  {% if paginator.next_page %}
-    <a class="pager__next" href="{{ paginator.next_page_path | prepend: site.baseurl }}" title="Следующая страница">></a>
-  {% endif %}
+	{% if paginator.next_page %}
+	<a class="pager__next" href="{{ paginator.next_page_path | prepend: site.baseurl }}" title="Следующая страница">></a>
+	{% endif %}
 </div>
 {% endif %}

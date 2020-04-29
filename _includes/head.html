@@ -2,16 +2,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"> {% seo %}
 <meta property="og:type" content="{{ layout.type | default: 'website'}}"> {% feed_meta %}
 
-
 <link rel="shortcut icon" href="/favicon.ico">
 <link rel="apple-touch-icon" sizes="192x192" href="/images/icons/icon-192x192.png">
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#ffffff" id="themeColor">
 
-<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
-<link rel="dns-prefetch" href="https://api.iconify.design" />
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com"/>
+<link rel="dns-prefetch" href="https://api.iconify.design"/>
 
 <link rel="stylesheet" href="/assets/css/main.css"> {%- if page.leaflet == true %}
-<link href="/assets/css/leaflet.min.css" rel="stylesheet" />
+<link href="/assets/css/leaflet.min.css" rel="stylesheet"/>
 <script src="/assets/js/leaflet.min.js"></script>
 {%- endif %} {% include analytics-header.html %}

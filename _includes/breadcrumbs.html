@@ -1,34 +1,33 @@
-{% assign crumbs = page.url | split: '/' %}
-{% assign crumbs_total = crumbs | size | minus: 1 %}
-{% assign pos = 1 %}
-{% if crumbs_total > 0 %}
+{% assign crumbs = page.url | split: '/' -%}
+{%- assign crumbs_total = crumbs | size | minus: 1 -%}
+{%- assign pos = 1 -%}
+{%- if crumbs_total > 0 -%}
 <ol class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
-  <li itemprop="itemListElement" itemscope  itemtype="https://schema.org/ListItem">
-    <a itemprop="item" href="/"><span itemprop="name">Главная</span></a>
-    <meta itemprop="position" content="1" />
-  </li>
-  {% for crumb in crumbs offset: 1 %}
-    {% assign pos = pos | plus: 1 %}
-    {% if forloop.index == crumbs_total %}
-      <li class="active">
-        <span>{{page.breadcrumb|default:page.title}}</span>
-      </li>
-    {% else %}
-      {% assign crumb_limit = forloop.index | plus: 1 %}
-      {% capture crumb_url %}{% for c in crumbs limit: crumb_limit %}{{ c | append: '/' }}{% endfor %}{% endcapture %}
-      {% capture crumb_without_index %}{{ crumb_url }}{% endcapture %}
-      {% capture crumb_with_index %}{{ crumb_url | append: 'index.html' }}{% endcapture %}
-      {% capture current_page %}{{ site.baseurl }}{{ page.url }}{% endcapture %}
-
-      {% for p in site.pages %}
-        {% if crumb_without_index != current_page and crumb_without_index == p.url %}
-          <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-            <a itemprop="item" href="{{ crumb_with_index }}"><span itemprop="name">{{p.breadcrumb|default:p.title}}</span></a>
-            <meta itemprop="position" content="{{pos}}" />
-          </li>
-        {% endif %}
-      {% endfor %}
-    {% endif %}
-  {% endfor %}
+	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a itemprop="item" href="/"><span itemprop="name">Главная</span></a>
+		<meta itemprop="position" content="1"/>
+	</li>
+	{%- for crumb in crumbs offset: 1 -%}
+	{%- assign pos = pos | plus: 1 -%}
+	{%- if forloop.index == crumbs_total -%}
+	<li class="active">
+		<span>{{page.breadcrumb|default:page.title}}</span>
+	</li>
+	{%- else -%}
+	{%- assign crumb_limit = forloop.index | plus: 1 -%}
+	{%- capture crumb_url %}{% for c in crumbs limit: crumb_limit %}{{ c | append: '/' }}{% endfor %}{% endcapture -%}
+	{%- capture crumb_without_index %}{{ crumb_url }}{% endcapture -%}
+	{%- capture crumb_with_index %}{{ crumb_url | append: 'index.html' }}{% endcapture -%}
+	{%- capture current_page %}{{ site.baseurl }}{{ page.url }}{% endcapture -%}
+	{%- for p in site.pages -%}
+	{%- if crumb_without_index != current_page and crumb_without_index == p.url -%}
+	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a itemprop="item" href="{{ crumb_with_index }}"><span itemprop="name">{{p.breadcrumb|default:p.title}}</span></a>
+		<meta itemprop="position" content="{{pos}}"/>
+	</li>
+	{%- endif -%}
+	{%- endfor -%}
+	{%- endif -%}
+	{%- endfor -%}
 </ol>
 {% endif %}
