@@ -1,7 +1,10 @@
 .post-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  grid-gap: 16px;
+  grid-gap: 32px;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
 
 .pi-huge {
@@ -22,24 +25,45 @@
 }
 
 .pi {
-  overflow: hidden;
+  margin: 0;
+}
+
+.pi__link {
   padding: 0;
   display: flex;
   flex-direction: column;
 
   @extend .card;
-  @extend .e2;
 
   &:hover, &:focus {
-    @extend .e3;
-
     text-decoration: none;
-    transition: box-shadow 120ms ease-in-out;
   }
 }
 
+.pi__link {
+  position: relative;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.24);
+}
+
+.pi__link:before {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 4px;
+  z-index: -1;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.24);
+  opacity: 0;
+  transition: opacity 150ms;
+}
+
+.pi__link:hover:before {
+  opacity: 1;
+}
+
 .pi__title, .pi__meta, .pi__desc {
-  background-color: var(--card-bg);
   padding: 0 16px;
 }
 
@@ -88,4 +112,7 @@
   @extend .img-dim-1-33;
   @extend .img-wr;
   overflow: hidden;
+  margin: 0;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
 }

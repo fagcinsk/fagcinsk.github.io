@@ -4,10 +4,10 @@
 {% if related_posts != empty %}
 <section class="related-posts">
   <p>Ещё почитать:</p>
-  <div class="post-list" itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
+  <ul class="post-list">
     {%- include publisher.html -%}
     {% for post in related_posts | limit: 6 %}{% include post-item.html %}{% endfor %}
-  </div>
+  </ul>
 </section>
 {% endif %}
 {% endif %}

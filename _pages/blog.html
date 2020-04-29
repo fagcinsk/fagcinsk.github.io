@@ -22,7 +22,7 @@ description: Блог фронтенд веб-разработчика Миха�
   <h1>Блог фронтенд веб-разработчика &mdash; актуальные записи</h1>
 
   {%- assign post = site.posts | first %}
-  <article class="card e2 pi-huge">
+  <article class="card e2 pi-huge" itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
     <div class="pi-huge__img_wr">
       <img data-proofer-ignore alt="Картинка к {{ post.title }}" class="pi-huge__img lazy"
            itemprop="image" content="{{ post.image }}"
@@ -44,10 +44,10 @@ description: Блог фронтенд веб-разработчика Миха�
     </div>
   </article>
 
-  <div class="post-list" itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
+  <ul class="post-list">
     {%- include publisher.html -%}
     {%- for post in site.posts offset: 1 limit: 10 %}
     {%- include post-item.html %}
     {%- endfor %}
-  </div>
+  </ul>
 </div>

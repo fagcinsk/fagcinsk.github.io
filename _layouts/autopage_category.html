@@ -8,7 +8,7 @@ schema: CollectionPage
 <div class="mwm">
   <h1>{{ site.data.categories[category].name }} &mdash; актуальные записи категории блога</h1>
   <p>{{ site.data.categories[category].description }}</p>
-  <div class="post-list">
+  <ul class="post-list">
     {% for post in site.categories[category] %}{% include post-item.html heading_level=2 %}{% endfor %}
-  </div>
+  </ul>
 </div>
