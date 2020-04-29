@@ -1,6 +1,6 @@
 {% assign h_level = include.heading_level | default:3 %}
 {% assign hide_meta = include.hide_meta | default:false %}
-<a class="pi" href="{{ post.url }}" itemscope itemtype="https://schema.org/BlogPosting">
+<a class="pi" href="{{ post.url }}" itemprop="blogPosts" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="pi__img_wr">
   <img data-proofer-ignore alt="Картинка к {{ post.title }}" class="pi__img lazy"
     itemprop="image" itemscope itemtype="http://schema.org/ImageObject" content="{{ post.image }}"
