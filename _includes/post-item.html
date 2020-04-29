@@ -10,7 +10,7 @@
 		<header class="pi__title">
 			<h{{h_level}} itemprop="headline name">{{ post.title }}</h{{h_level}}>
 		</header>
-		<p class="pi__desc" itemprop="description">{{ post.excerpt | strip_html | truncatewords: 10 }}</p>
+		<p class="pi__desc" itemprop="description">{{ post.description | strip_html }}</p>
 		{%- if hide_meta == false %}
 		<footer class="pi__meta">
 			{% include pubdate.html date=post.date %}
