@@ -3,7 +3,7 @@ type: article
 layout: default
 schema: Blog
 ---
-<article class="post card e2" itemscope itemtype="http://schema.org/BlogPosting" itemprop="mainEntity">
+<article class="post card e2" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting" itemprop="mainEntity">
   <header class="post__header">
     <div class="post__meta">{% include post-meta.html post=page %}</div>
     <h1 class="post__title" itemprop="headline name">{{ page.title | escape }}</h1>
