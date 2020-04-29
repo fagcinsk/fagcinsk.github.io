@@ -13,7 +13,7 @@ permalink: /
   <p>В <a href="/blog">блоге</a> рассказываю о веб-разработке, об интерфейсных решениях, способах улучшения user
     experience, оптимизации веб-приложений. Собираю фронтенд best practices, быстрые простые и надёжные способы
     достижения результатов.</p>
-  <div class="post-list" itemprop="blogPosts">
+  <div class="post-list">
     {%- include publisher.html -%}
     {%- for post in site.categories["frontend"] limit: 10 %}
     {%- include post-item.html %}
