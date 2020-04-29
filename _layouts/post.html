@@ -3,19 +3,19 @@ type: article
 layout: default
 schema: Blog
 ---
-<article class="post card e2" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting" itemprop="mainEntity">
+<div class="post card e2" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post__header">
     <div class="post__meta">{% include post-meta.html post=page %}</div>
     <h1 class="post__title" itemprop="headline name">{{ page.title | escape }}</h1>
     {% if page.image %}
     {% if page.image_hide != true %}
     {% include image.html url=page.image alt=page.title %}
-    <meta itemprop="image" content="{{ page.image }}">
+    <meta itemprop="image" content="{{ site.url }}/{{ page.image }}">
     {% endif %}
     {% endif %}
   </header>
   <div class="article-ad">{% include ad-post-content.html %}</div>
-  <div itemprop="articleBody">{{content}}</div>
+  <article itemprop="mainEntityOfPage articleBody">{{content}}</article>
   <br>
   <footer>
     {% include share.html %}
@@ -34,9 +34,8 @@ schema: Blog
       </div>
     </div>
     <p>Чтобы не пропускать новости, можно <a href="/subscribe">подписаться на email рассылку</a>.</p>
-    {% include publisher.html %}
     {% include ad-page-content.html %}
     {% include disqus.html %}
   </footer>
-</article>
+</div>
 <div class="mwm">{% include related.html post=page %}</div>

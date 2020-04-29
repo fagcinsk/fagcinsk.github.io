@@ -1,21 +1,24 @@
 {% assign h_level = include.heading_level | default:3 %}
 {% assign hide_meta = include.hide_meta | default:false %}
-<li class="pi" itemprop="blogPosts" itemscope itemtype="https://schema.org/BlogPosting">
-<a class="pi__link" href="{{ post.url }}">
-  <figure class="pi__img_wr">
-  <img data-proofer-ignore alt="Картинка к {{ post.title }}" class="pi__img lazy"
-    itemprop="image" itemscope itemtype="http://schema.org/ImageObject" content="{{ post.image }}"
-    data-src="//images.weserv.nl/?url=mikhail-yudin.ru/{{ post.image }}&output=jpg&q=65&w=480&il&default={{ site.url }}/assets/img/no-image.svg">
-  </figure>
-  <header class="pi__title">
-    <h{{h_level}} itemprop="headline name">{{ post.title }}</h{{h_level}}>
-  </header>
-  <p class="pi__desc" itemprop="description">{{ post.excerpt | strip_html | truncatewords: 10 }}</p>
-  {%- if hide_meta == false %}
-  <footer class="pi__meta">
-    {% include pubdate.html date=post.date %}
-    • <address class="author" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ post.author | default: site.author.name }}</span></address>
-  </footer>
-  {%- endif %}
-</a>
+<li class="pi" itemprop="itemListElement" itemscope itemtype="https://schema.org/BlogPosting">
+	<meta itemprop="position" content="{{ forloop.index }}"/>
+	<a class="pi__link" itemprop="url" href="{{ site.url }}{{ post.url }}">
+		<figure class="pi__img_wr" itemprop='image' itemscope itemtype='http://schema.org/ImageObject'>
+			<img data-proofer-ignore alt="Картинка к {{ post.title }}" class="pi__img lazy"
+					 data-src="//images.weserv.nl/?url=mikhail-yudin.ru/{{ post.image }}&output=jpg&q=65&w=480&il&default={{ site.url }}/assets/img/no-image.svg">
+			<link itemprop="contentUrl url" href="{{ site.url }}/{{ post.image }}"/>
+		</figure>
+		<header class="pi__title">
+			<h{{h_level}} itemprop="headline name">{{ post.title }}</h{{h_level}}>
+		</header>
+		<p class="pi__desc" itemprop="description">{{ post.excerpt | strip_html | truncatewords: 10 }}</p>
+		{%- if hide_meta == false %}
+		<footer class="pi__meta">
+			{% include pubdate.html date=post.date %}
+			•
+			<address class="author" itemprop="author publisher" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ post.author | default: site.author.name }}</span>
+			</address>
+		</footer>
+		{%- endif %}
+	</a>
 </li>

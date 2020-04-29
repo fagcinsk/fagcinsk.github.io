@@ -1,14 +1,14 @@
 {% if site.data.publisher %}
-  {% assign publisher = site.data.publisher %}
-  <div itemprop="publisher" itemtype="{{ publisher['@context'] }}/{{ publisher['@type'] }}" itemscope="" hidden="">
-    <meta itemprop="name" content="{{publisher.name }}" />
-    <meta itemprop="url" content="{{ publisher.url }}" />
-    <meta itemprop="email" content="{{ publisher.email }}" />
-    <div itemprop="logo" itemtype="http://schema.org/ImageObject" itemscope="">
-      <meta itemprop="url" content="{{ publisher.logo.url }}" />
-    </div>
-    {% if publisher.sameAs %}{% for link in publisher.sameAs %}
-      <meta itemprop="sameAs" content="{{ link }}" />
-    {% endfor %}{% endif %}
-  </div>
+{% assign publisher = site.data.publisher %}
+<div itemprop="publisher" itemtype="{{ publisher['@context'] }}/{{ publisher['@type'] }}" itemscope hidden>
+	<meta itemprop="name" content="{{publisher.name }}"/>
+	<meta itemprop="email" content="{{ publisher.email }}"/>
+	<figure itemprop="logo" itemtype="http://schema.org/ImageObject" itemscope>
+		<img itemprop="contentUrl url" alt="Лого {{publisher.name }}" src="{{ site.url }}{{ publisher.logo.url }}"/>
+	</figure>
+	<a href="{{ publisher.url }}" itemprop="url" rel="noreferrer,noopener">{{publisher.name }}</a>
+	{% if publisher.sameAs %}{% for link in publisher.sameAs %}
+	<meta itemprop="sameAs" content="{{ link }}"/>
+	{% endfor %}{% endif %}
+</div>
 {% endif %}

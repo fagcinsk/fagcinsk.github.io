@@ -9,7 +9,7 @@ description: Блог фронтенд веб-разработчика Миха�
 ---
 
 <section class="pr-intro">
-  <div class="content-block card post e2">
+  <div class="content-block card post e2" itemprop="description">
     {% capture promo_text %}{% include promo-text.md %}{% endcapture %}
     {{ promo_text | markdownify }}
   </div>
@@ -18,34 +18,34 @@ description: Блог фронтенд веб-разработчика Миха�
   </aside>
 </section>  
 
-<div class="mwm">
-  <h1>Блог фронтенд веб-разработчика &mdash; актуальные записи</h1>
+<div class="mwm" itemscope itemtype="http://schema.org/ItemList">
+  <h1 itemprop="description">Блог фронтенд веб-разработчика &mdash; актуальные записи</h1>
 
   {%- assign post = site.posts | first %}
-  <article class="card e2 pi-huge" itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
-    <div class="pi-huge__img_wr">
+  <article class="card e2 pi-huge" itemprop="itemListElement" itemscope itemtype="http://schema.org/BlogPosting">
+    <meta itemprop="position" content="0"/>
+    <figure class="pi-huge__img_wr" itemprop='image' itemscope itemtype='http://schema.org/ImageObject'>
       <img data-proofer-ignore alt="Картинка к {{ post.title }}" class="pi-huge__img lazy"
-           itemprop="image" content="{{ post.image }}"
            data-src="//images.weserv.nl/?url=mikhail-yudin.ru/{{ post.image }}&output=jpg&q=80&w=640&il&default={{ site.url }}/assets/img/no-image.svg">
-    </div>
+      <link itemprop="contentUrl url" href="{{ site.url }}/{{ post.image }}"/>
+    </figure>
     <div class="pi-huge__content">
       <header class="pi-huge__title">
-        <h2 itemprop="headline name"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <h2 itemprop="headline name"><a itemprop="url" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h2>
       </header>
       <div class="pi-huge_desc">
-        <p>{{ post.excerpt | strip_html | truncatewords: 75 }}</p>
+        <p itemprop="description">{{ post.excerpt | strip_html }}</p>
       </div>
       <footer class="pi-huge__meta">
         {% include pubdate.html date=post.date %}
         •
-        <address class="author" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ post.author | default: site.author.name }}</span>
+        <address class="author" itemprop="author publisher" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ post.author | default: site.author.name }}</span>
         </address>
       </footer>
     </div>
   </article>
 
   <ul class="post-list">
-    {%- include publisher.html -%}
     {%- for post in site.posts offset: 1 limit: 10 %}
     {%- include post-item.html %}
     {%- endfor %}
