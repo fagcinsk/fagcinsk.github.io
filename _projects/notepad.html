@@ -99,7 +99,7 @@ small {
 }
 </style>
 <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
-<div id="notepad" tabindex="1" contenteditable autofocus></div>
+<div id="notepad" tabindex="1" contenteditable tabindex="1"></div>
 <ul id="menu" class="m">
   <li class="m__item" data-action="formatClear" title="Clear format">
     <i class="iconify" data-icon="mdi-format-clear"></i>
@@ -204,6 +204,7 @@ for (let i in actionButtons) {
 
 fillHistoryList();
 np.focus();
+np.click();
 
 </script>
 <small class="copyright">
