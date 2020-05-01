@@ -20,7 +20,7 @@ image: photos/normalize-css-protiv-reset-css.png?v=1
 
 А normalize.css решает в том числе и эту проблему.
 В итоге сделал выбор в сторону normalize.css против reset.css. 
-Вместе с [системными шрифтами](/frontend/most-recent-variant-of-css-system-font-families/) это решение позволяет меньшими затратами достичь нужного результата и быстрее предоставить пользователю контент.
+Вместе с [системными шрифтами](/frontend/most-recent-variant-of-css-system-font-families) это решение позволяет меньшими затратами достичь нужного результата и быстрее предоставить пользователю контент.
 
 ## Где скачать normalize.css
 
