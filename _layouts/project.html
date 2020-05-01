@@ -2,6 +2,16 @@
 {%- assign schema = page.schema | default: layout.schema | default: "WebPage" -%}
 {%- assign lang = page.lang | default: site.lang | default: 'en' -%}
 <html prefix="og: http://ogp.me/ns#" lang="{{ lang }}" itemscope itemtype="https://schema.org/{{ schema }}">
-<head>{% include head.html %}</head>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"> {% seo %}
+<meta property="og:type" content="{{ layout.type | default: 'website'}}"> {% feed_meta %}
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="192x192" href="/images/icons/icon-192x192.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#ffffff" id="themeColor">
+{% include analytics-header.html %}
+</head>
 <body>{{ content }}</body>
 </html>
