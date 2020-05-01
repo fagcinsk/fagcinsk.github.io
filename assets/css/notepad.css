@@ -1,0 +1,94 @@
+html {
+  touch-action: manipulation;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  color: #222;
+  display: flex;
+  flex-flow: column;
+  font: 1.25em/1.6 "Noto Sans", sans-serif;
+}
+
+a {
+  color: #c44;
+  text-decoration: none;
+}
+
+small {
+  font-size: 0.75em;
+  color: #666;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+#menu,
+#history {
+  margin: 0;
+  padding: 0;
+}
+
+#menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  list-style-type: none;
+  display: flex;
+  flex-flow: column;
+  width: 42px;
+  opacity: 0.75;
+}
+
+.m__item {
+  background-color: #eee;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.m__item:hover,
+.m__item.open {
+  background-color: #ccc;
+}
+
+#history {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: calc(100vw - 42px);
+  max-width: 250px;
+  max-height: 176px;
+  overflow-y: auto;
+  background-color: #eee;
+}
+
+.m__item.open > #history {
+  display: flex;
+  flex-flow: column;
+}
+
+.h__item {
+  font-size: 1rem;
+  padding: 12px 16px;
+  list-style: none;
+}
+
+#notepad {
+  flex-grow: 1;
+  padding: calc(16px + 4vw);
+  border: none;
+  resize: none;
+  outline: none;
+  overflow-y: auto;
+  background-color: #fefefe;
+}

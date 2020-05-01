@@ -4,209 +4,26 @@ title: Блокнот
 permalink: /projects/notepad
 description: Блокнот с сохранением в Local Storage, поддержкой форматирования и историей.
 ---
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" />
-<style>
-html {
-  touch-action: manipulation;
-}
-
-body {
-  margin: 0;
-  box-sizing: border-box;
-  height: 100vh;
-  color: #222;
-  display: flex;
-  flex-flow: column;
-  font: 1.25em/1.6 "Noto Sans", sans-serif;
-}
-
-a {
-  color: #c44;
-  text-decoration: none;
-}
-
-small {
-  font-size: 0.75em;
-  color: #666;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-#menu,
-#history {
-  margin: 0;
-  padding: 0;
-}
-
-#menu {
-  position: fixed;
-  top: 0;
-  right: 0;
-  list-style-type: none;
-  display: flex;
-  flex-flow: column;
-  width: 42px;
-}
-
-.m__item {
-  background-color: #eee;
-  height: 42px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  position: relative;
-}
-
-.m__item:hover,
-.m__item.open {
-  background-color: #ccc;
-}
-
-#history {
-  display: none;
-  position: absolute;
-  top: 100%;
-  right: 0;
-  width: calc(100vw - 42px);
-  max-height: 176px;
-  overflow-y: auto;
-  background-color: #eee;
-}
-
-.m__item.open > #history {
-  display: flex;
-  flex-flow: column;
-}
-
-.h__item {
-  font-size: 1rem;
-  padding: 12px 16px;
-  list-style: none;
-}
-
-#notepad {
-  flex-grow: 1;
-  padding: calc(16px + 4vw);
-  border: none;
-  resize: none;
-  outline: none;
-  background-color: #fefefe;
-}
-</style>
+<link rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"/>
+<link rel="stylesheet" href="/assets/css/notepad.css"/>
 <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
-<div id="notepad" tabindex="1" contenteditable tabindex="1"></div>
+<div id="notepad" tabindex="1" contenteditable></div>
 <ul id="menu" class="m">
-  <li class="m__item" data-action="formatClear" title="Clear format">
-    <i class="iconify" data-icon="mdi-format-clear"></i>
-  </li>
-  <li class="m__item" data-action="historyAdd" title="Add to history">
-    <i class="iconify" data-icon="mdi-database-plus"></i>
-  </li>
-  <li class="m__item" data-action="historyClear" title="Clear history">
-    <i class="iconify" data-icon="mdi-database-remove"></i>
-  </li>
-  <li class="m__item m__history" data-action="toggle" title="History">
-    <i class="iconify" data-icon="mdi-history"></i>
-    <ul id="history"></ul>
-  </li>
+	<li class="m__item" data-action="formatClear" title="Clear format">
+		<i class="iconify" data-icon="mdi-format-clear"></i>
+	</li>
+	<li class="m__item" data-action="historyAdd" title="Add to history">
+		<i class="iconify" data-icon="mdi-database-plus"></i>
+	</li>
+	<li class="m__item" data-action="historyClear" title="Clear history">
+		<i class="iconify" data-icon="mdi-database-remove"></i>
+	</li>
+	<li class="m__item m__history" data-action="toggle" title="History">
+		<i class="iconify" data-icon="mdi-history"></i>
+		<ul id="history"></ul>
+	</li>
 </ul>
-<script>
-const PREFIX = "notepad-";
-const np = document.querySelector("#notepad");
-const history = document.querySelector("#history");
-const actionButtons = document.querySelectorAll("[data-action]");
-
-np.innerHTML = localStorage.getItem(PREFIX + "content");
-
-function saveContent() {
-  localStorage.setItem(PREFIX + "content", np.innerHTML);
-}
-
-function getHistory() {
-  return JSON.parse(localStorage.getItem(PREFIX + "history")) || {};
-}
-
-function setHistory(data) {
-  return localStorage.setItem(PREFIX + "history", JSON.stringify(data));
-}
-
-function fillHistoryList() {
-  history.innerHTML = "";
-  const hData = getHistory();
-  console.log(hData);
-  for (let i in hData) {
-    if (!hData.hasOwnProperty(i)) continue;
-    let hItem = document.createElement("li");
-    hItem.classList.add("h__item");
-    hItem.dataset["action"] = "restoreFromHistory";
-    hItem.dataset["key"] = i;
-    hItem.innerText = i;
-    history.appendChild(hItem);
-    addActionButtonHandler(hItem);
-  }
-}
-
-function onHistoryAdd() {
-  const hData = getHistory();
-  hData[new Date().toLocaleString()] = np.innerHTML;
-  setHistory(hData);
-  fillHistoryList();
-}
-
-function onHistoryClear() {
-  if (!confirm("Remove ALL records from hidtory?")) return;
-  setHistory({});
-  fillHistoryList();
-}
-
-function onFormatClear() {
-  document.execCommand("removeformat");
-}
-
-function onToggle() {
-  if (this.classList.contains("open")) {
-    this.classList.remove("open");
-  } else {
-    this.classList.add("open");
-  }
-}
-
-function onRestoreFromHistory() {
-  console.log("rfh");
-  const hData = getHistory();
-  np.innerHTML = hData[this.dataset.key];
-}
-
-function addActionButtonHandler(actionButton) {
-  actionButton.addEventListener("click", function (e) {
-    let action = this.dataset.action;
-    action = action.charAt(0).toUpperCase() + action.slice(1);
-    window["on" + action].bind(this)(e);
-    saveContent();
-  });
-}
-
-np.addEventListener("keypress", saveContent);
-
-for (let i in actionButtons) {
-  if (!actionButtons.hasOwnProperty(i)) continue;
-  actionButtons[i].addEventListener("mousedown", function (e) {
-    e.preventDefault();
-    e.stopPropagation();
-  });
-  addActionButtonHandler(actionButtons[i]);
-}
-
-fillHistoryList();
-np.focus();
-np.click();
-
-</script>
-<small class="copyright">
-  &copy; <a href="https://mikhail-yudin.ru">Mikhail Yudin</a>
-</small>
+<small class="copyright">&copy; <a href="https://mikhail-yudin.ru">Mikhail Yudin</a></small>
+<script src="https://cdn.jsdelivr.net/npm/vanilla-caret-js@1.0.1/dist/VanillaCaret.min.js"></script>
+<script src="/assets/js/notepad.js"></script>
