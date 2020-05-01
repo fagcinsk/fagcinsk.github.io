@@ -50,6 +50,7 @@ permalinks: pretty
 leaflet: leaflet@1.5.1
 
 target-blank:
+  rel: external
   add_css_classes: ext-link
 
 pagination:
