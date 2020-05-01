@@ -1,0 +1,7 @@
+<!DOCTYPE html>
+{%- assign schema = page.schema | default: layout.schema | default: "WebPage" -%}
+{%- assign lang = page.lang | default: site.lang | default: 'en' -%}
+<html prefix="og: http://ogp.me/ns#" lang="{{ lang }}" itemscope itemtype="https://schema.org/{{ schema }}">
+<head>{% include head.html %}</head>
+<body>{{ content }}</body>
+</html>
