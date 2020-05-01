@@ -7,9 +7,15 @@ body {
   box-sizing: border-box;
   height: 100vh;
   color: #222;
+  background-color: #fefefe;
   display: flex;
   flex-flow: column;
   font: 1.25em/1.6 "Noto Sans", sans-serif;
+}
+
+body.dark {
+  color: #fefefe;
+  background-color: #222;
 }
 
 a {
@@ -46,7 +52,6 @@ small {
 }
 
 .m__item {
-  background-color: #eee;
   height: 42px;
   display: flex;
   justify-content: center;
@@ -57,7 +62,7 @@ small {
 
 .m__item:hover,
 .m__item.open {
-  background-color: #ccc;
+  background-color: rgba(128, 128, 128, 0.5);
 }
 
 #history {
@@ -67,9 +72,11 @@ small {
   right: 0;
   width: calc(100vw - 42px);
   max-width: 250px;
+  min-height: 42px;
   max-height: 176px;
+  padding: 8px 0;
   overflow-y: auto;
-  background-color: #eee;
+  background-color: rgba(128, 128, 128, 0.5);
 }
 
 .m__item.open > #history {
@@ -90,5 +97,4 @@ small {
   resize: none;
   outline: none;
   overflow-y: auto;
-  background-color: #fefefe;
 }

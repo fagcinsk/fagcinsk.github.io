@@ -1,4 +1,5 @@
 const PREFIX = 'notepad-'
+const THEME_PREFIX = PREFIX + 'theme'
 const CONTENT_PREFIX = PREFIX + 'content'
 const HISTORY_PREFIX = PREFIX + 'history'
 
@@ -7,6 +8,20 @@ const history = document.querySelector('#history')
 const actionButtons = document.querySelectorAll('[data-action]')
 
 const caret = new VanillaCaret(np)
+
+let notepadTheme = !!localStorage.getItem(THEME_PREFIX)
+
+function setTheme(theme) {
+  notepadTheme = theme
+  if (theme) {
+    document.body.classList.add('dark')
+  } else {
+    document.body.classList.remove('dark')
+  }
+  localStorage.setItem(THEME_PREFIX, theme)
+}
+
+setTheme(notepadTheme)
 
 function getSnapshot() {
   return {content: np.innerHTML, pos: caret.getPos()}
@@ -70,6 +85,10 @@ function onToggle() {
   }
 }
 
+function onThemeSwitch() {
+  setTheme(!notepadTheme)
+}
+
 function onRestoreFromHistory() {
   const hData = getHistory()
   let data = hData[this.dataset.key]
@@ -124,4 +143,5 @@ for (let i in actionButtons) {
 }
 
 fillHistoryList()
+np.focus()
 restoreContent(JSON.parse(localStorage.getItem(CONTENT_PREFIX)))
