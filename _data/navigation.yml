@@ -1,4 +1,4 @@
 - {name: 'Обо мне', link: '/about', rel: 'author'}
 - {name: 'Блог', link: '/blog/'}
 - {name: 'Проекты', link: '/projects/'}
-- {name: 'Контакты', link: '/contact', rel: 'contact nofollow'}
+- {name: 'Контакты', link: '/contact', rel: 'contact'}
