@@ -73,8 +73,13 @@ function onHistoryClear() {
   fillHistoryList()
 }
 
-function onFormatClear() {
-  document.execCommand('removeformat')
+function onFormat() {
+  const cmd = this.dataset['command']
+  if (cmd === 'removeformat') {
+    document.execCommand('removeformat', false, '')
+    return
+  }
+  document.execCommand(cmd)
 }
 
 function onToggle() {
@@ -101,6 +106,7 @@ function addActionButtonHandler(actionButton) {
     e.stopPropagation()
   })
   actionButton.addEventListener('click', function (e) {
+    e.stopPropagation()
     let action = this.dataset.action
     action = action.charAt(0).toUpperCase() + action.slice(1)
     window['on' + action].bind(this)(e)
@@ -130,7 +136,7 @@ np.addEventListener('input', debouncedSave)
 np.addEventListener('click', debouncedSave)
 
 np.addEventListener('mousedown', function (e) {
-  const opened = document.querySelectorAll('.open')
+  const opened = document.querySelectorAll('.open:not(.no-close)')
   for (let i in opened) {
     if (!opened.hasOwnProperty(i)) continue
     opened[i].classList.remove('open')

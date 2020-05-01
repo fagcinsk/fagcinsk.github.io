@@ -35,7 +35,8 @@ small {
 }
 
 #menu,
-#history {
+#history,
+.sm {
   margin: 0;
   padding: 0;
 }
@@ -43,16 +44,16 @@ small {
 #menu {
   position: fixed;
   top: 0;
-  right: 0;
+  right: 16px;
   list-style-type: none;
   display: flex;
   flex-flow: column;
-  width: 42px;
   opacity: 0.75;
 }
 
 .m__item {
   height: 42px;
+  width: 42px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -66,7 +67,6 @@ small {
 }
 
 #history {
-  display: none;
   position: absolute;
   top: 100%;
   right: 0;
@@ -79,9 +79,23 @@ small {
   background-color: rgba(128, 128, 128, 0.5);
 }
 
+.sm {
+  position: absolute;
+  right: 100%;
+  top: 0;
+}
+
+#history, .sm {
+  display: none;
+}
+
 .m__item.open > #history {
   display: flex;
   flex-flow: column;
+}
+
+.m__item.open > .sm {
+  display: flex;
 }
 
 .h__item {

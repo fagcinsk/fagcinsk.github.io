@@ -11,11 +11,38 @@ image: photos/pencil-notepad-notebook-paper.jpg
 <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
 <div id="notepad" tabindex="1" contenteditable></div>
 <ul id="menu" class="m">
+	<li class="m__item no-close" data-action="toggle" title="Text format">
+		<i class="iconify" data-icon="mdi-format-size"></i>
+		<ul class="sm">
+			<li class="m__item" data-action="format" data-command="removeformat" title="Clear format">
+				<i class="iconify" data-icon="mdi-format-clear"></i>
+			</li>
+			<li class="m__item" data-action="format" data-command="bold" title="Bold">
+				<i class="iconify" data-icon="mdi-format-bold"></i>
+			</li>
+
+			<li class="m__item" data-action="format" data-command="justifyFull" title="Align justify">
+				<i class="iconify" data-icon="mdi-format-align-justify"></i>
+			</li>
+			<li class="m__item" data-action="format" data-command="justifyLeft" title="Align left">
+				<i class="iconify" data-icon="mdi-format-align-left"></i>
+			</li>
+			<li class="m__item" data-action="format" data-command="justifyCenter" title="Align center">
+				<i class="iconify" data-icon="mdi-format-align-center"></i>
+			</li>
+			<li class="m__item" data-action="format" data-command="justifyRight" title="Align right">
+				<i class="iconify" data-icon="mdi-format-align-right"></i>
+			</li>
+			<li class="m__item" data-action="format" data-command="insertOrderedList" title="Numbered list">
+				<i class="iconify" data-icon="mdi-format-list-numbered"></i>
+			</li>
+			<li class="m__item" data-action="format" data-command="insertUnorderedList" title="Unordered list">
+				<i class="iconify" data-icon="mdi-format-list-bulleted"></i>
+			</li>
+		</ul>
+	</li>
 	<li class="m__item" data-action="themeSwitch" title="Switch theme">
 		<i class="iconify" data-icon="mdi-theme-light-dark"></i>
-	</li>
-	<li class="m__item" data-action="formatClear" title="Clear format">
-		<i class="iconify" data-icon="mdi-format-clear"></i>
 	</li>
 	<li class="m__item" data-action="historyAdd" title="Add to history">
 		<i class="iconify" data-icon="mdi-database-plus"></i>
