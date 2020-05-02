@@ -24,7 +24,7 @@ function saveContent() {
 }
 
 function restoreContent(data) {
-  data = data || {content: '', pos: 0}
+  if(!data) return
   np.innerHTML = data.content
   caret.setPos(data.pos)
 }

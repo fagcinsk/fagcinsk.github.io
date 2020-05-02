@@ -31,6 +31,15 @@ a {
   box-sizing: inherit;
 }
 
+/* basic typography */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  line-height: 1.2;
+  margin-bottom: 0.5em;
+}
+
+/* /basic typography */
+
 #menu,
 #menu ul,
 #history,
