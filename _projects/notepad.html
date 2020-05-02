@@ -12,7 +12,7 @@ image: photos/pencil-notepad-notebook-paper.jpg
 <link rel="stylesheet" href="/assets/css/notepad.css"/>
 <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
 <div id="notepad" tabindex="1" contenteditable></div>
-<ul id="menu" class="m">
+<ul id="menu" class="m mv">
 	<li class="m__item no-close" data-action="toggle" title="Text format">
 		<i class="iconify" data-icon="mdi-format-size"></i>
 		<ul class="sm">
@@ -43,18 +43,25 @@ image: photos/pencil-notepad-notebook-paper.jpg
 			</li>
 		</ul>
 	</li>
-	<li class="m__item" data-action="themeSwitch" title="Switch theme">
-		<i class="iconify" data-icon="mdi-theme-light-dark"></i>
-	</li>
-	<li class="m__item" data-action="historyAdd" title="Add to history">
-		<i class="iconify" data-icon="mdi-database-plus"></i>
-	</li>
-	<li class="m__item" data-action="historyClear" title="Clear history">
-		<i class="iconify" data-icon="mdi-database-remove"></i>
-	</li>
 	<li class="m__item m__history" data-action="toggle" title="History">
 		<i class="iconify" data-icon="mdi-history"></i>
-		<ul id="history"></ul>
+		<div class="sm mv">
+			<ul class="history-wrapper mh">
+				<li class="m__item" data-action="historyAdd" title="Add to history">
+					<i class="iconify" data-icon="mdi-database-plus"></i>
+				</li>
+				<li class="m__item" data-action="historyClear" title="Clear history">
+					<i class="iconify" data-icon="mdi-database-remove"></i>
+				</li>
+			</ul>
+			<ul id="history"></ul>
+		</div>
+	</li>
+	<li class="m__item" data-action="toggleFullScreen" title="Toggle full screen">
+		<i class="iconify" data-icon="mdi-arrow-expand-all"></i>
+	</li>
+	<li class="m__item" data-action="themeSwitch" title="Switch theme">
+		<i class="iconify" data-icon="mdi-theme-light-dark"></i>
 	</li>
 </ul>
 <small class="copyright">&copy; <a href="https://mikhail-yudin.ru">Mikhail Yudin</a></small>

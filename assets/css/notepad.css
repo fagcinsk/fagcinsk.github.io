@@ -35,6 +35,7 @@ small {
 }
 
 #menu,
+#menu ul,
 #history,
 .sm {
   margin: 0;
@@ -46,9 +47,7 @@ small {
   top: 0;
   right: 16px;
   list-style-type: none;
-  display: flex;
-  flex-flow: column;
-  opacity: 0.75;
+  opacity: 0.95;
 }
 
 .m__item {
@@ -62,40 +61,41 @@ small {
 }
 
 .m__item:hover,
-.m__item.open {
-  background-color: rgba(128, 128, 128, 0.5);
+.m__item.open,
+#history, .history-wrapper {
+  background-color: rgb(128, 128, 128);
 }
 
 #history {
   position: absolute;
   top: 100%;
   right: 0;
-  width: calc(100vw - 42px);
+  width: calc(100vw - 84px);
   max-width: 250px;
   min-height: 42px;
   max-height: 176px;
   padding: 8px 0;
   overflow-y: auto;
-  background-color: rgba(128, 128, 128, 0.5);
 }
 
 .sm {
   position: absolute;
   right: 100%;
   top: 0;
-}
-
-#history, .sm {
-  display: none;
-}
-
-.m__item.open > #history {
   display: flex;
+  visibility: hidden;
+}
+
+.mv, .mh {
+  display: flex;
+}
+
+.mv {
   flex-flow: column;
 }
 
-.m__item.open > .sm {
-  display: flex;
+.m__item.open > #history, .m__item.open > .sm {
+  visibility: visible;
 }
 
 .h__item {
@@ -106,9 +106,15 @@ small {
 
 #notepad {
   flex-grow: 1;
-  padding: calc(16px + 4vw);
+  padding: calc(16px + 4vw) calc(16px + 4vw + (100% - 40em) / 2);
   border: none;
   resize: none;
   outline: none;
   overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+  #notepad {
+    padding: calc(16px + 4vw);
+  }
 }

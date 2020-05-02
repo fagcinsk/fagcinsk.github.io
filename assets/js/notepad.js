@@ -84,6 +84,18 @@ function onThemeSwitch() {
   }
 }
 
+function onToggleFullScreen() {
+  const element = document.documentElement
+  let isFullscreen = document.webkitIsFullScreen || document.mozFullScreen || false
+  element.requestFullScreen = element.requestFullScreen || element.webkitRequestFullScreen || element.mozRequestFullScreen || function () {
+    return false
+  }
+  document.cancelFullScreen = document.cancelFullScreen || document.webkitCancelFullScreen || document.mozCancelFullScreen || function () {
+    return false
+  }
+  isFullscreen ? document.cancelFullScreen() : element.requestFullScreen()
+}
+
 function onRestoreFromHistory() {
   const hData = getHistory()
   let data = hData[this.dataset.key]
@@ -93,14 +105,12 @@ function onRestoreFromHistory() {
 function addActionButtonHandler(actionButton) {
   actionButton.addEventListener('mousedown', function (e) {
     e.preventDefault()
-    e.stopPropagation()
   })
   actionButton.addEventListener('click', function (e) {
     e.stopPropagation()
     let action = this.dataset.action
     action = action.charAt(0).toUpperCase() + action.slice(1)
     window['on' + action].bind(this)(e)
-    saveContent()
   })
 }
 
@@ -125,17 +135,15 @@ const debouncedSave = debounce(saveContent, 500)
 np.addEventListener('input', debouncedSave)
 np.addEventListener('click', debouncedSave)
 
-np.addEventListener('mousedown', function (e) {
+np.addEventListener('mousedown', function hideOpenedMenus(e) {
   const opened = document.querySelectorAll('.open:not(.no-close)')
   for (let i in opened) {
-    if (!opened.hasOwnProperty(i)) continue
-    opened[i].classList.remove('open')
+    if (opened.hasOwnProperty(i)) opened[i].classList.remove('open')
   }
 })
 
 for (let i in actionButtons) {
-  if (!actionButtons.hasOwnProperty(i)) continue
-  addActionButtonHandler(actionButtons[i])
+  if (actionButtons.hasOwnProperty(i)) addActionButtonHandler(actionButtons[i])
 }
 
 fillHistoryList()
