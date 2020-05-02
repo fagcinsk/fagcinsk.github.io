@@ -17,12 +17,12 @@
 	{%- assign crumb_limit = forloop.index | plus: 1 -%}
 	{%- capture crumb_url %}{% for c in crumbs limit: crumb_limit %}{{ c | append: '/' }}{% endfor %}{% endcapture -%}
 	{%- capture crumb_without_index %}{{ crumb_url }}{% endcapture -%}
-	{%- capture crumb_with_index %}{{ crumb_url | append: 'index.html' }}{% endcapture -%}
+	{%- capture crumb_with_index %}{{ crumb_url }}{% endcapture -%}
 	{%- capture current_page %}{{ site.baseurl }}{{ page.url }}{% endcapture -%}
 	{%- for p in site.pages -%}
 	{%- if crumb_without_index != current_page and crumb_without_index == p.url -%}
 	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-		<a itemprop="item" href="{{ crumb_with_index }}"><span itemprop="name">{{p.breadcrumb|default:p.title}}</span></a>
+		<a itemprop="item" href="{{ crumb_with_index | remove: 'index.html' }}"><span itemprop="name">{{p.breadcrumb|default:p.title}}</span></a>
 		<meta itemprop="position" content="{{pos}}"/>
 	</li>
 	{%- endif -%}
