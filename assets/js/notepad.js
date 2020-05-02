@@ -1,3 +1,9 @@
+/**
+ * Simple notepad with history using localstorage
+ * @author fagci https://github.com/fagcinsk/
+ * @copyright Mikhail Yudin aka fagci (https://mikhail-yudin.ru)
+ */
+
 const PREFIX = 'notepad-'
 const THEME_PREFIX = PREFIX + 'theme'
 const CONTENT_PREFIX = PREFIX + 'content'
