@@ -45,9 +45,17 @@ small {
 #menu {
   position: fixed;
   top: 0;
-  right: 16px;
+  right: 0;
   list-style-type: none;
   opacity: 0.95;
+}
+
+.theme-dark #menu, .theme-dark #menu ul {
+  background-color: #222;
+}
+
+.theme-default #menu, .theme-default #menu ul {
+  background-color: #fefefe;
 }
 
 .m__item {
@@ -84,6 +92,7 @@ small {
   top: 0;
   display: flex;
   visibility: hidden;
+  max-width: calc(100vw - 42px);
 }
 
 .mv, .mh {
