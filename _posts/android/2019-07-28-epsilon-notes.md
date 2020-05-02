@@ -1,8 +1,8 @@
 ---
 layout: post
 categories: android
-title: Песочница в Epsilon Notes или крутой редактор markdown для Android
-description: Расскажу, зачем и как я использую этот инструмент
+title: Живая разработка в Epsilon Notes
+description: Песочница и крутой редактор Markdown для Android. Расскажу, зачем и как я использую Epsilon Notes.
 image: photos/en.jpg
 ---
 
