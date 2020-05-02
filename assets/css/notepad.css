@@ -9,12 +9,8 @@ html {
 body {
   margin: 0;
   box-sizing: border-box;
-  height: 100%;
-  max-height: 100vh;
   color: #222;
   background-color: #fefefe;
-  display: flex;
-  flex-flow: column;
   font: 1em/1.6 "Noto Sans", sans-serif;
 }
 
@@ -121,12 +117,13 @@ a {
 }
 
 #notepad {
-  flex-grow: 1;
   padding: calc(16px + 3vw) calc(16px + 3vw + (100% - 48em) / 2);
   border: none;
   resize: none;
   outline: none;
   overflow-y: auto;
+  height: 100vh;
+  max-height: 100vh;
 }
 
 @media (max-width: 768px) {
