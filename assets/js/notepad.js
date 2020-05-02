@@ -5,7 +5,6 @@
  */
 
 const PREFIX = 'notepad-'
-const THEME_PREFIX = PREFIX + 'theme'
 const CONTENT_PREFIX = PREFIX + 'content'
 const HISTORY_PREFIX = PREFIX + 'history'
 
@@ -24,7 +23,7 @@ function saveContent() {
 }
 
 function restoreContent(data) {
-  if(!data) return
+  if (!data) return
   np.innerHTML = data.content
   caret.setPos(data.pos)
 }
@@ -66,12 +65,7 @@ function onHistoryClear() {
 }
 
 function onFormat() {
-  const cmd = this.dataset['command']
-  if (cmd === 'removeformat') {
-    document.execCommand('removeformat', false, '')
-    return
-  }
-  document.execCommand(cmd)
+  document.execCommand(this.dataset['command'])
 }
 
 function onToggle() {
