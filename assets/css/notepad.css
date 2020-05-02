@@ -12,6 +12,7 @@ body {
   color: #222;
   background-color: #fefefe;
   font: 1em/1.6 "Noto Sans", sans-serif;
+  overflow: hidden;
 }
 
 body.theme-dark {
@@ -122,7 +123,7 @@ a {
   resize: none;
   outline: none;
   overflow-y: auto;
-  height: 100vh;
+  height: 100%;
   max-height: 100vh;
 }
 
