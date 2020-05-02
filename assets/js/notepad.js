@@ -9,20 +9,6 @@ const actionButtons = document.querySelectorAll('[data-action]')
 
 const caret = new VanillaCaret(np)
 
-let notepadTheme = !!localStorage.getItem(THEME_PREFIX)
-
-function setTheme(theme) {
-  notepadTheme = theme
-  if (theme) {
-    document.body.classList.add('dark')
-  } else {
-    document.body.classList.remove('dark')
-  }
-  localStorage.setItem(THEME_PREFIX, theme)
-}
-
-setTheme(notepadTheme)
-
 function getSnapshot() {
   return {content: np.innerHTML, pos: caret.getPos()}
 }
@@ -91,7 +77,11 @@ function onToggle() {
 }
 
 function onThemeSwitch() {
-  setTheme(!notepadTheme)
+  if (getTheme() === 'dark') {
+    setTheme('default')
+  } else {
+    setTheme('dark')
+  }
 }
 
 function onRestoreFromHistory() {

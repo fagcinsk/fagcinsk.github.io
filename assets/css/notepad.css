@@ -13,7 +13,7 @@ body {
   font: 1.25em/1.6 "Noto Sans", sans-serif;
 }
 
-body.dark {
+body.theme-dark {
   color: #fefefe;
   background-color: #222;
 }
