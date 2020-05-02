@@ -5,19 +5,19 @@
     <span id="menu_toggler">
       <span class="iconify" data-icon="mdi:menu"></span>
     </span>
-    <nav class="main-menu" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
-      <ul class="main-menu__list menu-root">
+    <nav class="main-menu">
+      <ul class="main-menu__list menu-root" role="menu" itemscope itemtype="https://www.schema.org/SiteNavigationElement">
         {%- for nav_item in site.data.navigation -%}
-          <li class="main-menu__item">
+          <li class="main-menu__item" role="menuitem">
           <a class="menu-link" itemprop="url" href="{{nav_item.link}}" title="{{nav_item.name}}" {% if nav_item.rel %}rel="{{nav_item.rel}}"{% endif %}>
             <span itemprop="name">{{nav_item.name}}</span>
           </a>
           {% if nav_item.link == '/blog/' %}
-          <ul class="cat main-menu__list main-menu__list_sub e3">
+          <ul class="cat main-menu__list main-menu__list_sub e3" role="menu" itemscope itemtype="https://www.schema.org/SiteNavigationElement">
             {% assign cats = site.categories | sort  %}
             {%- for cat in cats -%}
             {%- capture url %}/{{ cat[0] | url_encode }}/{% endcapture -%}
-            <li class="main-menu__item">
+            <li class="main-menu__item" role="menuitem">
               <a class="menu-link cat__link" itemprop="url" href="/blog{{ url }}">
                 <span itemprop="name">{{ site.data.categories[cat[0]].name }}</span>
               </a>
