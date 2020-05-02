@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 {%- assign schema = page.schema | default: layout.schema | default: "WebPage" -%}
 {%- assign lang = page.lang | default: site.lang | default: 'en' -%}
+{%- assign manifest = page.manifest | default: site.manifest | default: '/manifest.json' -%}
 <html prefix="og: http://ogp.me/ns#" lang="{{ lang }}" itemscope itemtype="https://schema.org/{{ schema }}">
 <head>
 	<meta charset="utf-8">
@@ -10,7 +11,7 @@
 	{% feed_meta %}
 	<link rel="shortcut icon" href="/favicon.ico">
 	<link rel="apple-touch-icon" sizes="192x192" href="/images/icons/icon-192x192.png">
-	<link rel="manifest" href="/manifest.json">
+	<link rel="manifest" href="{{ manifest }}">
 	<meta name="theme-color" content="#ffffff" id="themeColor">
 	{% include analytics-header.html %}
 </head>
