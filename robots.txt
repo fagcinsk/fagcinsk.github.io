@@ -3,7 +3,6 @@ Allow: *
 Disallow: /offline.html
 Disallow: /calendar/
 Disallow: /search/
-Disallow: /contact
 Disallow: /subscribe
 Sitemap: https://mikhail-yudin.ru/sitemap.xml
 Host: mikhail-yudin.ru
