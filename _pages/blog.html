@@ -2,52 +2,57 @@
 type: website
 schema: Blog
 title: Блог фронтенд веб-разработчика
+breadcrumb: Блог
 image: assets/img/blog.jpg
 layout: default
 permalink: /blog/
 description: Блог фронтенд веб-разработчика Михаила Юдина. Мысли о вёрстке, интерфейсах, полезные записки для себя.
 ---
 
-<section class="pr-intro">
-	<div class="content-block card post e2" itemprop="description">
-		{% capture promo_text %}{% include promo-text.md %}{% endcapture %}
-		{{ promo_text | markdownify }}
-	</div>
-	<aside class="page__aside" itemscope itemtype="https://schema.org/WPSideBar">
-		{% include sidebar.html %}
-	</aside>
-</section>
-
-<div class="mwm" itemscope itemtype="https://schema.org/Blog">
-	<h1 itemprop="description">Блог фронтенд веб-разработчика &mdash; актуальные записи</h1>
-
-	{%- assign post = site.posts | first %}
-	<article class="card e2 pi-huge" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-		<figure class="pi-huge__img_wr" itemprop='image' itemscope itemtype='https://schema.org/ImageObject'>
-			<img data-proofer-ignore alt="Картинка к {{ post.title }}" class="pi-huge__img lazy"
-					 data-src="//images.weserv.nl/?url=mikhail-yudin.ru/{{ post.image }}&output=jpg&q=80&w=640&il&default={{ site.url }}/assets/img/no-image.svg">
-			<link itemprop="contentUrl url" href="{{ site.url }}/{{ post.image }}"/>
-		</figure>
-		<div class="pi-huge__content">
-			<header class="pi-huge__title">
-				<h2 itemprop="headline name"><a itemprop="url" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h2>
-			</header>
-			<div class="pi-huge_desc">
-				<p itemprop="description">{{ post.excerpt | strip_html }}</p>
+<main class="page">
+	<div class="page__content mw">
+		<section class="pr-intro">
+			<div itemprop="description">
+				{% capture promo_text %}{% include promo-text.md %}{% endcapture %}
+				{{ promo_text | markdownify }}
 			</div>
-			<footer class="pi-huge__meta">
-				{% include pubdate.html date=post.date %}
-				•
-				<address class="author" itemprop="author publisher" itemscope itemtype="https://schema.org/Person"><span
-						itemprop="name">{{ post.author | default: site.author.name }}</span>
-				</address>
-			</footer>
-		</div>
-	</article>
+			<aside class="page__aside" itemscope itemtype="https://schema.org/WPSideBar">
+				{% include sidebar.html %}
+			</aside>
+		</section>
 
-	<ul class="post-list">
-		{%- for post in site.posts offset: 1 limit: 10 %}
-		{%- include post-item.html %}
-		{%- endfor %}
-	</ul>
-</div>
+		<div class="mwm" itemscope itemtype="https://schema.org/Blog">
+			<h1 itemprop="description">Блог фронтенд веб-разработчика &mdash; актуальные записи</h1>
+
+			{%- assign post = site.posts | first %}
+			<article class="card e2 pi-huge" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+				<figure class="pi-huge__img_wr" itemprop='image' itemscope itemtype='https://schema.org/ImageObject'>
+					<img data-proofer-ignore alt="Картинка к {{ post.title }}" class="pi-huge__img lazy"
+							 data-src="//images.weserv.nl/?url=mikhail-yudin.ru/{{ post.image }}&output=jpg&q=80&w=640&il&default={{ site.url }}/assets/img/no-image.svg">
+					<link itemprop="contentUrl url" href="{{ site.url }}/{{ post.image }}"/>
+				</figure>
+				<div class="pi-huge__content">
+					<header class="pi-huge__title">
+						<h2 itemprop="headline name"><a itemprop="url" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h2>
+					</header>
+					<div class="pi-huge_desc">
+						<p itemprop="description">{{ post.excerpt | strip_html }}</p>
+					</div>
+					<footer class="pi-huge__meta">
+						{% include pubdate.html date=post.date %}
+						•
+						<address class="author" itemprop="author publisher" itemscope itemtype="https://schema.org/Person"><span
+								itemprop="name">{{ post.author | default: site.author.name }}</span>
+						</address>
+					</footer>
+				</div>
+			</article>
+
+			<ul class="post-list">
+				{%- for post in site.posts offset: 1 limit: 10 %}
+				{%- include post-item.html %}
+				{%- endfor %}
+			</ul>
+		</div>
+	</div>
+</main>

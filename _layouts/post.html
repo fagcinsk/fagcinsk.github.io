@@ -5,14 +5,17 @@ schema: Blog
 ---
 <main class="page">
 	<div class="page__content mw">
-		{% include breadcrumbs.html %}
 		<article class="post card e2" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
 			<header class="post__header">
-				<div class="post__meta">{% include post-meta.html post=page %}</div>
+				<div class="flex">
+					<div class="grow-1">{% include breadcrumbs.html %}</div>
+					<span class="post__meta">{% include post-meta.html post=page %}</span>
+				</div>
 				<h1 class="post__title" itemprop="headline name">{{ page.title | escape }}</h1>
 				{% if page.image and page.image_hide != true %}
 				{% include image.html url=page.image alt=page.title %}
 				<meta itemprop="image" content="{{ site.url }}/{{ page.image }}">
+				<meta itemprop="articleSection" content="{{ page.categories | first }}">
 				{% endif %}
 			</header>
 			<div class="article-ad">{% include ad-post-content.html %}</div>
