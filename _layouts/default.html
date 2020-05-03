@@ -1,31 +1,16 @@
 <!DOCTYPE html>
 {%- assign schema = page.schema | default: layout.schema | default: "WebPage" -%}
 {%- assign lang = page.lang | default: site.lang | default: 'en' -%}
-<html class="theme-default" prefix="og: http://ogp.me/ns#" lang="{{ lang }}" itemscope itemtype="https://schema.org/{{ schema }}">
+<html class="theme-default" prefix="og: http://ogp.me/ns#" lang="{{ lang }}"
+      itemscope itemtype="https://schema.org/{{ schema }}">
 <head>{% include head.html %}</head>
 <body>
-  {%- include header.html %}
-  {%- if page.promo == true %}
-  <section class="pr">
-    <a class="avatar author-block__avatar e4" href="/about" title="Я">
-      <img data-proofer-ignore class="lazy" data-src="/assets/img/ava.jpg" alt="Михаил Юдин аватар">
-    </a>
-    <h1>Фронтенд разработчик Михаил Юдин</h1>
-    <p>Разрабатываю сайты, оптимизирую веб-приложения, улучшаю пользовательский опыт.<br>Веду блог, делюсь идеями и крутыми фичами.</p>
-  </section>
-  {%- endif %}
-  <main class="page">
-    <div class="page__content mw">
-      {% include breadcrumbs.html %}
-      {{ content }}
-    </div>
-  </main>
-  {%- if page.gallery == true %}{% include photoswipe.html %}{% endif %}
-  {%- include footer.html %}
-
-  <script>window.lazySizesConfig={lazyClass:'lazy'}</script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" async defer></script>
-  <script src="https://code.iconify.design/1/1.0.3/iconify.min.js" async defer></script>
-  <script src="/assets/js/main.js" async defer></script>
+{% include header.html %}
+{{ content }}
+{% include footer.html %}
+{% if page.gallery == true %}
+{% include photoswipe.html %}
+{% endif %}
+{% include scripts.html %}
 </body>
 </html>

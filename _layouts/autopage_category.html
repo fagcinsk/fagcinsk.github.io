@@ -4,11 +4,15 @@ schema: CollectionPage
 ---
 
 {% assign category = page.dir | split: "/" | last %}
-
-<div class="mwm">
-  <h1>{{ site.data.categories[category].name }} &mdash; актуальные записи категории блога</h1>
-  <p>{{ site.data.categories[category].description }}</p>
-  <ul class="post-list">
-    {% for post in site.categories[category] %}{% include post-item.html heading_level=2 %}{% endfor %}
-  </ul>
-</div>
+<main class="page">
+	<div class="page__content mw">
+		{% include breadcrumbs.html %}
+		<div class="mwm">
+			<h1>{{ site.data.categories[category].name }} &mdash; актуальные записи категории блога</h1>
+			<p>{{ site.data.categories[category].description }}</p>
+			<ul class="post-list">
+				{% for post in site.categories[category] %}{% include post-item.html heading_level=2 %}{% endfor %}
+			</ul>
+		</div>
+	</div>
+</main>

@@ -3,6 +3,11 @@ type: website
 layout: default
 schema: WebPage
 ---
-<article class="post card e2" itemscope itemprop="mainContentOfPage">
-	{{ content }}
-</article>
+<main class="page">
+	<div class="page__content mw">
+		{% include breadcrumbs.html %}
+		<article class="post card e2" itemscope itemprop="mainContentOfPage">
+			{{ content }}
+		</article>
+	</div>
+</main>

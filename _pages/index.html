@@ -2,7 +2,7 @@
 type: website
 schema: CollectionPage
 title: Михаил Юдин фронтенд веб-разработчик
-layout: default
+layout: home
 promo: true
 image: assets/img/me.jpg
 permalink: /
@@ -25,8 +25,8 @@ permalink: /
   <p itemprop="description">Делюсь <a href="/projects/">проектами</a> которые доступны онлайн.</p>
   <ul class="post-list">
     {%- for doc in site.projects %}
-    {%- assign post = doc %}
-    {%- include post-item.html hide_meta=true %}
+      {%- assign post = doc %}
+      {%- include post-item.html hide_meta=true %}
     {%- endfor %}
   </ul>
 </section>

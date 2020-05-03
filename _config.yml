@@ -41,6 +41,7 @@ markdown: kramdown
 kramdown:
   input: GFM
   syntax_highlighter: rouge
+  enable_coderay: True
   syntax_highlighter_opts:
     default_lang: html
     css_class: 'codehilite'
