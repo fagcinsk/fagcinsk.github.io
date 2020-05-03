@@ -9,6 +9,7 @@
 @import "base/normalize";
 @import "base/base";
 @import "base/typography-light";
+@import "components/functional";
 @import "layout/page";
 @import "components/header";
 @import "components/site-categories";
@@ -18,5 +19,4 @@
 @import "components/map";
 @import "components/form";
 @import "components/calendar";
-@import "components/functional";
 @import "pages/post";

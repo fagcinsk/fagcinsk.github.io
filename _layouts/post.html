@@ -2,18 +2,16 @@
 type: article
 layout: default
 schema: Blog
+breadcrumb: Запись блога
 ---
 <main class="page">
 	<div class="page__content mw">
 		<article class="post card e2" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
 			<header class="post__header">
-				<div class="flex">
-					<div class="grow-1">{% include breadcrumbs.html %}</div>
-					<span class="post__meta">{% include post-meta.html post=page %}</span>
-				</div>
+				{% include breadcrumbs.html %}
 				<h1 class="post__title" itemprop="headline name">{{ page.title | escape }}</h1>
 				{% if page.image and page.image_hide != true %}
-				{% include image.html url=page.image alt=page.title %}
+				<img src="{{ site.url }}/{{ page.image }}" alt="{{ page.title | escape }}">
 				<meta itemprop="image" content="{{ site.url }}/{{ page.image }}">
 				<meta itemprop="articleSection" content="{{ page.categories | first }}">
 				{% endif %}
@@ -22,25 +20,21 @@ schema: Blog
 			<div itemprop="mainEntityOfPage articleBody">{{content}}</div>
 			<br>
 			<footer>
+				{% include post-meta.html post=page %}
 				{% include share.html %}
 				<hr>
-				<div class="tile">
-					<div class="tile__image">
-						<div class="author-avatar">
-							<a class="avatar author-block__avatar e4" href="/about" rel="author"
-								 title="{{ page.author | default: site.author.name }}, перейти к профилю">
-								<img data-proofer-ignore class="lazy" data-src="/assets/img/ava.jpg"
-										 alt="{{ page.author | default: site.author.name }}, автор материала">
-							</a>
-							<p class="author-avatar__name"><a href="/about" rel="author">{{ page.author | default: site.author.name
-								}}</a>
-							</p>
-						</div>
-					</div>
+				<address itemprop="author publisher" itemscope itemtype="https://schema.org/Person" class="tile">
+					<a class="avatar-sm tile__image" href="/about" rel="author"
+						 title="{{ page.author | default: site.author.name }}, перейти к профилю">
+						<img src="/assets/img/ava.jpg" alt="{{ page.author | default: site.author.name }}, автор материала">
+					</a>
 					<div class="tile__text">
+						Автор: <a rel="author" href="/about"><span
+							itemprop="name">{{ post.author | default: site.author.name }}</span></a>
 						<p>{{site.description}}</p>
 					</div>
-				</div>
+				</address>
+				<hr>
 				<p>Чтобы не пропускать новости, можно <a href="/subscribe">подписаться на email рассылку</a>.</p>
 				{% include ad-page-content.html %}
 				{% include disqus.html %}

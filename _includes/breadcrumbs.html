@@ -11,7 +11,7 @@
 	{%- assign pos = pos | plus: 1 -%}
 	{%- if forloop.index == crumbs_total -%}
 	<li class="active">
-		<span>{{page.breadcrumb|default:page.title}}</span>
+		<span>{{ page.breadcrumb | default:layout.breadcrumb | default:page.title }}</span>
 	</li>
 	{%- else -%}
 	{%- assign crumb_limit = forloop.index | plus: 1 -%}
