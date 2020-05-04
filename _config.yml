@@ -93,6 +93,8 @@ autopages:
 include:
   - _pages
   - _categories
+  - _headers
+  - _redirects
 
 exclude:
   - Gemfile
@@ -103,4 +105,4 @@ exclude:
   - .idea
   - .jekyll-cache
   - .sass-cache
-  - _redirects
+
