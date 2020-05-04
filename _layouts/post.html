@@ -20,8 +20,11 @@ breadcrumb: Запись блога
 			<div itemprop="mainEntityOfPage articleBody">{{content}}</div>
 			<br>
 			<footer>
-				{% include post-meta.html post=page %}
-				{% include share.html %}
+				<div class="flex">
+					<div class="grow-1">{% include share.html %}</div>
+					{% include post-meta.html post=page %}
+				</div>
+				{% include ad-page-content.html %}
 				<hr>
 				<address itemprop="author publisher" itemscope itemtype="https://schema.org/Person" class="tile">
 					<a class="avatar-sm tile__image" href="/about" rel="author"
@@ -36,7 +39,6 @@ breadcrumb: Запись блога
 				</address>
 				<hr>
 				<p>Чтобы не пропускать новости, можно <a href="/subscribe">подписаться на email рассылку</a>.</p>
-				{% include ad-page-content.html %}
 				{% include disqus.html %}
 			</footer>
 		</article>

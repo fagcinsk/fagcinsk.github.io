@@ -7,8 +7,9 @@ image: photos/stm32f103-adc-with-dma.png
 
 Having troubles with STM32f103 ADC using DMA, solved by introducing timer for external triggering.  
 
-Video here:  
-[https://www.youtube.com/watch?v=h16B7YAlttY](https://www.youtube.com/watch?v=h16B7YAlttY)  
+Video:
+
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/h16B7YAlttY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Here is working source:  
 
