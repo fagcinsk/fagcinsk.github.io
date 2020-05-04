@@ -1,20 +1,17 @@
-{% assign h_level = include.heading_level | default:3 %}
-{% assign hide_meta = include.hide_meta | default:false %}
 <li class="pi" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-	<a class="pi__link" itemprop="url" href="{{ site.url }}{{ post.url }}">
+	<a class="pi__link" itemprop="url" href="{{ post.url | absolute_url }}">
 		<figure class="pi__img_wr" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
 			<img data-proofer-ignore alt="Картинка к {{ post.title }}" class="pi__img lazy"
 					 data-src="//images.weserv.nl/?url=mikhail-yudin.ru/{{ post.image }}&output=jpg&q=65&w=480&il&default={{ site.url }}/assets/img/no-image.svg">
-			<link itemprop="contentUrl url" href="{{ site.url }}/{{ post.image }}"/>
+			<link itemprop="contentUrl url" href="{{ post.image | absolute_url }}"/>
 		</figure>
 		<header class="pi__title">
-			<h{{h_level}} itemprop="headline name">{{ post.title }}</h{{h_level}}>
+			<h3 itemprop="headline name">{{ post.title }}</h3>
 		</header>
 		<p class="pi__desc" itemprop="description">{{ post.description | strip_html }}</p>
-		{%- if hide_meta == false %}
+		{%- if (include.hide_meta | default:false) == false %}
 		<footer class="pi__meta">
-			{% include pubdate.html date=post.date %}
-			•
+			{% include pubdate.html date=post.date %} •
 			<address class="author" itemprop="author publisher" itemscope itemtype="https://schema.org/Person">
 				<span itemprop="name">{{ post.author | default: site.author.name }}</span>
 			</address>

@@ -1,14 +1,14 @@
 lang: ru
 title: Михаил Юдин
-headline: Михаил Юдин
 author:
   name: Михаил Юдин
   email: fagci.nsk@gmail.com
   jobTitle: Web Developer
   image: /assets/img/ava.jpg
 logo: /assets/img/favicon-full.png
-description: >
-  Я фронтенд разработчик, веду блог о вёрстке сайтов, оптимизации веб-приложений. Улучшаю пользовательский опыт, собираю лучшие практики в области веб-разработки.
+description: >-
+  Я фронтенд разработчик, веду блог о вёрстке сайтов, оптимизации веб-приложений.
+  Улучшаю пользовательский опыт, собираю лучшие практики в области веб-разработки.
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mikhail-yudin.ru"
@@ -93,8 +93,6 @@ autopages:
 include:
   - _pages
   - _categories
-  - _headers
-  - _redirects
 
 exclude:
   - Gemfile

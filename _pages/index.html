@@ -9,43 +9,44 @@ permalink: /
 ---
 
 <section itemscope itemtype="https://schema.org/Blog">
-  <h2>Фронтенд &mdash; последние записи блога</h2>
-  <p itemprop="description">В <a href="/blog">блоге</a> рассказываю о веб-разработке, об интерфейсных решениях, способах улучшения user
-    experience, оптимизации веб-приложений. Собираю фронтенд best practices, быстрые простые и надёжные способы
-    достижения результатов.</p>
-  <ul class="post-list">
-    {%- for post in site.categories["frontend"] limit: 10 %}
-    {%- include post-item.html %}
-    {%- endfor %}
-  </ul>
+	<h2>Фронтенд &mdash; последние записи блога</h2>
+	<p itemprop="description">В <a href="/blog">блоге</a> рассказываю о веб-разработке, об интерфейсных решениях, способах
+		улучшения user
+		experience, оптимизации веб-приложений. Собираю фронтенд best practices, быстрые простые и надёжные способы
+		достижения результатов.</p>
+	<ul class="post-list">
+		{%- for post in site.categories["frontend"] limit: 10 %}
+		{%- include post-item.html %}
+		{%- endfor %}
+	</ul>
 </section>
 
 <section itemscope itemtype="https://schema.org/Blog">
-  <h2>Проекты онлайн</h2>
-  <p itemprop="description">Делюсь <a href="/projects/">проектами</a> которые доступны онлайн.</p>
-  <ul class="post-list">
-    {%- for doc in site.projects %}
-      {%- assign post = doc %}
-      {%- include post-item.html hide_meta=true %}
-    {%- endfor %}
-  </ul>
+	<h2>Проекты онлайн</h2>
+	<p itemprop="description">Делюсь <a href="/projects/">проектами</a> которые доступны онлайн.</p>
+	<ul class="post-list">
+		{%- for doc in site.projects %}
+		{%- assign post = doc %}
+		{%- include post-item.html hide_meta=true %}
+		{%- endfor %}
+	</ul>
 </section>
 
-<section itemscope itemtype="https://schema.org/Blog">
-  <h2>Проекты на Github</h2>
-  <p itemprop="description">Веб-приложения, игры, библиотеки, исходники которых есть в свободном доступе.</p>
-  <div class="post-list">
-    {% assign category = site.data.projects | where: 'category','Web' %}
-    {% for repo in category %}
-    <div class="card e1">
-      <div class="tile">
-        <div class="tile__image"><span class="iconify project-icon" data-icon="{{ repo.icon }}"></span></div>
-        <div class="tile__text">
-          <h3><a href="https://github.com/fagcinsk/{{ repo.repo }}">{{ repo.repo }}</a></h3>
-          {{ repo.name }}
-        </div>
-      </div>
-    </div>
-    {% endfor %}
-  </div>
+<section>
+	<h2>Проекты на Github</h2>
+	<p>Веб-приложения, игры, библиотеки, исходники которых есть в свободном доступе.</p>
+	<div class="post-list">
+		{% assign category = site.data.projects | where: 'category','Web' %}
+		{% for repo in category %}
+		<div class="card e1">
+			<div class="tile">
+				<div class="tile__image"><i class="iconify project-icon" data-icon="{{ repo.icon }}"></i></div>
+				<div class="tile__text">
+					<h3><a href="https://github.com/fagcinsk/{{ repo.repo }}">{{ repo.repo }}</a></h3>
+					<p>{{ repo.name }}</p>
+				</div>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
 </section>
