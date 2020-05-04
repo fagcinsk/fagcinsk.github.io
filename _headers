@@ -1,7 +1,6 @@
 /*
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
-  Link: </assets/css/main.css>; rel=preload; as=style
 /*.jpg
   Cache-Control: max-age=31536000, public
 /*.css

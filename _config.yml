@@ -90,9 +90,6 @@ autopages:
   tags:
     enabled: false
 
-sass:
-  style: compressed
-
 include:
   - _pages
   - _categories
