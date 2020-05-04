@@ -2,3 +2,5 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/fagcinsk/fagcinsk.github.io?style=flat-square)
 ![GitHub repo size](https://img.shields.io/github/repo-size/fagcinsk/fagcinsk.github.io?style=flat-square)
 ![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/fagcinsk/fagcinsk.github.io?style=flat-square)
+
+Repo for my Jekyll [mikhail-yudin.ru](https://mikhail-yudin.ru/) blog.
