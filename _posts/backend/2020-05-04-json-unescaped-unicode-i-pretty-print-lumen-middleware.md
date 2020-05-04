@@ -1,6 +1,6 @@
 ---
 layout: post
-categories: frontend
+categories: backend
 title: Lumen middleware для UNESCAPED_UNICODE и PRETTY_PRINT
 description: Простейший способ возвращать неэкранированный юникод в Lumen посредством middleware.
 ---
