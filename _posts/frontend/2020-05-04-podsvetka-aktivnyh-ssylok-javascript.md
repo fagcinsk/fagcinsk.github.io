@@ -3,6 +3,7 @@ layout: post
 categories: frontend
 title: Подсветка активных ссылок на чистом JavaScript
 description: Подсвечиваем активные ссылки на Vanilla JS. Просто и эффективно.
+image: photos/javascript-active-links-highlight.jpg
 ---
 
 Хорошей практикой считается подсвечивать текущую ссылку, чтобы показать пользователю, где он находится в данный момент.
