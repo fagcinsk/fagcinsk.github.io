@@ -2,6 +2,8 @@ $max-content-size: 48rem;
 
 html {
   box-sizing: border-box;
+  overflow-y: scroll;
+  touch-action: manipulation;
 }
 
 body {

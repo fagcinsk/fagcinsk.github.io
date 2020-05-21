@@ -6,10 +6,6 @@ body {
   font: #{1.8rem}/#{1.6} $font-family-sans-serif;
 }
 
-code {
-  font-family: $font-family-mono;
-}
-
 h1,
 h2,
 h3,
@@ -19,52 +15,8 @@ h6 {
   line-height: 1.2;
   font-family: $font-family-sans-serif-condensed;
   font-stretch: condensed;
-  font-weight: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-dl dl,
-dl ol,
-dl ul,
-ol dl,
-ol ol,
-ol ul,
-ul dl,
-ul ol,
-ul ul {
-  font-size: 90%;
-  margin: 1.5em 0 1.5em 3em;
-}
-
-dd,
-dt,
-li {
-  margin-bottom: 1em;
-}
-
-blockquote,
-dl,
-figure,
-form,
-ol,
-p,
-pre,
-table,
-ul {
-  margin-bottom: 1em;
-}
-
-p {
-  margin-top: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
   font-weight: 300;
   letter-spacing: -0.1rem;
   margin-top: 1em;
@@ -75,6 +27,26 @@ h1 {
   &:first-of-type {
     margin-top: 0;
   }
+}
+
+p {
+  margin-top: 0;
+}
+
+
+dd,
+dt,
+li,
+blockquote,
+dl,
+figure,
+form,
+ol,
+p,
+pre,
+table,
+ul {
+  margin-bottom: 1em;
 }
 
 blockquote {

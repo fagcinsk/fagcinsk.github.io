@@ -98,13 +98,19 @@
 .pi__img, .pi-huge__img {
   object-fit: cover;
   object-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .pi__img_wr, .pi-huge__img_wr {
-  @extend .img-dim-1-33;
+  @extend .img-dim-1-77;
   @extend .img-wr;
   overflow: hidden;
   margin: 0;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
+

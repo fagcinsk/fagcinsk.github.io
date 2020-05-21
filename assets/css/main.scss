@@ -2,21 +2,4 @@
 ---
 
 @charset "utf-8";
-@import "abstracts/variables";
-@import "abstracts/mixins";
-@import "abstracts/palette";
-@import "themes/default";
-@import "base/normalize";
-@import "base/base";
-@import "base/typography-light";
-@import "components/functional";
-@import "layout/page";
-@import "components/header";
-@import "components/site-categories";
-@import "components/footer";
-@import "components/author";
-@import "components/post-item";
-@import "components/map";
-@import "components/form";
-@import "components/calendar";
-@import "pages/post";
+@import 'main.scss';

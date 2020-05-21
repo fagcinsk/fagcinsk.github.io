@@ -211,3 +211,18 @@
 .text-right {
   text-align: right;
 }
+
+// todo: improve
+
+.mw {
+  max-width: 135rem;
+}
+
+.ma {
+  margin: 2vw auto;
+}
+
+.mwm {
+  @extend .mw;
+  @extend .ma;
+}

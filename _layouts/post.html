@@ -6,12 +6,12 @@ breadcrumb: Запись блога
 ---
 <main class="page">
 	<div class="page__content mw">
-		<article class="post card e2" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+		<article class="post ma card e2" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
 			<header class="post__header">
 				{% include breadcrumbs.html %}
 				<h1 class="post__title" itemprop="headline name">{{ page.title | escape }}</h1>
 				{% if page.image and page.image_hide != true %}
-				<img src="{{ site.url }}/{{ page.image }}" alt="{{ page.title | escape }}">
+				<img class="post__img" src="{{ site.url }}/{{ page.image }}" alt="{{ page.title | escape }}">
 				<meta itemprop="image" content="{{ site.url }}/{{ page.image }}">
 				<meta itemprop="articleSection" content="{{ page.categories | first }}">
 				{% endif %}

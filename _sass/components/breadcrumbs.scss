@@ -1,0 +1,24 @@
+
+.breadcrumbs {
+  margin: 32px 0 0;
+  font-size: 1.6rem;
+  list-style: none;
+  padding: 0;
+  color: var(--breadcrumbs-c);
+
+  li {
+    display: inline-block;
+    margin: 0;
+  }
+
+  li:not(:last-child) {
+    &:after {
+      content: " / ";
+    }
+  }
+}
+
+article .breadcrumbs {
+  margin-top: 0;
+  font-size: 1.4rem;
+}
