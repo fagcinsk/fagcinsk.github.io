@@ -1,12 +1,16 @@
 @import "abstracts/variables";
 @import "abstracts/mixins";
 @import "abstracts/palette";
+
 @import "themes/default";
+
 @import "base/normalize";
 @import "base/base";
 @import "base/typography-light";
-@import "components/functional";
+@import "base/functional";
+
 @import "layout/page";
+
 @import "components/header";
 @import "components/breadcrumbs";
 @import "components/footer";
@@ -15,4 +19,5 @@
 @import "components/map";
 @import "components/form";
 @import "components/calendar";
+
 @import "pages/post";

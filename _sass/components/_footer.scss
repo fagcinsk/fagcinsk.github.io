@@ -1,0 +1,16 @@
+.page__footer {
+  margin-top: 32px;
+  padding: 64px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .contact-icons {
+    font-size: 40px;
+  }
+
+  @media (max-width: 768px) {
+    flex-flow: column;
+    align-items: center;
+  }
+}
