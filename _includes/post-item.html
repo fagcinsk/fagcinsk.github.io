@@ -9,7 +9,7 @@
 			<h3 itemprop="headline name">{{ post.title }}</h3>
 		</header>
 		<p class="pi__desc" itemprop="description">{{ post.description | strip_html }}</p>
-		{%- if (include.hide_meta | default:false) == false %}
+		{%- if include.hide_meta != true %}
 		<footer class="pi__meta">
 			{% include pubdate.html date=post.date %} •
 			<address class="author" itemprop="author publisher" itemscope itemtype="https://schema.org/Person">
