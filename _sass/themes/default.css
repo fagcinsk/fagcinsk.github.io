@@ -8,6 +8,7 @@
   --c-primary-dark: hsl(0, 100%, 25%);
   --c-primary: hsl(0, 50%, 50%);
   --c-primary-light: hsl(0, 65%, 65%);
+  --c-primary-light-transparent: hsla(0, 65%, 65%,0.15);
   --c-primary-lightest: hsl(0, 5%, 92%);
 
   --page-c: var(--c-dark);
@@ -23,8 +24,8 @@
   --link-c-h: var(--c-primary-dark);
   --link-c-a: var(--c-primary);
   --border-c: var(--c-gray);
-  --blockquote-border: var(--c-primary-light);
-  --blockquote-bg: var(--c-light);
+  --blockquote-border-c: var(--c-primary-light);
+  --blockquote-bg: var(--c-primary-light-transparent);
   --header-bg: var(--c-white);
   --menu-c: var(--c-gray-dark);
   --menu-c-a: var(--c-primary);

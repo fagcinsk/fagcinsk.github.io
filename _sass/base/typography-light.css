@@ -52,9 +52,8 @@ blockquote {
   margin-left: 0;
   margin-right: 0;
   padding: 0.25em 1.25em;
-
-  border-left: 2px solid var(--blockquote-border);
-  background-color: var(--blockquote-bg);
+  font-size: 1.6rem;
+  line-height: 1.5;
 }
 
 blockquote p {
@@ -71,7 +70,7 @@ code,
 kbd,
 samp,
 pre {
-  font: 1em/1.5 var(--font-family-monospace);
+  font: 1.6rem/1.5 var(--font-family-monospace);
 }
 
 code {

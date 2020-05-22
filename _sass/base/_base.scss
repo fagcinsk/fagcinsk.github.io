@@ -192,6 +192,11 @@ code {
   background-color: var(--code-bg);
 }
 
+blockquote {
+  border-left: 3px solid var(--blockquote-border-c);
+  background-color: var(--blockquote-bg);
+}
+
 .pr {
   padding: calc(32px + 2%) 5%;
   text-align: center;
@@ -203,7 +208,7 @@ code {
     content: "";
     position: absolute;
     top: -40px;
-    box-shadow: 0 0 72px #fff;
+    box-shadow: 0 0 72px var(--c-white);
     width: 40px;
     height: 40px;
   }
@@ -294,9 +299,9 @@ code {
 
 .ad-notify {
   font-size: 0.75em;
-  color: grey;
-  background-color: #eaeaea;
-  border: 1px solid grey;
+  color: var(--c-gray);
+  background-color: var(--c-light);
+  border: 1px solid;
   border-radius: 3px;
   padding: 8px;
   display: block;
