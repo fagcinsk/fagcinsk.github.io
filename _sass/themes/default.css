@@ -1,0 +1,51 @@
+:root {
+  --c-dark: hsl(0, 0%, 5%);
+  --c-gray-dark: hsl(0, 0%, 25%);
+  --c-gray: hsl(0, 0%, 50%);
+  --c-light: hsl(0, 0%, 95%);
+  --c-white: hsl(0, 0%, 100%);
+
+  --c-primary-dark: hsl(0, 100%, 25%);
+  --c-primary: hsl(0, 50%, 50%);
+  --c-primary-light: hsl(0, 65%, 65%);
+  --c-primary-lightest: hsl(0, 5%, 92%);
+
+  --page-c: var(--c-dark);
+  --page-bg: var(--c-primary-lightest);
+  --sel-c: var(--c-white);
+  --sel-bg: var(--c-primary);
+  --mark-c: var(--c-dark);
+  --mark-bg: var(--c-primary-light);
+  --code-c: var(--c-dark);
+  --code-bg: var(--c-light);
+  --code-border-c: var(--c-gray);
+  --link-c: var(--c-primary);
+  --link-c-h: var(--c-primary-dark);
+  --link-c-a: var(--c-primary);
+  --border-c: var(--c-gray);
+  --blockquote-border: var(--c-primary-light);
+  --blockquote-bg: var(--c-light);
+  --header-bg: var(--c-white);
+  --menu-c: var(--c-gray-dark);
+  --menu-c-a: var(--c-primary);
+  --menu-c-h: var(--c-dark);
+  --menu-bg-h: var(--c-light);
+  --go-top-bg: var(--c-white);
+  --go-top-bg-h: var(--c-primary-light);
+  --go-top-c-h: var(--c-white);
+  --promo-c: var(--c-white);
+  --promo-bg: var(--c-gray);
+  --control-c: var(--c-dark);
+  --control-border-c: var(--c-dark);
+  --control-outline-f: var(--c-primary);
+  --button-c: var(--c-white);
+  --button-bg: var(--c-primary);
+  --button-bg-a: var(--c-primary-light);
+  --cal-we-c: var(--c-gray);
+  --cal-cur-c: var(--c-primary);
+  --cal-cur-bg: var(--c-light);
+  --post-meta-c: var(--c-gray);
+  --post-desc-c: var(--c-gray-dark);
+  --card-bg: var(--c-white);
+  --breadcrumbs-c: var(--c-gray);
+}

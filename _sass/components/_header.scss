@@ -13,7 +13,7 @@
 
 .main-menu {
   text-transform: uppercase;
-  font-family: $font-family-sans-serif-condensed;
+  font-family: var(--font-family-sans-serif-condensed);
   font-stretch: condensed;
 }
 
@@ -42,7 +42,6 @@
 
   &.active {
     color: var(--menu-c-a);
-    background-color: var(--menu-bg-a);
   }
 }
 

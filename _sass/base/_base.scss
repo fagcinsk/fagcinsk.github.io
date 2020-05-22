@@ -29,8 +29,9 @@ a {
   text-decoration: none;
   transition: color 100ms ease-in-out;
 
-  &:hover {
+  &:hover, &:focus {
     text-decoration: underline;
+    color: var(--link-c-h);
   }
 
   &:active {
