@@ -1,4 +1,8 @@
-$max-content-size: 48rem;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 2000px;
 
 html {
   box-sizing: border-box;
@@ -9,46 +13,84 @@ html {
 body {
   width: 100%;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   color: var(--page-c);
   background-color: var(--page-bg);
+
+  display: grid;
+  grid-column-gap: 2vw;
+  grid-template-areas: "header header header" "promo promo promo" ". main ." ". related ." ". side-right ." "footer footer footer";
 }
 
 main {
   height: auto;
-  flex-grow: 1;
-
-  display: flex;
   min-height: 100vh;
   justify-content: center;
   z-index: 1;
   position: relative;
+  grid-area: main;
+  min-width: 0;
 }
 
-.page__content {
-  flex-grow: 1;
+.page__header {
+  grid-area: header;
 }
 
-.page__aside, .page__content {
-  margin: 0 32px;
+.page__aside_left {
+  grid-area: side-left;
+  min-width: 0;
 }
 
-.sidebar-block {
-  margin-bottom: 32px;
+.page__aside_right {
+  grid-area: side-right;
+  min-width: 0;
 }
 
-@media (max-width: $max-content-size) {
-  main {
-    flex-flow: column;
+.page__footer {
+  grid-area: footer;
+}
+
+.related {
+  grid-area: related;
+}
+
+.pr {
+  grid-area: promo;
+}
+
+.post {
+  max-width: 42em;
+}
+
+.layout-page, .layout-autopage_category, .layout-default, .layout-post {
+  grid-gap: 2vw;
+  grid-template-areas: "header header header" ". main ." ". related ." ". side-right ." "footer footer footer";
+}
+
+@media (min-width: $breakpoint-xl) {
+  .layout-post {
+    grid-template-columns: 1fr 46em 320px 1fr;
+    grid-template-areas: "header header header header" ". main side-right ." ". related related ." "footer footer footer footer";
   }
-  .page__aside, .page__content {
-    margin: 0 16px;
+}
+
+@media (min-width: $breakpoint-xxl) {
+  .layout-home {
+    grid-template-areas: "header header header header" "promo . main ." "promo footer footer footer";
+  }
+  .layout-post {
+    grid-template-columns: 1fr 46em 1fr 1fr;
+    grid-template-areas: "header header header header" ". main side-right ." ". main related ." "footer footer footer footer";
+  }
+  .pr {
+    height: 100vh;
+    position: sticky;
+    top: 0;
   }
 }
 
-@media (min-width: $max-content-size) {
-  .page__aside {
-    width: 250px;
+@media (max-width: $breakpoint-xl) {
+  .layout {
+    grid-column-gap: 2vw;
+    grid-template-columns: 0 auto 0;
   }
 }

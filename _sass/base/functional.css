@@ -212,17 +212,22 @@
   text-align: right;
 }
 
+.nowrap {
+  white-space: nowrap;
+}
+
 /* todo: improve */
 
 .mw {
   max-width: 135rem;
 }
 
-.ma {
-  margin: 2vw auto;
+.mxa {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .mwm {
   @extend .mw;
-  @extend .ma;
+  @extend .mxa;
 }

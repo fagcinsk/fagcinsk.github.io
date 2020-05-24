@@ -4,45 +4,62 @@ layout: default
 schema: Blog
 breadcrumb: Запись блога
 ---
-<main class="page">
-	<div class="page__content mw">
-		<article class="post ma card e2" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-			<header class="post__header">
-				{% include breadcrumbs.html %}
-				<h1 class="post__title" itemprop="headline name">{{ page.title | escape }}</h1>
-				{% if page.image and page.image_hide != true %}
-				<img class="post__img" src="{{ site.url }}/{{ page.image }}" alt="{{ page.title | escape }}">
-				<meta itemprop="image" content="{{ site.url }}/{{ page.image }}">
-				<meta itemprop="articleSection" content="{{ page.categories | first }}">
-				{% endif %}
-			</header>
-			<div class="article-ad">{% include ad-post-content.html %}</div>
-			<div itemprop="mainEntityOfPage articleBody">{{content}}</div>
-			<br>
-			<footer>
-				<div class="flex">
-					<div class="grow-1">{% include share.html %}</div>
-					{% include post-meta.html post=page %}
+<link rel="stylesheet" href="/assets/css/post.css">
+<main>
+	<article class="post mwm card e2" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+		<header class="post__header">
+			{% include breadcrumbs.html %}
+			<h1 class="post__title" itemprop="headline name">{{ page.title | escape }}</h1>
+			{% if page.image and page.image_hide != true %}
+			<img class="post__img" src="{{ site.url }}/{{ page.image }}" alt="{{ page.title | escape }}">
+			<meta itemprop="image" content="{{ site.url }}/{{ page.image }}">
+			<meta itemprop="articleSection" content="{{ page.categories | first }}">
+			{% endif %}
+		</header>
+		<div class="article-ad">{% include ad-post-content.html %}</div>
+		<div itemprop="mainEntityOfPage articleBody">{{content}}</div>
+		<br>
+		<footer>
+			<div class="flex">
+				<div class="grow-1">{% include share.html %}</div>
+				{% include post-meta.html post=page %}
+			</div>
+			{% include ad-page-content.html %}
+			<hr>
+			<address itemprop="author publisher" itemscope itemtype="https://schema.org/Person" class="tile">
+				<a class="avatar-sm tile__image" href="/about" rel="author"
+					 title="{{ page.author | default: site.author.name }}, перейти к профилю">
+					<img src="/assets/img/ava_128.jpg" alt="{{ page.author | default: site.author.name }}, автор материала">
+				</a>
+				<div class="tile__text">
+					Автор: <a rel="author" href="/about"><span
+						itemprop="name">{{ post.author | default: site.author.name }}</span></a>
+					<p>{{site.description}}</p>
 				</div>
-				{% include ad-page-content.html %}
-				<hr>
-				<address itemprop="author publisher" itemscope itemtype="https://schema.org/Person" class="tile">
-					<a class="avatar-sm tile__image" href="/about" rel="author"
-						 title="{{ page.author | default: site.author.name }}, перейти к профилю">
-						<img src="/assets/img/ava_128.jpg" alt="{{ page.author | default: site.author.name }}, автор материала">
-					</a>
-					<div class="tile__text">
-						Автор: <a rel="author" href="/about"><span
-							itemprop="name">{{ post.author | default: site.author.name }}</span></a>
-						<p>{{site.description}}</p>
-					</div>
-				</address>
-				<hr>
-				<p>Чтобы не пропускать новости, можно <a href="/subscribe">подписаться на email рассылку</a>.</p>
-				<p>Если остались вопросы или есть пожелания или замечания &mdash; пишите в комментарии:</p>
-				{% include disqus.html %}
-			</footer>
-		</article>
-		<div class="mwm">{% include related.html post=page %}</div>
-	</div>
+			</address>
+			<hr>
+			<p>Чтобы не пропускать новости, можно <a href="/subscribe">подписаться на email рассылку</a>.</p>
+			<p>Если остались вопросы или есть пожелания или замечания &mdash; пишите в комментарии:</p>
+			{% include disqus.html %}
+		</footer>
+	</article>
 </main>
+<aside class="related">
+	{% include related.html post=page %}
+</aside>
+<aside class="page__aside_right">
+	<section class="card e2">
+		<b class="sidebar__heading">Последние записи блога</b>
+		{%- for post in site.categories["frontend"] limit: 5 %}
+		<p class="pi-small">
+			<small>
+				{% include pubdate.html date=post.date %} •
+				{{ post.author | default: site.author.name }} •
+				{% include post-categories.html post=post %}
+			</small><br>
+			<a href="{{ post.url | absolute_url }}">{{ post.title }}</a>
+		</p>
+		{%- endfor %}
+		<a class="block text-right" href="/blog" title="Смотреть всё в блоге">смотреть всё</a>
+	</section>
+</aside>

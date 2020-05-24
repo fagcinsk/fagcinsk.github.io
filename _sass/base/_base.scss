@@ -206,6 +206,7 @@ blockquote {
   --light-color: var(--c-primary);
 
   text-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
 
   &:before,
   &:after {
@@ -246,9 +247,19 @@ blockquote {
   margin-bottom: 0;
 }
 
+.sidebar__heading {
+  font: 300 #{2.4rem}/#{1.2} var(--font-family-sans-serif-condensed);
+  font-stretch: condensed;
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.pi-small {
+  line-height: 1.2;
+}
+
 .post {
   max-width: 42em;
-  box-sizing: content-box;
   padding: 4.2vw;
 }
 
