@@ -45,6 +45,9 @@ task proofer: [:build] do
       log_level: :warn,
       check_html: true,
       ssl_verifypeer: false,
+      :typhoeus => { # The options for the curl library that's used.
+        :ssl_verifypeer => false # This will stop you from getting errors when certs can't be parsed, which doesn't matter in this case.
+      },
       assume_extension: true,
       external_only: true, # fast fix for deploying new posts problem
       internal_domains: ['mikhail-yudin.ru']
