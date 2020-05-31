@@ -44,6 +44,7 @@ task proofer: [:build] do
       '_site/',
       log_level: :warn,
       check_html: true,
+      ssl_verifypeer: false,
       assume_extension: true,
       external_only: true, # fast fix for deploying new posts problem
       internal_domains: ['mikhail-yudin.ru']
