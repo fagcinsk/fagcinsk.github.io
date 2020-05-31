@@ -1,4 +1,33 @@
-<script>window.lazySizesConfig={lazyClass:'lazy'}</script>
+<script>
+  var menutoggler = document.queryselector('#menu_toggler');
+  var mainmenu = document.queryselector('.main-menu');
+  var ismenuopened = false;
+
+  function toggleMenu(){
+    isMenuOpened = !isMenuOpened;
+    if(isMenuOpened) {
+      mainMenu.classList.add('open')
+    } else {
+      mainMenu.classList.remove('open')
+    }
+  }
+
+  function hideMenu(e){
+    if(e.target != mainMenu) return;
+    isMenuOpened = false;
+    mainMenu.classList.remove('open')
+  }
+
+  menuToggler.addEventListener('click', toggleMenu);
+  mainMenu.addEventListener('click', hideMenu);
+  mainMenu.addEventListener('touchmove', hideMenu, {passive:true});
+</script>
+<script>
+  (function (a) { const b = a.links.length; for (let c = 0; c < b; c++)a.URL.startsWith(a.links[c].href) && a.links[c].classList.add("active") })(window.document);
+</script>
+<!-- YaMetrika -->
+<noscript><div><img src="https://mc.yandex.ru/watch/54261154" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /YaMetrika --><script>window.lazySizesConfig={lazyClass:'lazy'}</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js" async defer></script>
 <script src="https://code.iconify.design/1/1.0.3/iconify.min.js" async defer></script>
 <script src="/assets/js/main.js" async defer></script>

@@ -1,9 +1,8 @@
 .page__footer {
+  background-color: var(--c-white);
+  border-top: 1px solid var(--border-c);
   margin-top: 32px;
-  padding: 64px 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding: 16px;
 
   .contact-icons {
     font-size: 40px;

@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html class="theme-default" prefix="og: http://ogp.me/ns#" lang="{{ page.lang | default: site.lang | default: 'en' }}"
-			itemscope itemtype="https://schema.org/{{ page.schema | default: layout.schema | default: 'WebPage' }}">
-<head>{% include head.html %}</head>
-<body class="layout layout-{{ page.layout }}">
-{% include header.html %}
-{{ content }}
-{% include footer.html %}
-{% if page.gallery == true %}
-{% include photoswipe.html %}
-{% endif %}
-{% include scripts.html %}
-</body>
+<html class="theme-default" 
+      prefix="og: http://ogp.me/ns#" 
+      lang="{{ page.lang | default: site.lang | default: 'en' }}"
+      itemscope itemtype="https://schema.org/{{ page.schema | default: layout.schema | default: 'WebPage' }}">
+  <head>{% include head.html %}</head>
+  <body>
+    <div class="layout layout-{{ page.layout }}">
+      {% include header.html %}
+      {{ content }}
+      {% include footer.html %}
+    </div>
+    {% if page.gallery == true %}
+      {% include photoswipe.html %}
+    {% endif %}
+    {% include scripts.html %}
+  </body>
 </html>

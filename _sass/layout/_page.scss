@@ -11,10 +11,13 @@ html {
 }
 
 body {
-  width: 100%;
-  min-height: 100vh;
   color: var(--page-c);
   background-color: var(--page-bg);
+}
+
+.layout {
+  width: 100%;
+  min-height: 100vh;
 
   display: grid;
   grid-column-gap: 2vw;
@@ -22,8 +25,6 @@ body {
 }
 
 main {
-  height: auto;
-  min-height: 100vh;
   justify-content: center;
   z-index: 1;
   position: relative;
@@ -33,6 +34,16 @@ main {
 
 .page__header {
   grid-area: header;
+  align-self: start;
+}
+
+.page__footer {
+  grid-area: footer;
+  align-self: end;
+}
+
+.page__header, .page__footer {
+  min-height: 0;
 }
 
 .page__aside_left {
@@ -43,10 +54,6 @@ main {
 .page__aside_right {
   grid-area: side-right;
   min-width: 0;
-}
-
-.page__footer {
-  grid-area: footer;
 }
 
 .related {
@@ -77,10 +84,12 @@ main {
   .layout-home {
     grid-template-areas: "header header header header" "promo . main ." "promo footer footer footer";
   }
+
   .layout-post {
     grid-template-columns: 1fr 46em 1fr 1fr;
     grid-template-areas: "header header header header" ". main side-right ." ". main related ." "footer footer footer footer";
   }
+  
   .pr {
     height: 100vh;
     position: sticky;
@@ -94,3 +103,4 @@ main {
     grid-template-columns: 0 auto 0;
   }
 }
+
