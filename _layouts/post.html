@@ -11,9 +11,9 @@ breadcrumb: Запись блога
 			{% include breadcrumbs.html %}
 			<h1 class="post__title" itemprop="headline name">{{ page.title | escape }}</h1>
 			{% if page.image and page.image_hide != true %}
-			<img class="post__img" src="{{ site.url }}/{{ page.image }}" alt="{{ page.title | escape }}">
-			<meta itemprop="image" content="{{ site.url }}/{{ page.image }}">
-			<meta itemprop="articleSection" content="{{ page.categories | first }}">
+				<img class="post__img" src="{{ site.url }}/{{ page.image }}" alt="{{ page.title | escape }}">
+				<meta itemprop="image" content="{{ site.url }}/{{ page.image }}">
+				<meta itemprop="articleSection" content="{{ page.categories | first }}">
 			{% endif %}
 		</header>
 		<div class="article-ad">{% include ad-post-content.html %}</div>
@@ -28,12 +28,12 @@ breadcrumb: Запись блога
 			<hr>
 			<address itemprop="author publisher" itemscope itemtype="https://schema.org/Person" class="tile">
 				<a class="avatar-sm tile__image" href="/about" rel="author"
-					 title="{{ page.author | default: site.author.name }}, перейти к профилю">
+												   title="{{ page.author | default: site.author.name }}, перейти к профилю">
 					<img src="/assets/img/ava_128.jpg" alt="{{ page.author | default: site.author.name }}, автор материала">
 				</a>
 				<div class="tile__text">
 					Автор: <a rel="author" href="/about"><span
-						itemprop="name">{{ post.author | default: site.author.name }}</span></a>
+								 itemprop="name">{{ post.author | default: site.author.name }}</span></a>
 					<p>{{site.description}}</p>
 				</div>
 			</address>
@@ -61,5 +61,25 @@ breadcrumb: Запись блога
 		</p>
 		{%- endfor %}
 		<a class="block text-right" href="/blog" title="Смотреть всё в блоге">смотреть всё</a>
+		<!-- Yandex.RTB R-A-427763-6 -->
+		<div id="yandex_rtb_R-A-427763-6"></div>
+		<script type="text/javascript">
+			(function(w, d, n, s, t) {
+				w[n] = w[n] || [];
+				w[n].push(function() {
+					Ya.Context.AdvManager.render({
+						blockId: "R-A-427763-6",
+						renderTo: "yandex_rtb_R-A-427763-6",
+						async: true
+					});
+				});
+				t = d.getElementsByTagName("script")[0];
+				s = d.createElement("script");
+				s.type = "text/javascript";
+				s.src = "//an.yandex.ru/system/context.js";
+				s.async = true;
+				t.parentNode.insertBefore(s, t);
+			})(this, this.document, "yandexContextAsyncCallbacks");
+		</script>
 	</section>
 </aside>
