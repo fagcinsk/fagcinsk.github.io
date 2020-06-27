@@ -16,10 +16,10 @@ description: Блог фронтенд веб-разработчика Миха�
 				{% capture promo_text %}{% include promo-text.md %}{% endcapture %}
 				{{ promo_text | markdownify }}
 			</div>
-			<aside class="page__aside" itemscope itemtype="https://schema.org/WPSideBar">
-				{% include sidebar.html %}
-			</aside>
 		</section>
+		<aside itemscope itemtype="https://schema.org/WPSideBar">
+			{% include ad-page-full.html %}
+		</aside>
 
 		<div class="mwm" itemscope itemtype="https://schema.org/Blog">
 			<h1 itemprop="description">Блог фронтенд веб-разработчика &mdash; актуальные записи</h1>
@@ -28,7 +28,7 @@ description: Блог фронтенд веб-разработчика Миха�
 			<article class="card e2 pi-huge" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
 				<figure class="pi-huge__img_wr" itemprop='image' itemscope itemtype='https://schema.org/ImageObject'>
 					<img data-proofer-ignore alt="Картинка к {{ post.title }}" class="pi-huge__img lazy"
-							 data-src="//images.weserv.nl/?url=mikhail-yudin.ru/{{ post.image }}&output=jpg&q=80&w=640&il&default={{ site.url }}/assets/img/no-image.svg">
+																						data-src="//images.weserv.nl/?url=mikhail-yudin.ru/{{ post.image }}&output=jpg&q=80&w=640&il&default={{ site.url }}/assets/img/no-image.svg">
 					<link itemprop="contentUrl url" href="{{ site.url }}/{{ post.image }}"/>
 				</figure>
 				<div class="pi-huge__content">
@@ -42,7 +42,7 @@ description: Блог фронтенд веб-разработчика Миха�
 						{% include pubdate.html date=post.date %}
 						•
 						<address class="author" itemprop="author publisher" itemscope itemtype="https://schema.org/Person"><span
-								itemprop="name">{{ post.author | default: site.author.name }}</span>
+																					  itemprop="name">{{ post.author | default: site.author.name }}</span>
 						</address>
 					</footer>
 				</div>
