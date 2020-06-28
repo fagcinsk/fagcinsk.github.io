@@ -46,6 +46,12 @@ main {
   min-height: 0;
 }
 
+.page__aside_left, .page__aside_right {
+    display: grid;
+    grid-gap: 16px;
+    grid-auto-rows: minmax(min-content, max-content);
+}
+
 .page__aside_left {
   grid-area: side-left;
   min-width: 0;
