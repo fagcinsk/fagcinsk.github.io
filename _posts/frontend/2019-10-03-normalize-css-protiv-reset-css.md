@@ -2,7 +2,7 @@
 layout: post
 categories: frontend
 title: "Битва титанов: normalize.css против reset.css"
-description: Использовать normalize.css практично и менее затратно. Расскажу почему и что подвело к использованию normalize.css вместо reset.css
+description: Чтобы сайт отображался одинаково во всех браузерах используйте normalize.css. Расскажу почему и что подвело к использованию normalize.css вместо reset.css
 image: photos/normalize-css-protiv-reset-css.png?v=1
 ---
 
@@ -25,4 +25,8 @@ image: photos/normalize-css-protiv-reset-css.png?v=1
 ## Где скачать normalize.css
 
 Известный источник с самым большим комьюнити &mdash; [normalize.css](https://github.com/necolas/normalize.css/) от [Nicolas Gallagher](https://github.com/necolas).
-Официальный сайт проекта [necolas.github.io/normalize.css](https://necolas.github.io/normalize.css/)
+Официальный сайт проекта [necolas.github.io/normalize.css](https://necolas.github.io/normalize.css/).
+
+Так же существует __более лёгкая версия normalize.css__ для топовых браузеров:
+[sindresorhus/modern-normalize](https://github.com/sindresorhus/modern-normalize).
+
