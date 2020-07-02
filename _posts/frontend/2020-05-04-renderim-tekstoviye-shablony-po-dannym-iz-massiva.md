@@ -34,17 +34,26 @@ image: photos/php-render-text-template.jpg
  */
 public static function renderDataTemplate(string $template, array $data): string
 {
-    return preg_replace_callback('/{([^}]+?)}/', static function ($v) use ($data) {
-        $temp = &$data;
-        foreach (explode('.', $v[1]) as $key) {
-            $temp = &$temp[$key] ?? null;
-            if ($temp === null) {
-                return null;
-            }
-        }
-        return $temp;
-    }, $template);
+  return preg_replace_callback('/{([^{}]+?)}/', static function ($v) use ($data) {
+    $temp = &$data;
+    foreach (explode('.', $v[1]) as $key) {
+      $temp = &$temp[$key] ?? null;
+      if ($temp === null) {
+        return null;
+      }
+    }
+    return $temp;
+  }, $template);
 }
 ```
+
+Данная версия позволяет выполнять множественную замену вложенных шаблонов,
+применяя функцию несколько раз для шаблона вида:
+
+```yaml
+{variables.{data.item.type}.{id}.name}
+
+```
+так как разворачивает только ближайшие фигурные скобки.
 
 Актуальная версия функции PHP для рендера шаблона по данным из ассоциативного массива: [PHP function to render string path template using nested array](https://gist.github.com/fagcinsk/5c189856f00f4e3c4329858db19b5841).
