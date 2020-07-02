@@ -11,6 +11,11 @@ image: photos/optimizaciya-i-uskoreniye-vim.png
 
 ## VIM хорошо работает по SSH
 
+После [перехода на удалёнку по SSH](/blog/linux/rabotaem-udalyonno-po-ssh-na-karantine)
+и [перехода с IDEA на VIM](/blog/frontend/perehod-s-phpstorm-ili-idea-na-vim),
+стал использовать ресурсы серверов для веб-разработки, ибо сервера обычно мощнее
+и оперативы больше ;)
+
 Скорость работы VIM по SSH зависит от нескольких факторов:
 
 - качество соединения
