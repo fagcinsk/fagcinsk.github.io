@@ -2,7 +2,7 @@
 layout: post
 categories: frontend
 title: "Битва титанов: normalize.css против reset.css"
-description: Чтобы сайт отображался одинаково во всех браузерах используйте normalize.css. Расскажу почему и что подвело к использованию normalize.css вместо reset.css
+description: Чтобы сайт отображался одинаково во всех браузерах используйте normalize.css. Расскажу где скачать полную версию и лайт версию для топовых браузеров =)
 image: photos/normalize-css-protiv-reset-css.png?v=1
 ---
 
