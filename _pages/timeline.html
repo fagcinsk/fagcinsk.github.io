@@ -1,0 +1,43 @@
+---
+type: website
+schema: Blog
+title: Архив записей блога
+breadcrumb: Архив
+image: assets/img/blog.jpg
+layout: default
+permalink: /arhiv-zapisey-bloga/
+description: История размещения постов в блоге от самых новых
+---
+
+<link rel="stylesheet" href="/assets/css/post.css">
+<main>
+  <article class="post mwm card e2">
+    <h1 itemprop="description">Архив блога фронтенд разработчика</h1>
+
+    <ul class="archive">
+      {%- for post in site.posts limit: 50 %}
+      <article class="arcive__item"
+               itemprop="blogPost" 
+               itemscope itemtype="https://schema.org/BlogPosting">
+        <h2 itemprop="headline name">
+          <a itemprop="url" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+        </h2>
+        <footer class="text-small nowrap">
+          {% include pubdate.html date=post.date %}
+          •
+          <address class="inline" 
+                   itemprop="author publisher" 
+                   itemscope itemtype="https://schema.org/Person">
+            <span itemprop="name">{{ post.author | default: site.author.name }}</span>
+          </address>
+        </footer>
+      </article>
+      {%- endfor %}
+    </ul>
+  </article>
+</main>
+<aside class="page__aside_right">
+  <section class="card e2">
+    {% include ad-sidebar.html %}
+  </section>
+</aside>

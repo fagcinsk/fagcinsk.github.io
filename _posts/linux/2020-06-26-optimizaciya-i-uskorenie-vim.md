@@ -9,6 +9,7 @@ image: photos/optimizaciya-i-uskoreniye-vim.png
 Делюсь опытом ускорения редактора VIM при использовании через SSH соединение,
 в том числе при работе через tmux.
 
+
 ## VIM хорошо работает по SSH
 
 После [перехода на удалёнку по SSH](/blog/linux/rabotaem-udalyonno-po-ssh-na-karantine)

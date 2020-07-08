@@ -4,6 +4,7 @@ layout: default
 schema: Blog
 breadcrumb: Запись блога
 ---
+{% assign category = page.categories | first %}
 <link rel="stylesheet" href="/assets/css/post.css">
 <main>
 	<article class="post mwm card e2" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
@@ -13,7 +14,7 @@ breadcrumb: Запись блога
 			{% if page.image and page.image_hide != true %}
 				<img class="post__img" src="{{ site.url }}/{{ page.image }}" alt="{{ page.title | escape }}">
 				<meta itemprop="image" content="{{ site.url }}/{{ page.image }}">
-				<meta itemprop="articleSection" content="{{ page.categories | first }}">
+				<meta itemprop="articleSection" content="{{ category }}">
 			{% endif %}
 		</header>
 		<div class="article-ad">{% include ad-post-content.html %}</div>
@@ -50,7 +51,8 @@ breadcrumb: Запись блога
 <aside class="page__aside_right">
 	<section class="card e2">
 		<b class="sidebar__heading">Последние записи блога</b>
-		{%- for post in site.categories["frontend"] limit: 5 %}
+    {% assign posts = site.categories[category] | where_exp:"post","post.id != page.id" %}
+		{%- for post in posts limit: 5 %}
 		<p class="pi-small">
 			<small>
 				{% include pubdate.html date=post.date %} •

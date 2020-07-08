@@ -1,10 +1,13 @@
+.archive, .post-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
 .post-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   grid-gap: 32px;
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
 }
 
 .pi-huge {
