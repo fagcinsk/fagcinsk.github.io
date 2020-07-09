@@ -8,31 +8,37 @@ layout: default
 permalink: /arhiv-zapisey-bloga/
 description: История размещения постов в блоге от самых новых
 ---
-
+{% assign len = site.posts.size %}
+{% assign len_m10 = len | modulo: 10 %}
+{% assign len_m100 = len | modulo: 100 %}
 <link rel="stylesheet" href="/assets/css/post.css">
 <main>
   <article class="post mwm card e2">
     <h1 itemprop="description">Архив блога фронтенд разработчика</h1>
+    <p>Всего в блоге {{ len }} {% if len_m10 == 1 and len_m100 <> 11 %}запись
+      {%- else %}
+      {%- if len_m10 >= 2 
+      and len_m10 <= 4 
+      and len_m100 < 10 or len_m100 >= 20 
+      %}записи
+      {%- else %}записей
+      {%- endif %}
+      {%- endif %}</p>
 
     <ul class="archive">
-      {%- for post in site.posts limit: 50 %}
-      <article class="arcive__item"
-               itemprop="blogPost" 
-               itemscope itemtype="https://schema.org/BlogPosting">
-        <h2 itemprop="headline name">
-          <a itemprop="url" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
-        </h2>
-        <footer class="text-small nowrap">
-          {% include pubdate.html date=post.date %}
-          •
-          <address class="inline" 
-                   itemprop="author publisher" 
-                   itemscope itemtype="https://schema.org/Person">
-            <span itemprop="name">{{ post.author | default: site.author.name }}</span>
-          </address>
+      {% for post in site.posts %}
+        {%- assign category = post.categories | first -%}
+        <article class="arcive__item">
+          <h2><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h2>
+          <footer class="text-small nowrap">
+            {%- include pubdate.html date=post.date %} / {% if site.data.categories[category] %}
+              {{- site.data.categories[category].name -}}
+            {% else %}
+              {{- category -}}
+            {% endif -%}
         </footer>
-      </article>
-      {%- endfor %}
+        </article>
+      {% endfor %}
     </ul>
   </article>
 </main>
