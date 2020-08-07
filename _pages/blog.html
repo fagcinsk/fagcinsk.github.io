@@ -36,7 +36,7 @@ description: Блог фронтенд веб-разработчика Миха�
 						<h2 itemprop="headline name"><a itemprop="url" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h2>
 					</header>
 					<div class="pi-huge_desc">
-						<p itemprop="description">{{ post.excerpt | strip_html }}</p>
+						<p itemprop="description">{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
 					</div>
 					<footer class="pi-huge__meta">
 						{% include pubdate.html date=post.date %}
