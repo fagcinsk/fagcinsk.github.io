@@ -1,7 +1,15 @@
 :root {
-  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  --font-family-sans-serif-condensed: "DINNextW01-CondensedMed", "AvenirNextCondensed-Bold", "Futura-CondensedExtraBold", HelveticaNeue-CondensedBold, "Ubuntu Condensed", "Liberation Sans Narrow", "Franklin Gothic Demi Cond", "Arial Narrow", "Roboto Condensed", sans-serif-condensed, Arial, "Trebuchet MS", "Lucida Grande", Tahoma, sans-serif;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  --font-family-sans-serif-condensed: "DINNextW01-CondensedMed",
+    "AvenirNextCondensed-Bold", "Futura-CondensedExtraBold",
+    HelveticaNeue-CondensedBold, "Ubuntu Condensed", "Liberation Sans Narrow",
+    "Franklin Gothic Demi Cond", "Arial Narrow", "Roboto Condensed",
+    sans-serif-condensed, Arial, "Trebuchet MS", "Lucida Grande", Tahoma,
+    sans-serif;
   --font-family-serif: Georgia, Times, Times New Roman, serif;
 }
 
@@ -29,7 +37,15 @@ h6 {
   margin: 1em 0 0.5em 0;
 }
 
-h1:first-of-type, p {
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: 0.0125em;
+}
+
+h1:first-of-type,
+p {
   margin-top: 0;
 }
 
@@ -42,9 +58,12 @@ form,
 ol,
 p,
 pre,
-table,
-ul {
+table {
   margin-bottom: 1em;
+}
+
+ul {
+  padding-left: 1.25em;
 }
 
 blockquote {
@@ -112,7 +131,9 @@ figure {
   margin: 0 0 1em;
 }
 
-.text-small, small {
+.text-small,
+small {
   font-size: 0.75em;
   color: var(--c-gray);
 }
+
