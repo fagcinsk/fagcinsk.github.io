@@ -28,7 +28,7 @@ sitemap: false
         <dc:creator>{{ site.author.name | xml_escape }}</dc:creator>
 				{% endif %}
 				{% if post.excerpt %}
-					<description>{{ post.excerpt | strip_html | xml_escape }}</description>
+					<description>{{ post.excerpt | strip_html | truncatewords: 50 | xml_escape }}</description>
 				{% else %}
 					<description>{{ post.description | strip_html | xml_escape }}</description>
 				{% endif %}
