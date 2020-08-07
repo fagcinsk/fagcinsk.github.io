@@ -3,11 +3,14 @@ layout: post
 categories: frontend
 title: Чеклист оптимиации веб-приложения
 description: Пополняемый список ключевых моментов для оптимизации сайтов и веб-приложений
+image: photos/2020-08-06-checklist-optimizacii-web-prilozheniya.jpg
 ---
 
 Оставлю здесь список ключевых мест, подлежащих оптимизации.
 Будет полезно мне при выкатывании очередного проекта в продакшен,
 а также всем заинтересованным в отзывчивых веб-приложениях и веб-интерфейсах.
+
+![Тайминги загрузки страницы](/photos/timings_simple.png)
 
 ## Серверная часть
 
@@ -57,7 +60,9 @@ TTFB складывается из:
   - минимизировать объём передаваемых данных от api.
 
 ### Фронтенд
-  
+
+![Тайминги загрузки страницы сайта (источник: developer.mozilla.org)](/photos/navigation_resource_timings.png)
+
 На фронтенде показателей больше:
 
 - [First Contentful Paint (FCP)](https://developer.mozilla.org/ru/docs/%D0%A1%D0%BB%D0%BE%D0%B2%D0%B0%D1%80%D1%8C/First_contentful_paint) &mdash; время до первой отрисовки;
