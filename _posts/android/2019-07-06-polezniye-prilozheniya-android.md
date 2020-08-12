@@ -77,7 +77,6 @@ MiXplorer - это быстрый, удобный, красивый и полн�
 
 ## Automagic
 
-[PlayMarket](https://play.google.com/store/apps/details?id=ch.gridvision.ppam.androidautomagic&hl=ru) 
 [4pda](https://4pda.ru/forum/index.php?showtopic=456523)
 
 Автоматизация андроид с блок-схемами (аналог AutomateIt, Tasker и MacroDroid).
