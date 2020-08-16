@@ -8,12 +8,12 @@ title: Acer Aspire v5 122p alsa, mpd
 
 ### Alsa
 
-~/.asoundrc :
+~/.asoundrc:
 
 ```conf
 pcm.dsp {  
-  type plug  
-  slave.pcm "dmix"  
+  type plug
+  slave.pcm "dmix"
 }  
 ```
 
@@ -32,7 +32,7 @@ _So, HDMI is second device, and sources mixings by dmix_
 ```conf
 music_directory         "/home/{username}/Music"  
 playlist_directory      "/home/{username}/.mpd/playlists"  
-db_file                        "/home/{username}/.mpd/mpd.db"  
+db_file                 "/home/{username}/.mpd/mpd.db"  
 log_file                "/home/{username}/.mpd/mpd.log"  
 
 audio_output {  
@@ -47,7 +47,8 @@ audio_output {
 
 ```shell
 mkdir -p ~/.mpd/playlists  
-sudo systemctl enable mpdsudo systemctl start mpd
+sudo systemctl enable mpd
+sudo systemctl start mpd
 
 mpc load <playlist_name>
 
